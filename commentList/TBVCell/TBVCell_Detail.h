@@ -1,25 +1,20 @@
 //
-//  MyVedioTBVCell.h
-//  MonkeyKingVideo
+//  TBVCell_Detail.h
+//  commentList
 //
-//  Created by Jobs on 2020/6/24.
+//  Created by 刘赓 on 2020/7/13.
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
-#import "TBVCell_style_02.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// 个人中心——我的视频
-@interface MyVedioTBVCell : TBVCell_style_02
-
-@property(nonatomic,copy)DataBlock actionBlock;
+@interface TBVCell_Detail : UITableViewCell
 
 +(instancetype)cellWith:(UITableView *)tableView;
 +(CGFloat)cellHeightWithModel:(id _Nullable)model;
 - (void)richElementsInCellWithModel:(id _Nullable)model;
-
--(void)action:(DataBlock)actionBlock;
 
 @end
 

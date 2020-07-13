@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import <Masonry/Masonry.h>
 
+#import "TBVCell.h"
+
 @interface ViewController ()
 <
 UITableViewDelegate
@@ -23,26 +25,25 @@ UITableViewDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
     self.tableView.alpha = 1;
 }
 
 #pragma mark —————————— UITableViewDelegate,UITableViewDataSource ——————————
-- (CGFloat)tableView:(UITableView *)tableView
-heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return [MyFansTBVCell cellHeightWithModel:nil];;
-}
+//- (CGFloat)tableView:(UITableView *)tableView
+//heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return [MyFansTBVCell cellHeightWithModel:nil];
+//}
 
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    @weakify(self)
-    [PersonalCenterVC ComingFromVC:weak_self
-                       comingStyle:ComingStyle_PUSH
-                 presentationStyle:UIModalPresentationAutomatic
-                     requestParams:nil
-                           success:^(id data) {}
-                          animated:YES];
+//    @weakify(self)
+//    [PersonalCenterVC ComingFromVC:weak_self
+//                       comingStyle:ComingStyle_PUSH
+//                 presentationStyle:UIModalPresentationAutomatic
+//                     requestParams:nil
+//                           success:^(id data) {}
+//                          animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -52,7 +53,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    MyFansTBVCell *cell = [MyFansTBVCell cellWith:tableView];
+    TBVCell *cell = [TBVCell cellWith:tableView];
     [cell richElementsInCellWithModel:nil];
     return cell;
 }
@@ -64,7 +65,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         _tableView.dataSource = self;
         [self.view addSubview:_tableView];
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edge
+            make.edges.equalTo(self.view);
         }];
     }return _tableView;
 }

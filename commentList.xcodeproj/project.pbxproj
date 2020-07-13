@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		47F1DE0F9D5C2BEEE0202B39 /* Pods_commentListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0CF0E67EA8BFA59C3D36147 /* Pods_commentListTests.framework */; };
+		8BE28E3524BCB51400CF5D7B /* TBVCell_Detail.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE28E3424BCB51400CF5D7B /* TBVCell_Detail.m */; };
+		8BE28E3C24BCB6F600CF5D7B /* TBVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE28E3B24BCB6F600CF5D7B /* TBVCell.m */; };
 		B39069305FAC615D8C6F4D6B /* Pods_commentList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC5B97A55D8F418AC00D92E /* Pods_commentList.framework */; };
 		C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0824BCAD3800894903 /* AppDelegate.m */; };
 		C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0B24BCAD3800894903 /* SceneDelegate.m */; };
@@ -42,6 +44,10 @@
 /* Begin PBXFileReference section */
 		0A7CAF397B699C809DE9FAD2 /* Pods_commentList_commentListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_commentList_commentListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6428E7887D15CD3420F28C00 /* Pods-commentList-commentListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commentList-commentListUITests.release.xcconfig"; path = "Target Support Files/Pods-commentList-commentListUITests/Pods-commentList-commentListUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8BE28E3324BCB51400CF5D7B /* TBVCell_Detail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBVCell_Detail.h; sourceTree = "<group>"; };
+		8BE28E3424BCB51400CF5D7B /* TBVCell_Detail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBVCell_Detail.m; sourceTree = "<group>"; };
+		8BE28E3A24BCB6F600CF5D7B /* TBVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBVCell.h; sourceTree = "<group>"; };
+		8BE28E3B24BCB6F600CF5D7B /* TBVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBVCell.m; sourceTree = "<group>"; };
 		9BC5B97A55D8F418AC00D92E /* Pods_commentList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_commentList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BEEFFD90758D0D57ED7277C /* Pods-commentList-commentListUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commentList-commentListUITests.debug.xcconfig"; path = "Target Support Files/Pods-commentList-commentListUITests/Pods-commentList-commentListUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0CF0E67EA8BFA59C3D36147 /* Pods_commentListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_commentListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,8 +72,6 @@
 		C5802D2D24BCAD3900894903 /* commentListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = commentListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5802D3124BCAD3900894903 /* commentListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = commentListUITests.m; sourceTree = "<group>"; };
 		C5802D3324BCAD3900894903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C5FCFEE224BCAE9600162950 /* MyVedioTBVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVedioTBVCell.h; sourceTree = "<group>"; };
-		C5FCFEE324BCAE9600162950 /* MyVedioTBVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVedioTBVCell.m; sourceTree = "<group>"; };
 		ED5772C36E89E2D9DFDFA8BA /* Pods-commentListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commentListTests.release.xcconfig"; path = "Target Support Files/Pods-commentListTests/Pods-commentListTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD981085353B1F176FD123A4 /* Pods-commentList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commentList.release.xcconfig"; path = "Target Support Files/Pods-commentList/Pods-commentList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +127,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8BE28E2F24BCB4B800CF5D7B /* TBVCell */ = {
+			isa = PBXGroup;
+			children = (
+				8BE28E3A24BCB6F600CF5D7B /* TBVCell.h */,
+				8BE28E3B24BCB6F600CF5D7B /* TBVCell.m */,
+				8BE28E3324BCB51400CF5D7B /* TBVCell_Detail.h */,
+				8BE28E3424BCB51400CF5D7B /* TBVCell_Detail.m */,
+			);
+			path = TBVCell;
+			sourceTree = "<group>";
+		};
+		8BE28E3924BCB6A800CF5D7B /* other */ = {
+			isa = PBXGroup;
+			children = (
+				C5802D0724BCAD3800894903 /* AppDelegate.h */,
+				C5802D0824BCAD3800894903 /* AppDelegate.m */,
+				C5802D0A24BCAD3800894903 /* SceneDelegate.h */,
+				C5802D0B24BCAD3800894903 /* SceneDelegate.m */,
+				C5802D1024BCAD3800894903 /* Main.storyboard */,
+				C5802D1624BCAD3900894903 /* Assets.xcassets */,
+				C5802D1824BCAD3900894903 /* LaunchScreen.storyboard */,
+				C5802D1C24BCAD3900894903 /* main.m */,
+				C5802D1324BCAD3800894903 /* commentList.xcdatamodeld */,
+			);
+			path = other;
+			sourceTree = "<group>";
+		};
 		C5802CFB24BCAD3800894903 = {
 			isa = PBXGroup;
 			children = (
@@ -148,19 +179,11 @@
 		C5802D0624BCAD3800894903 /* commentList */ = {
 			isa = PBXGroup;
 			children = (
-				C5FCFEE424BCAE9900162950 /* New Group */,
-				C5802D0724BCAD3800894903 /* AppDelegate.h */,
-				C5802D0824BCAD3800894903 /* AppDelegate.m */,
-				C5802D0A24BCAD3800894903 /* SceneDelegate.h */,
-				C5802D0B24BCAD3800894903 /* SceneDelegate.m */,
+				C5802D1B24BCAD3900894903 /* Info.plist */,
+				8BE28E3924BCB6A800CF5D7B /* other */,
 				C5802D0D24BCAD3800894903 /* ViewController.h */,
 				C5802D0E24BCAD3800894903 /* ViewController.m */,
-				C5802D1024BCAD3800894903 /* Main.storyboard */,
-				C5802D1624BCAD3900894903 /* Assets.xcassets */,
-				C5802D1824BCAD3900894903 /* LaunchScreen.storyboard */,
-				C5802D1B24BCAD3900894903 /* Info.plist */,
-				C5802D1C24BCAD3900894903 /* main.m */,
-				C5802D1324BCAD3800894903 /* commentList.xcdatamodeld */,
+				8BE28E2F24BCB4B800CF5D7B /* TBVCell */,
 			);
 			path = commentList;
 			sourceTree = "<group>";
@@ -181,15 +204,6 @@
 				C5802D3324BCAD3900894903 /* Info.plist */,
 			);
 			path = commentListUITests;
-			sourceTree = "<group>";
-		};
-		C5FCFEE424BCAE9900162950 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				C5FCFEE224BCAE9600162950 /* MyVedioTBVCell.h */,
-				C5FCFEE324BCAE9600162950 /* MyVedioTBVCell.m */,
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,8 +444,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BE28E3524BCB51400CF5D7B /* TBVCell_Detail.m in Sources */,
 				C5802D1D24BCAD3900894903 /* main.m in Sources */,
 				C5802D0F24BCAD3800894903 /* ViewController.m in Sources */,
+				8BE28E3C24BCB6F600CF5D7B /* TBVCell.m in Sources */,
 				C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */,
 				C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */,
 				C5802D1524BCAD3800894903 /* commentList.xcdatamodeld in Sources */,
