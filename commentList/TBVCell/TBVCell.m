@@ -20,7 +20,7 @@ UITableViewDelegate
 
 @property(nonatomic,strong)UILabel *titleLab;
 @property(nonatomic,strong)UITableView *tableView;
-@property(nonatomic,strong)UILabel *loadingMoreLab;
+@property(nonatomic,strong)UIButton *loadingMoreBtn;
 
 @property(nonatomic,strong)NSArray <NSArray <NSString*>*>*dataArr;
 //@[@[@"我是标题 1"],@[@"我是标题 1.1",@"我是标题 1.2",@"我是标题 1.3",@"我是标题 1.4",@"我是标题 1.5"]]
@@ -62,7 +62,7 @@ UITableViewDelegate
     self.titleLab.text = self.dataArr[0][0];//一级
     self.tableView.alpha = 1;//二级
     if (self.dataArr[1].count > Rule) {
-        self.loadingMoreLab.alpha = 1;
+        self.loadingMoreBtn.alpha = 1;
     }else{}
 }
 #pragma mark —————————— UITableViewDelegate,UITableViewDataSource ——————————
@@ -117,7 +117,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 #warning 这个地方要写底部的约束，否则tableView无法出现
             NSArray *temp_2_arr = self.dataArr[1];
             if (temp_2_arr.count > Rule) {//包括主标题有大于3条数据 出现“加载更多”
-                make.bottom.equalTo(self.loadingMoreLab.mas_top);
+                make.bottom.equalTo(self.loadingMoreBtn.mas_top);
             }else{
                 make.bottom.equalTo(self.contentView);
             }
@@ -125,19 +125,19 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     }return _tableView;
 }
 
--(UILabel *)loadingMoreLab{
-    if (!_loadingMoreLab) {
-        _loadingMoreLab = UILabel.new;
-        _loadingMoreLab.backgroundColor = [UIColor systemBlueColor];
-        _loadingMoreLab.text = @"加载更多";
-        _loadingMoreLab.textAlignment = NSTextAlignmentCenter;
-        [self.contentView addSubview:_loadingMoreLab];
-        [_loadingMoreLab mas_makeConstraints:^(MASConstraintMaker *make) {
+-(UIButton *)loadingMoreBtn{
+    if (!_loadingMoreBtn) {
+        _loadingMoreBtn = UIButton.new;
+        _loadingMoreBtn.backgroundColor = [UIColor systemBlueColor];
+        [_loadingMoreBtn setTitle:@"加载更多"
+                         forState:UIControlStateNormal];
+        [self.contentView addSubview:_loadingMoreBtn];
+        [_loadingMoreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.bottom.equalTo(self.contentView);
             make.top.equalTo(self.tableView.mas_bottom);
             make.height.mas_equalTo(55);
         }];
-    }return _loadingMoreLab;
+    }return _loadingMoreBtn;
 }
 
 
