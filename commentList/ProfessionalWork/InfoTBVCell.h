@@ -1,8 +1,8 @@
 //
-//  TBVCell.h
+//  InfoTBVCell.h
 //  commentList
 //
-//  Created by 刘赓 on 2020/7/13.
+//  Created by Jobs on 2020/7/14.
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
@@ -10,12 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TBVCell : UITableViewCell
+@interface InfoTBVCell : UITableViewCell
 
--(void)actionBlock:(DataBlock)block;
-
-+(instancetype)cellWith:(UITableView *)tableView
-              withModel:(id _Nullable)model;
++(instancetype)cellWith:(UITableView *)tableView;
 +(CGFloat)cellHeightWithModel:(id _Nullable)model;
 - (void)richElementsInCellWithModel:(id _Nullable)model;
 
