@@ -12,4 +12,7 @@
 #import "AABlock.h"
 #import <Masonry/Masonry.h>
 
+#define WeakSelf __weak typeof(self) weakSelf = self;
+#define StrongSelf __strong typeof(self) strongSelf = self;
+
 #endif /* PrefixHeader_pch */

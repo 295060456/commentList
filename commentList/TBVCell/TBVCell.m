@@ -22,6 +22,7 @@ UITableViewDelegate
 @property(nonatomic,strong)UIButton *loadingMoreBtn;
 
 @property(nonatomic,strong)NSArray <NSArray <NSString*>*>*dataArr;
+@property(nonatomic,copy)DataBlock block;
 //@[@[@"我是标题 1"],@[@"我是标题 1.1",@"我是标题 1.2",@"我是标题 1.3",@"我是标题 1.4",@"我是标题 1.5"]]
 @end
 
@@ -75,11 +76,12 @@ UITableViewDelegate
 }
 //上个页面要用
 - (void)richElementsInCellWithModel:(id _Nullable)model{
-    self.dataArr = (NSArray *)model;
+    self.dataArr = (NSArray *)model[@"data"];
     self.titleLab.text = self.dataArr[0][0];//一级
     self.tableView.alpha = 1;//二级
     if (self.dataArr[1].count > Rule) {
         self.loadingMoreBtn.alpha = 1;
+        self.loadingMoreBtn.tag = [model[@"indexPath"] intValue];
     }else{}
 }
 #pragma mark —————————— UITableViewDelegate,UITableViewDataSource ——————————
@@ -108,6 +110,18 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [cell richElementsInCellWithModel:self.dataArr[1][indexPath.row]];
     return cell;
 }
+
+-(void)loadingMoreBtnClickEvent:(UIButton *)sender{
+    if (self.block) {
+        self.block(@{@"sender":sender,
+                     @"tableView":self.tableView});
+    }
+}
+
+-(void)actionBlock:(DataBlock)block{
+    self.block = block;
+}
+
 #pragma mark —— lazyLoad
 -(UILabel *)titleLab{
     if (!_titleLab) {
@@ -149,6 +163,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         _loadingMoreBtn.backgroundColor = [UIColor systemBlueColor];
         [_loadingMoreBtn setTitle:@"加载更多"
                          forState:UIControlStateNormal];
+        [_loadingMoreBtn addTarget:self
+                            action:@selector(loadingMoreBtnClickEvent:)
+                  forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:_loadingMoreBtn];
         [_loadingMoreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.bottom.equalTo(self.contentView);

@@ -18,7 +18,7 @@ UITableViewDelegate
 
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray <NSArray <NSArray <NSString *>*>*>*dataArr;
-
+@property(nonatomic,strong)NSMutableArray <NSString *>*supplementDataMutArr;
 @end
 
 @implementation ViewController
@@ -48,7 +48,22 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
          cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     TBVCell *cell = [TBVCell cellWith:tableView
                             withModel:self.dataArr[indexPath.row]];
-    [cell richElementsInCellWithModel:self.dataArr[indexPath.row]];
+    [cell richElementsInCellWithModel:@{@"data":self.dataArr[indexPath.row],@"indexPath":@(indexPath.row)}];
+    WeakSelf
+    [cell actionBlock:^(id data) {
+        UIButton *btn = (UIButton *)data[@"sender"];
+        UITableView *tableView = (UITableView *)data[@"tableView"];
+        NSLog(@"");
+        //插入数据
+        NSArray *temp = weakSelf.dataArr[btn.tag][1];
+        NSMutableArray *temp_01 = [NSMutableArray arrayWithArray:temp];
+        for (NSString *str in weakSelf.supplementDataMutArr) {
+            [temp_01 addObject:str];
+        }
+        
+//        [tableView reloadData];
+        [self.tableView reloadData];
+    }];
     return cell;
 }
 #pragma mark —— lazyLoad
@@ -81,7 +96,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     }return _dataArr;
 }
 
-
+-(NSMutableArray<NSString *> *)supplementDataMutArr{
+    if (!_supplementDataMutArr) {
+        _supplementDataMutArr = NSMutableArray.array;
+        [_supplementDataMutArr addObject:@"我是补充数据——01"];
+        [_supplementDataMutArr addObject:@"我是补充数据——02"];
+        [_supplementDataMutArr addObject:@"我是补充数据——03"];
+    }return _supplementDataMutArr;
+}
 
 
 @end

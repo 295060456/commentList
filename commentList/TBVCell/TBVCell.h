@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TBVCell : UITableViewCell
 
+-(void)actionBlock:(DataBlock)block;
+
 +(instancetype)cellWith:(UITableView *)tableView
               withModel:(id _Nullable)model;
 +(CGFloat)cellHeightWithModel:(id _Nullable)model;
