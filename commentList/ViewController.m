@@ -51,15 +51,18 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [cell richElementsInCellWithModel:@{@"data":self.dataArr[indexPath.row],@"indexPath":@(indexPath.row)}];
     WeakSelf
     [cell actionBlock:^(id data) {
-        UIButton *btn = (UIButton *)data[@"sender"];
-        UITableView *tableView = (UITableView *)data[@"tableView"];
+        UIButton *btn = (UIButton *)data;
         NSLog(@"");
         //插入数据
+        NSArray *temp_01 = weakSelf.dataArr[btn.tag][0];//
         NSArray *temp = weakSelf.dataArr[btn.tag][1];
-        NSMutableArray *temp_01 = [NSMutableArray arrayWithArray:temp];
+        NSMutableArray *temp_03 = [NSMutableArray arrayWithArray:temp];
         for (NSString *str in weakSelf.supplementDataMutArr) {
-            [temp_01 addObject:str];
+            [temp_03 addObject:str];//
         }
+        
+        [weakSelf.dataArr removeObjectAtIndex:btn.tag];
+        [weakSelf.dataArr insertObject:@[temp_01,temp_03] atIndex:btn.tag];
         
 //        [tableView reloadData];
         [self.tableView reloadData];

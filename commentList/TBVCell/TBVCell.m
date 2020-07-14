@@ -113,8 +113,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
 -(void)loadingMoreBtnClickEvent:(UIButton *)sender{
     if (self.block) {
-        self.block(@{@"sender":sender,
-                     @"tableView":self.tableView});
+        self.block(sender);
     }
 }
 
