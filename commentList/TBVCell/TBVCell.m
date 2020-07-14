@@ -8,7 +8,6 @@
 
 #import "TBVCell.h"
 #import "TBVCell_Detail.h"
-#import <Masonry/Masonry.h>
 
 #define Rule 3//二级标题展示多少个
 
@@ -31,28 +30,28 @@ UITableViewDelegate
 +(instancetype)cellWith:(UITableView *)tableView
               withModel:(id _Nullable)model{
     
-//    TBVCell *cell = [[TBVCell alloc]initWithStyle:UITableViewCellStyleDefault
-//                         reuseIdentifier:@"TBVCell_style_2"];
-//    cell.contentView.backgroundColor = [UIColor blueColor];
-//    return cell;
+    TBVCell *cell = [[TBVCell alloc]initWithStyle:UITableViewCellStyleDefault
+                         reuseIdentifier:@"TBVCell_style_2"];
+    cell.contentView.backgroundColor = [UIColor blueColor];
+    return cell;
     
-    NSArray <NSArray <NSString*>*>*tempArr = (NSArray *)model;
-    TBVCell *cell = nil;
-    if (tempArr.count > Rule) {//包括主标题有大于3条数据 出现“加载更多”
-        cell = (TBVCell *)[tableView dequeueReusableCellWithIdentifier:@"TBVCell_style_1"];
-        if (!cell) {
-            cell = [[TBVCell alloc]initWithStyle:UITableViewCellStyleDefault
-                                 reuseIdentifier:@"TBVCell_style_1"];
-            cell.contentView.backgroundColor = [UIColor greenColor];
-        }return cell;
-    }else{
-        cell = (TBVCell *)[tableView dequeueReusableCellWithIdentifier:@"TBVCell_style_2"];
-        if (!cell) {
-            cell = [[TBVCell alloc]initWithStyle:UITableViewCellStyleDefault
-                                 reuseIdentifier:@"TBVCell_style_2"];
-            cell.contentView.backgroundColor = [UIColor blueColor];
-        }return cell;
-    }
+//    NSArray <NSArray <NSString*>*>*tempArr = (NSArray *)model;
+//    TBVCell *cell = nil;
+//    if (tempArr.count > Rule) {//包括主标题有大于3条数据 出现“加载更多”
+//        cell = (TBVCell *)[tableView dequeueReusableCellWithIdentifier:@"TBVCell_style_1"];
+//        if (!cell) {
+//            cell = [[TBVCell alloc]initWithStyle:UITableViewCellStyleDefault
+//                                 reuseIdentifier:@"TBVCell_style_1"];
+//            cell.contentView.backgroundColor = [UIColor greenColor];
+//        }return cell;
+//    }else{
+//        cell = (TBVCell *)[tableView dequeueReusableCellWithIdentifier:@"TBVCell_style_2"];
+//        if (!cell) {
+//            cell = [[TBVCell alloc]initWithStyle:UITableViewCellStyleDefault
+//                                 reuseIdentifier:@"TBVCell_style_2"];
+//            cell.contentView.backgroundColor = [UIColor blueColor];
+//        }return cell;
+//    }
 }
 
 -(void)drawRect:(CGRect)rect{

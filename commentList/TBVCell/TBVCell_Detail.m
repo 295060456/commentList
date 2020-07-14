@@ -7,7 +7,6 @@
 //
 
 #import "TBVCell_Detail.h"
-#import <Masonry/Masonry.h>
 
 @interface TBVCell_Detail ()
 
