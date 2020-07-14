@@ -10,15 +10,11 @@
 #import <Masonry/Masonry.h>
 
 @interface TBVCell_Detail ()
-<
-UITableViewDelegate
-,UITableViewDataSource
->
 
-@property(nonatomic,strong)UITableView *tableView;
+@property(nonatomic,strong)UILabel *detailTitleLab;
 
 @end
-
+//二级
 @implementation TBVCell_Detail
 
 +(instancetype)cellWith:(UITableView *)tableView{
@@ -39,19 +35,19 @@ UITableViewDelegate
 }
 
 - (void)richElementsInCellWithModel:(id _Nullable)model{
-
+    self.detailTitleLab.text = model;
 }
 
--(UITableView *)tableView{
-    if (!_tableView) {
-        _tableView = UITableView.new;
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        [self.view addSubview:_tableView];
-//        [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.edges.equalTo(self.view);
-//        }];
-    }return _tableView;
+-(UILabel *)detailTitleLab{
+    if (!_detailTitleLab) {
+        _detailTitleLab = UILabel.new;
+        _detailTitleLab.backgroundColor = [UIColor redColor];
+        _detailTitleLab.textAlignment = NSTextAlignmentCenter;
+        [self.contentView addSubview:_detailTitleLab];
+        [_detailTitleLab mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.contentView);
+        }];
+    }return _detailTitleLab;
 }
 
 @end

@@ -18,6 +18,7 @@ UITableViewDelegate
 >
 
 @property(nonatomic,strong)UITableView *tableView;
+@property(nonatomic,strong)NSMutableArray <NSArray <NSArray <NSString *>*>*>*dataArr;
 
 @end
 
@@ -28,36 +29,30 @@ UITableViewDelegate
     self.view.backgroundColor = [UIColor redColor];
     self.tableView.alpha = 1;
 }
-
 #pragma mark —————————— UITableViewDelegate,UITableViewDataSource ——————————
-//- (CGFloat)tableView:(UITableView *)tableView
-//heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    return [MyFansTBVCell cellHeightWithModel:nil];
-//}
+- (CGFloat)tableView:(UITableView *)tableView
+heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    CGFloat r = [TBVCell cellHeightWithModel:self.dataArr[indexPath.row]];
+    return r;
+}
 
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    @weakify(self)
-//    [PersonalCenterVC ComingFromVC:weak_self
-//                       comingStyle:ComingStyle_PUSH
-//                 presentationStyle:UIModalPresentationAutomatic
-//                     requestParams:nil
-//                           success:^(id data) {}
-//                          animated:YES];
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section{
-    return 4;
+    return self.dataArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     TBVCell *cell = [TBVCell cellWith:tableView];
-    [cell richElementsInCellWithModel:nil];
+    [cell richElementsInCellWithModel:self.dataArr[indexPath.row]];
     return cell;
 }
-
+#pragma mark —— lazyLoad
 -(UITableView *)tableView{
     if (!_tableView) {
         _tableView = UITableView.new;
@@ -69,6 +64,18 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         }];
     }return _tableView;
 }
+
+-(NSMutableArray <NSArray <NSArray <NSString *>*>*>*)dataArr{
+    if (!_dataArr) {
+        _dataArr = NSMutableArray.array;
+        [_dataArr addObject:@[@[@"我是标题 1"],@[@"我是标题 1.1",@"我是标题 1.2",@"我是标题 1.3",@"我是标题 1.4",@"我是标题 1.5"]]];
+        [_dataArr addObject:@[@[@"我是标题 2"],@[@"我是标题 2.1",@"我是标题 2.2",@"我是标题 2.3"]]];
+        [_dataArr addObject:@[@[@"我是标题 3"],@[]]];
+        [_dataArr addObject:@[@[@"我是标题 4"],@[@"我是标题 4.1"]]];
+        [_dataArr addObject:@[@[@"我是标题 5"],@[@"我是标题 5.1",@"我是标题 5.2"]]];
+    }return _dataArr;
+}
+
 
 
 
