@@ -32,8 +32,7 @@ UITableViewDelegate
 #pragma mark —————————— UITableViewDelegate,UITableViewDataSource ——————————
 - (CGFloat)tableView:(UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CGFloat r = [TBVCell cellHeightWithModel:self.dataArr[indexPath.row]];
-    return r;
+    return [TBVCell cellHeightWithModel:self.dataArr[indexPath.row]];
 }
 
 - (void)tableView:(UITableView *)tableView

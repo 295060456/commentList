@@ -10,7 +10,7 @@
 #import "TBVCell_Detail.h"
 #import <Masonry/Masonry.h>
 
-#define Rule 3
+#define Rule 3//二级标题展示多少个
 
 @interface TBVCell ()
 <
@@ -38,19 +38,17 @@ UITableViewDelegate
 }
 
 -(void)drawRect:(CGRect)rect{
-
+    NSLog(@"");
 }
 //@[@[@"我是标题 1"],@[@"我是标题 1.1",@"我是标题 1.2",@"我是标题 1.3",@"我是标题 1.4",@"我是标题 1.5"]]
 +(CGFloat)cellHeightWithModel:(id _Nullable)model{
     if ([model isKindOfClass:NSArray.class]) {
         NSArray <NSArray <NSString *>*>*arr = (NSArray *)model;
-        NSArray *temp_1_Arr = arr[0];
-        NSArray *temp_2_Arr = arr[1];
-        long t = temp_1_Arr.count + temp_2_Arr.count;//一级标题 ＋ 二级标题
-        if (t > Rule) {//包括主标题有大于3条数据 出现“加载更多”
-            return 5 * 55;//只展示3个数据
-        }else if(t <= Rule && t >= 1){//没有 出现“加载更多”
-            return 55 * t;
+        NSArray *temp_2_Arr = arr[1];// 二级标题
+        if (temp_2_Arr.count > Rule) {//包括主标题有大于3条数据 出现“加载更多”
+            return (Rule + 2) * 55;//只展示3个数据
+        }else if(temp_2_Arr.count <= Rule && temp_2_Arr.count >= 1){//没有 出现“加载更多”
+            return (temp_2_Arr.count + 1) * 55;
         }else{//只有主标题
             return 55;
         }
@@ -63,7 +61,9 @@ UITableViewDelegate
     self.dataArr = (NSArray *)model;
     self.titleLab.text = self.dataArr[0][0];//一级
     self.tableView.alpha = 1;//二级
-    self.loadingMoreLab.alpha = 1;
+    if (self.dataArr[1].count > Rule) {
+        self.loadingMoreLab.alpha = 1;
+    }else{}
 }
 #pragma mark —————————— UITableViewDelegate,UITableViewDataSource ——————————
 - (CGFloat)tableView:(UITableView *)tableView
@@ -80,7 +80,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
  numberOfRowsInSection:(NSInteger)section{
     if (self.dataArr[1].count > Rule) {
         return Rule;
-    }else return self.dataArr[1].count;
+    }else{
+        return self.dataArr[1].count;
+    }
 }
 //@[@[@"我是标题 1"],@[@"我是标题 1.1",@"我是标题 1.2",@"我是标题 1.3",@"我是标题 1.4",@"我是标题 1.5"]]
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -110,8 +112,15 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         _tableView.dataSource = self;
         [self.contentView addSubview:_tableView];
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.equalTo(self.contentView);
             make.top.equalTo(self.titleLab.mas_bottom);
+            make.left.right.equalTo(self.contentView);
+#warning 这个地方要写底部的约束，否则tableView无法出现
+            NSArray *temp_2_arr = self.dataArr[1];
+            if (temp_2_arr.count > Rule) {//包括主标题有大于3条数据 出现“加载更多”
+                make.bottom.equalTo(self.loadingMoreLab.mas_top);
+            }else{
+                make.bottom.equalTo(self.contentView);
+            }
         }];
     }return _tableView;
 }
@@ -119,6 +128,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 -(UILabel *)loadingMoreLab{
     if (!_loadingMoreLab) {
         _loadingMoreLab = UILabel.new;
+        _loadingMoreLab.backgroundColor = [UIColor systemBlueColor];
         _loadingMoreLab.text = @"加载更多";
         _loadingMoreLab.textAlignment = NSTextAlignmentCenter;
         [self.contentView addSubview:_loadingMoreLab];
