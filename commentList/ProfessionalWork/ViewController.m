@@ -54,11 +54,15 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
             [temp addObject:str];
         }
         [self.dataMutArr removeObjectAtIndex:indexPath.section];
-        [self.dataMutArr insertObject:@[arr_0,temp] atIndex:indexPath.section];
+        [self.dataMutArr insertObject:@[arr_0,temp]
+                              atIndex:indexPath.section];
         NSLog(@"");
         self.isFullShow = YES;
-    }
-    [self.tableView reloadData];
+        //两种刷新方法
+        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section]
+                      withRowAnimation:UITableViewRowAnimationAutomatic];
+        //    [self.tableView reloadData];
+    }else{}
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
