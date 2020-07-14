@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TBVCell : UITableViewCell
 
-+(instancetype)cellWith:(UITableView *)tableView;
++(instancetype)cellWith:(UITableView *)tableView
+              withModel:(id _Nullable)model;
 +(CGFloat)cellHeightWithModel:(id _Nullable)model;
 - (void)richElementsInCellWithModel:(id _Nullable)model;
 

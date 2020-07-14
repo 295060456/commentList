@@ -28,19 +28,37 @@ UITableViewDelegate
 
 @implementation TBVCell
 
-+(instancetype)cellWith:(UITableView *)tableView{
-    TBVCell *cell = (TBVCell *)[tableView dequeueReusableCellWithIdentifier:@"TBVCell"];
-    if (!cell) {
-        cell = [[TBVCell alloc]initWithStyle:UITableViewCellStyleDefault
-                             reuseIdentifier:@"TBVCell"];
-        cell.contentView.backgroundColor = [UIColor greenColor];
-    }return cell;
++(instancetype)cellWith:(UITableView *)tableView
+              withModel:(id _Nullable)model{
+    
+    TBVCell *cell = [[TBVCell alloc]initWithStyle:UITableViewCellStyleDefault
+                         reuseIdentifier:@"TBVCell_style_2"];
+    cell.contentView.backgroundColor = [UIColor blueColor];
+    return cell;
+    
+//    NSArray <NSArray <NSString*>*>*tempArr = (NSArray *)model;
+//    TBVCell *cell = nil;
+//    if (tempArr.count > Rule) {//包括主标题有大于3条数据 出现“加载更多”
+//        cell = (TBVCell *)[tableView dequeueReusableCellWithIdentifier:@"TBVCell_style_1"];
+//        if (!cell) {
+//            cell = [[TBVCell alloc]initWithStyle:UITableViewCellStyleDefault
+//                                 reuseIdentifier:@"TBVCell_style_1"];
+//            cell.contentView.backgroundColor = [UIColor greenColor];
+//        }return cell;
+//    }else{
+//        cell = (TBVCell *)[tableView dequeueReusableCellWithIdentifier:@"TBVCell_style_2"];
+//        if (!cell) {
+//            cell = [[TBVCell alloc]initWithStyle:UITableViewCellStyleDefault
+//                                 reuseIdentifier:@"TBVCell_style_2"];
+//            cell.contentView.backgroundColor = [UIColor blueColor];
+//        }return cell;
+//    }
 }
 
 -(void)drawRect:(CGRect)rect{
     NSLog(@"");
 }
-//@[@[@"我是标题 1"],@[@"我是标题 1.1",@"我是标题 1.2",@"我是标题 1.3",@"我是标题 1.4",@"我是标题 1.5"]]
+//上个页面要用
 +(CGFloat)cellHeightWithModel:(id _Nullable)model{
     if ([model isKindOfClass:NSArray.class]) {
         NSArray <NSArray <NSString *>*>*arr = (NSArray *)model;
@@ -56,7 +74,7 @@ UITableViewDelegate
         return 0;
     }
 }
-//@[@[@"我是标题 1"],@[@"我是标题 1.1",@"我是标题 1.2",@"我是标题 1.3",@"我是标题 1.4",@"我是标题 1.5"]]
+//上个页面要用
 - (void)richElementsInCellWithModel:(id _Nullable)model{
     self.dataArr = (NSArray *)model;
     self.titleLab.text = self.dataArr[0][0];//一级
@@ -84,7 +102,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         return self.dataArr[1].count;
     }
 }
-//@[@[@"我是标题 1"],@[@"我是标题 1.1",@"我是标题 1.2",@"我是标题 1.3",@"我是标题 1.4",@"我是标题 1.5"]]
+
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     TBVCell_Detail *cell = [TBVCell_Detail cellWith:tableView];
@@ -110,6 +128,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         _tableView = UITableView.new;
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.scrollEnabled = NO;
         [self.contentView addSubview:_tableView];
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.titleLab.mas_bottom);

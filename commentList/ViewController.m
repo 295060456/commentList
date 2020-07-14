@@ -47,7 +47,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    TBVCell *cell = [TBVCell cellWith:tableView];
+    TBVCell *cell = [TBVCell cellWith:tableView
+                            withModel:self.dataArr[indexPath.row]];
     [cell richElementsInCellWithModel:self.dataArr[indexPath.row]];
     return cell;
 }
