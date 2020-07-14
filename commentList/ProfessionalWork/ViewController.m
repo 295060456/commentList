@@ -27,10 +27,18 @@ UITableViewDelegate
 @property(nonatomic,strong)NSMutableArray <NSArray <NSArray <NSString *>*>*>*dataMutArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*supplementDataMutArr;
 @property(nonatomic,assign)BOOL isFullShow;
+@property(nonatomic,assign)long loadDataNum;//每次加载数据的
 
 @end
 
 @implementation ViewController
+
+- (instancetype)init{
+    if (self = [super init]) {
+        self.isFullShow = NO;
+        self.loadDataNum = 1;
+    }return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,9 +58,18 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         NSArray *arr_1 = self.dataMutArr[indexPath.section][1];
         NSMutableArray *temp = [NSMutableArray arrayWithArray:arr_1];
         NSLog(@"");
-        for (NSString *str in self.supplementDataMutArr) {
-            [temp addObject:str];
+        
+        if (self.loadDataNum != self.supplementDataMutArr.count) {//每次加载loadDataNum
+            for (int i = 0; i < self.loadDataNum; i++) {
+                NSString *str = self.supplementDataMutArr[i];
+                [temp addObject:str];
+            }
+        }else{//全加载
+            for (NSString *str in self.supplementDataMutArr) {
+                [temp addObject:str];
+            }
         }
+        
         [self.dataMutArr removeObjectAtIndex:indexPath.section];
         [self.dataMutArr insertObject:@[arr_0,temp]
                               atIndex:indexPath.section];
@@ -67,10 +84,36 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section{
-    if (self.dataMutArr[section][1].count > preMax && !self.isFullShow) {
+    if (self.dataMutArr[section][1].count > preMax &&
+        !self.isFullShow &&//不是全加载
+        (self.loadDataNum != self.supplementDataMutArr.count)) {
         return preMax + 1;
     }else{
         return self.dataMutArr[section][1].count;
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath{//preMax
+    if (self.dataMutArr[indexPath.section][1].count > preMax &&
+        !self.isFullShow &&//不是全加载
+        (self.loadDataNum != self.supplementDataMutArr.count)) {
+        //截留 最后一个cell是 LoadMoreTBVCell
+        if (indexPath.row == preMax) {
+            LoadMoreTBVCell *cell = [LoadMoreTBVCell cellWith:tableView];
+            [cell richElementsInCellWithModel:nil];
+            return cell;
+        }else{
+            InfoTBVCell *cell = [InfoTBVCell cellWith:tableView];
+//            int r = indexPath.row;
+//            int d = indexPath.section;
+            [cell richElementsInCellWithModel:self.dataMutArr[indexPath.section][1][indexPath.row]];
+            return cell;
+        }
+    }else{//全显示
+        InfoTBVCell *cell = [InfoTBVCell cellWith:tableView];
+        [cell richElementsInCellWithModel:self.dataMutArr[indexPath.section][1][indexPath.row]];
+        return cell;
     }
 }
 
@@ -93,28 +136,6 @@ viewForHeaderInSection:(NSInteger)section{
     header.section = section;
     header.textLabel.text = self.dataMutArr[section][0][0];
     return header;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView
-         cellForRowAtIndexPath:(NSIndexPath *)indexPath{//preMax
-    if (self.dataMutArr[indexPath.section][1].count > preMax && !self.isFullShow) {
-        //截留 最后一个cell是 LoadMoreTBVCell
-        if (indexPath.row == preMax) {
-            LoadMoreTBVCell *cell = [LoadMoreTBVCell cellWith:tableView];
-            [cell richElementsInCellWithModel:nil];
-            return cell;
-        }else{
-            InfoTBVCell *cell = [InfoTBVCell cellWith:tableView];
-//            int r = indexPath.row;
-//            int d = indexPath.section;
-            [cell richElementsInCellWithModel:self.dataMutArr[indexPath.section][1][indexPath.row]];
-            return cell;
-        }
-    }else{//全显示
-        InfoTBVCell *cell = [InfoTBVCell cellWith:tableView];
-        [cell richElementsInCellWithModel:self.dataMutArr[indexPath.section][1][indexPath.row]];
-        return cell;
-    }
 }
 #pragma mark —— lazyLoad
 -(UITableView *)tableView{
