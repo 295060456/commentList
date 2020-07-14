@@ -19,6 +19,8 @@ UITableViewDelegate
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray <NSArray <NSArray <NSString *>*>*>*dataArr;
 @property(nonatomic,strong)NSMutableArray <NSString *>*supplementDataMutArr;
+@property(nonatomic,assign)BOOL isUnfold;
+
 @end
 
 @implementation ViewController
@@ -31,7 +33,8 @@ UITableViewDelegate
 #pragma mark —————————— UITableViewDelegate,UITableViewDataSource ——————————
 - (CGFloat)tableView:(UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return [TBVCell cellHeightWithModel:self.dataArr[indexPath.row]];
+    return [TBVCell cellHeightWithModel:@{@"data":self.dataArr[indexPath.row],
+                                          @"isUnfold":@(self.isUnfold)}];
 }
 
 - (void)tableView:(UITableView *)tableView
@@ -48,7 +51,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
          cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     TBVCell *cell = [TBVCell cellWith:tableView
                             withModel:self.dataArr[indexPath.row]];
-    [cell richElementsInCellWithModel:@{@"data":self.dataArr[indexPath.row],@"indexPath":@(indexPath.row)}];
+    [cell richElementsInCellWithModel:@{@"data":self.dataArr[indexPath.row],
+                                        @"indexPath":@(indexPath.row),
+                                        @"isUnfold":@(self.isUnfold)}];
     WeakSelf
     [cell actionBlock:^(id data) {
         UIButton *btn = (UIButton *)data;
@@ -65,6 +70,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         [weakSelf.dataArr insertObject:@[temp_01,temp_03] atIndex:btn.tag];
         
 //        [tableView reloadData];
+        self.isUnfold = YES;
         [self.tableView reloadData];
     }];
     return cell;

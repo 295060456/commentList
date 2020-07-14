@@ -23,7 +23,8 @@ UITableViewDelegate
 
 @property(nonatomic,strong)NSArray <NSArray <NSString*>*>*dataArr;
 @property(nonatomic,copy)DataBlock block;
-//@[@[@"我是标题 1"],@[@"我是标题 1.1",@"我是标题 1.2",@"我是标题 1.3",@"我是标题 1.4",@"我是标题 1.5"]]
+@property(nonatomic,assign)BOOL isUnfold;
+
 @end
 
 @implementation TBVCell
@@ -59,10 +60,13 @@ UITableViewDelegate
     NSLog(@"");
 }
 //上个页面要用
-+(CGFloat)cellHeightWithModel:(id _Nullable)model{
-    if ([model isKindOfClass:NSArray.class]) {
-        NSArray <NSArray <NSString *>*>*arr = (NSArray *)model;
-        NSArray *temp_2_Arr = arr[1];// 二级标题
++(CGFloat)cellHeightWithModel:(id _Nullable)model{//
+    NSArray <NSArray <NSString *>*>*arr = (NSArray *)model[@"data"];
+    NSArray *temp_2_Arr = arr[1];// 二级标题
+    bool IsUnfold = [model[@"isUnfold"] boolValue];
+    if (IsUnfold) {
+        return (temp_2_Arr.count + 1) * 55;
+    }else{
         if (temp_2_Arr.count > Rule) {//包括主标题有大于3条数据 出现“加载更多”
             return (Rule + 2) * 55;//只展示3个数据
         }else if(temp_2_Arr.count <= Rule && temp_2_Arr.count >= 1){//没有 出现“加载更多”
@@ -70,18 +74,23 @@ UITableViewDelegate
         }else{//只有主标题
             return 55;
         }
-    }else{
-        return 0;
     }
 }
 //上个页面要用
 - (void)richElementsInCellWithModel:(id _Nullable)model{
     self.dataArr = (NSArray *)model[@"data"];
+    self.isUnfold = [model[@"isUnfold"] boolValue];
     self.titleLab.text = self.dataArr[0][0];//一级
     self.tableView.alpha = 1;//二级
-    if (self.dataArr[1].count > Rule) {
+    if (self.dataArr[1].count > Rule && !self.isUnfold) {
         self.loadingMoreBtn.alpha = 1;
         self.loadingMoreBtn.tag = [model[@"indexPath"] intValue];
+    }else if (self.isUnfold){
+        [self.loadingMoreBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.titleLab.mas_bottom);
+            make.left.right.equalTo(self.contentView);
+            make.bottom.equalTo(self.contentView);
+        }];
     }else{}
 }
 #pragma mark —————————— UITableViewDelegate,UITableViewDataSource ——————————
@@ -97,7 +106,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section{
-    if (self.dataArr[1].count > Rule) {
+    if (self.dataArr[1].count > Rule && !self.isUnfold) {
         return Rule;
     }else{
         return self.dataArr[1].count;
