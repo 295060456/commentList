@@ -86,11 +86,8 @@ UITableViewDelegate
         self.loadingMoreBtn.alpha = 1;
         self.loadingMoreBtn.tag = [model[@"indexPath"] intValue];
     }else if (self.isUnfold){
-        [self.loadingMoreBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.titleLab.mas_bottom);
-            make.left.right.equalTo(self.contentView);
-            make.bottom.equalTo(self.contentView);
-        }];
+        [self.loadingMoreBtn removeFromSuperview];
+        [self.tableView reloadData];
     }else{}
 }
 #pragma mark —————————— UITableViewDelegate,UITableViewDataSource ——————————
