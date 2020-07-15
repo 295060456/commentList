@@ -63,10 +63,10 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         NSLog(@"KKK");
     }else{
         fcm.isFullShow = !fcm.isFullShow;
-        [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section]
-                 withRowAnimation:UITableViewRowAnimationAutomatic];
-        
-        //    [self.tableView reloadData];
+#warning 使用动画刷屏 在下面几个数据刷新的时候会闪屏
+//        [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section]
+//                 withRowAnimation:UITableViewRowAnimationNone];
+        [self.tableView reloadData];
     }
 }
 
