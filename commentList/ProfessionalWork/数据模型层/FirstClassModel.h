@@ -22,10 +22,12 @@
 #pragma mask --- define
 @property(nonatomic,assign)BOOL _hasMore;
 @property(nonatomic,assign)BOOL isFullShow;
-///二级数据实际个数
+///当前二级数据实际个数
 @property(nonatomic,assign)int rand;
-///二级数据显示个数
+///当前二级数据显示个数
 @property(nonatomic,assign)int randShow;
+///显示控制，二级数据默认最多显示多少个
+@property(nonatomic,assign)int PreMax;
 
 + (FirstClassModel *)create:(NSString *)firstClassText;
 

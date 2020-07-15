@@ -27,8 +27,7 @@ UITableViewDelegate
 @property(nonatomic,strong)UITableView *tableView;
 ///所有数据一次性全部请求完
 @property(nonatomic,strong)NSMutableArray <FirstClassModel *>*sources;
-///显示个数限制
-@property(nonatomic,assign)int PreMax;//
+
 @property(nonatomic,assign)int NewPreMax;
 
 //@property(nonatomic,assign)long loadDataNum;//每次加载数据的
@@ -40,7 +39,6 @@ UITableViewDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
-    self.PreMax = preMax;
     self.tableView.alpha = 1;
     NSLog(@"");
 }
@@ -62,8 +60,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         FirstClassModel *fcm = self.sources[indexPath.section];
         fcm.randShow += LoadDataNum;//randShow 初始值是 preMax
         if (fcm.rand > fcm.randShow) {//还有数据
-            self.NewPreMax = self.PreMax + LoadDataNum;
-            self.PreMax = self.NewPreMax;
+            self.NewPreMax = preMax + LoadDataNum;
+            self.sources[indexPath.section].PreMax = self.NewPreMax;
             fcm._hasMore = YES;
         }else{//fcm.rand = preMax + 1 + LoadDataNum 数据没了
             fcm._hasMore = NO;
@@ -71,7 +69,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
         if (fcm._hasMore) {
             if ((fcm.isFullShow && indexPath.row < fcm.secClsModelMutArr.count) ||
-                indexPath.row < self.PreMax) {
+                indexPath.row < self.sources[indexPath.section].PreMax) {
                 #pragma warning 点击单元格要做的事
                 NSLog(@"KKK");
             }else{
@@ -87,10 +85,10 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section{
-    if (self.sources[section].secClsModelMutArr.count > self.PreMax &&
+    if (self.sources[section].secClsModelMutArr.count > self.sources[section].PreMax &&
         self.sources[section]._hasMore &&
         !self.sources[section].isFullShow) {
-        return self.PreMax + 1;
+        return self.sources[section].PreMax + 1;
     }else{
         return self.sources[section].secClsModelMutArr.count;
     }
@@ -103,7 +101,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         [cell richElementsInCellWithModel:self.sources[indexPath.section].secClsModelMutArr[indexPath.row].secondClassText];
         return cell;
     }else{//不是全显示
-        if (indexPath.row == self.PreMax &&
+        if (indexPath.row == self.sources[indexPath.section].PreMax &&
             self.sources[indexPath.section]._hasMore) {//
             LoadMoreTBVCell *cell = [LoadMoreTBVCell cellWith:tableView];
             [cell richElementsInCellWithModel:nil];
