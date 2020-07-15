@@ -26,7 +26,7 @@
 //        fcm.rand = preMax;//3
 //    }
     fcm.randShow = preMax;
-    fcm.rand = preMax + 1 + 2;//6
+    fcm.rand = preMax + 1 + 5;//6
     fcm.PreMax = preMax;
     
     for(NSInteger idx = 1; idx <= fcm.rand; idx ++){
