@@ -41,6 +41,11 @@ UITableViewDelegate
     self.tableView.alpha = 1;
     NSLog(@"");
 }
+
+-(void)headerIsTapEvent:(NonHoveringHeaderView *)sender{
+    //疑惑 传tag无效
+    NSLog(@"%p",sender);
+}
 #pragma mark —————————— UITableViewDelegate,UITableViewDataSource ——————————
 - (CGFloat)tableView:(UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -50,36 +55,19 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-//    self.loadDataNum = LoadDataNum;//在这里进行赋值
-    
-//    if (LoadMoreTBVCell.class == [tableView cellForRowAtIndexPath:indexPath].class) {
-//        //定位到具体的“加载更多”的锚点
-//        NSArray *arr_0 = self.dataMutArr[indexPath.section][0];
-//        NSArray *arr_1 = self.dataMutArr[indexPath.section][1];
-//        NSMutableArray *temp = [NSMutableArray arrayWithArray:arr_1];
-//        NSLog(@"");
-//
-//        if (self.loadDataNum != self.supplementDataMutArr.count) {//每次加载loadDataNum
-//            for (int i = 0; i < self.loadDataNum; i++) {
-//                NSString *str = self.supplementDataMutArr[i];
-//                [temp addObject:str];
-//            }
-//        }else{//全加载
-//            for (NSString *str in self.supplementDataMutArr) {
-//                [temp addObject:str];
-//            }
-//        }
-//        //整理数据源
-//        [self.dataMutArr removeObjectAtIndex:indexPath.section];
-//        [self.dataMutArr insertObject:@[arr_0,temp]
-//                              atIndex:indexPath.section];
-//        NSLog(@"");
-//        self.isFullShow = YES;
-//        //两种刷新方法
-//        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section]
-//                      withRowAnimation:UITableViewRowAnimationAutomatic];
-//        //    [self.tableView reloadData];
-//    }else{}
+    FirstClassModel *fcm = self.sources[indexPath.section];
+    if(!fcm._hasMore ||
+       (fcm.isFullShow && indexPath.row < fcm.secClsModelMutArr.count) ||
+       indexPath.row < preMax){
+        #pragma warning 点击单元格要做的事
+        NSLog(@"KKK");
+    }else{
+        fcm.isFullShow = !fcm.isFullShow;
+        [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section]
+                 withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+        //    [self.tableView reloadData];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -125,14 +113,32 @@ heightForHeaderInSection:(NSInteger)section{
 
 - (UIView *)tableView:(UITableView *)tableView
 viewForHeaderInSection:(NSInteger)section{
-    //viewForHeaderInSection 悬停与否
-    Class headerClass = NonHoveringHeaderView.class;
-//    Class headerClass = HoveringHeaderView.class;
     
-    UITableViewHeaderFooterView *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass(headerClass)];
+    NonHoveringHeaderView *header = nil;
+    
+    {//第一种创建方式
+        header = [[NonHoveringHeaderView alloc]initWithReuseIdentifier:NSStringFromClass(NonHoveringHeaderView.class)
+                                                              withData:@(section)];
+
+
+    
+        [header.result addTarget:self
+                          action:@selector(headerIsTapEvent:)
+                forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+//    {//第二种创建方式
+//        //viewForHeaderInSection 悬停与否
+//        Class headerClass = NonHoveringHeaderView.class;
+//    //    Class headerClass = HoveringHeaderView.class;
+//
+//        header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass(headerClass)];
+//    }
+    
     header.tableView = tableView;
     header.section = section;
     header.textLabel.text = self.sources[section].firstClassText;
+
     return header;
 }
 #pragma mark —— lazyLoad

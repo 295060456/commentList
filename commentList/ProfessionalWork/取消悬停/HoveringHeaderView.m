@@ -8,8 +8,28 @@
 
 #import "HoveringHeaderView.h"
 
+@interface HoveringHeaderView ()
+
+@end
+
 @implementation HoveringHeaderView
 
+- (instancetype)initWithReuseIdentifier:(nullable NSString *)reuseIdentifier
+                               withData:(id)data{
+    if (self = [super initWithReuseIdentifier:reuseIdentifier]) {
+        self.result.alpha = 1;
+    }return self;
+}
 
+#pragma mark —— lazyLoad
+-(UIControl *)result{
+    if (!_result) {
+        _result = UIControl.new;
+        [self.contentView addSubview:_result];
+        [_result mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.contentView);
+        }];
+    }return _result;
+}
 
 @end
