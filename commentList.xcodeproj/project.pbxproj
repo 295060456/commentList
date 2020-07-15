@@ -228,14 +228,11 @@
 		C5C2082924BDF186001ED2F5 /* ProfessionalWork */ = {
 			isa = PBXGroup;
 			children = (
-				C5F78A7F24BED4FD008A46EC /* 数据模型层 */,
-				C5C2081F24BDEEDE001ED2F5 /* 取消悬停 */,
 				C5C2081624BDE01C001ED2F5 /* ViewController.h */,
 				C5C2081724BDE01C001ED2F5 /* ViewController.m */,
-				C5C2081924BDE254001ED2F5 /* InfoTBVCell.h */,
-				C5C2081A24BDE254001ED2F5 /* InfoTBVCell.m */,
-				C5C2081C24BDE268001ED2F5 /* LoadMoreTBVCell.h */,
-				C5C2081D24BDE268001ED2F5 /* LoadMoreTBVCell.m */,
+				C5F78A8624BEE021008A46EC /* TBVCell */,
+				C5F78A7F24BED4FD008A46EC /* 数据模型层 */,
+				C5C2081F24BDEEDE001ED2F5 /* 取消悬停 */,
 			);
 			path = ProfessionalWork;
 			sourceTree = "<group>";
@@ -249,6 +246,17 @@
 				C5F78A8224BED515008A46EC /* SecondClassModel.m */,
 			);
 			path = "数据模型层";
+			sourceTree = "<group>";
+		};
+		C5F78A8624BEE021008A46EC /* TBVCell */ = {
+			isa = PBXGroup;
+			children = (
+				C5C2081924BDE254001ED2F5 /* InfoTBVCell.h */,
+				C5C2081A24BDE254001ED2F5 /* InfoTBVCell.m */,
+				C5C2081C24BDE268001ED2F5 /* LoadMoreTBVCell.h */,
+				C5C2081D24BDE268001ED2F5 /* LoadMoreTBVCell.m */,
+			);
+			path = TBVCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

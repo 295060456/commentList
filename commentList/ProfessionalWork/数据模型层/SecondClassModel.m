@@ -8,6 +8,10 @@
 
 #import "SecondClassModel.h"
 
+@interface SecondClassModel ()
+
+@end
+
 @implementation SecondClassModel
 
 + (SecondClassModel *)create:(NSString *)secondClassText{

@@ -8,15 +8,18 @@
 
 #import "FirstClassModel.h"
 
-@implementation FirstClassModel
+@interface FirstClassModel ()
 
+@end
+
+@implementation FirstClassModel
 + (FirstClassModel *)create:(NSString *)firstClassText{
     FirstClassModel *fcm = [[self alloc]init];
     fcm.firstClassText = firstClassText;
-    
+//    arc4random()是一个真正的伪随机算法，不需要随机数种子。
+//    产生一个[0,100)的数字
     NSInteger rand = arc4random() % 5 + 1;
     for(NSInteger idx = 0; idx < rand; idx ++){
-        #define swf stringWithFormat:@"%@----%ld"
         if (idx != 0) {
             NSString *show = [NSString stringWithFormat:@"%@----%ld", firstClassText, idx];
             SecondClassModel *lm = [SecondClassModel create:show];
