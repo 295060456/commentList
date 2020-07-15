@@ -18,7 +18,13 @@
     fcm.firstClassText = firstClassText;
 //    arc4random()是一个真正的伪随机算法，不需要随机数种子。
 //    产生一个[0,100)的数字
-    NSInteger rand = arc4random() % 5 + 1;
+//    NSInteger rand = arc4random() % 5 + 1;
+    NSInteger rand;
+    if (firstClassText.intValue % 2) {
+        rand = preMax + 5;
+    }else{
+        rand = preMax;
+    }
     for(NSInteger idx = 0; idx < rand; idx ++){
         if (idx != 0) {
             NSString *show = [NSString stringWithFormat:@"%@----%ld", firstClassText, idx];

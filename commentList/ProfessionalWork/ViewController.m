@@ -27,7 +27,9 @@ UITableViewDelegate
 >
 
 @property(nonatomic,strong)UITableView *tableView;
-@property(nonatomic,strong)NSMutableArray <FirstClassModel *>*sources;
+@property(nonatomic,strong)NSMutableArray <FirstClassModel *>*sources;//所有数据一次性全部请求完
+@property(nonatomic,assign)int PreMax;//
+@property(nonatomic,assign)int NewPreMax;
 
 //@property(nonatomic,assign)long loadDataNum;//每次加载数据的
 
@@ -38,6 +40,7 @@ UITableViewDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
+    self.PreMax = preMax;
     self.tableView.alpha = 1;
     NSLog(@"");
 }
@@ -56,25 +59,33 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     FirstClassModel *fcm = self.sources[indexPath.section];
-    if(!fcm._hasMore ||
-       (fcm.isFullShow && indexPath.row < fcm.secClsModelMutArr.count) ||
-       indexPath.row < preMax){
-        #pragma warning 点击单元格要做的事
-        NSLog(@"KKK");
+    
+    if (!fcm._hasMore) {
+        NSLog(@"DDD");
+        if (!self.NewPreMax) {
+            self.NewPreMax = self.PreMax + LoadDataNum;
+            self.PreMax = self.NewPreMax;
+        }
     }else{
-        fcm.isFullShow = !fcm.isFullShow;
-#warning 使用动画刷屏 在下面几个数据刷新的时候会闪屏
-//        [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section]
-//                 withRowAnimation:UITableViewRowAnimationNone];
-        [self.tableView reloadData];
+        if ((fcm.isFullShow && indexPath.row < fcm.secClsModelMutArr.count) ||
+            indexPath.row < self.PreMax) {
+            #pragma warning 点击单元格要做的事
+            NSLog(@"KKK");
+        }else{
+            fcm.isFullShow = !fcm.isFullShow;
+    #warning 使用动画刷屏 在下面几个数据刷新的时候会闪屏
+    //        [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section]
+    //                 withRowAnimation:UITableViewRowAnimationNone];
+            [self.tableView reloadData];
+        }
     }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section{
-    if (self.sources[section].secClsModelMutArr.count > preMax &&
+    if (self.sources[section].secClsModelMutArr.count > self.PreMax &&
         !self.sources[section].isFullShow) {
-        return preMax + 1;
+        return self.PreMax + 1;
     }else{
         return self.sources[section].secClsModelMutArr.count;
     }
@@ -82,9 +93,12 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    if (!self.sources[indexPath.section].isFullShow) {//不是全显示
-        if (indexPath.row == preMax) {
+    if (self.sources[indexPath.section].isFullShow) {//是全显示
+        InfoTBVCell *cell = [InfoTBVCell cellWith:tableView];
+        [cell richElementsInCellWithModel:self.sources[indexPath.section].secClsModelMutArr[indexPath.row].secondClassText];
+        return cell;
+    }else{//不是全显示
+        if (indexPath.row == self.PreMax ) {//&& self.sources[indexPath.section]._hasMore
             LoadMoreTBVCell *cell = [LoadMoreTBVCell cellWith:tableView];
             [cell richElementsInCellWithModel:nil];
             return cell;
@@ -95,10 +109,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
             [cell richElementsInCellWithModel:self.sources[indexPath.section].secClsModelMutArr[indexPath.row].secondClassText];
             return cell;
         }
-    }else{//全显示
-        InfoTBVCell *cell = [InfoTBVCell cellWith:tableView];
-        [cell richElementsInCellWithModel:self.sources[indexPath.section].secClsModelMutArr[indexPath.row].secondClassText];
-        return cell;
     }
 }
 
@@ -160,9 +170,9 @@ forHeaderFooterViewReuseIdentifier:NSStringFromClass(HoveringHeaderView.class)];
 
 - (NSMutableArray <FirstClassModel *>*)sources{
     if(!_sources){
-        _sources = [NSMutableArray array];
+        _sources = NSMutableArray.array;
         for(NSInteger idx = 1; idx <= 50; idx ++){
-            NSString *str = [NSString stringWithFormat:@"第%ld条评论", idx];
+            NSString *str = [NSString stringWithFormat:@"%ld", idx];
             FirstClassModel *hm = [FirstClassModel create:str];
             [_sources addObject:hm];
         }
