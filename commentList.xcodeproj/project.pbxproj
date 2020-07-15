@@ -24,6 +24,8 @@
 		C5C2082624BDEEFD001ED2F5 /* HoveringHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2082024BDEEFD001ED2F5 /* HoveringHeaderView.m */; };
 		C5C2082724BDEEFD001ED2F5 /* NonHoveringHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2082124BDEEFD001ED2F5 /* NonHoveringHeaderView.m */; };
 		C5C2082824BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2082424BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m */; };
+		C5F78A8424BED516008A46EC /* FirstClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78A8024BED515008A46EC /* FirstClassModel.m */; };
+		C5F78A8524BED516008A46EC /* SecondClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78A8224BED515008A46EC /* SecondClassModel.m */; };
 		D0808B087E0D3C40779EE807 /* Pods_commentList_commentListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7CAF397B699C809DE9FAD2 /* Pods_commentList_commentListUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +85,10 @@
 		C5C2082324BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewHeaderFooterView+Attribute.h"; sourceTree = "<group>"; };
 		C5C2082424BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewHeaderFooterView+Attribute.m"; sourceTree = "<group>"; };
 		C5C2082524BDEEFD001ED2F5 /* HoveringHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoveringHeaderView.h; sourceTree = "<group>"; };
+		C5F78A8024BED515008A46EC /* FirstClassModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstClassModel.m; sourceTree = "<group>"; };
+		C5F78A8124BED515008A46EC /* FirstClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstClassModel.h; sourceTree = "<group>"; };
+		C5F78A8224BED515008A46EC /* SecondClassModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondClassModel.m; sourceTree = "<group>"; };
+		C5F78A8324BED516008A46EC /* SecondClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondClassModel.h; sourceTree = "<group>"; };
 		ED5772C36E89E2D9DFDFA8BA /* Pods-commentListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commentListTests.release.xcconfig"; path = "Target Support Files/Pods-commentListTests/Pods-commentListTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD981085353B1F176FD123A4 /* Pods-commentList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commentList.release.xcconfig"; path = "Target Support Files/Pods-commentList/Pods-commentList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +228,7 @@
 		C5C2082924BDF186001ED2F5 /* ProfessionalWork */ = {
 			isa = PBXGroup;
 			children = (
+				C5F78A7F24BED4FD008A46EC /* 数据模型层 */,
 				C5C2081F24BDEEDE001ED2F5 /* 取消悬停 */,
 				C5C2081624BDE01C001ED2F5 /* ViewController.h */,
 				C5C2081724BDE01C001ED2F5 /* ViewController.m */,
@@ -231,6 +238,17 @@
 				C5C2081D24BDE268001ED2F5 /* LoadMoreTBVCell.m */,
 			);
 			path = ProfessionalWork;
+			sourceTree = "<group>";
+		};
+		C5F78A7F24BED4FD008A46EC /* 数据模型层 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F78A8124BED515008A46EC /* FirstClassModel.h */,
+				C5F78A8024BED515008A46EC /* FirstClassModel.m */,
+				C5F78A8324BED516008A46EC /* SecondClassModel.h */,
+				C5F78A8224BED515008A46EC /* SecondClassModel.m */,
+			);
+			path = "数据模型层";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,6 +493,8 @@
 				C5C2082724BDEEFD001ED2F5 /* NonHoveringHeaderView.m in Sources */,
 				C5802D1D24BCAD3900894903 /* main.m in Sources */,
 				C5C2081E24BDE268001ED2F5 /* LoadMoreTBVCell.m in Sources */,
+				C5F78A8524BED516008A46EC /* SecondClassModel.m in Sources */,
+				C5F78A8424BED516008A46EC /* FirstClassModel.m in Sources */,
 				C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */,
 				C5C2082824BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m in Sources */,
 				C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */,
