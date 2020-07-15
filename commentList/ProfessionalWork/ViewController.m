@@ -18,8 +18,6 @@
 #import "FirstClassModel.h"
 #import "SecondClassModel.h"
 
-#define LoadDataNum 1//加载更多数据 一次加载的个数
-
 @interface ViewController ()
 <
 UITableViewDelegate
@@ -27,7 +25,9 @@ UITableViewDelegate
 >
 
 @property(nonatomic,strong)UITableView *tableView;
-@property(nonatomic,strong)NSMutableArray <FirstClassModel *>*sources;//所有数据一次性全部请求完
+///所有数据一次性全部请求完
+@property(nonatomic,strong)NSMutableArray <FirstClassModel *>*sources;
+///显示个数限制
 @property(nonatomic,assign)int PreMax;//
 @property(nonatomic,assign)int NewPreMax;
 
@@ -57,33 +57,38 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    FirstClassModel *fcm = self.sources[indexPath.section];
-    
-    if (!fcm._hasMore) {
-        NSLog(@"DDD");
-        if (!self.NewPreMax) {
+    LoadMoreTBVCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if ([cell isKindOfClass:LoadMoreTBVCell.class]) {
+        FirstClassModel *fcm = self.sources[indexPath.section];
+        fcm.randShow += LoadDataNum;//randShow 初始值是 preMax
+        if (fcm.rand > fcm.randShow) {//还有数据
             self.NewPreMax = self.PreMax + LoadDataNum;
             self.PreMax = self.NewPreMax;
+            fcm._hasMore = YES;
+        }else{//fcm.rand = preMax + 1 + LoadDataNum 数据没了
+            fcm._hasMore = NO;
         }
-    }else{
-        if ((fcm.isFullShow && indexPath.row < fcm.secClsModelMutArr.count) ||
-            indexPath.row < self.PreMax) {
-            #pragma warning 点击单元格要做的事
-            NSLog(@"KKK");
-        }else{
-            fcm.isFullShow = !fcm.isFullShow;
+
+        if (fcm._hasMore) {
+            if ((fcm.isFullShow && indexPath.row < fcm.secClsModelMutArr.count) ||
+                indexPath.row < self.PreMax) {
+                #pragma warning 点击单元格要做的事
+                NSLog(@"KKK");
+            }else{
+                fcm.isFullShow = !fcm.isFullShow;
+            }
+        }else{}
     #warning 使用动画刷屏 在下面几个数据刷新的时候会闪屏
     //        [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section]
     //                 withRowAnimation:UITableViewRowAnimationNone];
-            [self.tableView reloadData];
-        }
-    }
+        [self.tableView reloadData];
+    }else{}
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section{
     if (self.sources[section].secClsModelMutArr.count > self.PreMax &&
+        self.sources[section]._hasMore &&
         !self.sources[section].isFullShow) {
         return self.PreMax + 1;
     }else{
@@ -98,7 +103,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         [cell richElementsInCellWithModel:self.sources[indexPath.section].secClsModelMutArr[indexPath.row].secondClassText];
         return cell;
     }else{//不是全显示
-        if (indexPath.row == self.PreMax ) {//&& self.sources[indexPath.section]._hasMore
+        if (indexPath.row == self.PreMax &&
+            self.sources[indexPath.section]._hasMore) {//
             LoadMoreTBVCell *cell = [LoadMoreTBVCell cellWith:tableView];
             [cell richElementsInCellWithModel:nil];
             return cell;
