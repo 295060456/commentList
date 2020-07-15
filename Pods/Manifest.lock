@@ -1,16 +1,73 @@
 PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - BRPickerView (2.6.3):
+    - BRPickerView/AddressPickerView (= 2.6.3)
+    - BRPickerView/Base (= 2.6.3)
+    - BRPickerView/DatePickerView (= 2.6.3)
+    - BRPickerView/StringPickerView (= 2.6.3)
+  - BRPickerView/AddressPickerView (2.6.3):
+    - BRPickerView/Base
+  - BRPickerView/Base (2.6.3)
+  - BRPickerView/DatePickerView (2.6.3):
+    - BRPickerView/Base
+  - BRPickerView/StringPickerView (2.6.3):
+    - BRPickerView/Base
+  - GKNavigationBar (1.0.8)
+  - JXCategoryView (1.5.5)
   - Masonry (1.1.0)
+  - MJExtension (3.2.2)
+  - MJRefresh (3.4.3)
+  - ReactiveObjC (3.1.1)
+  - TZImagePickerController (3.3.2)
 
 DEPENDENCIES:
+  - AFNetworking
+  - BRPickerView
+  - GKNavigationBar
+  - JXCategoryView
   - Masonry
+  - MJExtension
+  - MJRefresh
+  - ReactiveObjC
+  - TZImagePickerController
 
 SPEC REPOS:
   trunk:
+    - AFNetworking
+    - BRPickerView
+    - GKNavigationBar
+    - JXCategoryView
     - Masonry
+    - MJExtension
+    - MJRefresh
+    - ReactiveObjC
+    - TZImagePickerController
 
 SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  BRPickerView: 67ce855d07ff61771b586fea719053612bfeb1d6
+  GKNavigationBar: b88553e9a973b38724b57ac6d177e210199a3e3e
+  JXCategoryView: 0293fcb356f10a5c2e679dac0a1a5f1899ee0c87
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
+  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  TZImagePickerController: 36ca728ec681228918aa82e993aaab1962281b72
 
-PODFILE CHECKSUM: be4919ca88b773d6d8bf3fbea6395da8906b6a10
+PODFILE CHECKSUM: 3e8bd6467b0110f1eedb1273fff8f04287d95ab7
 
 COCOAPODS: 1.9.3

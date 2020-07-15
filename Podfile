@@ -6,7 +6,15 @@ target 'commentList' do
   use_frameworks!
 
   pod 'Masonry'
-
+  pod 'AFNetworking'
+  pod 'TZImagePickerController'
+  pod 'ReactiveObjC'
+  pod 'MJRefresh'
+  pod 'MJExtension'
+  pod 'BRPickerView'
+  pod 'GKNavigationBar'
+  pod 'JXCategoryView'
+  
   # Pods for commentList
 
   target 'commentListTests' do

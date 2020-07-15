@@ -11,8 +11,53 @@
 
 #import "AABlock.h"
 #import <Masonry/Masonry.h>
+#import "AFNetworking.h"
+#import <ReactiveObjC.h>
+#import "TZImagePickerController.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import <BRPickerView.h>
+#import "GKNavigationBar.h"
+#import "JXCategoryView.h"
+#import "ECAuthorizationTools.h"
+#import "SceneDelegate.h"
 
 #define WeakSelf __weak typeof(self) weakSelf = self;
 #define StrongSelf __strong typeof(self) strongSelf = self;
+
+#ifndef SCREEN_BOUNDS
+#define SCREEN_BOUNDS [UIScreen mainScreen].bounds
+#endif
+#ifndef SCREEN_WIDTH
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#endif
+#ifndef SCREEN_HEIGHT
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#endif
+#define kIMG(imgName) [UIImage imageNamed:imgName]
+
+static inline UIWindow * getMainWindow(){
+    UIWindow *window = nil;
+    if (@available(iOS 13.0, *)) {
+        window = [SceneDelegate sharedInstance].window;
+    }else{
+        window = UIApplication.sharedApplication.delegate.window;
+//        [UIApplication sharedApplication].keyWindow
+    }return window;
+}
+
+static inline BOOL isiPhoneX_series() {
+    BOOL iPhoneXSeries = NO;
+    if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {
+        return iPhoneXSeries;
+    }
+
+    if (@available(iOS 11.0, *)) {
+        UIWindow *mainWindow = getMainWindow();
+        if (mainWindow.safeAreaInsets.bottom > 0.0) {
+            iPhoneXSeries = YES;
+        }
+    }return iPhoneXSeries;
+}
 
 #endif /* PrefixHeader_pch */
