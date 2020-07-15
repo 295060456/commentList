@@ -28,10 +28,6 @@ UITableViewDelegate
 ///所有数据一次性全部请求完
 @property(nonatomic,strong)NSMutableArray <FirstClassModel *>*sources;
 
-@property(nonatomic,assign)int NewPreMax;
-
-//@property(nonatomic,assign)long loadDataNum;//每次加载数据的
-
 @end
 
 @implementation ViewController
@@ -60,8 +56,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         FirstClassModel *fcm = self.sources[indexPath.section];
         fcm.randShow += LoadDataNum;//randShow 初始值是 preMax
         if (fcm.rand > fcm.randShow) {//还有数据
-            self.NewPreMax = preMax + LoadDataNum;
-            self.sources[indexPath.section].PreMax = self.NewPreMax;
+            
+            self.sources[indexPath.section].PreMax += LoadDataNum;
+            
             fcm._hasMore = YES;
         }else{//fcm.rand = preMax + 1 + LoadDataNum 数据没了
             fcm._hasMore = NO;
