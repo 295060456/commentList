@@ -47,7 +47,7 @@ UITableViewDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor brownColor];
     self.gk_navTitleColor = [UIColor blackColor];
     self.gk_navBackgroundColor = [UIColor clearColor];
     self.gk_navigationBar.backgroundColor = [UIColor clearColor];
@@ -55,7 +55,7 @@ UITableViewDelegate
     self.gk_statusBarHidden = NO;
     self.gk_navLineHidden = YES;
     self.gk_navRightBarButtonItem = self.closeItem;
-    self.tableView.alpha = 1;
+//    self.tableView.alpha = 1;
 }
 
 - (void)viewWillLayoutSubviews {

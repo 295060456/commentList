@@ -15,7 +15,7 @@
     CGFloat liftingHeight;
 }
 
-@property(nonatomic,weak)CommentPopUpVC *commentPopUpVC;
+@property(nonatomic,strong)CommentPopUpVC *commentPopUpVC;
 
 @end
 
@@ -47,7 +47,6 @@
 }
 
 -(void)willOpen{
-//    weakify(self)
     [self.commentPopUpVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
         make.height.mas_equalTo(self->liftingHeight);
@@ -57,47 +56,47 @@
     
     [UIView animateWithDuration:0.3f
                      animations:^{
-//        strongify(self)
         [self.commentPopUpVC.view mas_updateConstraints:^(MASConstraintMaker *make) {
             make.bottom.mas_equalTo(0);
         }];
         // 注意需要再执行一次更新约束
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
-//        strongify(self)
         self->isOpen = !self->isOpen;
     }];
 }
 
 -(void)willClose_vertical{
-//    weakify(self)
     [UIView animateWithDuration:0.3f
                      animations:^{
-//        strongify(self)
         [self.commentPopUpVC.view mas_updateConstraints:^(MASConstraintMaker *make) {
             make.bottom.mas_equalTo(self->liftingHeight);
         }];
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
-//        @strongify(self)
-        self.commentPopUpVC = nil;//不写这一句，反复暴力点击的时候会崩
+        //vc的view减1
+        [self->_commentPopUpVC.view removeFromSuperview];
+        //vc为0
+        [self->_commentPopUpVC removeFromParentViewController];
+        self->_commentPopUpVC = nil;
         self->isOpen = !self->isOpen;
     }];
 }
 
 -(void)willClose_horizont{
-//    weakify(self)
     [UIView animateWithDuration:0.3f
                      animations:^{
-//        strongify(self)
         [self.commentPopUpVC.view mas_updateConstraints:^(MASConstraintMaker *make) {
 //            make.bottom.mas_equalTo(self->liftingHeight);
             make.left.mas_equalTo(SCREEN_WIDTH);
         }];
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
-//        strongify(self)
-        self.commentPopUpVC = nil;//不写这一句，反复暴力点击的时候会崩
+        //vc的view减1
+        [self.commentPopUpVC.view removeFromSuperview];
+        //vc为0
+        [self.commentPopUpVC removeFromParentViewController];
+        self->_commentPopUpVC = nil;
         self->isOpen = !self->isOpen;
     }];
 }
@@ -105,7 +104,7 @@
 #pragma mark —— lazyload
 -(CommentPopUpVC *)commentPopUpVC{
     if (!_commentPopUpVC) {
-        _commentPopUpVC = [CommentPopUpVC sharedInstance];
+        _commentPopUpVC = CommentPopUpVC.new;
         _commentPopUpVC.liftingHeight = liftingHeight;
         [self addChildViewController:_commentPopUpVC];
         [self.view addSubview:_commentPopUpVC.view];
