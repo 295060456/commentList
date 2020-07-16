@@ -39,10 +39,6 @@ UITableViewDelegate
     NSLog(@"");
 }
 
--(void)headerIsTapEvent:(NonHoveringHeaderView *)sender{
-    //疑惑 传tag无效
-    NSLog(@"%p",sender);
-}
 #pragma mark —————————— UITableViewDelegate,UITableViewDataSource ——————————
 - (CGFloat)tableView:(UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -129,13 +125,8 @@ viewForHeaderInSection:(NSInteger)section{
     
     {//第一种创建方式
         header = [[NonHoveringHeaderView alloc]initWithReuseIdentifier:NSStringFromClass(NonHoveringHeaderView.class)
-                                                              withData:@(section)];
+                                                            withData:@(section)];
 
-
-    
-        [header.result addTarget:self
-                          action:@selector(headerIsTapEvent:)
-                forControlEvents:UIControlEventTouchUpInside];
     }
     
 //    {//第二种创建方式
@@ -152,6 +143,7 @@ viewForHeaderInSection:(NSInteger)section{
 
     return header;
 }
+
 #pragma mark —— lazyLoad
 -(UITableView *)tableView{
     if (!_tableView) {

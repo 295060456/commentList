@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		47F1DE0F9D5C2BEEE0202B39 /* Pods_commentListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0CF0E67EA8BFA59C3D36147 /* Pods_commentListTests.framework */; };
 		B39069305FAC615D8C6F4D6B /* Pods_commentList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC5B97A55D8F418AC00D92E /* Pods_commentList.framework */; };
+		C573502B24C004EC0028C27D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2081724BDE01C001ED2F5 /* ViewController.m */; };
 		C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0824BCAD3800894903 /* AppDelegate.m */; };
 		C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0B24BCAD3800894903 /* SceneDelegate.m */; };
 		C5802D1224BCAD3800894903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5802D1024BCAD3800894903 /* Main.storyboard */; };
@@ -25,7 +26,6 @@
 		C5C2082824BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2082424BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m */; };
 		C5F78A8424BED516008A46EC /* FirstClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78A8024BED515008A46EC /* FirstClassModel.m */; };
 		C5F78A8524BED516008A46EC /* SecondClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78A8224BED515008A46EC /* SecondClassModel.m */; };
-		C5F78B1424BF3F73008A46EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78B1324BF3F73008A46EC /* ViewController.m */; };
 		C5F78B1824BF3FA0008A46EC /* CommentPopUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78B1624BF3FA0008A46EC /* CommentPopUpVC.m */; };
 		C5F78B1B24BF3FB0008A46EC /* CommentPopUpVC+VM.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78B1924BF3FB0008A46EC /* CommentPopUpVC+VM.m */; };
 		C5F78B1F24BF4195008A46EC /* PopUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78B1D24BF4195008A46EC /* PopUpVC.m */; };
@@ -610,9 +610,9 @@
 				C5C2081E24BDE268001ED2F5 /* LoadMoreTBVCell.m in Sources */,
 				C5F78A8524BED516008A46EC /* SecondClassModel.m in Sources */,
 				C5F78B1F24BF4195008A46EC /* PopUpVC.m in Sources */,
+				C573502B24C004EC0028C27D /* ViewController.m in Sources */,
 				C5F78B2324BF41EF008A46EC /* BaseVC.m in Sources */,
 				C5F78A8424BED516008A46EC /* FirstClassModel.m in Sources */,
-				C5F78B1424BF3F73008A46EC /* ViewController.m in Sources */,
 				C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */,
 				C5C2082824BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m in Sources */,
 				C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */,

@@ -23,6 +23,10 @@
     }return self;
 }
 
+-(void)resultAction:(id)sender{
+    NSLog(@"self.tag = %ld",(long)self.tag);
+}
+
 - (void)setFrame:(CGRect)frame {
     [super setFrame:[self.tableView rectForHeaderInSection:self.section]];
 }
@@ -31,6 +35,9 @@
 -(UIControl *)result{
     if (!_result) {
         _result = UIControl.new;
+        [_result addTarget:self
+                    action:@selector(resultAction:)
+          forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:_result];
         [_result mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.contentView);

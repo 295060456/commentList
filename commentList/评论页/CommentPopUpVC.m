@@ -36,7 +36,6 @@ UITableViewDelegate
 
 - (void)dealloc {
     NSLog(@"Running self.class = %@;NSStringFromSelector(_cmd) = '%@';__FUNCTION__ = %s", self.class, NSStringFromSelector(_cmd),__FUNCTION__);
-    //直接置为nil 不走dealloc 但是内存打印是nil
 }
 
 - (instancetype)init{
