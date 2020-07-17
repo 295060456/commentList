@@ -117,7 +117,6 @@
         [self addChildViewController:_commentPopUpVC];
         [self.view addSubview:_commentPopUpVC.view];
         [_commentPopUpVC actionBlock:^(id data) {
-            
             MoveDirection moveDirection = [data intValue];
             if (moveDirection == MoveDirection_vertical_down) {
                 [self willClose_vertical];
