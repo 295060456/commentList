@@ -117,11 +117,14 @@
         [self addChildViewController:_commentPopUpVC];
         [self.view addSubview:_commentPopUpVC.view];
         [_commentPopUpVC actionBlock:^(id data) {
+            
             MoveDirection moveDirection = [data intValue];
-            if (moveDirection == MoveDirection_vertical) {
+            if (moveDirection == MoveDirection_vertical_down) {
                 [self willClose_vertical];
-            }else if (moveDirection == MoveDirection_horizont){
+            }else if (moveDirection == MoveDirection_horizont_right){
                 [self willClose_horizont];
+            }else if (moveDirection == MoveDirection_vertical_up){
+                [self willOpen];
             }else{}
         }];
     }return _commentPopUpVC;

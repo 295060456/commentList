@@ -18,8 +18,12 @@ UIGestureRecognizerDelegate
 @property(nonatomic,assign)BOOL isPush;
 @property(nonatomic,assign)BOOL isPresent;
 
+@property(nonatomic,assign)CGFloat orginX;
+@property(nonatomic,assign)CGFloat orginY;
+
 @property(nonatomic,strong)UIPanGestureRecognizer *panGestureRecognizer;
 @property(nonatomic,strong)UITapGestureRecognizer *tapGestureRecognizer;
+@property(nonatomic,strong)UISwipeGestureRecognizer *swipeGestureRecognizer;
 
 @end
 
@@ -88,6 +92,8 @@ static dispatch_once_t onceToken;
     [super viewDidLoad];
     self.panGestureRecognizer.enabled = YES;
     self.tapGestureRecognizer.enabled = YES;
+    self.orginX = self.view.center.x;
+    self.orginY = self.view.center.y;
     NSLog(@"");
 }
 
@@ -105,6 +111,30 @@ static dispatch_once_t onceToken;
 
 -(void)actionBlock:(DataBlock)block{
     self.block = block;
+}
+
+- (void)swipeGestureRecognizerDirectionUp:(UISwipeGestureRecognizer *)swipe{
+    switch (swipe.direction) {
+        case UISwipeGestureRecognizerDirectionRight:{
+            
+        }break;
+        case UISwipeGestureRecognizerDirectionLeft:{
+            
+        }break;
+        case UISwipeGestureRecognizerDirectionUp:{
+            if (self.block) {
+                self.block(@(MoveDirection_vertical_up));
+            }
+        }break;
+        case UISwipeGestureRecognizerDirectionDown:{
+            if (self.block) {
+                self.block(@(MoveDirection_vertical_down));
+            }
+        }break;
+            
+        default:
+            break;
+    }
 }
 #pragma mark - UIGestureRecognizerDelegate
 //每次走2次
@@ -174,6 +204,7 @@ static dispatch_once_t onceToken;
             //消失阶段
             self.view.center = CGPointMake(
                                            self.view.center.x + translatePoint.x,
+//                                           self.orginY
                                            self.view.center.y //+ translatePoint.y
                                            );
             [panGestureRecognizer setTranslation:CGPointZero
@@ -184,9 +215,8 @@ static dispatch_once_t onceToken;
             if (self.view.left < SCREEN_WIDTH / 2) {
                 self.view.left = 0;
             }else{
-//                self.view.left = SCREEN_WIDTH;//消失
                 if (self.block) {
-                    self.block(@(MoveDirection_horizont));
+                    self.block(@(MoveDirection_horizont_right));//消失
                 }
             }
         }
@@ -202,6 +232,7 @@ static dispatch_once_t onceToken;
             //消失阶段
             self.view.center = CGPointMake(
                                            self.view.center.x ,//+ translatePoint.x,
+//                                           self.orginX,
                                            self.view.center.y + translatePoint.y
                                            );
             [panGestureRecognizer setTranslation:CGPointZero
@@ -210,9 +241,8 @@ static dispatch_once_t onceToken;
         
         if (gestureRecognizerState == UIGestureRecognizerStateEnded) {
             if (self.view.top > self.liftingHeight * 1.5) {
-//                self.view.top = SCREEN_HEIGHT;//消失
                 if (self.block) {
-                    self.block(@(MoveDirection_vertical));
+                    self.block(@(MoveDirection_vertical_down));//消失
                 }
             }else{
                 self.view.top = self.liftingHeight;
@@ -242,11 +272,22 @@ static dispatch_once_t onceToken;
     }return _panGestureRecognizer;
 }
 
+-(UISwipeGestureRecognizer *)swipeGestureRecognizer{
+    if (!_swipeGestureRecognizer) {
+        _swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                                            action:@selector(swipeGestureRecognizerDirectionUp:)];
+        // 轻扫方向:默认是右边
+        _swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionUp;
+    }return _swipeGestureRecognizer;
+}
+
 -(CGFloat)liftingHeight{
     if (!_liftingHeight) {
         
     }return _liftingHeight;
 }
+
+
 
 
 @end
