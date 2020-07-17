@@ -18,11 +18,7 @@ UIGestureRecognizerDelegate
 @property(nonatomic,assign)BOOL isPush;
 @property(nonatomic,assign)BOOL isPresent;
 
-@property(nonatomic,assign)CGFloat orginX;
-@property(nonatomic,assign)CGFloat orginY;
-
 @property(nonatomic,strong)UIPanGestureRecognizer *panGestureRecognizer;
-@property(nonatomic,strong)UITapGestureRecognizer *tapGestureRecognizer;
 @property(nonatomic,strong)UISwipeGestureRecognizer *swipeGestureRecognizerUp;
 @property(nonatomic,strong)UISwipeGestureRecognizer *swipeGestureRecognizerDown;
 
@@ -92,11 +88,8 @@ static dispatch_once_t onceToken;
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.panGestureRecognizer.enabled = YES;
-    self.tapGestureRecognizer.enabled = YES;
-    self.swipeGestureRecognizerUp.enabled = YES;
-    self.swipeGestureRecognizerDown.enabled = YES;
-    self.orginX = self.view.center.x;
-    self.orginY = self.view.center.y;
+//    self.swipeGestureRecognizerUp.enabled = YES;
+//    self.swipeGestureRecognizerDown.enabled = YES;
     NSLog(@"");
 }
 
@@ -149,11 +142,6 @@ static dispatch_once_t onceToken;
 //是否接收一个手势触摸事件，默认为YES，返回NO为不接收
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
     return YES;
-}
-//点击手势 放开手的时候走
-- (void)handleGuesture:(UITapGestureRecognizer *)sender{
-    NSLog(@"点击手势");
-//    CGPoint point = [sender locationInView:self.view];
 }
 //拖拽手势
 - (void)pan:(UIPanGestureRecognizer *)panGestureRecognizer{
@@ -211,7 +199,6 @@ static dispatch_once_t onceToken;
             if (self.view.mj_x < 0) {
                 self.view.mj_x = 0;
             }
-            
         }
         
         if (gestureRecognizerState == UIGestureRecognizerStateEnded) {
@@ -254,16 +241,6 @@ static dispatch_once_t onceToken;
 }
 
 #pragma mark —— lazyLoad
--(UITapGestureRecognizer *)tapGestureRecognizer{
-    if (!_tapGestureRecognizer) {
-        _tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                        action:@selector(handleGuesture:)];
-        _tapGestureRecognizer.delegate = self;
-        
-        [self.view addGestureRecognizer:_tapGestureRecognizer];
-    }return _tapGestureRecognizer;
-}
-
 -(UIPanGestureRecognizer *)panGestureRecognizer{
     if (!_panGestureRecognizer) {
         _panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self
