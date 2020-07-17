@@ -23,7 +23,8 @@ UIGestureRecognizerDelegate
 
 @property(nonatomic,strong)UIPanGestureRecognizer *panGestureRecognizer;
 @property(nonatomic,strong)UITapGestureRecognizer *tapGestureRecognizer;
-@property(nonatomic,strong)UISwipeGestureRecognizer *swipeGestureRecognizer;
+@property(nonatomic,strong)UISwipeGestureRecognizer *swipeGestureRecognizerUp;
+@property(nonatomic,strong)UISwipeGestureRecognizer *swipeGestureRecognizerDown;
 
 @end
 
@@ -92,6 +93,8 @@ static dispatch_once_t onceToken;
     [super viewDidLoad];
     self.panGestureRecognizer.enabled = YES;
     self.tapGestureRecognizer.enabled = YES;
+    self.swipeGestureRecognizerUp.enabled = YES;
+    self.swipeGestureRecognizerDown.enabled = YES;
     self.orginX = self.view.center.x;
     self.orginY = self.view.center.y;
     NSLog(@"");
@@ -272,13 +275,22 @@ static dispatch_once_t onceToken;
     }return _panGestureRecognizer;
 }
 
--(UISwipeGestureRecognizer *)swipeGestureRecognizer{
-    if (!_swipeGestureRecognizer) {
-        _swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+-(UISwipeGestureRecognizer *)swipeGestureRecognizerUp{
+    if (!_swipeGestureRecognizerUp) {
+        _swipeGestureRecognizerUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self
                                                                             action:@selector(swipeGestureRecognizerDirectionUp:)];
         // 轻扫方向:默认是右边
-        _swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionUp;
-    }return _swipeGestureRecognizer;
+        _swipeGestureRecognizerUp.direction = UISwipeGestureRecognizerDirectionUp;
+    }return _swipeGestureRecognizerUp;
+}
+
+-(UISwipeGestureRecognizer *)swipeGestureRecognizerDown{
+    if (!_swipeGestureRecognizerDown) {
+        _swipeGestureRecognizerUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                                            action:@selector(swipeGestureRecognizerDirectionUp:)];
+        // 轻扫方向:默认是右边
+        _swipeGestureRecognizerUp.direction = UISwipeGestureRecognizerDirectionDown;
+    }return _swipeGestureRecognizerDown;
 }
 
 -(CGFloat)liftingHeight{
