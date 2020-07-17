@@ -281,6 +281,7 @@ static dispatch_once_t onceToken;
                                                                             action:@selector(swipeGestureRecognizerDirectionUp:)];
         // 轻扫方向:默认是右边
         _swipeGestureRecognizerUp.direction = UISwipeGestureRecognizerDirectionUp;
+        [self.view addGestureRecognizer:_swipeGestureRecognizerUp];
     }return _swipeGestureRecognizerUp;
 }
 
@@ -290,6 +291,7 @@ static dispatch_once_t onceToken;
                                                                             action:@selector(swipeGestureRecognizerDirectionUp:)];
         // 轻扫方向:默认是右边
         _swipeGestureRecognizerUp.direction = UISwipeGestureRecognizerDirectionDown;
+        [self.view addGestureRecognizer:_swipeGestureRecognizerUp];
     }return _swipeGestureRecognizerDown;
 }
 
