@@ -205,13 +205,13 @@ static dispatch_once_t onceToken;
         NSLog(@"向右➡️移动");
         if (gestureRecognizerState == UIGestureRecognizerStateChanged) {
             //消失阶段
-            self.view.center = CGPointMake(
-                                           self.view.center.x + translatePoint.x,
-//                                           self.orginY
-                                           self.view.center.y //+ translatePoint.y
-                                           );
-            [panGestureRecognizer setTranslation:CGPointZero
-                                          inView:self.view];
+            self.view.transform = CGAffineTransformTranslate(self.view.transform,
+                                                             translatePoint.x,
+                                                             0);
+            if (self.view.mj_x < 0) {
+                self.view.mj_x = 0;
+            }
+            
         }
         
         if (gestureRecognizerState == UIGestureRecognizerStateEnded) {
@@ -233,13 +233,12 @@ static dispatch_once_t onceToken;
         NSLog(@"向下⤵️移动");
         if (gestureRecognizerState == UIGestureRecognizerStateChanged) {
             //消失阶段
-            self.view.center = CGPointMake(
-                                           self.view.center.x ,//+ translatePoint.x,
-//                                           self.orginX,
-                                           self.view.center.y + translatePoint.y
-                                           );
-            [panGestureRecognizer setTranslation:CGPointZero
-                                          inView:self.view];
+            self.view.transform = CGAffineTransformTranslate(self.view.transform,
+                                                             0,
+                                                             translatePoint.y);
+            if (self.view.mj_y < self.view.mj_h) {
+                self.view.mj_y = self.view.mj_h;
+            }
         }
         
         if (gestureRecognizerState == UIGestureRecognizerStateEnded) {
