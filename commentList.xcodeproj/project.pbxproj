@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		47F1DE0F9D5C2BEEE0202B39 /* Pods_commentListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0CF0E67EA8BFA59C3D36147 /* Pods_commentListTests.framework */; };
 		B39069305FAC615D8C6F4D6B /* Pods_commentList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC5B97A55D8F418AC00D92E /* Pods_commentList.framework */; };
-		C573502B24C004EC0028C27D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2081724BDE01C001ED2F5 /* ViewController.m */; };
 		C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0824BCAD3800894903 /* AppDelegate.m */; };
 		C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0B24BCAD3800894903 /* SceneDelegate.m */; };
 		C5802D1224BCAD3800894903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5802D1024BCAD3800894903 /* Main.storyboard */; };
@@ -35,6 +34,7 @@
 		C5F78B2F24BF44F1008A46EC /* ECAuthorizationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78B2E24BF44F1008A46EC /* ECAuthorizationTools.m */; };
 		C5F78B3224BF46BD008A46EC /* 官方@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5F78B3024BF46BD008A46EC /* 官方@2x.png */; };
 		C5F78B3324BF46BD008A46EC /* 官方@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5F78B3124BF46BD008A46EC /* 官方@3x.png */; };
+		C5F8C09724C09C6400782B46 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78B1324BF3F73008A46EC /* ViewController.m */; };
 		D0808B087E0D3C40779EE807 /* Pods_commentList_commentListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7CAF397B699C809DE9FAD2 /* Pods_commentList_commentListUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -610,12 +610,12 @@
 				C5C2081E24BDE268001ED2F5 /* LoadMoreTBVCell.m in Sources */,
 				C5F78A8524BED516008A46EC /* SecondClassModel.m in Sources */,
 				C5F78B1F24BF4195008A46EC /* PopUpVC.m in Sources */,
-				C573502B24C004EC0028C27D /* ViewController.m in Sources */,
 				C5F78B2324BF41EF008A46EC /* BaseVC.m in Sources */,
 				C5F78A8424BED516008A46EC /* FirstClassModel.m in Sources */,
 				C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */,
 				C5C2082824BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m in Sources */,
 				C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */,
+				C5F8C09724C09C6400782B46 /* ViewController.m in Sources */,
 				C5F78B2F24BF44F1008A46EC /* ECAuthorizationTools.m in Sources */,
 				C5C2082624BDEEFD001ED2F5 /* HoveringHeaderView.m in Sources */,
 				C5F78B2B24BF422D008A46EC /* FSCustomButton.m in Sources */,

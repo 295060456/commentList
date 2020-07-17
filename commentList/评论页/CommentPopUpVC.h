@@ -12,8 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CommentPopUpVC : PopUpVC
 
-@property(nonatomic,assign)CGFloat liftingHeight;
-
 @end
 
 NS_ASSUME_NONNULL_END

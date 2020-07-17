@@ -14,6 +14,7 @@ target 'commentList' do
   pod 'BRPickerView'
   pod 'GKNavigationBar'
   pod 'JXCategoryView'
+  pod 'YYKit'
   
   # Pods for commentList
 

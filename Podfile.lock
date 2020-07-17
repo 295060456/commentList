@@ -33,6 +33,9 @@ PODS:
   - MJRefresh (3.4.3)
   - ReactiveObjC (3.1.1)
   - TZImagePickerController (3.3.2)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - AFNetworking
@@ -44,6 +47,7 @@ DEPENDENCIES:
   - MJRefresh
   - ReactiveObjC
   - TZImagePickerController
+  - YYKit
 
 SPEC REPOS:
   trunk:
@@ -56,6 +60,7 @@ SPEC REPOS:
     - MJRefresh
     - ReactiveObjC
     - TZImagePickerController
+    - YYKit
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
@@ -67,7 +72,8 @@ SPEC CHECKSUMS:
   MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   TZImagePickerController: 36ca728ec681228918aa82e993aaab1962281b72
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 3e8bd6467b0110f1eedb1273fff8f04287d95ab7
+PODFILE CHECKSUM: cba908a12ee0dfd907f86697f64eed3335981c24
 
 COCOAPODS: 1.9.3

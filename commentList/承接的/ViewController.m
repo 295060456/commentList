@@ -33,17 +33,9 @@
     isOpen = NO;
     liftingHeight = SCREEN_HEIGHT / 2;
 }
+#pragma mark —— PopUpVCDelegate
+- (void)closeComment {
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches
-          withEvent:(UIEvent *)event{
-    //初始值为NO
-    if (isOpen) {//目前为开
-        [self willClose_vertical];
-    }else{//目前为关
-        if (!_commentPopUpVC) {
-            [self willOpen];
-        }
-    }
 }
 
 -(void)willOpen{
@@ -74,10 +66,10 @@
         }];
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
-        //vc的view减1
-        [self->_commentPopUpVC.view removeFromSuperview];
+                //vc的view减1
+        [self.commentPopUpVC.view removeFromSuperview];
         //vc为0
-        [self->_commentPopUpVC removeFromParentViewController];
+        [self.commentPopUpVC removeFromParentViewController];
         self->_commentPopUpVC = nil;
         self->isOpen = !self->isOpen;
     }];
@@ -101,6 +93,22 @@
     }];
 }
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches
+          withEvent:(UIEvent *)event{
+    for (UITouch *touch in touches) {
+        UIView *touchView = touch.view;
+        if (touchView == _commentPopUpVC.view) {
+            
+        }else if(touchView == self.view){
+            if (_commentPopUpVC.view) {
+                [self willClose_vertical];
+            }else{
+                [self willOpen];
+            }
+        }else{}
+    }
+}
+
 #pragma mark —— lazyload
 -(CommentPopUpVC *)commentPopUpVC{
     if (!_commentPopUpVC) {
@@ -108,17 +116,13 @@
         _commentPopUpVC.liftingHeight = liftingHeight;
         [self addChildViewController:_commentPopUpVC];
         [self.view addSubview:_commentPopUpVC.view];
-//        weakify(self)
         [_commentPopUpVC actionBlock:^(id data) {
-//            strongify(self)
-            if ([data isKindOfClass:NSNumber.class]) {
-                NSNumber *num = (NSNumber *)data;
-                if (num.intValue == MoveDirection_horizont) {
-                    [self willClose_horizont];
-                }else if (num.intValue == MoveDirection_vertical){
-                    [self willClose_vertical];
-                }else{}
-            }
+            MoveDirection moveDirection = [data intValue];
+            if (moveDirection == MoveDirection_vertical) {
+                [self willClose_vertical];
+            }else if (moveDirection == MoveDirection_horizont){
+                [self willClose_horizont];
+            }else{}
         }];
     }return _commentPopUpVC;
 }

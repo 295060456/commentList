@@ -21,6 +21,7 @@
 #import "JXCategoryView.h"
 #import "ECAuthorizationTools.h"
 #import "SceneDelegate.h"
+#import "YYKit.h"
 
 #define WeakSelf __weak typeof(self) weakSelf = self;
 #define StrongSelf __strong typeof(self) strongSelf = self;
