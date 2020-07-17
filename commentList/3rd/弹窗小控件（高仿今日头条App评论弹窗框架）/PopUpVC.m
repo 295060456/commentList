@@ -109,7 +109,7 @@ static dispatch_once_t onceToken;
     self.block = block;
 }
 
-- (void)swipeGestureRecognizerDirectionUp:(UISwipeGestureRecognizer *)swipe{
+- (void)swipeGestureRecognizerDirection:(UISwipeGestureRecognizer *)swipe{
     switch (swipe.direction) {
         case UISwipeGestureRecognizerDirectionRight:{
             
@@ -254,7 +254,7 @@ static dispatch_once_t onceToken;
 -(UISwipeGestureRecognizer *)swipeGestureRecognizerUp{
     if (!_swipeGestureRecognizerUp) {
         _swipeGestureRecognizerUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self
-                                                                            action:@selector(swipeGestureRecognizerDirectionUp:)];
+                                                                            action:@selector(swipeGestureRecognizerDirection:)];
         // 轻扫方向:默认是右边
         _swipeGestureRecognizerUp.direction = UISwipeGestureRecognizerDirectionUp;
         [self.view addGestureRecognizer:_swipeGestureRecognizerUp];
@@ -264,7 +264,7 @@ static dispatch_once_t onceToken;
 -(UISwipeGestureRecognizer *)swipeGestureRecognizerDown{
     if (!_swipeGestureRecognizerDown) {
         _swipeGestureRecognizerUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self
-                                                                            action:@selector(swipeGestureRecognizerDirectionUp:)];
+                                                                            action:@selector(swipeGestureRecognizerDirection:)];
         // 轻扫方向:默认是右边
         _swipeGestureRecognizerUp.direction = UISwipeGestureRecognizerDirectionDown;
         [self.view addGestureRecognizer:_swipeGestureRecognizerUp];
