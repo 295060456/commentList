@@ -22,6 +22,9 @@ UIGestureRecognizerDelegate
 @property(nonatomic,strong)UISwipeGestureRecognizer *swipeGestureRecognizerUp;
 @property(nonatomic,strong)UISwipeGestureRecognizer *swipeGestureRecognizerDown;
 
+/// move 0 不动 1 右 -1 下
+@property (nonatomic, assign) NSInteger isMove;
+
 @end
 
 @implementation PopUpVC
@@ -88,8 +91,8 @@ static dispatch_once_t onceToken;
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.panGestureRecognizer.enabled = YES;
-//    self.swipeGestureRecognizerUp.enabled = YES;
-//    self.swipeGestureRecognizerDown.enabled = YES;
+    //self.swipeGestureRecognizerUp.enabled = YES;
+    //self.swipeGestureRecognizerDown.enabled = YES;
     NSLog(@"");
 }
 
@@ -124,6 +127,7 @@ static dispatch_once_t onceToken;
         }break;
         case UISwipeGestureRecognizerDirectionDown:{
             if (self.block) {
+                
                 self.block(@(MoveDirection_vertical_down));
             }
         }break;
@@ -179,37 +183,40 @@ static dispatch_once_t onceToken;
         //    }
     }
 
+    
+    
     // 获取手势状态
     UIGestureRecognizerState gestureRecognizerState = panGestureRecognizer.state;
     // 获取手指的偏移量
     CGPoint translatePoint = [panGestureRecognizer translationInView:self.view];
     // 移动方向
     CGPoint velocity = [self.panGestureRecognizer velocityInView:self.view];
-     if (velocity.x < 0){
-        NSLog(@"向左◀️移动");
-        //不能移动
-        self.view.left = 0;
-    }else if (velocity.x > 0){
-        NSLog(@"向右➡️移动");
-        if (gestureRecognizerState == UIGestureRecognizerStateChanged) {
-            //消失阶段
-//            self.view.transform = CGAffineTransformTranslate(self.view.transform,
-//                                                             translatePoint.x,
-//                                                             0);
-//            if (self.view.mj_x < 0) {
-//                self.view.mj_x = 0;
-//            }
+    NSLog(@"point:%@",NSStringFromCGPoint(translatePoint));
+    if (gestureRecognizerState == UIGestureRecognizerStateBegan) {
+        NSLog(@"UIGestureRecognizerStateBegan point:%@",NSStringFromCGPoint(translatePoint));
+        if (translatePoint.x < 0 || translatePoint.y < 0) {
+            self.isMove = 0;
+        }else{
+            if (translatePoint.x > translatePoint.y) {
+                self.isMove = 1;
+            }else{
+                self.isMove = -1;
+            }
+        }
+    }else if (gestureRecognizerState == UIGestureRecognizerStateChanged) {
+        NSLog(@"UIGestureRecognizerStateChanged point:%@",NSStringFromCGPoint(translatePoint));
+        if (self.isMove) {
+            if (self.isMove == 1) {
+                self.view.center = CGPointMake(self.view.center.x + translatePoint.x,self.view.center.y);
+            }else{
+                self.view.center = CGPointMake(self.view.center.x ,self.view.center.y + translatePoint.y);
+            }
             
-            self.view.center = CGPointMake(
-                                           self.view.center.x + translatePoint.x,
-//                                           self.orginY
-                                           self.view.center.y //+ translatePoint.y
-                                           );
-            [panGestureRecognizer setTranslation:CGPointZero
-                                          inView:self.view];
+            [panGestureRecognizer setTranslation:CGPointZero inView:self.view];
         }
         
-        if (gestureRecognizerState == UIGestureRecognizerStateEnded) {
+    }else if (gestureRecognizerState == UIGestureRecognizerStateEnded) {
+        NSLog(@"UIGestureRecognizerStateEnded point:%@",NSStringFromCGPoint(translatePoint));
             if (self.view.left < SCREEN_WIDTH / 2) {
                 self.view.left = 0;
             }else{
@@ -217,34 +224,7 @@ static dispatch_once_t onceToken;
                     self.block(@(MoveDirection_horizont_right));//消失
                 }
             }
-        }
-    }else{}
 
-    if (velocity.y < 0){
-        NSLog(@"向上⤴️移动");
-        //不能移动
-        self.view.top = self.liftingHeight;
-    }else if (velocity.y > 0){
-        NSLog(@"向下⤵️移动");
-        if (gestureRecognizerState == UIGestureRecognizerStateChanged) {
-            //消失阶段
-//            self.view.transform = CGAffineTransformTranslate(self.view.transform,
-//                                                             0,
-//                                                             translatePoint.y);
-//            if (self.view.mj_y < self.view.mj_h) {
-//                self.view.mj_y = self.view.mj_h;
-//            }
-            
-            self.view.center = CGPointMake(
-                                           self.view.center.x ,//+ translatePoint.x,
-//                                           self.orginX,
-                                           self.view.center.y + translatePoint.y
-                                           );
-            [panGestureRecognizer setTranslation:CGPointZero
-                                          inView:self.view];
-        }
-        
-        if (gestureRecognizerState == UIGestureRecognizerStateEnded) {
             if (self.view.top > self.liftingHeight * 1.5) {
                 if (self.block) {
                     self.block(@(MoveDirection_vertical_down));//消失
@@ -252,8 +232,78 @@ static dispatch_once_t onceToken;
             }else{
                 self.view.top = self.liftingHeight;
             }
-        }
-    }else{}
+        
+    }
+    
+//     if (velocity.x < 0){
+//        NSLog(@"向左◀️移动");
+//        //不能移动
+//        self.view.left = 0;
+//    }else if (velocity.x > 0){
+//        NSLog(@"向右➡️移动");
+//        if (gestureRecognizerState == UIGestureRecognizerStateChanged) {
+//            //消失阶段
+////            self.view.transform = CGAffineTransformTranslate(self.view.transform,
+////                                                             translatePoint.x,
+////                                                             0);
+////            if (self.view.mj_x < 0) {
+////                self.view.mj_x = 0;
+////            }
+//
+//            self.view.center = CGPointMake(
+//                                           self.view.center.x + translatePoint.x,
+////                                           self.orginY
+//                                           self.view.center.y //+ translatePoint.y
+//                                           );
+//            [panGestureRecognizer setTranslation:CGPointZero
+//                                          inView:self.view];
+//        }
+//
+//        if (gestureRecognizerState == UIGestureRecognizerStateEnded) {
+//            if (self.view.left < SCREEN_WIDTH / 2) {
+//                self.view.left = 0;
+//            }else{
+//                if (self.block) {
+//                    self.block(@(MoveDirection_horizont_right));//消失
+//                }
+//            }
+//        }
+//    }else{}
+//
+//    if (velocity.y < 0){
+//        NSLog(@"向上⤴️移动");
+//        //不能移动
+//        self.view.top = self.liftingHeight;
+//    }else if (velocity.y > 0){
+//        NSLog(@"向下⤵️移动");
+//        if (gestureRecognizerState == UIGestureRecognizerStateChanged) {
+//            //消失阶段
+////            self.view.transform = CGAffineTransformTranslate(self.view.transform,
+////                                                             0,
+////                                                             translatePoint.y);
+////            if (self.view.mj_y < self.view.mj_h) {
+////                self.view.mj_y = self.view.mj_h;
+////            }
+//
+//            self.view.center = CGPointMake(
+//                                           self.view.center.x ,//+ translatePoint.x,
+////                                           self.orginX,
+//                                           self.view.center.y + translatePoint.y
+//                                           );
+//            [panGestureRecognizer setTranslation:CGPointZero
+//                                          inView:self.view];
+//        }
+//
+//        if (gestureRecognizerState == UIGestureRecognizerStateEnded) {
+//            if (self.view.top > self.liftingHeight * 1.5) {
+//                if (self.block) {
+//                    self.block(@(MoveDirection_vertical_down));//消失
+//                }
+//            }else{
+//                self.view.top = self.liftingHeight;
+//            }
+//        }
+//    }else{}
 }
 
 #pragma mark —— lazyLoad
@@ -262,7 +312,7 @@ static dispatch_once_t onceToken;
         _panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self
                                                                         action:@selector(pan:)];
         _panGestureRecognizer.minimumNumberOfTouches = 1;//default = 1
-        [self.view addGestureRecognizer:self.panGestureRecognizer];
+        [self.view addGestureRecognizer:_panGestureRecognizer];
         self.panGestureRecognizer.delegate = self;
     }return _panGestureRecognizer;
 }
@@ -274,6 +324,7 @@ static dispatch_once_t onceToken;
         // 轻扫方向:默认是右边
         _swipeGestureRecognizerUp.direction = UISwipeGestureRecognizerDirectionUp;
         [self.view addGestureRecognizer:_swipeGestureRecognizerUp];
+        _swipeGestureRecognizerUp.delegate = self;
     }return _swipeGestureRecognizerUp;
 }
 
@@ -283,6 +334,7 @@ static dispatch_once_t onceToken;
                                                                             action:@selector(swipeGestureRecognizerDirection:)];
         // 轻扫方向:默认是右边
         _swipeGestureRecognizerUp.direction = UISwipeGestureRecognizerDirectionDown;
+        _swipeGestureRecognizerUp.delegate = self;
         [self.view addGestureRecognizer:_swipeGestureRecognizerUp];
     }return _swipeGestureRecognizerDown;
 }
