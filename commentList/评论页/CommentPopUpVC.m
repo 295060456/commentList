@@ -54,7 +54,7 @@ UITableViewDelegate
     self.gk_statusBarHidden = NO;
     self.gk_navLineHidden = YES;
     self.gk_navRightBarButtonItem = self.closeItem;
-//    self.tableView.alpha = 1;
+    self.tableView.alpha = 1;
 }
 
 - (void)viewWillLayoutSubviews {
