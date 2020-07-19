@@ -22,6 +22,7 @@
 #import "ECAuthorizationTools.h"
 #import "SceneDelegate.h"
 #import "YYKit.h"
+#import "UIView+Extras.h"
 
 #define WeakSelf __weak typeof(self) weakSelf = self;
 #define StrongSelf __strong typeof(self) strongSelf = self;

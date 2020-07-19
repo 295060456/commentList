@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		47F1DE0F9D5C2BEEE0202B39 /* Pods_commentListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0CF0E67EA8BFA59C3D36147 /* Pods_commentListTests.framework */; };
 		B39069305FAC615D8C6F4D6B /* Pods_commentList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC5B97A55D8F418AC00D92E /* Pods_commentList.framework */; };
+		C54F104D24C480D200EE1E67 /* UIView+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C54F104B24C480D200EE1E67 /* UIView+Extras.m */; };
 		C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0824BCAD3800894903 /* AppDelegate.m */; };
 		C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0B24BCAD3800894903 /* SceneDelegate.m */; };
 		C5802D1224BCAD3800894903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5802D1024BCAD3800894903 /* Main.storyboard */; };
@@ -63,6 +64,8 @@
 		A0CF0E67EA8BFA59C3D36147 /* Pods_commentListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_commentListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB97C5DB8C2372F6EF680D78 /* Pods-commentListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commentListTests.debug.xcconfig"; path = "Target Support Files/Pods-commentListTests/Pods-commentListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC11A027C76951D368AEBAA5 /* Pods-commentList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commentList.debug.xcconfig"; path = "Target Support Files/Pods-commentList/Pods-commentList.debug.xcconfig"; sourceTree = "<group>"; };
+		C54F104B24C480D200EE1E67 /* UIView+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extras.m"; sourceTree = "<group>"; };
+		C54F104C24C480D200EE1E67 /* UIView+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extras.h"; sourceTree = "<group>"; };
 		C5802D0424BCAD3800894903 /* commentList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = commentList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5802D0724BCAD3800894903 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5802D0824BCAD3800894903 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -354,6 +357,8 @@
 		C5F78B3424BF4712008A46EC /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				C54F104C24C480D200EE1E67 /* UIView+Extras.h */,
+				C54F104B24C480D200EE1E67 /* UIView+Extras.m */,
 				C5F78B2C24BF44E8008A46EC /* ECAuthorizationTools */,
 				C5F78B2424BF4225008A46EC /* 高度自定义的按钮 */,
 				C5F78B2024BF41E6008A46EC /* BaseVC */,
@@ -611,6 +616,7 @@
 				C5F78A8524BED516008A46EC /* SecondClassModel.m in Sources */,
 				C5F78B1F24BF4195008A46EC /* PopUpVC.m in Sources */,
 				C5F78B2324BF41EF008A46EC /* BaseVC.m in Sources */,
+				C54F104D24C480D200EE1E67 /* UIView+Extras.m in Sources */,
 				C5F78A8424BED516008A46EC /* FirstClassModel.m in Sources */,
 				C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */,
 				C5C2082824BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m in Sources */,
