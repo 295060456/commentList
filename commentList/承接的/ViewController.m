@@ -114,8 +114,6 @@
     if (!_commentPopUpVC) {
         _commentPopUpVC = CommentPopUpVC.new;
         _commentPopUpVC.liftingHeight = liftingHeight;
-//        [UIView appointCornerCutToCircleWithTargetView:_commentPopUpVC.view
-//                                     byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight];
         [UIView appointCornerCutToCircleWithTargetView:_commentPopUpVC.view
                                      byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight
                                            cornerRadii:CGSizeMake(20, 20)];
