@@ -21,7 +21,6 @@
     if (!cell) {
         cell = [[InfoTBVCell alloc]initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:@"InfoTBVCell"];
-        cell.contentView.backgroundColor = [UIColor greenColor];
 
     }return cell;
 }
