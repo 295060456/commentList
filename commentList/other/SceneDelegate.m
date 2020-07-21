@@ -15,21 +15,20 @@
 
 @implementation SceneDelegate
 
-+ (SceneDelegate *)sharedInstance{
-    static SceneDelegate *_instance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        if (!_instance) {
-
-            _instance = [[super allocWithZone:NULL] init];
+static SceneDelegate *static_sceneDelegate = nil;
++(SceneDelegate *)sharedInstance{
+    @synchronized(self){
+        if (!static_sceneDelegate) {
+            static_sceneDelegate = SceneDelegate.new;
         }
-    });return _instance;
+    }return static_sceneDelegate;
 }
 
-+ (id)allocWithZone:(struct _NSZone *)zone{
-    return [self sharedInstance];
+-(instancetype)init{
+    if (self = [super init]) {
+        static_sceneDelegate = self;
+    }return self;
 }
-
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
