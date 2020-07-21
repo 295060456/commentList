@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) UIWindow * window;
 
-+ (instancetype)sharedInstance;
++ (SceneDelegate *)sharedInstance;
 
 @end
 
