@@ -32,6 +32,24 @@
     self.view.backgroundColor = [UIColor redColor];
     isOpen = NO;
     liftingHeight = SCREEN_HEIGHT / 2;
+    [self keyboard];
+}
+
+-(void)keyboard{
+#warning 此处必须禁用IQKeyboardManager，因为框架的原因，弹出键盘的时候是整个VC全部向上抬起，一个是弹出的高度不对，第二个是弹出的逻辑不正确，就只是需要评论页向上同步弹出键盘高度即可。可是一旦禁用IQKeyboardManager这里就必须手动监听键盘弹出高度，再根据这个高度对评论页做二次约束
+    [IQKeyboardManager sharedManager].enable = NO;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillChangeFrameNotification:)
+                                                 name:UIKeyboardWillChangeFrameNotification
+                                               object:nil];
+}
+
+- (void)keyboardWillChangeFrameNotification:(NSNotification *)notification{
+    NSDictionary *userInfo = notification.userInfo;
+    CGRect beginFrame = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];//(origin = (x = 0, y = 896), size = (width = 414, height = 346))
+    CGRect endFrame = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];//(origin = (x = 0, y = 550), size = (width = 414, height = 346))
+    CGFloat KeyboardOffsetY = beginFrame.origin.y - endFrame.origin.y;
+    self.commentPopUpVC.view.mj_y -= KeyboardOffsetY;
 }
 #pragma mark —— PopUpVCDelegate
 - (void)closeComment {

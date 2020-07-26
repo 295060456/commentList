@@ -11,6 +11,8 @@
 
 #import "AABlock.h"
 #import <Masonry/Masonry.h>
+#import <IQKeyboardManager/IQKeyboardManager.h>
+#import <LYEmptyView/LYEmptyViewHeader.h>
 #import "AFNetworking.h"
 #import <ReactiveObjC.h>
 #import "TZImagePickerController.h"
@@ -20,9 +22,12 @@
 #import "GKNavigationBar.h"
 #import "JXCategoryView.h"
 #import "ECAuthorizationTools.h"
-#import "SceneDelegate.h"
 #import "YYKit.h"
+#import "SDWebImage-umbrella.h"//不支持图片后处理
 #import "UIView+Extras.h"
+#import "UIImage+YBGIF.h"
+#import "SceneDelegate.h"
+
 
 #define WeakSelf __weak typeof(self) weakSelf = self;
 #define StrongSelf __strong typeof(self) strongSelf = self;
@@ -37,6 +42,31 @@
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #endif
 #define kIMG(imgName) [UIImage imageNamed:imgName]
+
+#define RGBCOLOR(r,g,b)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+#define COLOR_RGB(r,g,b,a)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+#define HEXCOLOR(hexValue)  [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0 green:((float)((hexValue & 0xFF00) >> 8))/255.0 blue:((float)(hexValue & 0xFF))/255.0 alpha:1]
+#define MianScreen          UIScreen.mainScreen.bounds.size
+#define Device_Width        MianScreen.width//获取屏幕宽高
+#define SCALING_RATIO(UISize) (UISize) * Device_Width / 375.0f//全局比例尺
+///常见颜色
+#define kClearColor     [UIColor clearColor]
+#define kBlackColor     [UIColor blackColor]
+#define kBlueColor      [UIColor blueColor]
+#define kWhiteColor     [UIColor whiteColor]
+#define kCyanColor      [UIColor cyanColor]
+#define kGrayColor      [UIColor grayColor]
+#define kOrangeColor    [UIColor orangeColor]
+#define kRedColor       [UIColor redColor]
+#define KBrownColor     [UIColor brownColor]
+#define KDarkGrayColor  [UIColor darkGrayColor]
+#define KDarkTextColor  [UIColor darkTextColor]
+#define KYellowColor    [UIColor yellowColor]
+#define KPurpleColor    [UIColor purpleColor]
+#define KLightTextColor [UIColor lightTextColor]
+#define KLightGrayColor [UIColor lightGrayColor]
+#define KGreenColor     [UIColor greenColor]
+#define KMagentaColor   [UIColor magentaColor]
 
 static inline UIWindow * getMainWindow(){
     UIWindow *window = nil;

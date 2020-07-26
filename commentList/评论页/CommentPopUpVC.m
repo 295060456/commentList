@@ -11,6 +11,7 @@
 
 #import "LoadMoreTBVCell.h"
 #import "InfoTBVCell.h"
+#import "InputView.h"
 
 #import "NonHoveringHeaderView.h"
 #import "HoveringHeaderView.h"
@@ -26,6 +27,7 @@ UITableViewDelegate
 >
 
 @property(nonatomic,strong)UITableView *tableView;
+@property(nonatomic,strong)InputView *inputView;
 @property(nonatomic,strong)UIBarButtonItem *closeItem;
 ///所有数据一次性全部请求完
 @property(nonatomic,strong)NSMutableArray <FirstClassModel *>*sourcesMutArr;
@@ -51,19 +53,11 @@ UITableViewDelegate
     self.gk_navBackgroundColor = [UIColor clearColor];
     self.gk_navigationBar.backgroundColor = [UIColor clearColor];
     self.gk_navTitle = @"评论页";
-    self.gk_statusBarHidden = NO;
+    self.gk_statusBarHidden = YES;
     self.gk_navLineHidden = YES;
     self.gk_navRightBarButtonItem = self.closeItem;
+    self.inputView.alpha = 1;
     self.tableView.alpha = 1;
-}
-
-- (void)viewWillLayoutSubviews {
-    //这种做法确实是没有办法，因为没有办法获取到navigationBar里面的_UINavigationBarContentView
-    self.gk_navigationBar.frame = CGRectMake(0,
-                                             -GK_NAVBAR_HEIGHT,
-                                             SCREEN_WIDTH,
-                                             58);
-    [self.gk_navigationBar layoutSubviews];
 }
 
 #pragma mark —— 点击事件
@@ -190,9 +184,22 @@ viewForHeaderInSection:(NSInteger)section{
     return header;
 }
 #pragma mark —— lazyLoad
+-(__kindof InputView *)inputView{
+    if (!_inputView) {
+        _inputView = InputView.new;
+        _inputView.backgroundColor = HEXCOLOR(0x20242F);
+        [self.view addSubview:_inputView];
+        [_inputView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.bottom.equalTo(self.view);
+            make.height.mas_equalTo(SCALING_RATIO(62));
+        }];
+    }return _inputView;
+}
+
 -(UITableView *)tableView{
     if (!_tableView) {
         _tableView = UITableView.new;
+        _tableView.backgroundColor = HEXCOLOR(0x242A37);
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_tableView registerClass:NonHoveringHeaderView.class
@@ -202,18 +209,19 @@ forHeaderFooterViewReuseIdentifier:NSStringFromClass(HoveringHeaderView.class)];
         _tableView.mj_header = self.tableViewHeader;
         _tableView.mj_footer = self.tableViewFooter;
         _tableView.mj_footer.hidden = NO;
-        CGFloat D = isiPhoneX_series()?80:49;
+        _tableView.ly_emptyView = [LYEmptyView emptyViewWithImageStr:@"noData"
+                                                            titleStr:@"还没有评论哦"
+                                                           detailStr:@""];
         [self.view addSubview:_tableView];
-        _tableView.frame = CGRectMake(0,
-                                      GK_NAVBAR_HEIGHT,
-                                      SCREEN_WIDTH,
-                                      self.liftingHeight - GK_NAVBAR_HEIGHT - D);
-//        [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.left.right.bottom.equalTo(self.view);
-//            make.top.equalTo(self.gk_navigationBar.mas_bottom);
-//        }];
+        extern CGFloat LZB_TABBAR_HEIGHT;
+        [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.equalTo(self.view);
+            make.top.equalTo(self.gk_navigationBar.mas_bottom);
+            make.bottom.equalTo(self.inputView.mas_top);
+        }];
     }return _tableView;
 }
+
 
 - (NSMutableArray <FirstClassModel *>*)sourcesMutArr{
     if(!_sourcesMutArr){

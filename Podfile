@@ -15,6 +15,9 @@ target 'commentList' do
   pod 'GKNavigationBar'
   pod 'JXCategoryView'
   pod 'YYKit'
+  pod 'IQKeyboardManager'
+  pod 'LYEmptyView'
+  pod 'SDWebImage'
   
   # Pods for commentList
 
