@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "CommentPopUpVC.h"
 
+#import "TestClass.h"
+
 @interface ViewController ()
 {
     BOOL isOpen;
@@ -34,6 +36,7 @@
     isOpen = NO;
     liftingHeight = SCREEN_HEIGHT / 2;
     [self keyboard];
+    [TestClass print:@"a",@"b",@"c", nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated{

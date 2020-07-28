@@ -148,6 +148,7 @@
 		C590FF1224CFF163000F36C9 /* gif_header_32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C590FEDB24CFF163000F36C9 /* gif_header_32@2x.png */; };
 		C590FF1324CFF163000F36C9 /* gif_header_5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C590FEDC24CFF163000F36C9 /* gif_header_5@2x.png */; };
 		C590FF1424CFF163000F36C9 /* gif_header_18@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C590FEDD24CFF163000F36C9 /* gif_header_18@2x.png */; };
+		C590FF1824CFF8F1000F36C9 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C590FF1724CFF8F1000F36C9 /* TestClass.m */; };
 		C5C2081B24BDE254001ED2F5 /* InfoTBVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2081A24BDE254001ED2F5 /* InfoTBVCell.m */; };
 		C5C2081E24BDE268001ED2F5 /* LoadMoreTBVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2081D24BDE268001ED2F5 /* LoadMoreTBVCell.m */; };
 		C5C2082624BDEEFD001ED2F5 /* HoveringHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2082024BDEEFD001ED2F5 /* HoveringHeaderView.m */; };
@@ -345,6 +346,8 @@
 		C590FEDB24CFF163000F36C9 /* gif_header_32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gif_header_32@2x.png"; sourceTree = "<group>"; };
 		C590FEDC24CFF163000F36C9 /* gif_header_5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gif_header_5@2x.png"; sourceTree = "<group>"; };
 		C590FEDD24CFF163000F36C9 /* gif_header_18@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gif_header_18@2x.png"; sourceTree = "<group>"; };
+		C590FF1624CFF8F1000F36C9 /* TestClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
+		C590FF1724CFF8F1000F36C9 /* TestClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
 		C5C2081224BDC6B5001ED2F5 /* AABlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AABlock.h; sourceTree = "<group>"; };
 		C5C2081324BDC6C9001ED2F5 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C5C2081624BDE01C001ED2F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -511,6 +514,7 @@
 		C5802D0624BCAD3800894903 /* commentList */ = {
 			isa = PBXGroup;
 			children = (
+				C590FF1524CFF8D1000F36C9 /* 可变参数Test */,
 				C5C2081324BDC6C9001ED2F5 /* PrefixHeader.pch */,
 				C5802D1B24BCAD3900894903 /* Info.plist */,
 				C5F78B3424BF4712008A46EC /* 3rd */,
@@ -772,6 +776,15 @@
 				C590FE5124CFF151000F36C9 /* gif_header_55@3x.png */,
 			);
 			path = "166 * 166 @3x";
+			sourceTree = "<group>";
+		};
+		C590FF1524CFF8D1000F36C9 /* 可变参数Test */ = {
+			isa = PBXGroup;
+			children = (
+				C590FF1624CFF8F1000F36C9 /* TestClass.h */,
+				C590FF1724CFF8F1000F36C9 /* TestClass.m */,
+			);
+			path = "可变参数Test";
 			sourceTree = "<group>";
 		};
 		C5C2081F24BDEEDE001ED2F5 /* 取消悬停 */ = {
@@ -1234,6 +1247,7 @@
 				C5F78B2324BF41EF008A46EC /* BaseVC.m in Sources */,
 				C590FE1524CFEA14000F36C9 /* CommentPopUpVC+VM.m in Sources */,
 				C52F592124CD4AA0001F72B3 /* InputView.m in Sources */,
+				C590FF1824CFF8F1000F36C9 /* TestClass.m in Sources */,
 				C52F592424CD4B77001F72B3 /* ZYTextField.m in Sources */,
 				C54F104D24C480D200EE1E67 /* UIView+Extras.m in Sources */,
 				C5F78A8424BED516008A46EC /* FirstClassModel.m in Sources */,
