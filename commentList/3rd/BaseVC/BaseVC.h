@@ -15,6 +15,11 @@ typedef enum : NSUInteger {
     ComingStyle_PRESENT
 } ComingStyle;
 
+typedef enum : NSUInteger {
+    SYS_AlertController = 0,//UIAlertController
+    YX_AlertController//Pod
+} AlertControllerStyle;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseVC : UIViewController
@@ -24,6 +29,8 @@ UIGestureRecognizerDelegate
 ,TZImagePickerControllerDelegate
 >
 
+@property(nonatomic,strong)NSString *path;
+@property(nonatomic,strong)UIImageView *gifImageView;
 @property(nonatomic,strong)RACSignal *reqSignal;
 @property(nonatomic,strong)MJRefreshAutoGifFooter *tableViewFooter;
 @property(nonatomic,strong)MJRefreshGifHeader *tableViewHeader;
@@ -45,26 +52,29 @@ UIGestureRecognizerDelegate
 @property(nonatomic,copy)void (^ReachableNetWorking)(void);//有网络
 
 -(void)backBtnClickEvent:(UIButton *)sender;
--(void)VCwillComingBlock:(DataBlock)block;//即将进来
--(void)VCdidComingBlock:(DataBlock)block;//已经进来
--(void)VCwillBackBlock:(DataBlock)block;//即将出去
--(void)VCdidBackBlock:(DataBlock)block;//已经出去
--(void)GettingPicBlock:(DataBlock)block;//点选的图片
--(void)BRStringPickerViewBlock:(DataBlock)block;
+-(void)VCwillComingBlock:(MKDataBlock)block;//即将进来
+-(void)VCdidComingBlock:(MKDataBlock)block;//已经进来
+-(void)VCwillBackBlock:(MKDataBlock)block;//即将出去
+-(void)VCdidBackBlock:(MKDataBlock)block;//已经出去
+-(void)GettingPicBlock:(MKDataBlock)block;//点选的图片
+-(void)BRStringPickerViewBlock:(MKDataBlock)block;
 
 -(void)AFNReachability;
 
 -(void)showLoginAlertView;
--(void)showAlertViewTitle:(NSString *)title
-                  message:(NSString *)message
-              btnTitleArr:(NSArray <NSString*>*)btnTitleArr
-           alertBtnAction:(NSArray <NSString*>*)alertBtnActionArr;
--(void)showActionSheetTitle:(NSString *)title
-                    message:(NSString *)message
-                btnTitleArr:(NSArray <NSString*>*)btnTitleArr
-             alertBtnAction:(NSArray <NSString*>*)alertBtnActionArr
-                     sender:(nullable UIButton *)sender;
-
+-(void)alertControllerStyle:(AlertControllerStyle)alertControllerStyle
+         showAlertViewTitle:(nullable NSString *)title
+                    message:(nullable NSString *)message
+            isSeparateStyle:(BOOL)isSeparateStyle
+                btnTitleArr:(NSArray <NSString *> *)btnTitleArr
+             alertBtnAction:(NSArray <NSString *> *)alertBtnActionArr;
+-(void)alertControllerStyle:(AlertControllerStyle)alertControllerStyle
+       showActionSheetTitle:(nullable NSString *)title
+                    message:(nullable NSString *)message
+            isSeparateStyle:(BOOL)isSeparateStyle
+                btnTitleArr:(NSArray <NSString *> *)btnTitleArr
+             alertBtnAction:(NSArray <NSString *> *)alertBtnActionArr
+                     sender:(nullable UIControl *)sender;
 -(void)locateTabBar:(NSInteger)index;
 -(void)setStatusBarBackgroundColor:(UIColor *)color;
 -(void)choosePic;//选择图片
@@ -75,7 +85,7 @@ UIGestureRecognizerDelegate
                  comingStyle:(ComingStyle)comingStyle
            presentationStyle:(UIModalPresentationStyle)presentationStyle
                requestParams:(nullable id)requestParams
-                     success:(DataBlock)block
+                     success:(MKDataBlock)block
                     animated:(BOOL)animated;
 
 @end

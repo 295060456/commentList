@@ -8,21 +8,26 @@
 //
 
 #import "BaseVC.h"
+#import "SDWebImage-umbrella.h"//不支持图片后处理
+#import "UIImage+GIF.h"
 
 @interface BaseVC ()
 <
 JXCategoryListContentViewDelegate
 >
 
-@property(nonatomic,copy)DataBlock willComingBlock;
-@property(nonatomic,copy)DataBlock didComingBlock;
-@property(nonatomic,copy)DataBlock willBackBlock;
-@property(nonatomic,copy)DataBlock didBackBlock;
-@property(nonatomic,copy)DataBlock picBlock;
-@property(nonatomic,copy)DataBlock brStringPickerViewBlock;
+@property(nonatomic,strong)UIImage *image;
+@property(nonatomic,strong)NSData *data;
+
+@property(nonatomic,copy)MKDataBlock willComingBlock;
+@property(nonatomic,copy)MKDataBlock didComingBlock;
+@property(nonatomic,copy)MKDataBlock willBackBlock;
+@property(nonatomic,copy)MKDataBlock didBackBlock;
+@property(nonatomic,copy)MKDataBlock picBlock;
+@property(nonatomic,copy)MKDataBlock brStringPickerViewBlock;
 
 @property(nonatomic,strong)id requestParams;
-@property(nonatomic,copy)DataBlock successBlock;
+@property(nonatomic,copy)MKDataBlock successBlock;
 @property(nonatomic,assign)BOOL isPush;
 @property(nonatomic,assign)BOOL isPresent;
 @property(nonatomic,strong)AFNetworkReachabilityManager *afNetworkReachabilityManager;
@@ -46,7 +51,7 @@ JXCategoryListContentViewDelegate
                  comingStyle:(ComingStyle)comingStyle
            presentationStyle:(UIModalPresentationStyle)presentationStyle
                requestParams:(nullable id)requestParams
-                     success:(DataBlock)block
+                     success:(MKDataBlock)block
                     animated:(BOOL)animated{
     BaseVC *vc = BaseVC.new;
     vc.successBlock = block;
@@ -138,27 +143,27 @@ JXCategoryListContentViewDelegate
                                              animated:NO];
 }
 
--(void)VCwillComingBlock:(DataBlock)block{//即将进来
+-(void)VCwillComingBlock:(MKDataBlock)block{//即将进来
     self.willComingBlock = block;
 }
 
--(void)VCdidComingBlock:(DataBlock)block{//已经进来
+-(void)VCdidComingBlock:(MKDataBlock)block{//已经进来
     self.didComingBlock = block;
 }
 
--(void)VCwillBackBlock:(DataBlock)block{//即将出去
+-(void)VCwillBackBlock:(MKDataBlock)block{//即将出去
     self.willBackBlock = block;
 }
 
--(void)VCdidBackBlock:(DataBlock)block{//已经出去
+-(void)VCdidBackBlock:(MKDataBlock)block{//已经出去
     self.didBackBlock = block;
 }
 
--(void)GettingPicBlock:(DataBlock)block{//点选的图片
+-(void)GettingPicBlock:(MKDataBlock)block{//点选的图片
     self.picBlock = block;
 }
 
--(void)BRStringPickerViewBlock:(DataBlock)block{
+-(void)BRStringPickerViewBlock:(MKDataBlock)block{
     self.brStringPickerViewBlock = block;
 }
 #pragma mark —— JXCategoryListContentViewDelegate
@@ -187,7 +192,7 @@ JXCategoryListContentViewDelegate
             @strongify(self)
             switch (status) {
                 case AFNetworkReachabilityStatusUnknown:
-//                    DLog(@"未知网络");
+                    DLog(@"未知网络");
                     if (self.UnknownNetWorking) {
                         self.UnknownNetWorking();
                     }
@@ -196,7 +201,7 @@ JXCategoryListContentViewDelegate
                     }
                     break;
                 case AFNetworkReachabilityStatusReachableViaWWAN:
-//                    DLog(@"3G网络");//不是WiFi的网络都会识别成3G网络.比如2G/3G/4G网络
+                    DLog(@"3G网络");//不是WiFi的网络都会识别成3G网络.比如2G/3G/4G网络
                     if (self.ReachableViaWWANNetWorking) {
                         self.ReachableViaWWANNetWorking();
                     }
@@ -205,7 +210,7 @@ JXCategoryListContentViewDelegate
                     }
                     break;
                 case AFNetworkReachabilityStatusReachableViaWiFi:
-//                    DLog(@"WIFI网络");
+                    DLog(@"WIFI网络");
                     if (self.ReachableViaWiFiNetWorking) {
                         self.ReachableViaWiFiNetWorking();
                     }
@@ -214,7 +219,7 @@ JXCategoryListContentViewDelegate
                     }
                     break;
                 case AFNetworkReachabilityStatusNotReachable:
-//                    DLog(@"没有网络");
+                    DLog(@"没有网络");
                     if (self.NotReachableNetWorking) {
                         self.NotReachableNetWorking();
                     }
@@ -226,25 +231,125 @@ JXCategoryListContentViewDelegate
     [self.afNetworkReachabilityManager startMonitoring];
 }
 
--(void)showAlertViewTitle:(NSString *)title
-                  message:(NSString *)message
-              btnTitleArr:(NSArray <NSString*>*)btnTitleArr
-           alertBtnAction:(NSArray <NSString*>*)alertBtnActionArr{
-    @weakify(self)
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title
-                                                                             message:message
-                                                                      preferredStyle:UIAlertControllerStyleAlert];
-    for (int i = 0; i < alertBtnActionArr.count; i++) {
-        UIAlertAction *okAction = [UIAlertAction actionWithTitle:btnTitleArr[i]
-                                                           style:UIAlertActionStyleDefault
-                                                         handler:^(UIAlertAction * _Nonnull action) {
-                                                             @strongify(self)
-                                                             [self performSelector:NSSelectorFromString((NSString *)alertBtnActionArr[i])
-                                                                        withObject:Nil];
-                                                         }];
-        [alertController addAction:okAction];
+-(void)alertControllerStyle:(AlertControllerStyle)alertControllerStyle
+         showAlertViewTitle:(nullable NSString *)title
+                    message:(nullable NSString *)message
+            isSeparateStyle:(BOOL)isSeparateStyle
+                btnTitleArr:(NSArray <NSString*>*)btnTitleArr
+             alertBtnAction:(NSArray <NSString*>*)alertBtnActionArr{
+    switch (alertControllerStyle) {
+        case SYS_AlertController:{
+            @weakify(self)
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title
+                                                                                     message:message
+                                                                              preferredStyle:UIAlertControllerStyleAlert];
+            for (int i = 0; i < alertBtnActionArr.count; i++) {
+                UIAlertAction *okAction = [UIAlertAction actionWithTitle:btnTitleArr[i]
+                                                                   style:isSeparateStyle ? (i == alertBtnActionArr.count - 1 ? UIAlertActionStyleCancel : UIAlertActionStyleDefault) : UIAlertActionStyleDefault
+                                                                 handler:^(UIAlertAction * _Nonnull action) {
+                                                                     @strongify(self)
+                                                                     [self performSelector:NSSelectorFromString((NSString *)alertBtnActionArr[i])
+                                                                                withObject:Nil];
+                                                                 }];
+                [alertController addAction:okAction];
+            }
+            [self presentViewController:alertController
+                               animated:YES
+                             completion:nil];
+        }break;
+        case YX_AlertController:{
+            @weakify(self)
+            YXAlertController *alertController = [YXAlertController alertControllerWithTitle:title
+                                                                                     message:message
+                                                                                       style:YXAlertControllerStyleAlert];
+            //自定义颜色设置
+//            alertController.layout.doneActionTitleColor = [UIColor redColor];
+//            alertController.layout.cancelActionBackgroundColor = [UIColor whiteColor];
+//            alertController.layout.doneActionBackgroundColor = [UIColor yellowColor];
+//            alertController.layout.lineColor = [UIColor redColor];
+//            alertController.layout.topViewBackgroundColor = [UIColor orangeColor];
+//            alertController.layout.titleColor = [UIColor whiteColor];
+//            [alertController layoutSettings];
+            for (int i = 0; i < alertBtnActionArr.count; i++) {
+                YXAlertAction *okAction = [YXAlertAction actionWithTitle:btnTitleArr[i]
+                                                                   style:isSeparateStyle ? (i == alertBtnActionArr.count - 1 ? YXAlertActionStyleCancel : YXAlertActionStyleDefault) : YXAlertActionStyleDefault
+                                                                 handler:^(YXAlertAction * _Nonnull action) {
+                                                                     @strongify(self)
+                                                                     [self performSelector:NSSelectorFromString((NSString *)alertBtnActionArr[i])
+                                                                                withObject:Nil];
+                                                                 }];
+                [alertController addAction:okAction];
+            }
+            [self presentViewController:alertController
+                               animated:YES
+                             completion:nil];
+        }break;
+        default:
+            break;
     }
-    [self presentViewController:alertController
+}
+
+-(void)alertControllerStyle:(AlertControllerStyle)alertControllerStyle
+       showActionSheetTitle:(nullable NSString *)title
+                    message:(nullable NSString *)message
+            isSeparateStyle:(BOOL)isSeparateStyle
+                btnTitleArr:(NSArray <NSString*>*)btnTitleArr
+             alertBtnAction:(NSArray <NSString*>*)alertBtnActionArr
+                     sender:(nullable UIControl *)sender{
+    UIViewController *vc = nil;
+    switch (alertControllerStyle) {
+        case SYS_AlertController:{
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title
+                                                                                     message:message
+                                                                              preferredStyle:UIAlertControllerStyleActionSheet];
+            vc = alertController;
+            @weakify(self)
+            for (int i = 0; i < alertBtnActionArr.count; i++) {
+                UIAlertAction *okAction = [UIAlertAction actionWithTitle:btnTitleArr[i]
+                                                                   style:isSeparateStyle ? (i == alertBtnActionArr.count - 1 ? UIAlertActionStyleCancel : UIAlertActionStyleDefault) : UIAlertActionStyleDefault
+                                                                 handler:^(UIAlertAction * _Nonnull action) {
+                                                                     @strongify(self)
+                                                                     [self performSelector:NSSelectorFromString((NSString *)alertBtnActionArr[i])
+                                                                                withObject:Nil];
+                                                                 }];
+                [alertController addAction:okAction];
+            }
+        } break;
+        case YX_AlertController:{
+            YXAlertController *alertController = [YXAlertController alertControllerWithTitle:title
+                                                                                     message:message
+                                                                                       style:YXAlertControllerStyleActionSheet];
+            vc = alertController;
+            //自定义颜色设置
+//            alertController.layout.doneActionTitleColor = [UIColor redColor];
+//            alertController.layout.cancelActionBackgroundColor = [UIColor whiteColor];
+//            alertController.layout.doneActionBackgroundColor = [UIColor yellowColor];
+//            alertController.layout.lineColor = [UIColor redColor];
+//            alertController.layout.topViewBackgroundColor = [UIColor orangeColor];
+//            alertController.layout.titleColor = [UIColor whiteColor];
+//            [alertController layoutSettings];
+            @weakify(self)
+            for (int i = 0; i < alertBtnActionArr.count; i++) {
+                YXAlertAction *okAction = [YXAlertAction actionWithTitle:btnTitleArr[i]
+                                                                   style:isSeparateStyle ? (i == alertBtnActionArr.count - 1 ? YXAlertActionStyleCancel : YXAlertActionStyleDefault) : YXAlertActionStyleDefault
+                                                                 handler:^(YXAlertAction * _Nonnull action) {
+                                                                     @strongify(self)
+                                                                     [self performSelector:NSSelectorFromString((NSString *)alertBtnActionArr[i])
+                                                                                withObject:Nil];
+                                                                 }];
+                [alertController addAction:okAction];
+            }
+        } break;
+        default:
+            break;
+    }
+    UIPopoverPresentationController *popover = vc.popoverPresentationController;
+    if (popover){
+        popover.sourceView = sender;
+        popover.sourceRect = sender.bounds;
+        popover.permittedArrowDirections = UIPopoverArrowDirectionAny;
+    }
+    [self presentViewController:vc
                        animated:YES
                      completion:nil];
 }
@@ -286,37 +391,6 @@ JXCategoryListContentViewDelegate
     loginAction.enabled = NO;   // 禁用Login按钮
     [alertController addAction:cancelAction];
     [alertController addAction:loginAction];
-    [self presentViewController:alertController
-                       animated:YES
-                     completion:nil];
-}
-
--(void)showActionSheetTitle:(NSString *)title
-                    message:(NSString *)message
-                btnTitleArr:(NSArray <NSString*>*)btnTitleArr
-             alertBtnAction:(NSArray <NSString*>*)alertBtnActionArr
-                     sender:(nullable UIButton *)sender{
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title
-                                                                             message:message
-                                                                      preferredStyle:UIAlertControllerStyleActionSheet];
-
-    @weakify(self)
-    for (int i = 0; i < alertBtnActionArr.count; i++) {
-        UIAlertAction *okAction = [UIAlertAction actionWithTitle:btnTitleArr[i]
-                                                           style:UIAlertActionStyleDefault
-                                                         handler:^(UIAlertAction * _Nonnull action) {
-                                                             @strongify(self)
-                                                             [self performSelector:NSSelectorFromString((NSString *)alertBtnActionArr[i])
-                                                                        withObject:Nil];
-                                                         }];
-        [alertController addAction:okAction];
-    }
-    UIPopoverPresentationController *popover = alertController.popoverPresentationController;
-    if (popover){
-        popover.sourceView = sender;
-        popover.sourceRect = sender.bounds;
-        popover.permittedArrowDirections = UIPopoverArrowDirectionAny;
-    }
     [self presentViewController:alertController
                        animated:YES
                      completion:nil];
@@ -370,14 +444,16 @@ JXCategoryListContentViewDelegate
                                    completion:nil];
         }else{
             NSLog(@"相册不可用:%lu",(unsigned long)status);
-            [self showAlertViewTitle:@"获取相册权限"
-                                   message:@""
-                               btnTitleArr:@[@"去获取"]
-                            alertBtnAction:@[@"pushToSysConfig"]];
+            [self alertControllerStyle:SYS_AlertController
+                    showAlertViewTitle:@"获取相册权限"
+                               message:nil
+                       isSeparateStyle:YES
+                           btnTitleArr:@[@"去获取"]
+                        alertBtnAction:@[@"pushToSysConfig"]];
         }
     }];
 }
-//访问摄像头 
+//访问摄像头
 -(void)camera:(NSString *)doSth{
     //先鉴权
     @weakify(self)
@@ -394,10 +470,12 @@ JXCategoryListContentViewDelegate
                        withObject:Nil];
         }else{
             NSLog(@"摄像头不可用:%lu",(unsigned long)status);
-            [self showAlertViewTitle:@"获取摄像头权限"
-                                   message:@""
-                               btnTitleArr:@[@"去获取"]
-                            alertBtnAction:@[@"pushToSysConfig"]];
+            [self alertControllerStyle:SYS_AlertController
+                    showAlertViewTitle:@"获取摄像头权限"
+                               message:nil
+                       isSeparateStyle:YES
+                           btnTitleArr:@[@"去获取"]
+                        alertBtnAction:@[@"pushToSysConfig"]];
         }
     }];
 }
@@ -465,11 +543,25 @@ JXCategoryListContentViewDelegate
         [_tableViewHeader setImages:@[kIMG(@"官方")]
                            forState:MJRefreshStateIdle];
         // 设置即将刷新状态的动画图片（一松开就会刷新的状态）
-        [_tableViewHeader setImages:@[kIMG(@"官方")]
+        [_tableViewHeader setImages:@[kIMG(@"Indeterminate Spinner - Small")]
                            forState:MJRefreshStatePulling];
         // 设置正在刷新状态的动画图片
-        [_tableViewHeader setImages:@[kIMG(@"官方")]
+//        [_tableViewHeader setImages:@[kIMG(@"gif_header_1"),
+//                                      kIMG(@"gif_header_2"),
+//                                      kIMG(@"gif_header_3"),
+//                                      kIMG(@"gif_header_4")]
+//                           duration:0.4
+//                           forState:MJRefreshStateRefreshing];
+        NSMutableArray *dataMutArr = NSMutableArray.array;
+        for (int i = 1; i <= 55; i++) {
+            NSString *str = [NSString stringWithFormat:@"gif_header_%d",i];
+            [dataMutArr addObject:kIMG(str)];
+        }
+
+        [_tableViewHeader setImages:dataMutArr
+                           duration:0.7
                            forState:MJRefreshStateRefreshing];
+        
         // 设置文字
         [_tableViewHeader setTitle:@"Click or drag down to refresh"
                           forState:MJRefreshStateIdle];
@@ -477,10 +569,11 @@ JXCategoryListContentViewDelegate
                           forState:MJRefreshStateRefreshing];
         [_tableViewHeader setTitle:@"No more data"
                           forState:MJRefreshStateNoMoreData];
+
         // 设置字体
         _tableViewHeader.stateLabel.font = [UIFont systemFontOfSize:17];
         // 设置颜色
-        _tableViewHeader.stateLabel.textColor = [UIColor lightGrayColor];
+        _tableViewHeader.stateLabel.textColor = KLightGrayColor;
         //震动特效反馈
         [_tableViewHeader addObserver:self
                            forKeyPath:@"state"
@@ -497,11 +590,26 @@ JXCategoryListContentViewDelegate
         [_tableViewFooter setImages:@[kIMG(@"官方")]
                            forState:MJRefreshStateIdle];
         // 设置即将刷新状态的动画图片（一松开就会刷新的状态）
-        [_tableViewFooter setImages:@[kIMG(@"官方")]
+        [_tableViewFooter setImages:@[kIMG(@"Indeterminate Spinner - Small")]
                            forState:MJRefreshStatePulling];
         // 设置正在刷新状态的动画图片
-        [_tableViewFooter setImages:@[kIMG(@"官方")]
+//        [_tableViewFooter setImages:@[kIMG(@"gif_header_1"),
+//                                      kIMG(@"gif_header_2"),
+//                                      kIMG(@"gif_header_3"),
+//                                      kIMG(@"gif_header_4")]
+//                           duration:0.4
+//                           forState:MJRefreshStateRefreshing];
+        
+        NSMutableArray *dataMutArr = NSMutableArray.array;
+        for (int i = 1; i <= 55; i++) {
+            NSString *str = [NSString stringWithFormat:@"gif_header_%d",i];
+            [dataMutArr addObject:kIMG(str)];
+        }
+
+        [_tableViewHeader setImages:dataMutArr
+                           duration:0.4
                            forState:MJRefreshStateRefreshing];
+        
         // 设置文字
         [_tableViewFooter setTitle:@"Click or drag up to refresh"
                           forState:MJRefreshStateIdle];
@@ -512,7 +620,7 @@ JXCategoryListContentViewDelegate
         // 设置字体
         _tableViewFooter.stateLabel.font = [UIFont systemFontOfSize:17];
         // 设置颜色
-        _tableViewFooter.stateLabel.textColor = [UIColor lightGrayColor];
+        _tableViewFooter.stateLabel.textColor = KLightGrayColor;
         //震动特效反馈
         [_tableViewFooter addObserver:self
                            forKeyPath:@"state"
@@ -533,7 +641,7 @@ JXCategoryListContentViewDelegate
     if (!_backBtn) {
         _backBtn = FSCustomButton.new;
         _backBtn.buttonImagePosition = FSCustomButtonImagePositionLeft;
-        [_backBtn setTitleColor:[UIColor whiteColor]
+        [_backBtn setTitleColor:kWhiteColor
                        forState:UIControlStateNormal];
         [_backBtn setTitle:@"返回"
                   forState:UIControlStateNormal];
@@ -588,6 +696,38 @@ JXCategoryListContentViewDelegate
         _afNetworkReachabilityManager = [AFNetworkReachabilityManager sharedManager];
     }return _afNetworkReachabilityManager;
 }
+
+
+-(UIImageView *)gifImageView{
+    if (!_gifImageView) {
+        _gifImageView = UIImageView.new;
+        _gifImageView.image = self.image;
+        [self.view addSubview:_gifImageView];
+        [_gifImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.view);
+        }];
+    }return _gifImageView;
+}
+
+-(NSString *)path{
+    if (!_path) {
+        _path = [[NSBundle mainBundle] pathForResource:@"GIF大图"
+                                                ofType:@"gif"];
+    }return _path;
+}
+
+-(NSData *)data{
+    if (!_data) {
+        _data = [NSData dataWithContentsOfFile:self.path];
+    }return _data;
+}
+
+-(UIImage *)image{
+    if (!_image) {
+        _image = [UIImage sd_animatedGIFWithData:self.data];
+    }return _image;
+}
+
 
 @end
 

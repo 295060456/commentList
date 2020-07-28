@@ -18,6 +18,9 @@ target 'commentList' do
   pod 'IQKeyboardManager'
   pod 'LYEmptyView'
   pod 'SDWebImage'
+  pod 'SDWebImage/WebP'
+  pod 'MBProgressHUD+WJExtension'
+  pod 'LYXAlertController'
   
   # Pods for commentList
 

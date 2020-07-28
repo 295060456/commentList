@@ -29,14 +29,28 @@ PODS:
   - GKNavigationBar (1.0.8)
   - IQKeyboardManager (6.5.5)
   - JXCategoryView (1.5.5)
+  - libwebp (1.1.0):
+    - libwebp/demux (= 1.1.0)
+    - libwebp/mux (= 1.1.0)
+    - libwebp/webp (= 1.1.0)
+  - libwebp/demux (1.1.0):
+    - libwebp/webp
+  - libwebp/mux (1.1.0):
+    - libwebp/demux
+  - libwebp/webp (1.1.0)
   - LYEmptyView (1.3.1)
+  - LYXAlertController (0.0.2)
   - Masonry (1.1.0)
+  - "MBProgressHUD+WJExtension (1.3.1)"
   - MJExtension (3.2.2)
   - MJRefresh (3.4.3)
   - ReactiveObjC (3.1.1)
-  - SDWebImage (5.8.1):
-    - SDWebImage/Core (= 5.8.1)
-  - SDWebImage/Core (5.8.1)
+  - SDWebImage (4.4.8):
+    - SDWebImage/Core (= 4.4.8)
+  - SDWebImage/Core (4.4.8)
+  - SDWebImage/WebP (4.4.8):
+    - libwebp (< 2.0, >= 0.5)
+    - SDWebImage/Core
   - TZImagePickerController (3.3.2)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -49,11 +63,14 @@ DEPENDENCIES:
   - IQKeyboardManager
   - JXCategoryView
   - LYEmptyView
+  - LYXAlertController
   - Masonry
+  - "MBProgressHUD+WJExtension"
   - MJExtension
   - MJRefresh
   - ReactiveObjC
   - SDWebImage
+  - SDWebImage/WebP
   - TZImagePickerController
   - YYKit
 
@@ -64,8 +81,11 @@ SPEC REPOS:
     - GKNavigationBar
     - IQKeyboardManager
     - JXCategoryView
+    - libwebp
     - LYEmptyView
+    - LYXAlertController
     - Masonry
+    - "MBProgressHUD+WJExtension"
     - MJExtension
     - MJRefresh
     - ReactiveObjC
@@ -79,15 +99,18 @@ SPEC CHECKSUMS:
   GKNavigationBar: b88553e9a973b38724b57ac6d177e210199a3e3e
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   JXCategoryView: 0293fcb356f10a5c2e679dac0a1a5f1899ee0c87
+  libwebp: 946cb3063cea9236285f7e9a8505d806d30e07f3
   LYEmptyView: b6d418cfa38b78df0cf243f9a9c25ccbdc399922
+  LYXAlertController: b1459683e9d3622f697bd1ee6a9e584253b0c8b3
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  "MBProgressHUD+WJExtension": 1d9c93951b49e8c711fef6e6089aa6d7d3321192
   MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
   MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  SDWebImage: e3eae2eda88578db0685a0c88597fdadd9433f05
+  SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   TZImagePickerController: 36ca728ec681228918aa82e993aaab1962281b72
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 85041c9ca79679ea2a9feab3e3ad309599e76390
+PODFILE CHECKSUM: 44fb08de33baba726697a981ac8f3690ddefdb47
 
 COCOAPODS: 1.9.3

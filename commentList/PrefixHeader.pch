@@ -27,7 +27,12 @@
 #import "UIView+Extras.h"
 #import "UIImage+YBGIF.h"
 #import "SceneDelegate.h"
-
+#import "MKCommentModel.h"
+#import "RBCLikeButton.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+WJExtension.h"
+#import <YXAlertController.h>
+#import "BaseVC.h"
 
 #define WeakSelf __weak typeof(self) weakSelf = self;
 #define StrongSelf __strong typeof(self) strongSelf = self;
@@ -91,5 +96,16 @@ static inline BOOL isiPhoneX_series() {
         }
     }return iPhoneXSeries;
 }
+
+/** DEBUG LOG **/
+#ifdef DEBUG
+
+#define DLog( s, ... ) NSLog( @"< %@:(%d) > %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+
+#else
+
+#define DLog( s, ... )
+
+#endif
 
 #endif /* PrefixHeader_pch */
