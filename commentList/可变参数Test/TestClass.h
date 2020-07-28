@@ -12,7 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TestClass : NSObject
 
+@property(nonatomic,copy)KBlock block;
+
 + (void)print:(NSString *)firstArg, ... NS_REQUIRES_NIL_TERMINATION;
+
+-(void)actionBlock:(KBlock)block;
 
 @end
 

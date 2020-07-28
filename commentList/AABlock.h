@@ -1,4 +1,4 @@
-
+typedef void(^KBlock)(id data,...);
 typedef void(^NoResultBlock)(void);
 typedef void(^MKDataBlock)(id data);
 typedef void(^TwoDataBlock)(id data,id data2);

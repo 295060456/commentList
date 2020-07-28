@@ -516,9 +516,10 @@
 		C5802D0624BCAD3800894903 /* commentList */ = {
 			isa = PBXGroup;
 			children = (
-				C590FF1524CFF8D1000F36C9 /* 可变参数Test */,
 				C5C2081324BDC6C9001ED2F5 /* PrefixHeader.pch */,
+				C5C2081224BDC6B5001ED2F5 /* AABlock.h */,
 				C5802D1B24BCAD3900894903 /* Info.plist */,
+				C590FF1524CFF8D1000F36C9 /* 可变参数Test */,
 				C5F78B3424BF4712008A46EC /* 3rd */,
 				C590FE0A24CFE816000F36C9 /* 入口——————效果 */,
 				8BE28E3924BCB6A800CF5D7B /* Other */,
@@ -865,7 +866,6 @@
 		C5F78B3424BF4712008A46EC /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
-				C5C2081224BDC6B5001ED2F5 /* AABlock.h */,
 				C590FE1F24CFEAD4000F36C9 /* 高仿抖音点赞动画 */,
 				C590FE1B24CFEA7E000F36C9 /* BaseModel */,
 				C52F592824CD4CE9001F72B3 /* UiKit */,

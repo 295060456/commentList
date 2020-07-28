@@ -42,5 +42,12 @@
     }
 }
 
+-(void)actionBlock:(KBlock)block{
+    self.block = block;
+    if (self.block) {
+//        self.block(@(1),1,@"12");
+        self.block(@"11",@"12",@"13");
+    }
+}
 
 @end
