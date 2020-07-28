@@ -10,7 +10,37 @@
 
 @implementation CommentPopUpVC (VM)
 ///GET 初始化用户评论列表
--(void)netWorking_MKCommentQueryInitListGET{}
+-(void)netWorking_MKCommentQueryInitListGET{
+
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"CommentListData"
+                                                     ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data
+                                                        options:0
+                                                          error:nil];
+    NSLog(@"--%@",dic);
+    self.commentModel = [MKCommentModel mj_objectWithKeyValues:dic];
+    NSLog(@"%d",self.commentModel.endRow.intValue);
+    if ([dic isKindOfClass:NSDictionary.class]) {
+        self.commentModel.listMytArr = [MKFirstCommentModel mj_objectArrayWithKeyValuesArray:dic[@"list"]];
+        MKFirstCommentModel *firstCommentModel = nil;
+        for (int i = 0; i < self.commentModel.listMytArr.count; i++) {
+            firstCommentModel = self.commentModel.listMytArr[i];
+            NSLog(@"%@",firstCommentModel.content);
+            if ([dic[@"list"][i][@"child"] isKindOfClass:NSArray.class]) {
+                firstCommentModel.childMutArr = [MKChildCommentModel mj_objectArrayWithKeyValuesArray:dic[@"list"][i][@"child"]];
+                for (MKChildCommentModel *childCommentModel in firstCommentModel.childMutArr) {
+                    NSLog(@"%@",childCommentModel.content);
+                }
+            }
+        }
+        NSLog(@"");
+        [self.tableView reloadData];
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+        self.tableView.mj_footer.hidden = YES;
+    }
+}
 ///POST 评论视频
 -(void)netWorking_MKCommentVideoPOST{}
 ///POST 回复评论
