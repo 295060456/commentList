@@ -10,9 +10,11 @@
 		47F1DE0F9D5C2BEEE0202B39 /* Pods_commentListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0CF0E67EA8BFA59C3D36147 /* Pods_commentListTests.framework */; };
 		B39069305FAC615D8C6F4D6B /* Pods_commentList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC5B97A55D8F418AC00D92E /* Pods_commentList.framework */; };
 		C52F592124CD4AA0001F72B3 /* InputView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52F592024CD4AA0001F72B3 /* InputView.m */; };
-		C52F592424CD4B77001F72B3 /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C52F592324CD4B77001F72B3 /* ZYTextField.m */; };
 		C52F592724CD4C3E001F72B3 /* UIImage+YBGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = C52F592524CD4C3E001F72B3 /* UIImage+YBGIF.m */; };
 		C52F592A24CD4D18001F72B3 /* 钱袋.gif in Resources */ = {isa = PBXBuildFile; fileRef = C52F592924CD4D18001F72B3 /* 钱袋.gif */; };
+		C5379EA324D13FDC0078880F /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379E9F24D13FDC0078880F /* ZYTextField.m */; };
+		C5379EA624D13FE20078880F /* HQTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379EA424D13FE20078880F /* HQTextField.m */; };
+		C5379EA924D13FE80078880F /* CJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379EA824D13FE80078880F /* CJTextField.m */; };
 		C54F104D24C480D200EE1E67 /* UIView+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C54F104B24C480D200EE1E67 /* UIView+Extras.m */; };
 		C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0824BCAD3800894903 /* AppDelegate.m */; };
 		C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0B24BCAD3800894903 /* SceneDelegate.m */; };
@@ -194,11 +196,15 @@
 		BC11A027C76951D368AEBAA5 /* Pods-commentList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commentList.debug.xcconfig"; path = "Target Support Files/Pods-commentList/Pods-commentList.debug.xcconfig"; sourceTree = "<group>"; };
 		C52F591F24CD4AA0001F72B3 /* InputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputView.h; sourceTree = "<group>"; };
 		C52F592024CD4AA0001F72B3 /* InputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputView.m; sourceTree = "<group>"; };
-		C52F592224CD4B77001F72B3 /* ZYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYTextField.h; sourceTree = "<group>"; };
-		C52F592324CD4B77001F72B3 /* ZYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYTextField.m; sourceTree = "<group>"; };
 		C52F592524CD4C3E001F72B3 /* UIImage+YBGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YBGIF.m"; sourceTree = "<group>"; };
 		C52F592624CD4C3E001F72B3 /* UIImage+YBGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YBGIF.h"; sourceTree = "<group>"; };
 		C52F592924CD4D18001F72B3 /* 钱袋.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "钱袋.gif"; sourceTree = "<group>"; };
+		C5379E9F24D13FDC0078880F /* ZYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYTextField.m; sourceTree = "<group>"; };
+		C5379EA124D13FDC0078880F /* ZYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYTextField.h; sourceTree = "<group>"; };
+		C5379EA424D13FE20078880F /* HQTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQTextField.m; sourceTree = "<group>"; };
+		C5379EA524D13FE20078880F /* HQTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQTextField.h; sourceTree = "<group>"; };
+		C5379EA724D13FE80078880F /* CJTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTextField.h; sourceTree = "<group>"; };
+		C5379EA824D13FE80078880F /* CJTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTextField.m; sourceTree = "<group>"; };
 		C54F104B24C480D200EE1E67 /* UIView+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extras.m"; sourceTree = "<group>"; };
 		C54F104C24C480D200EE1E67 /* UIView+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extras.h"; sourceTree = "<group>"; };
 		C5802D0424BCAD3800894903 /* commentList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = commentList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -461,8 +467,6 @@
 		C52F591E24CD4A96001F72B3 /* 输入框部分 */ = {
 			isa = PBXGroup;
 			children = (
-				C52F592224CD4B77001F72B3 /* ZYTextField.h */,
-				C52F592324CD4B77001F72B3 /* ZYTextField.m */,
 				C52F591F24CD4AA0001F72B3 /* InputView.h */,
 				C52F592024CD4AA0001F72B3 /* InputView.m */,
 			);
@@ -491,6 +495,43 @@
 				C5F78B3124BF46BD008A46EC /* 官方@3x.png */,
 			);
 			path = "图片资源";
+			sourceTree = "<group>";
+		};
+		C5379E9A24D13FB40078880F /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				C5379E9D24D13FD30078880F /* ZYTextField */,
+				C5379E9C24D13FCC0078880F /* HQTextField */,
+				C5379E9B24D13FC30078880F /* CJTextField */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		C5379E9B24D13FC30078880F /* CJTextField */ = {
+			isa = PBXGroup;
+			children = (
+				C5379EA724D13FE80078880F /* CJTextField.h */,
+				C5379EA824D13FE80078880F /* CJTextField.m */,
+			);
+			path = CJTextField;
+			sourceTree = "<group>";
+		};
+		C5379E9C24D13FCC0078880F /* HQTextField */ = {
+			isa = PBXGroup;
+			children = (
+				C5379EA524D13FE20078880F /* HQTextField.h */,
+				C5379EA424D13FE20078880F /* HQTextField.m */,
+			);
+			path = HQTextField;
+			sourceTree = "<group>";
+		};
+		C5379E9D24D13FD30078880F /* ZYTextField */ = {
+			isa = PBXGroup;
+			children = (
+				C5379EA124D13FDC0078880F /* ZYTextField.h */,
+				C5379E9F24D13FDC0078880F /* ZYTextField.m */,
+			);
+			path = ZYTextField;
 			sourceTree = "<group>";
 		};
 		C5802CFB24BCAD3800894903 = {
@@ -866,6 +907,7 @@
 		C5F78B3424BF4712008A46EC /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				C5379E9A24D13FB40078880F /* UITextField */,
 				C590FE1F24CFEAD4000F36C9 /* 高仿抖音点赞动画 */,
 				C590FE1B24CFEA7E000F36C9 /* BaseModel */,
 				C52F592824CD4CE9001F72B3 /* UiKit */,
@@ -1252,19 +1294,21 @@
 				C590FE1524CFEA14000F36C9 /* CommentPopUpVC+VM.m in Sources */,
 				C52F592124CD4AA0001F72B3 /* InputView.m in Sources */,
 				C590FF1824CFF8F1000F36C9 /* TestClass.m in Sources */,
-				C52F592424CD4B77001F72B3 /* ZYTextField.m in Sources */,
 				C54F104D24C480D200EE1E67 /* UIView+Extras.m in Sources */,
 				C5F78A8424BED516008A46EC /* FirstClassModel.m in Sources */,
 				C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */,
 				C5C2082824BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m in Sources */,
 				C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */,
+				C5379EA324D13FDC0078880F /* ZYTextField.m in Sources */,
 				C52F592724CD4C3E001F72B3 /* UIImage+YBGIF.m in Sources */,
 				C5F78B2F24BF44F1008A46EC /* ECAuthorizationTools.m in Sources */,
+				C5379EA924D13FE80078880F /* CJTextField.m in Sources */,
 				C590FE0F24CFE97E000F36C9 /* ViewController.m in Sources */,
 				C5C2082624BDEEFD001ED2F5 /* HoveringHeaderView.m in Sources */,
 				C5F78B2B24BF422D008A46EC /* FSCustomButton.m in Sources */,
 				C590FE1E24CFEA85000F36C9 /* BaseModel.m in Sources */,
 				C590FE3124CFEAEA000F36C9 /* RBCLikeButton.m in Sources */,
+				C5379EA624D13FE20078880F /* HQTextField.m in Sources */,
 				C5802D1524BCAD3800894903 /* commentList.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
