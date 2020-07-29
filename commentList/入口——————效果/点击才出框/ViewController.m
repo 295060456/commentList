@@ -216,8 +216,8 @@
         [self.view addSubview:_commentPopUpVC.view];
         
         [_commentPopUpVC commentPopUpActionBlock:^(id data) {
-            NSLog(@"");
-            [self willClose_vertical];
+            //键盘消失
+            [self.commentPopUpVC.inputView endEditing:YES];
         }];
         
         [_commentPopUpVC actionBlock:^(id data) {
