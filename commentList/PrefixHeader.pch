@@ -33,9 +33,11 @@
 #import "MBProgressHUD+WJExtension.h"
 #import <YXAlertController.h>
 #import "BaseVC.h"
+#import "NSString+Extras.h"
 
 #define WeakSelf __weak typeof(self) weakSelf = self;
 #define StrongSelf __strong typeof(self) strongSelf = self;
+#define StringFormat(format,...) [NSString stringWithFormat:format, ##__VA_ARGS__]
 
 #ifndef SCREEN_BOUNDS
 #define SCREEN_BOUNDS [UIScreen mainScreen].bounds

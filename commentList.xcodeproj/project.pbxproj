@@ -15,6 +15,7 @@
 		C5379EA324D13FDC0078880F /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379E9F24D13FDC0078880F /* ZYTextField.m */; };
 		C5379EA624D13FE20078880F /* HQTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379EA424D13FE20078880F /* HQTextField.m */; };
 		C5379EA924D13FE80078880F /* CJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379EA824D13FE80078880F /* CJTextField.m */; };
+		C5379EAD24D148570078880F /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379EAC24D148570078880F /* NSString+Extras.m */; };
 		C54F104D24C480D200EE1E67 /* UIView+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C54F104B24C480D200EE1E67 /* UIView+Extras.m */; };
 		C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0824BCAD3800894903 /* AppDelegate.m */; };
 		C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0B24BCAD3800894903 /* SceneDelegate.m */; };
@@ -205,6 +206,8 @@
 		C5379EA524D13FE20078880F /* HQTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQTextField.h; sourceTree = "<group>"; };
 		C5379EA724D13FE80078880F /* CJTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTextField.h; sourceTree = "<group>"; };
 		C5379EA824D13FE80078880F /* CJTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTextField.m; sourceTree = "<group>"; };
+		C5379EAB24D148570078880F /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
+		C5379EAC24D148570078880F /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
 		C54F104B24C480D200EE1E67 /* UIView+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extras.m"; sourceTree = "<group>"; };
 		C54F104C24C480D200EE1E67 /* UIView+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extras.h"; sourceTree = "<group>"; };
 		C5802D0424BCAD3800894903 /* commentList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = commentList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -532,6 +535,15 @@
 				C5379E9F24D13FDC0078880F /* ZYTextField.m */,
 			);
 			path = ZYTextField;
+			sourceTree = "<group>";
+		};
+		C5379EAA24D148470078880F /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				C5379EAB24D148570078880F /* NSString+Extras.h */,
+				C5379EAC24D148570078880F /* NSString+Extras.m */,
+			);
+			path = NSString;
 			sourceTree = "<group>";
 		};
 		C5802CFB24BCAD3800894903 = {
@@ -907,6 +919,7 @@
 		C5F78B3424BF4712008A46EC /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				C5379EAA24D148470078880F /* NSString */,
 				C5379E9A24D13FB40078880F /* UITextField */,
 				C590FE1F24CFEAD4000F36C9 /* 高仿抖音点赞动画 */,
 				C590FE1B24CFEA7E000F36C9 /* BaseModel */,
@@ -1307,6 +1320,7 @@
 				C5C2082624BDEEFD001ED2F5 /* HoveringHeaderView.m in Sources */,
 				C5F78B2B24BF422D008A46EC /* FSCustomButton.m in Sources */,
 				C590FE1E24CFEA85000F36C9 /* BaseModel.m in Sources */,
+				C5379EAD24D148570078880F /* NSString+Extras.m in Sources */,
 				C590FE3124CFEAEA000F36C9 /* RBCLikeButton.m in Sources */,
 				C5379EA624D13FE20078880F /* HQTextField.m in Sources */,
 				C5802D1524BCAD3800894903 /* commentList.xcdatamodeld in Sources */,

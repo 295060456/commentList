@@ -28,6 +28,8 @@ UITableViewDelegate
 
 @property(nonatomic,strong)MKFirstCommentModel *firstCommentModel;
 @property(nonatomic,strong)MKChildCommentModel *childCommentModel;
+@property(nonatomic,copy)MKDataBlock CommentPopUpBlock;
+
 
 @end
 
@@ -110,6 +112,11 @@ UITableViewDelegate
         }
     }
 }
+
+-(void)commentPopUpActionBlock:(MKDataBlock)commentPopUpBlock{
+    self.CommentPopUpBlock = commentPopUpBlock;
+}
+
 //一级标题的：
 -(void)Reply{
     NSLog(@"%@",self.firstCommentModel.content);
@@ -146,7 +153,7 @@ UITableViewDelegate
 -(void)cancel{}
 #pragma mark ===================== 下拉刷新===================================
 - (void)pullToRefresh {
-    NSLog(@"下拉刷新");
+    DLog(@"下拉刷新");
     if (self.commentModel.listMytArr.count) {
         [self.commentModel.listMytArr removeAllObjects];
     }
@@ -154,7 +161,7 @@ UITableViewDelegate
 }
 #pragma mark ===================== 上拉加载更多===================================
 - (void)loadMoreRefresh {
-    NSLog(@"上拉加载更多");
+    DLog(@"上拉加载更多");
 }
 
 -(void)endRefreshing:(BOOL)refreshing{
@@ -327,12 +334,16 @@ viewForHeaderInSection:(NSInteger)section{
         _inputView = InputView.new;
         _inputView.backgroundColor = HEXCOLOR(0x20242F);
         @weakify(self)
-        [_inputView actionBlock:^(id data) {
+        [_inputView inputViewActionBlock:^(id data) {
             @strongify(self)
             if ([data isKindOfClass:UITextField.class]) {
                 UITextField *tf = (UITextField *)data;
                 self.inputContentStr = tf.text;
                 [self netWorking_MKCommentVideoPOST];
+                
+                if (self.CommentPopUpBlock) {
+                    self.CommentPopUpBlock(@1);
+                }
             }
         }];
         [self.view addSubview:_inputView];
