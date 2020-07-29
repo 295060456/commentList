@@ -61,7 +61,11 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-//    [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
+//    if (isOpen) {
+//        [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = YES;
+//    }else{
+//        [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
+//    }
 }
 
 -(void)viewWillLayoutSubviews{
@@ -77,13 +81,18 @@
     NSLog(@"键盘输入");//self.commentPopUpVC.view.frame = (0 448; 414 448);&& self.commentPopUpVC.view.frame = (0 448; 414 448);
     NSLog(@"self.commentPopUpVC.view退出");//self.commentPopUpVC.view.frame = (0 896; 414 448);self.commentPopUpVC.view.frame = (0 0; 414 896);
 //    self.commentPopUpVC.view.mj_y = CommentPopUpVC_Y;//开102 关448
-    if (CommentPopUpVC_Y != SCREEN_HEIGHT / 2 && CommentPopUpVC_Y != 0) {
+    if (CommentPopUpVC_Y != liftingHeight && CommentPopUpVC_Y != 0) {
         self.commentPopUpVC.view.mj_y = CommentPopUpVC_Y;
     }
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
+//     if (isOpen) {
+//         [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = YES;
+//     }else{
+//         [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
+//     }
 }
 
 -(void)keyboard{
