@@ -479,10 +479,10 @@
 		C52F592824CD4CE9001F72B3 /* UiKit */ = {
 			isa = PBXGroup;
 			children = (
-				C54F104C24C480D200EE1E67 /* UIView+Extras.h */,
-				C54F104B24C480D200EE1E67 /* UIView+Extras.m */,
-				C52F592624CD4C3E001F72B3 /* UIImage+YBGIF.h */,
-				C52F592524CD4C3E001F72B3 /* UIImage+YBGIF.m */,
+				C5379E9A24D13FB40078880F /* UITextField */,
+				C5DDFFAD24D3FA3F00307DFA /* UIImage */,
+				C5DDFFAC24D3FA3800307DFA /* UIView */,
+				C5379EAA24D148470078880F /* NSString */,
 			);
 			path = UiKit;
 			sourceTree = "<group>";
@@ -857,6 +857,24 @@
 			path = "取消悬停";
 			sourceTree = "<group>";
 		};
+		C5DDFFAC24D3FA3800307DFA /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				C54F104C24C480D200EE1E67 /* UIView+Extras.h */,
+				C54F104B24C480D200EE1E67 /* UIView+Extras.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		C5DDFFAD24D3FA3F00307DFA /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				C52F592624CD4C3E001F72B3 /* UIImage+YBGIF.h */,
+				C52F592524CD4C3E001F72B3 /* UIImage+YBGIF.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
 		C5F78A7F24BED4FD008A46EC /* 数据模型层 */ = {
 			isa = PBXGroup;
 			children = (
@@ -919,8 +937,6 @@
 		C5F78B3424BF4712008A46EC /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
-				C5379EAA24D148470078880F /* NSString */,
-				C5379E9A24D13FB40078880F /* UITextField */,
 				C590FE1F24CFEAD4000F36C9 /* 高仿抖音点赞动画 */,
 				C590FE1B24CFEA7E000F36C9 /* BaseModel */,
 				C52F592824CD4CE9001F72B3 /* UiKit */,
