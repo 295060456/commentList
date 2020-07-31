@@ -158,6 +158,7 @@
 		C5C2082624BDEEFD001ED2F5 /* HoveringHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2082024BDEEFD001ED2F5 /* HoveringHeaderView.m */; };
 		C5C2082724BDEEFD001ED2F5 /* NonHoveringHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2082124BDEEFD001ED2F5 /* NonHoveringHeaderView.m */; };
 		C5C2082824BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2082424BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m */; };
+		C5DD001D24D46C6F00307DFA /* EmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD001B24D46C6F00307DFA /* EmptyView.m */; };
 		C5F78A8424BED516008A46EC /* FirstClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78A8024BED515008A46EC /* FirstClassModel.m */; };
 		C5F78A8524BED516008A46EC /* SecondClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78A8224BED515008A46EC /* SecondClassModel.m */; };
 		C5F78B1F24BF4195008A46EC /* PopUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78B1D24BF4195008A46EC /* PopUpVC.m */; };
@@ -373,6 +374,8 @@
 		C5C2082324BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewHeaderFooterView+Attribute.h"; sourceTree = "<group>"; };
 		C5C2082424BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewHeaderFooterView+Attribute.m"; sourceTree = "<group>"; };
 		C5C2082524BDEEFD001ED2F5 /* HoveringHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoveringHeaderView.h; sourceTree = "<group>"; };
+		C5DD001B24D46C6F00307DFA /* EmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyView.m; sourceTree = "<group>"; };
+		C5DD001C24D46C6F00307DFA /* EmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyView.h; sourceTree = "<group>"; };
 		C5F78A8024BED515008A46EC /* FirstClassModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstClassModel.m; sourceTree = "<group>"; };
 		C5F78A8124BED515008A46EC /* FirstClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstClassModel.h; sourceTree = "<group>"; };
 		C5F78A8224BED515008A46EC /* SecondClassModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondClassModel.m; sourceTree = "<group>"; };
@@ -858,6 +861,15 @@
 			path = "取消悬停";
 			sourceTree = "<group>";
 		};
+		C5DD001A24D46C6400307DFA /* LYEmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				C5DD001C24D46C6F00307DFA /* EmptyView.h */,
+				C5DD001B24D46C6F00307DFA /* EmptyView.m */,
+			);
+			path = LYEmptyView;
+			sourceTree = "<group>";
+		};
 		C5DDFFAC24D3FA3800307DFA /* UIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -938,6 +950,7 @@
 		C5F78B3424BF4712008A46EC /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				C5DD001A24D46C6400307DFA /* LYEmptyView */,
 				C590FE1F24CFEAD4000F36C9 /* 高仿抖音点赞动画 */,
 				C590FE1B24CFEA7E000F36C9 /* BaseModel */,
 				C52F592824CD4CE9001F72B3 /* UiKit */,
@@ -1326,6 +1339,7 @@
 				C54F104D24C480D200EE1E67 /* UIView+Extras.m in Sources */,
 				C5F78A8424BED516008A46EC /* FirstClassModel.m in Sources */,
 				C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */,
+				C5DD001D24D46C6F00307DFA /* EmptyView.m in Sources */,
 				C5C2082824BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m in Sources */,
 				C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */,
 				C5379EA324D13FDC0078880F /* ZYTextField.m in Sources */,
