@@ -16,7 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 ///POST 评论视频
 -(void)netWorking_MKCommentVideoPOST;
 ///POST 回复评论
--(void)netWorking_MKCommentReplyCommentPOST;
+-(void)netWorking_MKCommentReplyCommentPOSTWithCommentId:(NSString *)commentId
+                                                      ID:(NSString *)ID
+                                                 content:(NSString *)content;
+///POST 删除评论
+-(void)netWorking_MKCommentDelCommentPOSTWithCommentId:(NSString *)commentId
+                                                    ID:(NSString *)ID;
 
 @end
 

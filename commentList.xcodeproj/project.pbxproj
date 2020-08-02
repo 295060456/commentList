@@ -153,6 +153,8 @@
 		C590FF1424CFF163000F36C9 /* gif_header_18@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C590FEDD24CFF163000F36C9 /* gif_header_18@2x.png */; };
 		C590FF1824CFF8F1000F36C9 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C590FF1724CFF8F1000F36C9 /* TestClass.m */; };
 		C590FF6A24D01D9A000F36C9 /* CommentListData.json in Resources */ = {isa = PBXBuildFile; fileRef = C590FF6924D01D9A000F36C9 /* CommentListData.json */; };
+		C5B5205924D6C27E00579178 /* URL_Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B5205724D6C27E00579178 /* URL_Manager.m */; };
+		C5B5206024D6C2FC00579178 /* MKLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B5205D24D6C2FC00579178 /* MKLoginModel.m */; };
 		C5C2081B24BDE254001ED2F5 /* InfoTBVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2081A24BDE254001ED2F5 /* InfoTBVCell.m */; };
 		C5C2081E24BDE268001ED2F5 /* LoadMoreTBVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2081D24BDE268001ED2F5 /* LoadMoreTBVCell.m */; };
 		C5C2082624BDEEFD001ED2F5 /* HoveringHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2082024BDEEFD001ED2F5 /* HoveringHeaderView.m */; };
@@ -360,6 +362,10 @@
 		C590FF1624CFF8F1000F36C9 /* TestClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
 		C590FF1724CFF8F1000F36C9 /* TestClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
 		C590FF6924D01D9A000F36C9 /* CommentListData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CommentListData.json; sourceTree = "<group>"; };
+		C5B5205724D6C27E00579178 /* URL_Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URL_Manager.m; sourceTree = "<group>"; };
+		C5B5205824D6C27E00579178 /* URL_Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL_Manager.h; sourceTree = "<group>"; };
+		C5B5205B24D6C2FC00579178 /* MKLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKLoginModel.h; sourceTree = "<group>"; };
+		C5B5205D24D6C2FC00579178 /* MKLoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKLoginModel.m; sourceTree = "<group>"; };
 		C5C2081224BDC6B5001ED2F5 /* AABlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AABlock.h; sourceTree = "<group>"; };
 		C5C2081324BDC6C9001ED2F5 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C5C2081624BDE01C001ED2F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -576,6 +582,8 @@
 				C5C2081324BDC6C9001ED2F5 /* PrefixHeader.pch */,
 				C5C2081224BDC6B5001ED2F5 /* AABlock.h */,
 				C5802D1B24BCAD3900894903 /* Info.plist */,
+				C5B5205A24D6C2FC00579178 /* UserInfo */,
+				C5B5205624D6C27E00579178 /* URL_Manager */,
 				C590FF1524CFF8D1000F36C9 /* 可变参数Test */,
 				C5F78B3424BF4712008A46EC /* 3rd */,
 				C590FE0A24CFE816000F36C9 /* 入口——————效果 */,
@@ -846,6 +854,25 @@
 				C590FF1724CFF8F1000F36C9 /* TestClass.m */,
 			);
 			path = "可变参数Test";
+			sourceTree = "<group>";
+		};
+		C5B5205624D6C27E00579178 /* URL_Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C5B5205724D6C27E00579178 /* URL_Manager.m */,
+				C5B5205824D6C27E00579178 /* URL_Manager.h */,
+			);
+			name = URL_Manager;
+			path = ../../../GitLab/monkeyKingVideo/Macro/URL_Manager;
+			sourceTree = "<group>";
+		};
+		C5B5205A24D6C2FC00579178 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				C5B5205B24D6C2FC00579178 /* MKLoginModel.h */,
+				C5B5205D24D6C2FC00579178 /* MKLoginModel.m */,
+			);
+			path = UserInfo;
 			sourceTree = "<group>";
 		};
 		C5C2081F24BDEEDE001ED2F5 /* 取消悬停 */ = {
@@ -1335,6 +1362,7 @@
 				C5F78B2324BF41EF008A46EC /* BaseVC.m in Sources */,
 				C590FE1524CFEA14000F36C9 /* CommentPopUpVC+VM.m in Sources */,
 				C52F592124CD4AA0001F72B3 /* InputView.m in Sources */,
+				C5B5206024D6C2FC00579178 /* MKLoginModel.m in Sources */,
 				C590FF1824CFF8F1000F36C9 /* TestClass.m in Sources */,
 				C54F104D24C480D200EE1E67 /* UIView+Extras.m in Sources */,
 				C5F78A8424BED516008A46EC /* FirstClassModel.m in Sources */,
@@ -1346,6 +1374,7 @@
 				C52F592724CD4C3E001F72B3 /* UIImage+YBGIF.m in Sources */,
 				C5F78B2F24BF44F1008A46EC /* ECAuthorizationTools.m in Sources */,
 				C5379EA924D13FE80078880F /* CJTextField.m in Sources */,
+				C5B5205924D6C27E00579178 /* URL_Manager.m in Sources */,
 				C590FE0F24CFE97E000F36C9 /* ViewController.m in Sources */,
 				C5C2082624BDEEFD001ED2F5 /* HoveringHeaderView.m in Sources */,
 				C5F78B2B24BF422D008A46EC /* FSCustomButton.m in Sources */,

@@ -28,6 +28,7 @@ PODS:
     - BRPickerView/Base
   - GKNavigationBar (1.0.8)
   - IQKeyboardManager (6.5.5)
+  - JSONModel (1.8.0)
   - JXCategoryView (1.5.5)
   - libwebp (1.1.0):
     - libwebp/demux (= 1.1.0)
@@ -61,6 +62,7 @@ DEPENDENCIES:
   - BRPickerView
   - GKNavigationBar
   - IQKeyboardManager
+  - JSONModel
   - JXCategoryView
   - LYEmptyView
   - LYXAlertController
@@ -80,6 +82,7 @@ SPEC REPOS:
     - BRPickerView
     - GKNavigationBar
     - IQKeyboardManager
+    - JSONModel
     - JXCategoryView
     - libwebp
     - LYEmptyView
@@ -98,6 +101,7 @@ SPEC CHECKSUMS:
   BRPickerView: 67ce855d07ff61771b586fea719053612bfeb1d6
   GKNavigationBar: b88553e9a973b38724b57ac6d177e210199a3e3e
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   JXCategoryView: 0293fcb356f10a5c2e679dac0a1a5f1899ee0c87
   libwebp: 946cb3063cea9236285f7e9a8505d806d30e07f3
   LYEmptyView: b6d418cfa38b78df0cf243f9a9c25ccbdc399922
@@ -111,6 +115,6 @@ SPEC CHECKSUMS:
   TZImagePickerController: 36ca728ec681228918aa82e993aaab1962281b72
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 44fb08de33baba726697a981ac8f3690ddefdb47
+PODFILE CHECKSUM: 03740f2b0b00f49370321351bd0497cf47c7fde7
 
 COCOAPODS: 1.9.3

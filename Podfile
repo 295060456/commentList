@@ -21,7 +21,7 @@ target 'commentList' do
   pod 'SDWebImage/WebP'
   pod 'MBProgressHUD+WJExtension'
   pod 'LYXAlertController'
-  
+  pod 'JSONModel'
   # Pods for commentList
 
   target 'commentListTests' do
