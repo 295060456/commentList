@@ -30,15 +30,6 @@ PODS:
   - IQKeyboardManager (6.5.5)
   - JSONModel (1.8.0)
   - JXCategoryView (1.5.5)
-  - libwebp (1.1.0):
-    - libwebp/demux (= 1.1.0)
-    - libwebp/mux (= 1.1.0)
-    - libwebp/webp (= 1.1.0)
-  - libwebp/demux (1.1.0):
-    - libwebp/webp
-  - libwebp/mux (1.1.0):
-    - libwebp/demux
-  - libwebp/webp (1.1.0)
   - LYEmptyView (1.3.1)
   - LYXAlertController (0.0.2)
   - Masonry (1.1.0)
@@ -46,12 +37,9 @@ PODS:
   - MJExtension (3.2.2)
   - MJRefresh (3.4.3)
   - ReactiveObjC (3.1.1)
-  - SDWebImage (4.4.8):
-    - SDWebImage/Core (= 4.4.8)
-  - SDWebImage/Core (4.4.8)
-  - SDWebImage/WebP (4.4.8):
-    - libwebp (< 2.0, >= 0.5)
-    - SDWebImage/Core
+  - SDWebImage (5.8.4):
+    - SDWebImage/Core (= 5.8.4)
+  - SDWebImage/Core (5.8.4)
   - TZImagePickerController (3.4.1)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -72,7 +60,6 @@ DEPENDENCIES:
   - MJRefresh
   - ReactiveObjC
   - SDWebImage
-  - SDWebImage/WebP
   - TZImagePickerController
   - YYKit
 
@@ -84,7 +71,6 @@ SPEC REPOS:
     - IQKeyboardManager
     - JSONModel
     - JXCategoryView
-    - libwebp
     - LYEmptyView
     - LYXAlertController
     - Masonry
@@ -103,7 +89,6 @@ SPEC CHECKSUMS:
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   JXCategoryView: 0293fcb356f10a5c2e679dac0a1a5f1899ee0c87
-  libwebp: 946cb3063cea9236285f7e9a8505d806d30e07f3
   LYEmptyView: b6d418cfa38b78df0cf243f9a9c25ccbdc399922
   LYXAlertController: b1459683e9d3622f697bd1ee6a9e584253b0c8b3
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -111,10 +96,10 @@ SPEC CHECKSUMS:
   MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
   MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
+  SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
   TZImagePickerController: 4e7a7b3d314f8a75f11042931dfd9d34c270c7db
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 03740f2b0b00f49370321351bd0497cf47c7fde7
+PODFILE CHECKSUM: 95a5ea5aab6d66590f952d31572a3bdb489eb751
 
 COCOAPODS: 1.9.3

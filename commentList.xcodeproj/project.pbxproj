@@ -17,6 +17,15 @@
 		C5379EA924D13FE80078880F /* CJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379EA824D13FE80078880F /* CJTextField.m */; };
 		C5379EAD24D148570078880F /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379EAC24D148570078880F /* NSString+Extras.m */; };
 		C54F104D24C480D200EE1E67 /* UIView+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C54F104B24C480D200EE1E67 /* UIView+Extras.m */; };
+		C57ADFB824D996C900419DFA /* BaseVC+AlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57ADFA624D996C800419DFA /* BaseVC+AlertController.m */; };
+		C57ADFB924D996C900419DFA /* BaseVC+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C57ADFA724D996C800419DFA /* BaseVC+MJRefresh.m */; };
+		C57ADFBA24D996C900419DFA /* BaseVC+BRStringPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57ADFA824D996C900419DFA /* BaseVC+BRStringPickerView.m */; };
+		C57ADFBB24D996C900419DFA /* BaseVC+TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57ADFAA24D996C900419DFA /* BaseVC+TZImagePickerController.m */; };
+		C57ADFBC24D996C900419DFA /* BaseVC+JXCategoryListContentViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C57ADFAB24D996C900419DFA /* BaseVC+JXCategoryListContentViewDelegate.m */; };
+		C57ADFBD24D996C900419DFA /* BaseVC+FSCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C57ADFAF24D996C900419DFA /* BaseVC+FSCustomButton.m */; };
+		C57ADFBE24D996C900419DFA /* BaseVC+GifImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57ADFB224D996C900419DFA /* BaseVC+GifImageView.m */; };
+		C57ADFBF24D996C900419DFA /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C57ADFB524D996C900419DFA /* BaseVC.m */; };
+		C57ADFC024D996C900419DFA /* BaseVC+AFNReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C57ADFB724D996C900419DFA /* BaseVC+AFNReachability.m */; };
 		C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0824BCAD3800894903 /* AppDelegate.m */; };
 		C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0B24BCAD3800894903 /* SceneDelegate.m */; };
 		C5802D1224BCAD3800894903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5802D1024BCAD3800894903 /* Main.storyboard */; };
@@ -164,7 +173,6 @@
 		C5F78A8424BED516008A46EC /* FirstClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78A8024BED515008A46EC /* FirstClassModel.m */; };
 		C5F78A8524BED516008A46EC /* SecondClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78A8224BED515008A46EC /* SecondClassModel.m */; };
 		C5F78B1F24BF4195008A46EC /* PopUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78B1D24BF4195008A46EC /* PopUpVC.m */; };
-		C5F78B2324BF41EF008A46EC /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78B2124BF41EF008A46EC /* BaseVC.m */; };
 		C5F78B2A24BF422D008A46EC /* CALayer+FSUI.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78B2524BF422D008A46EC /* CALayer+FSUI.m */; };
 		C5F78B2B24BF422D008A46EC /* FSCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78B2824BF422D008A46EC /* FSCustomButton.m */; };
 		C5F78B2F24BF44F1008A46EC /* ECAuthorizationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78B2E24BF44F1008A46EC /* ECAuthorizationTools.m */; };
@@ -213,6 +221,24 @@
 		C5379EAC24D148570078880F /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
 		C54F104B24C480D200EE1E67 /* UIView+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extras.m"; sourceTree = "<group>"; };
 		C54F104C24C480D200EE1E67 /* UIView+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extras.h"; sourceTree = "<group>"; };
+		C57ADFA624D996C800419DFA /* BaseVC+AlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+AlertController.m"; sourceTree = "<group>"; };
+		C57ADFA724D996C800419DFA /* BaseVC+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+MJRefresh.m"; sourceTree = "<group>"; };
+		C57ADFA824D996C900419DFA /* BaseVC+BRStringPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+BRStringPickerView.m"; sourceTree = "<group>"; };
+		C57ADFA924D996C900419DFA /* BaseVC+BRStringPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+BRStringPickerView.h"; sourceTree = "<group>"; };
+		C57ADFAA24D996C900419DFA /* BaseVC+TZImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+TZImagePickerController.m"; sourceTree = "<group>"; };
+		C57ADFAB24D996C900419DFA /* BaseVC+JXCategoryListContentViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+JXCategoryListContentViewDelegate.m"; sourceTree = "<group>"; };
+		C57ADFAC24D996C900419DFA /* BaseVC+TZImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+TZImagePickerController.h"; sourceTree = "<group>"; };
+		C57ADFAD24D996C900419DFA /* BaseVC+AlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+AlertController.h"; sourceTree = "<group>"; };
+		C57ADFAE24D996C900419DFA /* BaseVC+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+MJRefresh.h"; sourceTree = "<group>"; };
+		C57ADFAF24D996C900419DFA /* BaseVC+FSCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+FSCustomButton.m"; sourceTree = "<group>"; };
+		C57ADFB024D996C900419DFA /* BaseVC+GifImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+GifImageView.h"; sourceTree = "<group>"; };
+		C57ADFB124D996C900419DFA /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
+		C57ADFB224D996C900419DFA /* BaseVC+GifImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+GifImageView.m"; sourceTree = "<group>"; };
+		C57ADFB324D996C900419DFA /* BaseVC+AFNReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+AFNReachability.h"; sourceTree = "<group>"; };
+		C57ADFB424D996C900419DFA /* BaseVC+FSCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+FSCustomButton.h"; sourceTree = "<group>"; };
+		C57ADFB524D996C900419DFA /* BaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
+		C57ADFB624D996C900419DFA /* BaseVC+JXCategoryListContentViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+JXCategoryListContentViewDelegate.h"; sourceTree = "<group>"; };
+		C57ADFB724D996C900419DFA /* BaseVC+AFNReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+AFNReachability.m"; sourceTree = "<group>"; };
 		C5802D0424BCAD3800894903 /* commentList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = commentList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5802D0724BCAD3800894903 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5802D0824BCAD3800894903 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -390,8 +416,6 @@
 		C5F78B1324BF3F73008A46EC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C5F78B1D24BF4195008A46EC /* PopUpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopUpVC.m; sourceTree = "<group>"; };
 		C5F78B1E24BF4195008A46EC /* PopUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpVC.h; sourceTree = "<group>"; };
-		C5F78B2124BF41EF008A46EC /* BaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
-		C5F78B2224BF41EF008A46EC /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
 		C5F78B2524BF422D008A46EC /* CALayer+FSUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+FSUI.m"; sourceTree = "<group>"; };
 		C5F78B2624BF422D008A46EC /* FSCommenDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCommenDefine.h; sourceTree = "<group>"; };
 		C5F78B2724BF422D008A46EC /* FSCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCustomButton.h; sourceTree = "<group>"; };
@@ -947,8 +971,24 @@
 		C5F78B2024BF41E6008A46EC /* BaseVC */ = {
 			isa = PBXGroup;
 			children = (
-				C5F78B2224BF41EF008A46EC /* BaseVC.h */,
-				C5F78B2124BF41EF008A46EC /* BaseVC.m */,
+				C57ADFB124D996C900419DFA /* BaseVC.h */,
+				C57ADFB524D996C900419DFA /* BaseVC.m */,
+				C57ADFA924D996C900419DFA /* BaseVC+BRStringPickerView.h */,
+				C57ADFA824D996C900419DFA /* BaseVC+BRStringPickerView.m */,
+				C57ADFB424D996C900419DFA /* BaseVC+FSCustomButton.h */,
+				C57ADFAF24D996C900419DFA /* BaseVC+FSCustomButton.m */,
+				C57ADFAD24D996C900419DFA /* BaseVC+AlertController.h */,
+				C57ADFA624D996C800419DFA /* BaseVC+AlertController.m */,
+				C57ADFAE24D996C900419DFA /* BaseVC+MJRefresh.h */,
+				C57ADFA724D996C800419DFA /* BaseVC+MJRefresh.m */,
+				C57ADFAC24D996C900419DFA /* BaseVC+TZImagePickerController.h */,
+				C57ADFAA24D996C900419DFA /* BaseVC+TZImagePickerController.m */,
+				C57ADFB624D996C900419DFA /* BaseVC+JXCategoryListContentViewDelegate.h */,
+				C57ADFAB24D996C900419DFA /* BaseVC+JXCategoryListContentViewDelegate.m */,
+				C57ADFB024D996C900419DFA /* BaseVC+GifImageView.h */,
+				C57ADFB224D996C900419DFA /* BaseVC+GifImageView.m */,
+				C57ADFB324D996C900419DFA /* BaseVC+AFNReachability.h */,
+				C57ADFB724D996C900419DFA /* BaseVC+AFNReachability.m */,
 			);
 			path = BaseVC;
 			sourceTree = "<group>";
@@ -1355,23 +1395,28 @@
 				C5C2082724BDEEFD001ED2F5 /* NonHoveringHeaderView.m in Sources */,
 				C5802D1D24BCAD3900894903 /* main.m in Sources */,
 				C5C2081E24BDE268001ED2F5 /* LoadMoreTBVCell.m in Sources */,
+				C57ADFC024D996C900419DFA /* BaseVC+AFNReachability.m in Sources */,
 				C590FE1424CFEA14000F36C9 /* CommentPopUpVC.m in Sources */,
 				C5F78A8524BED516008A46EC /* SecondClassModel.m in Sources */,
 				C590FE1A24CFEA6A000F36C9 /* MKCommentModel.m in Sources */,
 				C5F78B1F24BF4195008A46EC /* PopUpVC.m in Sources */,
-				C5F78B2324BF41EF008A46EC /* BaseVC.m in Sources */,
+				C57ADFBE24D996C900419DFA /* BaseVC+GifImageView.m in Sources */,
 				C590FE1524CFEA14000F36C9 /* CommentPopUpVC+VM.m in Sources */,
 				C52F592124CD4AA0001F72B3 /* InputView.m in Sources */,
 				C5B5206024D6C2FC00579178 /* MKLoginModel.m in Sources */,
 				C590FF1824CFF8F1000F36C9 /* TestClass.m in Sources */,
 				C54F104D24C480D200EE1E67 /* UIView+Extras.m in Sources */,
+				C57ADFBB24D996C900419DFA /* BaseVC+TZImagePickerController.m in Sources */,
+				C57ADFB924D996C900419DFA /* BaseVC+MJRefresh.m in Sources */,
 				C5F78A8424BED516008A46EC /* FirstClassModel.m in Sources */,
 				C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */,
 				C5DD001D24D46C6F00307DFA /* EmptyView.m in Sources */,
 				C5C2082824BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m in Sources */,
 				C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */,
 				C5379EA324D13FDC0078880F /* ZYTextField.m in Sources */,
+				C57ADFBF24D996C900419DFA /* BaseVC.m in Sources */,
 				C52F592724CD4C3E001F72B3 /* UIImage+YBGIF.m in Sources */,
+				C57ADFBD24D996C900419DFA /* BaseVC+FSCustomButton.m in Sources */,
 				C5F78B2F24BF44F1008A46EC /* ECAuthorizationTools.m in Sources */,
 				C5379EA924D13FE80078880F /* CJTextField.m in Sources */,
 				C5B5205924D6C27E00579178 /* URL_Manager.m in Sources */,
@@ -1383,6 +1428,9 @@
 				C590FE3124CFEAEA000F36C9 /* RBCLikeButton.m in Sources */,
 				C5379EA624D13FE20078880F /* HQTextField.m in Sources */,
 				C5802D1524BCAD3800894903 /* commentList.xcdatamodeld in Sources */,
+				C57ADFBC24D996C900419DFA /* BaseVC+JXCategoryListContentViewDelegate.m in Sources */,
+				C57ADFBA24D996C900419DFA /* BaseVC+BRStringPickerView.m in Sources */,
+				C57ADFB824D996C900419DFA /* BaseVC+AlertController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

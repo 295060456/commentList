@@ -32,7 +32,6 @@
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+WJExtension.h"
 #import <YXAlertController.h>
-#import "BaseVC.h"
 #import "NSString+Extras.h"
 #import "EmptyView.h"
 #import "ZYTextField.h"
@@ -42,6 +41,16 @@
 
 #import "AppDelegate.h"
 #import "SceneDelegate.h"
+
+#import "BaseVC.h"
+#import "BaseVC+TZImagePickerController.h"
+#import "BaseVC+MJRefresh.h"
+#import "BaseVC+AlertController.h"
+#import "BaseVC+AFNReachability.h"
+#import "BaseVC+FSCustomButton.h"
+#import "BaseVC+JXCategoryListContentViewDelegate.h"
+#import "BaseVC+BRStringPickerView.h"
+#import "BaseVC+GifImageView.h"
 
 #define WeakSelf __weak typeof(self) weakSelf = self;
 #define StrongSelf __strong typeof(self) strongSelf = self;

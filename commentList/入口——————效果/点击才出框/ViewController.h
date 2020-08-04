@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 //点击才出框
-@interface ViewController : UIViewController
+@interface ViewController : BaseVC
 
 @end
 
