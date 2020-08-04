@@ -52,7 +52,7 @@ PODS:
   - SDWebImage/WebP (4.4.8):
     - libwebp (< 2.0, >= 0.5)
     - SDWebImage/Core
-  - TZImagePickerController (3.3.2)
+  - TZImagePickerController (3.4.1)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
@@ -112,7 +112,7 @@ SPEC CHECKSUMS:
   MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
-  TZImagePickerController: 36ca728ec681228918aa82e993aaab1962281b72
+  TZImagePickerController: 4e7a7b3d314f8a75f11042931dfd9d34c270c7db
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
 PODFILE CHECKSUM: 03740f2b0b00f49370321351bd0497cf47c7fde7
