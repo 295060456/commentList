@@ -44,6 +44,7 @@ CLLocationManagerDelegate
         }];
     }else if (type ==  ECPrivacyType_Photos) {              // 照片
         [self checkAndRequestAccessForPhotosWithAccessStatus:^id(ECAuthorizationStatus status, ECPrivacyType type) {
+            accessStatusCallBack(status,type);
             return nil;
         }];
     }else if (type == ECPrivacyType_BluetoothSharing) {     // 蓝牙
