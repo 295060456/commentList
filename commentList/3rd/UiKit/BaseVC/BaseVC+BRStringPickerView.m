@@ -18,6 +18,7 @@ static char *BaseVC_BRStringPickerView_BRStringPickerViewDataMutArr;
 @dynamic stringPickerView;
 @dynamic brStringPickerMode;
 @dynamic BRStringPickerViewDataMutArr;
+@dynamic brStringPickerViewBlock;
 
 -(void)BRStringPickerViewBlock:(MKDataBlock)block{
     self.brStringPickerViewBlock = block;
@@ -70,6 +71,5 @@ static char *BaseVC_BRStringPickerView_BRStringPickerViewDataMutArr;
                                  OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }return bRStringPickerViewDataMutArr;
 }
-
 
 @end

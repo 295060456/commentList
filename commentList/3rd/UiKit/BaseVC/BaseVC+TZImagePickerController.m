@@ -33,7 +33,6 @@ static char *BaseVC_TZImagePickerController_asset;
 @dynamic index;
 @dynamic photo;
 @dynamic asset;
-
 ///点选的图片
 -(void)GettingPicBlock:(MKDataBlock)block{
     self.picBlock = block;
@@ -43,8 +42,8 @@ static char *BaseVC_TZImagePickerController_asset;
     self.tzImagePickerControllerType = tzImagePickerControllerType;
     @weakify(self)
     [ECAuthorizationTools checkAndRequestAccessForType:ECPrivacyType_Photos
-                                          accessStatus:^(ECAuthorizationStatus status,
-                                                         ECPrivacyType type) {
+                                          accessStatus:^id(ECAuthorizationStatus status,
+                                                           ECPrivacyType type) {
         @strongify(self)
         // status 即为权限状态，
         //状态类型参考：ECAuthorizationStatus
@@ -53,6 +52,7 @@ static char *BaseVC_TZImagePickerController_asset;
             [self presentViewController:self.imagePickerVC
                                      animated:YES
                                    completion:nil];
+            return self.imagePickerVC;
         }else{
             NSLog(@"相册不可用:%lu",(unsigned long)status);
             [self alertControllerStyle:SYS_AlertController
@@ -61,6 +61,7 @@ static char *BaseVC_TZImagePickerController_asset;
                        isSeparateStyle:YES
                            btnTitleArr:@[@"去获取"]
                         alertBtnAction:@[@"pushToSysConfig"]];
+            return nil;
         }
     }];
 }
@@ -69,7 +70,7 @@ static char *BaseVC_TZImagePickerController_asset;
     //先鉴权
     @weakify(self)
     [ECAuthorizationTools checkAndRequestAccessForType:ECPrivacyType_Camera
-                                          accessStatus:^(ECAuthorizationStatus status,
+                                          accessStatus:^id(ECAuthorizationStatus status,
                                                          ECPrivacyType type) {
         @strongify(self)
         // status 即为权限状态，
@@ -88,6 +89,7 @@ static char *BaseVC_TZImagePickerController_asset;
                            btnTitleArr:@[@"去获取"]
                         alertBtnAction:@[@"pushToSysConfig"]];
         }
+        return nil;
     }];
 }
 #pragma mark —— lazyLoad

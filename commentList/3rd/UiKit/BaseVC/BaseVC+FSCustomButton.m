@@ -11,8 +11,8 @@
 
 @implementation BaseVC (FSCustomButton)
 
-static char *BaseVC_FSCustomButton_backBtnCategory;
-@dynamic backBtnCategory;
+static char *BaseVC_FSCustomButton_backBtn;
+@dynamic backBtn;
 
 #pragma mark —— 子类需要覆写
 -(void)backBtnClickEvent:(UIButton *)sender{
@@ -24,25 +24,25 @@ static char *BaseVC_FSCustomButton_backBtnCategory;
     }
 }
 #pragma mark —— lazyLoad
--(FSCustomButton *)backBtnCategory{
-    FSCustomButton *BackBtnCategory = objc_getAssociatedObject(self, BaseVC_FSCustomButton_backBtnCategory);
-    if (!BackBtnCategory) {
-        BackBtnCategory = FSCustomButton.new;
-        BackBtnCategory.buttonImagePosition = FSCustomButtonImagePositionLeft;
-        [BackBtnCategory setTitleColor:kWhiteColor
+-(FSCustomButton *)backBtn{
+    FSCustomButton *BackBtn = objc_getAssociatedObject(self, BaseVC_FSCustomButton_backBtn);
+    if (!BackBtn) {
+        BackBtn = FSCustomButton.new;
+        BackBtn.buttonImagePosition = FSCustomButtonImagePositionLeft;
+        [BackBtn setTitleColor:kWhiteColor
                        forState:UIControlStateNormal];
-        [BackBtnCategory setTitle:@"返回"
+        [BackBtn setTitle:@"返回"
                   forState:UIControlStateNormal];
-        [BackBtnCategory setImage:kIMG(@"back_white")
+        [BackBtn setImage:kIMG(@"back_white")
                   forState:UIControlStateNormal];
-        [BackBtnCategory addTarget:self
+        [BackBtn addTarget:self
                      action:@selector(backBtnClickEvent:)
            forControlEvents:UIControlEventTouchUpInside];
         objc_setAssociatedObject(self,
-                                 BaseVC_FSCustomButton_backBtnCategory,
-                                 BackBtnCategory,
+                                 BaseVC_FSCustomButton_backBtn,
+                                 BackBtn,
                                  OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }return BackBtnCategory;
+    }return BackBtn;
 }
 
 @end

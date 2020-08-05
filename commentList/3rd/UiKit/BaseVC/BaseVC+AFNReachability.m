@@ -80,4 +80,5 @@ static char *BaseVC_AFNReachability_afNetworkReachabilityManager;
     }return AfNetworkReachabilityManager;
 }
 
+
 @end
