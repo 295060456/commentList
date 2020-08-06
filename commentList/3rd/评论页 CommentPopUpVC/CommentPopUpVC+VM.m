@@ -11,25 +11,28 @@
 @implementation CommentPopUpVC (VM)
 ///GET 初始化用户评论列表
 -(void)netWorking_MKCommentQueryInitListGET{
-    return;
     
 }
 ///POST 评论视频
 -(void)netWorking_MKCommentVideoPOST{//
-    return;
-    
+   
 }
 ///POST 回复评论
 -(void)netWorking_MKCommentReplyCommentPOSTWithCommentId:(NSString *)commentId
                                                       ID:(NSString *)ID
                                                  content:(NSString *)content{//
-    return;
     
 }
 ///POST 删除评论
 -(void)netWorking_MKCommentDelCommentPOSTWithCommentId:(NSString *)commentId
                                                     ID:(NSString *)ID{
-    return;
+    
+}
+
+///POST 点赞或取消点赞
+-(void)netWorking_MKCommentSetPraisePOSTWithCommentId:(NSString *)commentId
+                                                   ID:(NSString *)ID
+                                               sender:(RBCLikeButton *)sender{
     
 }
 

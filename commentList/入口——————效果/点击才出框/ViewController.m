@@ -242,6 +242,24 @@
         _commentPopUpVC.view.mj_h = self.liftingHeight;
         
         @weakify(self)
+        //已经发送评论网络请求成功
+        [_commentPopUpVC commentPopUpActionBlock:^(id data) {
+            NSLog(@"");
+            @strongify(self)
+            if ([data isKindOfClass:ZYTextField.class]) {
+                if (!self.commentPopUpVC.inputView.textField.isInputting) {
+                    //仅仅键盘消失,commentPopUpVC还在
+//                    [self.commentPopUpVC.view endEditing:YES];
+//                    [self willClose_vertical];//?
+                    //发送按钮隐藏
+                    [self.view endEditing:YES];
+                    [self.commentPopUpVC.inputView hideSendBtn];
+                    self.commentPopUpVC.view.mj_y = self.liftingHeight;
+                }else{
+//                    self.commentPopUpVC.view.mj_y = 102;//self.CommentPopUpVC_EditY; CommentPopUpVC_Y
+                }
+            }
+        }];
         //点击 或者 拖拽触发事件
         [_commentPopUpVC popUpActionBlock:^(id data) {
             if ([data isKindOfClass:UIButton.class]) {
@@ -256,7 +274,10 @@
                                        message:@"确定放弃评论吗？"
                                isSeparateStyle:NO
                                    btnTitleArr:@[@"我不回复了",@"手滑啦"]
-                                alertBtnAction:@[@"GiveUpComment",@"Sorry"]];
+                                alertBtnAction:@[@"GiveUpComment",@"Sorry"]
+                                  alertVCBlock:^(id data) {
+                        //DIY
+                    }];
                 }
             }else{
                 //弹出键盘的时候 没做处理
@@ -268,21 +289,6 @@
                 }else if (moveDirection == MoveDirection_vertical_up){
                     [self willOpen];
                 }else{}
-            }
-        }];
-        //已经发送评论网络请求成功
-        [_commentPopUpVC commentPopUpActionBlock:^(id data) {
-            NSLog(@"");
-            @strongify(self)
-            if ([data isKindOfClass:ZYTextField.class]) {
-                if (!self.commentPopUpVC.inputView.textField.isInputting) {
-                    //仅仅键盘消失,commentPopUpVC还在
-//                    [self.commentPopUpVC.view endEditing:YES];
-//                    [self willClose_vertical];//?
-                    //发送按钮隐藏
-                    [self.commentPopUpVC.inputView BBB];
-                    self.commentPopUpVC.view.mj_y = self.liftingHeight;
-                }
             }
         }];
     }return _commentPopUpVC;
