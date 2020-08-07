@@ -289,15 +289,12 @@
             @strongify(self)
             if ([data isKindOfClass:ZYTextField.class]) {
                 if (!self->_commentPopUpVC.inputView.textField.isInputting) {
-                    //仅仅键盘消失,commentPopUpVC还在
-//                    [_commentPopUpVC.view endEditing:YES];
-//                    [self willClose_vertical];//?
                     //发送按钮隐藏
                     [self.view endEditing:YES];
                     [self->_commentPopUpVC.inputView hideSendBtn];
                     self->_commentPopUpVC.view.mj_y = self.liftingHeight;
                 }else{
-//                    _commentPopUpVC.view.mj_y = 102;//self.CommentPopUpVC_EditY; CommentPopUpVC_Y
+                    NSLog(@"");
                 }
             }
         }];
