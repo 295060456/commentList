@@ -28,6 +28,7 @@ PODS:
     - BRPickerView/Base
   - GKNavigationBar (1.1.3)
   - IQKeyboardManager (6.5.5)
+  - JPImageresizerView (1.7.5)
   - JSONModel (1.8.0)
   - JXCategoryView (1.5.6)
   - LYEmptyView (1.3.1)
@@ -50,6 +51,7 @@ DEPENDENCIES:
   - BRPickerView
   - GKNavigationBar
   - IQKeyboardManager
+  - JPImageresizerView
   - JSONModel
   - JXCategoryView
   - LYEmptyView
@@ -69,6 +71,7 @@ SPEC REPOS:
     - BRPickerView
     - GKNavigationBar
     - IQKeyboardManager
+    - JPImageresizerView
     - JSONModel
     - JXCategoryView
     - LYEmptyView
@@ -87,6 +90,7 @@ SPEC CHECKSUMS:
   BRPickerView: 70e2e38b6441d4b43e9d14727aea662756476367
   GKNavigationBar: 9ea53a433ff9297bbc33aa663de6cd902b5aaf00
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  JPImageresizerView: c23ae0d67ea61da374c8a16d3f55982111375c10
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   JXCategoryView: 603ccd8277a89b1a73e9cedb9d8ed4b294576008
   LYEmptyView: b6d418cfa38b78df0cf243f9a9c25ccbdc399922
@@ -100,6 +104,6 @@ SPEC CHECKSUMS:
   TZImagePickerController: 4e7a7b3d314f8a75f11042931dfd9d34c270c7db
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 95a5ea5aab6d66590f952d31572a3bdb489eb751
+PODFILE CHECKSUM: 58081d4b20092699267bf7c6991001d6554fcbe6
 
 COCOAPODS: 1.9.3

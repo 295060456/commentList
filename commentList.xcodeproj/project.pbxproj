@@ -25,6 +25,7 @@
 		C5748A3724DC4C0800A842B2 /* BaseVC+GifImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5748A2D24DC4C0800A842B2 /* BaseVC+GifImageView.m */; };
 		C5748A3824DC4C0800A842B2 /* BaseVC+AlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5748A2E24DC4C0800A842B2 /* BaseVC+AlertController.m */; };
 		C5748A3924DC4C0800A842B2 /* BaseVC+FSCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5748A2F24DC4C0800A842B2 /* BaseVC+FSCustomButton.m */; };
+		C5748A8024DD135700A842B2 /* BaseVC+JPImageresizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5748A7F24DD135700A842B2 /* BaseVC+JPImageresizerView.m */; };
 		C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0824BCAD3800894903 /* AppDelegate.m */; };
 		C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0B24BCAD3800894903 /* SceneDelegate.m */; };
 		C5802D1224BCAD3800894903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5802D1024BCAD3800894903 /* Main.storyboard */; };
@@ -238,6 +239,8 @@
 		C5748A2F24DC4C0800A842B2 /* BaseVC+FSCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+FSCustomButton.m"; sourceTree = "<group>"; };
 		C5748A3024DC4C0800A842B2 /* BaseVC+BRPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+BRPickerView.h"; sourceTree = "<group>"; };
 		C5748A3124DC4C0800A842B2 /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
+		C5748A7E24DD135700A842B2 /* BaseVC+JPImageresizerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+JPImageresizerView.h"; sourceTree = "<group>"; };
+		C5748A7F24DD135700A842B2 /* BaseVC+JPImageresizerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+JPImageresizerView.m"; sourceTree = "<group>"; };
 		C5802D0424BCAD3800894903 /* commentList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = commentList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5802D0724BCAD3800894903 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5802D0824BCAD3800894903 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -982,6 +985,8 @@
 				C5336FA824DAB9CC0082847C /* 存在疑问的 */,
 				C5748A3124DC4C0800A842B2 /* BaseVC.h */,
 				C5748A2224DC4C0700A842B2 /* BaseVC.m */,
+				C5748A7E24DD135700A842B2 /* BaseVC+JPImageresizerView.h */,
+				C5748A7F24DD135700A842B2 /* BaseVC+JPImageresizerView.m */,
 				C5748A2724DC4C0800A842B2 /* BaseVC+AFNReachability.h */,
 				C5748A2624DC4C0800A842B2 /* BaseVC+AFNReachability.m */,
 				C5748A2424DC4C0700A842B2 /* BaseVC+AlertController.h */,
@@ -1403,6 +1408,7 @@
 				C5802D1D24BCAD3900894903 /* main.m in Sources */,
 				C5C2081E24BDE268001ED2F5 /* LoadMoreTBVCell.m in Sources */,
 				C590FE1424CFEA14000F36C9 /* CommentPopUpVC.m in Sources */,
+				C5748A8024DD135700A842B2 /* BaseVC+JPImageresizerView.m in Sources */,
 				C5F78A8524BED516008A46EC /* SecondClassModel.m in Sources */,
 				C590FE1A24CFEA6A000F36C9 /* MKCommentModel.m in Sources */,
 				C5F78B1F24BF4195008A46EC /* PopUpVC.m in Sources */,

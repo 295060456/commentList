@@ -35,6 +35,7 @@
 #import "NSString+Extras.h"
 #import "EmptyView.h"
 #import "ZYTextField.h"
+#import "JPImageresizerView-umbrella.h"
 
 //URL
 #import "URL_Manager.h"
