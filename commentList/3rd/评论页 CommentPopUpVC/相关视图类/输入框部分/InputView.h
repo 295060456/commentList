@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)hideSendBtn;
 ///发送
 -(void)actionInputViewBlock:(MKDataBlock)inputViewActionBlock;
+///删除
+-(void)actionisInputtingBlock:(MKDataBlock)isInputtingActionBlock;
 
 @end
 

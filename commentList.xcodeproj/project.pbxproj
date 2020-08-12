@@ -153,6 +153,8 @@
 		C590FF1424CFF163000F36C9 /* gif_header_18@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C590FEDD24CFF163000F36C9 /* gif_header_18@2x.png */; };
 		C590FF1824CFF8F1000F36C9 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C590FF1724CFF8F1000F36C9 /* TestClass.m */; };
 		C590FF6A24D01D9A000F36C9 /* CommentListData.json in Resources */ = {isa = PBXBuildFile; fileRef = C590FF6924D01D9A000F36C9 /* CommentListData.json */; };
+		C59C4A5724E3A943002C2104 /* BaseVC+TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C59C4A5624E3A942002C2104 /* BaseVC+TZLocationManager.m */; };
+		C59C4A5A24E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C59C4A5824E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.m */; };
 		C5B5205924D6C27E00579178 /* URL_Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B5205724D6C27E00579178 /* URL_Manager.m */; };
 		C5B5206024D6C2FC00579178 /* MKLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B5205D24D6C2FC00579178 /* MKLoginModel.m */; };
 		C5C2081B24BDE254001ED2F5 /* InfoTBVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2081A24BDE254001ED2F5 /* InfoTBVCell.m */; };
@@ -378,6 +380,10 @@
 		C590FF1624CFF8F1000F36C9 /* TestClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
 		C590FF1724CFF8F1000F36C9 /* TestClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
 		C590FF6924D01D9A000F36C9 /* CommentListData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CommentListData.json; sourceTree = "<group>"; };
+		C59C4A5524E3A942002C2104 /* BaseVC+TZLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+TZLocationManager.h"; sourceTree = "<group>"; };
+		C59C4A5624E3A942002C2104 /* BaseVC+TZLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+TZLocationManager.m"; sourceTree = "<group>"; };
+		C59C4A5824E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+TZImagePickerControllerDelegate.m"; sourceTree = "<group>"; };
+		C59C4A5924E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+TZImagePickerControllerDelegate.h"; sourceTree = "<group>"; };
 		C5B5205724D6C27E00579178 /* URL_Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URL_Manager.m; sourceTree = "<group>"; };
 		C5B5205824D6C27E00579178 /* URL_Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL_Manager.h; sourceTree = "<group>"; };
 		C5B5205B24D6C2FC00579178 /* MKLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKLoginModel.h; sourceTree = "<group>"; };
@@ -970,13 +976,13 @@
 		C5E4C10624DFF28000D4862C /* 分享控件 */ = {
 			isa = PBXGroup;
 			children = (
-				C5E4C10724DFF28000D4862C /* BWItemModel.m */,
-				C5E4C10824DFF28000D4862C /* BWShareView.m */,
 				C5E4C10924DFF28000D4862C /* 分享控件的用法 */,
+				C5E4C10C24DFF28000D4862C /* BWItemCollectionViewCell.h */,
 				C5E4C10A24DFF28000D4862C /* BWItemCollectionViewCell.m */,
 				C5E4C10B24DFF28000D4862C /* BWItemModel.h */,
-				C5E4C10C24DFF28000D4862C /* BWItemCollectionViewCell.h */,
+				C5E4C10724DFF28000D4862C /* BWItemModel.m */,
 				C5E4C10D24DFF28000D4862C /* BWShareView.h */,
+				C5E4C10824DFF28000D4862C /* BWShareView.m */,
 			);
 			path = "分享控件";
 			sourceTree = "<group>";
@@ -1016,6 +1022,12 @@
 				C5336FA824DAB9CC0082847C /* 存在疑问的 */,
 				C5E4C0D324DFF11800D4862C /* BaseVC.h */,
 				C5E4C0D524DFF11800D4862C /* BaseVC.m */,
+				C5E4C0C324DFF11700D4862C /* BaseVC+TZImagePickerController.h */,
+				C5E4C0C224DFF11700D4862C /* BaseVC+TZImagePickerController.m */,
+				C59C4A5524E3A942002C2104 /* BaseVC+TZLocationManager.h */,
+				C59C4A5624E3A942002C2104 /* BaseVC+TZLocationManager.m */,
+				C59C4A5924E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.h */,
+				C59C4A5824E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.m */,
 				C5E4C0D024DFF11800D4862C /* BaseVC+AFNReachability.h */,
 				C5E4C0C824DFF11700D4862C /* BaseVC+AFNReachability.m */,
 				C5E4C0C924DFF11700D4862C /* BaseVC+AlertController.h */,
@@ -1034,8 +1046,6 @@
 				C5E4C0CF24DFF11800D4862C /* BaseVC+JXCategoryListContentViewDelegate.m */,
 				C5E4C0C724DFF11700D4862C /* BaseVC+OpenURL.h */,
 				C5E4C0C424DFF11700D4862C /* BaseVC+OpenURL.m */,
-				C5E4C0C324DFF11700D4862C /* BaseVC+TZImagePickerController.h */,
-				C5E4C0C224DFF11700D4862C /* BaseVC+TZImagePickerController.m */,
 			);
 			path = BaseVC;
 			sourceTree = "<group>";
@@ -1439,6 +1449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59C4A5724E3A943002C2104 /* BaseVC+TZLocationManager.m in Sources */,
 				C5F78B2A24BF422D008A46EC /* CALayer+FSUI.m in Sources */,
 				C5C2081B24BDE254001ED2F5 /* InfoTBVCell.m in Sources */,
 				C5E4C0DB24DFF11800D4862C /* BaseVC+AFNReachability.m in Sources */,
@@ -1454,6 +1465,7 @@
 				C52F592124CD4AA0001F72B3 /* InputView.m in Sources */,
 				C5B5206024D6C2FC00579178 /* MKLoginModel.m in Sources */,
 				C5E4C0E124DFF11800D4862C /* BaseVC+BRPickerView.m in Sources */,
+				C59C4A5A24E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.m in Sources */,
 				C590FF1824CFF8F1000F36C9 /* TestClass.m in Sources */,
 				C54F104D24C480D200EE1E67 /* UIView+Extras.m in Sources */,
 				C5E4C10F24DFF28000D4862C /* BWShareView.m in Sources */,

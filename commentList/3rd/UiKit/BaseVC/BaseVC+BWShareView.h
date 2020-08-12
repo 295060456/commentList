@@ -7,6 +7,7 @@
 //
 
 #import "BaseVC.h"
+#import "BWShareView.h"
 
 typedef enum : NSUInteger {
     BWShareViewStyle_1 = 0,//   有/无标题的单层分享
