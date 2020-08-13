@@ -162,6 +162,11 @@
 		C5C2082624BDEEFD001ED2F5 /* HoveringHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2082024BDEEFD001ED2F5 /* HoveringHeaderView.m */; };
 		C5C2082724BDEEFD001ED2F5 /* NonHoveringHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2082124BDEEFD001ED2F5 /* NonHoveringHeaderView.m */; };
 		C5C2082824BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2082424BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m */; };
+		C5CF70C424E510F5000DB72D /* SuspendBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF70BA24E510F5000DB72D /* SuspendBtn.m */; };
+		C5CF70C524E510F5000DB72D /* UIView+SuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF70BC24E510F5000DB72D /* UIView+SuspendView.m */; };
+		C5CF70C624E510F5000DB72D /* SuspendLab.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF70BF24E510F5000DB72D /* SuspendLab.m */; };
+		C5CF70C724E510F5000DB72D /* SuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF70C224E510F5000DB72D /* SuspendView.m */; };
+		C5CF70E424E51CFF000DB72D /* MonitorNetwoking.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF70E224E51CFE000DB72D /* MonitorNetwoking.m */; };
 		C5DD001D24D46C6F00307DFA /* EmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD001B24D46C6F00307DFA /* EmptyView.m */; };
 		C5E4C0D724DFF11800D4862C /* BaseVC+FSCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E4C0C124DFF11700D4862C /* BaseVC+FSCustomButton.m */; };
 		C5E4C0D824DFF11800D4862C /* BaseVC+TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E4C0C224DFF11700D4862C /* BaseVC+TZImagePickerController.m */; };
@@ -402,6 +407,16 @@
 		C5C2082324BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewHeaderFooterView+Attribute.h"; sourceTree = "<group>"; };
 		C5C2082424BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewHeaderFooterView+Attribute.m"; sourceTree = "<group>"; };
 		C5C2082524BDEEFD001ED2F5 /* HoveringHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoveringHeaderView.h; sourceTree = "<group>"; };
+		C5CF70BA24E510F5000DB72D /* SuspendBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendBtn.m; sourceTree = "<group>"; };
+		C5CF70BB24E510F5000DB72D /* SuspendBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendBtn.h; sourceTree = "<group>"; };
+		C5CF70BC24E510F5000DB72D /* UIView+SuspendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SuspendView.m"; sourceTree = "<group>"; };
+		C5CF70BE24E510F5000DB72D /* SuspendLab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendLab.h; sourceTree = "<group>"; };
+		C5CF70BF24E510F5000DB72D /* SuspendLab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendLab.m; sourceTree = "<group>"; };
+		C5CF70C024E510F5000DB72D /* UIView+SuspendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SuspendView.h"; sourceTree = "<group>"; };
+		C5CF70C224E510F5000DB72D /* SuspendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendView.m; sourceTree = "<group>"; };
+		C5CF70C324E510F5000DB72D /* SuspendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendView.h; sourceTree = "<group>"; };
+		C5CF70E224E51CFE000DB72D /* MonitorNetwoking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitorNetwoking.m; sourceTree = "<group>"; };
+		C5CF70E324E51CFE000DB72D /* MonitorNetwoking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitorNetwoking.h; sourceTree = "<group>"; };
 		C5DD001B24D46C6F00307DFA /* EmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyView.m; sourceTree = "<group>"; };
 		C5DD001C24D46C6F00307DFA /* EmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyView.h; sourceTree = "<group>"; };
 		C5E4C0C124DFF11700D4862C /* BaseVC+FSCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+FSCustomButton.m"; sourceTree = "<group>"; };
@@ -946,6 +961,52 @@
 			path = "取消悬停";
 			sourceTree = "<group>";
 		};
+		C5CF70B824E510F5000DB72D /* Suspend */ = {
+			isa = PBXGroup;
+			children = (
+				C5CF70B924E510F5000DB72D /* SuspendBtn */,
+				C5CF70BD24E510F5000DB72D /* SuspendLab */,
+				C5CF70C124E510F5000DB72D /* SuspendView */,
+			);
+			path = Suspend;
+			sourceTree = "<group>";
+		};
+		C5CF70B924E510F5000DB72D /* SuspendBtn */ = {
+			isa = PBXGroup;
+			children = (
+				C5CF70BB24E510F5000DB72D /* SuspendBtn.h */,
+				C5CF70BA24E510F5000DB72D /* SuspendBtn.m */,
+			);
+			path = SuspendBtn;
+			sourceTree = "<group>";
+		};
+		C5CF70BD24E510F5000DB72D /* SuspendLab */ = {
+			isa = PBXGroup;
+			children = (
+				C5CF70BE24E510F5000DB72D /* SuspendLab.h */,
+				C5CF70BF24E510F5000DB72D /* SuspendLab.m */,
+			);
+			path = SuspendLab;
+			sourceTree = "<group>";
+		};
+		C5CF70C124E510F5000DB72D /* SuspendView */ = {
+			isa = PBXGroup;
+			children = (
+				C5CF70C324E510F5000DB72D /* SuspendView.h */,
+				C5CF70C224E510F5000DB72D /* SuspendView.m */,
+			);
+			path = SuspendView;
+			sourceTree = "<group>";
+		};
+		C5CF70E124E51CF3000DB72D /* 网络数据实时监测 */ = {
+			isa = PBXGroup;
+			children = (
+				C5CF70E324E51CFE000DB72D /* MonitorNetwoking.h */,
+				C5CF70E224E51CFE000DB72D /* MonitorNetwoking.m */,
+			);
+			path = "网络数据实时监测";
+			sourceTree = "<group>";
+		};
 		C5DD001A24D46C6400307DFA /* LYEmptyView */ = {
 			isa = PBXGroup;
 			children = (
@@ -958,6 +1019,8 @@
 		C5DDFFAC24D3FA3800307DFA /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				C5CF70C024E510F5000DB72D /* UIView+SuspendView.h */,
+				C5CF70BC24E510F5000DB72D /* UIView+SuspendView.m */,
 				C54F104C24C480D200EE1E67 /* UIView+Extras.h */,
 				C54F104B24C480D200EE1E67 /* UIView+Extras.m */,
 			);
@@ -1074,6 +1137,8 @@
 		C5F78B3424BF4712008A46EC /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				C5CF70E124E51CF3000DB72D /* 网络数据实时监测 */,
+				C5CF70B824E510F5000DB72D /* Suspend */,
 				C5E4C10624DFF28000D4862C /* 分享控件 */,
 				C5DD001A24D46C6400307DFA /* LYEmptyView */,
 				C590FE1F24CFEAD4000F36C9 /* 高仿抖音点赞动画 */,
@@ -1449,9 +1514,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5CF70C524E510F5000DB72D /* UIView+SuspendView.m in Sources */,
+				C5CF70C724E510F5000DB72D /* SuspendView.m in Sources */,
 				C59C4A5724E3A943002C2104 /* BaseVC+TZLocationManager.m in Sources */,
 				C5F78B2A24BF422D008A46EC /* CALayer+FSUI.m in Sources */,
 				C5C2081B24BDE254001ED2F5 /* InfoTBVCell.m in Sources */,
+				C5CF70E424E51CFF000DB72D /* MonitorNetwoking.m in Sources */,
 				C5E4C0DB24DFF11800D4862C /* BaseVC+AFNReachability.m in Sources */,
 				C5E4C0DC24DFF11800D4862C /* BaseVC+JPImageresizerView.m in Sources */,
 				C5C2082724BDEEFD001ED2F5 /* NonHoveringHeaderView.m in Sources */,
@@ -1469,6 +1537,7 @@
 				C590FF1824CFF8F1000F36C9 /* TestClass.m in Sources */,
 				C54F104D24C480D200EE1E67 /* UIView+Extras.m in Sources */,
 				C5E4C10F24DFF28000D4862C /* BWShareView.m in Sources */,
+				C5CF70C624E510F5000DB72D /* SuspendLab.m in Sources */,
 				C5F78A8424BED516008A46EC /* FirstClassModel.m in Sources */,
 				C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */,
 				C5DD001D24D46C6F00307DFA /* EmptyView.m in Sources */,
@@ -1485,6 +1554,7 @@
 				C5379EA924D13FE80078880F /* CJTextField.m in Sources */,
 				C5E4C0DD24DFF11800D4862C /* BaseVC+JXCategoryListContentViewDelegate.m in Sources */,
 				C5B5205924D6C27E00579178 /* URL_Manager.m in Sources */,
+				C5CF70C424E510F5000DB72D /* SuspendBtn.m in Sources */,
 				C5E4C0DA24DFF11800D4862C /* BaseVC+AlertController.m in Sources */,
 				C590FE0F24CFE97E000F36C9 /* ViewController.m in Sources */,
 				C5E4C11124DFF28000D4862C /* BWItemCollectionViewCell.m in Sources */,
