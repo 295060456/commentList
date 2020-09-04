@@ -1739,7 +1739,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AGGNX9596Z;
+				DEVELOPMENT_TEAM = K92UCMVH8G;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/commentList/PrefixHeader.pch";
 				INFOPLIST_FILE = commentList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
