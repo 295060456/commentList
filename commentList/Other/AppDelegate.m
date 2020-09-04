@@ -36,7 +36,7 @@
     // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
     // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 }
-
+//系统版本低于iOS13.0的设备
 -(void)applicationDidEnterBackground:(UIApplication *)application{
     NSLog(@"---applicationDidEnterBackground----"); //进入后台
 }
