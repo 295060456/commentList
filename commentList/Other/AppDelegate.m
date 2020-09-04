@@ -37,7 +37,13 @@
     // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 }
 
+-(void)applicationDidEnterBackground:(UIApplication *)application{
+    NSLog(@"---applicationDidEnterBackground----"); //进入后台
+}
 
+-(void)applicationDidBecomeActive:(UIApplication *)application {
+    NSLog(@"---applicationDidBecomeActive----");//进入前台
+}
 #pragma mark - Core Data stack
 
 @synthesize persistentContainer = _persistentContainer;
