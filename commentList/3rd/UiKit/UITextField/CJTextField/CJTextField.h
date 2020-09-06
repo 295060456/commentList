@@ -10,8 +10,9 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+//iOS监听键盘删除事件
 @class CJTextField;
+
 @protocol CJTextFieldDeleteDelegate <NSObject>
 
 - (void)cjTextFieldDeleteBackward:(CJTextField *)textField;
@@ -20,7 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CJTextField : UITextField
 
-@property (nonatomic,weak)id <CJTextFieldDeleteDelegate>cj_delegate;
+@property(nonatomic,weak)id <CJTextFieldDeleteDelegate>cj_delegate;
+///输入的和某个预设定值不一致的时候，抖动动画
+- (void)isValidate:(NSString *)validate;
 
 @end
 
