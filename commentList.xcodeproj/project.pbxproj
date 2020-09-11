@@ -156,6 +156,7 @@
 		C590FF6A24D01D9A000F36C9 /* CommentListData.json in Resources */ = {isa = PBXBuildFile; fileRef = C590FF6924D01D9A000F36C9 /* CommentListData.json */; };
 		C59C4A5724E3A943002C2104 /* BaseVC+TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C59C4A5624E3A942002C2104 /* BaseVC+TZLocationManager.m */; };
 		C59C4A5A24E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C59C4A5824E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.m */; };
+		C5AA48F6250BB8C2009F583F /* UIViewController+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AA48F5250BB8C2009F583F /* UIViewController+Shake.m */; };
 		C5B5205924D6C27E00579178 /* URL_Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B5205724D6C27E00579178 /* URL_Manager.m */; };
 		C5B5206024D6C2FC00579178 /* MKLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B5205D24D6C2FC00579178 /* MKLoginModel.m */; };
 		C5C2081B24BDE254001ED2F5 /* InfoTBVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2081A24BDE254001ED2F5 /* InfoTBVCell.m */; };
@@ -390,6 +391,8 @@
 		C59C4A5624E3A942002C2104 /* BaseVC+TZLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+TZLocationManager.m"; sourceTree = "<group>"; };
 		C59C4A5824E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+TZImagePickerControllerDelegate.m"; sourceTree = "<group>"; };
 		C59C4A5924E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+TZImagePickerControllerDelegate.h"; sourceTree = "<group>"; };
+		C5AA48F4250BB8C2009F583F /* UIViewController+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Shake.h"; sourceTree = "<group>"; };
+		C5AA48F5250BB8C2009F583F /* UIViewController+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Shake.m"; sourceTree = "<group>"; };
 		C5B5205724D6C27E00579178 /* URL_Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URL_Manager.m; sourceTree = "<group>"; };
 		C5B5205824D6C27E00579178 /* URL_Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL_Manager.h; sourceTree = "<group>"; };
 		C5B5205B24D6C2FC00579178 /* MKLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKLoginModel.h; sourceTree = "<group>"; };
@@ -1081,6 +1084,8 @@
 				C5336FA824DAB9CC0082847C /* 存在疑问的 */,
 				C5E4C0D324DFF11800D4862C /* BaseVC.h */,
 				C5E4C0D524DFF11800D4862C /* BaseVC.m */,
+				C5AA48F4250BB8C2009F583F /* UIViewController+Shake.h */,
+				C5AA48F5250BB8C2009F583F /* UIViewController+Shake.m */,
 				C5E4C0C324DFF11700D4862C /* BaseVC+TZImagePickerController.h */,
 				C5E4C0C224DFF11700D4862C /* BaseVC+TZImagePickerController.m */,
 				C59C4A5524E3A942002C2104 /* BaseVC+TZLocationManager.h */,
@@ -1523,6 +1528,7 @@
 				C590FE1A24CFEA6A000F36C9 /* MKCommentModel.m in Sources */,
 				C5F78B1F24BF4195008A46EC /* PopUpVC.m in Sources */,
 				C590FE1524CFEA14000F36C9 /* CommentPopUpVC+VM.m in Sources */,
+				C5AA48F6250BB8C2009F583F /* UIViewController+Shake.m in Sources */,
 				C52F592124CD4AA0001F72B3 /* InputView.m in Sources */,
 				C5B5206024D6C2FC00579178 /* MKLoginModel.m in Sources */,
 				C5E4C0E124DFF11800D4862C /* BaseVC+BRPickerView.m in Sources */,
