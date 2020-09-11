@@ -41,6 +41,7 @@ PODS:
   - SDWebImage (5.8.4):
     - SDWebImage/Core (= 5.8.4)
   - SDWebImage/Core (5.8.4)
+  - SPAlertController (4.0.0)
   - TZImagePickerController (3.4.1)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -62,6 +63,7 @@ DEPENDENCIES:
   - MJRefresh
   - ReactiveObjC
   - SDWebImage
+  - SPAlertController
   - TZImagePickerController
   - YYKit
 
@@ -82,6 +84,7 @@ SPEC REPOS:
     - MJRefresh
     - ReactiveObjC
     - SDWebImage
+    - SPAlertController
     - TZImagePickerController
     - YYKit
 
@@ -101,9 +104,10 @@ SPEC CHECKSUMS:
   MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
+  SPAlertController: b245d7a5e17d612da051f2612aca3703f21d108f
   TZImagePickerController: 4e7a7b3d314f8a75f11042931dfd9d34c270c7db
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 58081d4b20092699267bf7c6991001d6554fcbe6
+PODFILE CHECKSUM: b62e3c2692b6007606ae73c777494392ab2735ee
 
 COCOAPODS: 1.9.3
