@@ -7,6 +7,7 @@
 //
 
 #import "BaseVC+OpenURL.h"
+#import "NSObject+Extras.h"
 
 @implementation BaseVC (OpenURL)
 

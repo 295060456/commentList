@@ -8,7 +8,8 @@
 
 #import "BaseVC+TZImagePickerController.h"
 #import "BaseVC+TZImagePickerControllerDelegate.h"
-#import "BaseVC+AlertController.h"
+#import "NSObject+SYSAlertController.h"
+#import "NSObject+SPAlertController.h"
 #import "BaseVC+TZLocationManager.h"
 #import <objc/runtime.h>
 

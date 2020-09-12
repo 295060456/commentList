@@ -194,11 +194,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-## LYXAlertController
-
-Copyright (c) 2017-2018 liuyunxin
-
-
 ## MBProgressHUD+WJExtension
 
 MIT License

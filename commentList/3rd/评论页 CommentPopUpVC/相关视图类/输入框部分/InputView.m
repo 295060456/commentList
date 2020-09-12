@@ -8,6 +8,7 @@
 
 #import "InputView.h"
 #import "ZYTextField.h"
+#import "NSObject+Extras.h"
 
 @interface InputView ()
 <
