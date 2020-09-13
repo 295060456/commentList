@@ -101,7 +101,7 @@ static const void *rightButtonEventBlockKey = &rightButtonEventBlockKey;
     //得到view的遮罩路径
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:targetView.bounds
                                                    byRoundingCorners:corners
-                                                         cornerRadii:CGSizeMake(10,10)];
+                                                         cornerRadii:cornerRadii];
     //创建 layer
     CAShapeLayer *maskLayer = [CAShapeLayer new];
     maskLayer.frame = targetView.bounds;
@@ -126,6 +126,7 @@ static const void *rightButtonEventBlockKey = &rightButtonEventBlockKey;
     UIGraphicsEndImageContext();
     return image;
 }
+
 ///点击放大再缩小
 + (void)addViewAnimation:(UIView *)sender
          completionBlock:(MKDataBlock)completionBlock{
