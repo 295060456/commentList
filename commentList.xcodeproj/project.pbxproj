@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		47F1DE0F9D5C2BEEE0202B39 /* Pods_commentListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0CF0E67EA8BFA59C3D36147 /* Pods_commentListTests.framework */; };
 		B39069305FAC615D8C6F4D6B /* Pods_commentList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC5B97A55D8F418AC00D92E /* Pods_commentList.framework */; };
+		C52E89662510B3A40070356F /* UITextField+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C52E89652510B3A40070356F /* UITextField+Extend.m */; };
 		C52F592124CD4AA0001F72B3 /* InputView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52F592024CD4AA0001F72B3 /* InputView.m */; };
 		C52F592A24CD4D18001F72B3 /* 钱袋.gif in Resources */ = {isa = PBXBuildFile; fileRef = C52F592924CD4D18001F72B3 /* 钱袋.gif */; };
 		C5379EA324D13FDC0078880F /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379E9F24D13FDC0078880F /* ZYTextField.m */; };
@@ -235,6 +236,8 @@
 		A0CF0E67EA8BFA59C3D36147 /* Pods_commentListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_commentListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB97C5DB8C2372F6EF680D78 /* Pods-commentListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commentListTests.debug.xcconfig"; path = "Target Support Files/Pods-commentListTests/Pods-commentListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC11A027C76951D368AEBAA5 /* Pods-commentList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commentList.debug.xcconfig"; path = "Target Support Files/Pods-commentList/Pods-commentList.debug.xcconfig"; sourceTree = "<group>"; };
+		C52E89642510B3A40070356F /* UITextField+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Extend.h"; sourceTree = "<group>"; };
+		C52E89652510B3A40070356F /* UITextField+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Extend.m"; sourceTree = "<group>"; };
 		C52F591F24CD4AA0001F72B3 /* InputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputView.h; sourceTree = "<group>"; };
 		C52F592024CD4AA0001F72B3 /* InputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputView.m; sourceTree = "<group>"; };
 		C52F592924CD4D18001F72B3 /* 钱袋.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "钱袋.gif"; sourceTree = "<group>"; };
@@ -587,6 +590,15 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		C52E89632510B3990070356F /* UITextField+Extend */ = {
+			isa = PBXGroup;
+			children = (
+				C52E89642510B3A40070356F /* UITextField+Extend.h */,
+				C52E89652510B3A40070356F /* UITextField+Extend.m */,
+			);
+			path = "UITextField+Extend";
+			sourceTree = "<group>";
+		};
 		C52F591E24CD4A96001F72B3 /* 输入框部分 */ = {
 			isa = PBXGroup;
 			children = (
@@ -634,6 +646,7 @@
 		C5379E9A24D13FB40078880F /* UITextField */ = {
 			isa = PBXGroup;
 			children = (
+				C52E89632510B3990070356F /* UITextField+Extend */,
 				C5379E9D24D13FD30078880F /* ZYTextField */,
 				C5379E9C24D13FCC0078880F /* HQTextField */,
 				C5379E9B24D13FC30078880F /* CJTextField */,
@@ -1641,6 +1654,7 @@
 				C590FF1824CFF8F1000F36C9 /* TestClass.m in Sources */,
 				C5E4C10F24DFF28000D4862C /* BWShareView.m in Sources */,
 				C5AA493B250C92BD009F583F /* UIView+Gradient.m in Sources */,
+				C52E89662510B3A40070356F /* UITextField+Extend.m in Sources */,
 				C5CF70C624E510F5000DB72D /* SuspendLab.m in Sources */,
 				C5F78A8424BED516008A46EC /* FirstClassModel.m in Sources */,
 				C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */,
