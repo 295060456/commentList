@@ -7,6 +7,7 @@
 //
 
 #import "SuspendLab.h"
+#import "NSString+Extras.h"
 
 @interface SuspendLab ()
 

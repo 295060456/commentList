@@ -7,6 +7,7 @@
 //
 
 #import "NSObject+Time.h"
+#import "NSString+Extras.h"
 
 @implementation NSObject (Time)
 //https://blog.csdn.net/autom_lishun/article/details/79094241

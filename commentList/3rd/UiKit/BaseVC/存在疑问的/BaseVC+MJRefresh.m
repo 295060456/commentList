@@ -34,22 +34,22 @@ static char *BaseVC_MJRefresh_refreshBackNormalFooter = "BaseVC_MJRefresh_refres
     MJRefreshGifHeader *TableViewHeader =  [MJRefreshGifHeader headerWithRefreshingTarget:self
                                                                          refreshingAction:@selector(pullToRefresh)];
     // 设置普通状态的动画图片
-    [TableViewHeader setImages:@[kIMG(@"官方")]
+    [TableViewHeader setImages:@[KIMG(@"官方")]
                       forState:MJRefreshStateIdle];
     // 设置即将刷新状态的动画图片（一松开就会刷新的状态）
-    [TableViewHeader setImages:@[kIMG(@"Indeterminate Spinner - Small")]
+    [TableViewHeader setImages:@[KIMG(@"Indeterminate Spinner - Small")]
                       forState:MJRefreshStatePulling];
     // 设置正在刷新状态的动画图片
-//        [_tableViewHeader setImages:@[kIMG(@"gif_header_1"),
-//                                      kIMG(@"gif_header_2"),
-//                                      kIMG(@"gif_header_3"),
-//                                      kIMG(@"gif_header_4")]
+//        [_tableViewHeader setImages:@[KIMG(@"gif_header_1"),
+//                                      KIMG(@"gif_header_2"),
+//                                      KIMG(@"gif_header_3"),
+//                                      KIMG(@"gif_header_4")]
 //                           duration:0.4
 //                           forState:MJRefreshStateRefreshing];
     NSMutableArray *dataMutArr = NSMutableArray.array;
     for (int i = 1; i <= 55; i++) {
         NSString *str = [NSString stringWithFormat:@"gif_header_%d",i];
-        [dataMutArr addObject:kIMG(str)];
+        [dataMutArr addObject:KIMG(str)];
     }
 
     [TableViewHeader setImages:dataMutArr
@@ -91,23 +91,23 @@ static char *BaseVC_MJRefresh_refreshBackNormalFooter = "BaseVC_MJRefresh_refres
     MJRefreshAutoGifFooter *TableViewFooter = [MJRefreshAutoGifFooter footerWithRefreshingTarget:self
                                                                 refreshingAction:@selector(loadMoreRefresh)];
     // 设置普通状态的动画图片
-    [TableViewFooter setImages:@[kIMG(@"官方")]
+    [TableViewFooter setImages:@[KIMG(@"官方")]
                       forState:MJRefreshStateIdle];
     // 设置即将刷新状态的动画图片（一松开就会刷新的状态）
-    [TableViewFooter setImages:@[kIMG(@"Indeterminate Spinner - Small")]
+    [TableViewFooter setImages:@[KIMG(@"Indeterminate Spinner - Small")]
                        forState:MJRefreshStatePulling];
     // 设置正在刷新状态的动画图片
-//        [_tableViewFooter setImages:@[kIMG(@"gif_header_1"),
-//                                      kIMG(@"gif_header_2"),
-//                                      kIMG(@"gif_header_3"),
-//                                      kIMG(@"gif_header_4")]
+//        [_tableViewFooter setImages:@[KIMG(@"gif_header_1"),
+//                                      KIMG(@"gif_header_2"),
+//                                      KIMG(@"gif_header_3"),
+//                                      KIMG(@"gif_header_4")]
 //                           duration:0.4
 //                           forState:MJRefreshStateRefreshing];
     
     NSMutableArray *dataMutArr = NSMutableArray.array;
     for (int i = 1; i <= 55; i++) {
         NSString *str = [NSString stringWithFormat:@"gif_header_%d",i];
-        [dataMutArr addObject:kIMG(str)];
+        [dataMutArr addObject:KIMG(str)];
     }
 
     [TableViewFooter setImages:dataMutArr

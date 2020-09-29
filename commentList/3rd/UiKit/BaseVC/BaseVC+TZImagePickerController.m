@@ -8,9 +8,10 @@
 
 #import "BaseVC+TZImagePickerController.h"
 #import "BaseVC+TZImagePickerControllerDelegate.h"
+#import "BaseVC+TZLocationManager.h"
 #import "NSObject+SYSAlertController.h"
 #import "NSObject+SPAlertController.h"
-#import "BaseVC+TZLocationManager.h"
+#import "ECAuthorizationTools.h"//https://github.com/EchoZuo/ECAuthorizationTools/blob/master/README.md
 #import <objc/runtime.h>
 
 @implementation BaseVC (TZImagePickerController)
@@ -49,7 +50,8 @@ static char *BaseVC_TZImagePickerController_asset = "BaseVC_TZImagePickerControl
     self.picBlock = block;
 }
 ///访问相册 —— 选择图片
--(void)choosePic:(TZImagePickerControllerType)tzImagePickerControllerType{
+-(void)choosePic:(TZImagePickerControllerType)tzImagePickerControllerType
+imagePickerVCBlock:(MKDataBlock _Nullable)imagePickerVCBlock{
     self.tzImagePickerControllerType = tzImagePickerControllerType;
     @weakify(self)
     [ECAuthorizationTools checkAndRequestAccessForType:ECPrivacyType_Photos
@@ -73,19 +75,23 @@ static char *BaseVC_TZImagePickerController_asset = "BaseVC_TZImagePickerControl
 //            self.imagePickerVC.cropRect = CGRectMake(left, top, widthHeight, widthHeight);
 //            self.imagePickerVC.scaleAspectFillCrop = YES;
 
+            if (imagePickerVCBlock) {
+                imagePickerVCBlock(self.imagePickerVC);
+            }
+            
             [self presentViewController:self.imagePickerVC
                                      animated:YES
                                    completion:nil];
             return self.imagePickerVC;
         }else{
             NSLog(@"相册不可用:%lu",(unsigned long)status);
-            [self alertControllerStyle:SYS_AlertController
-                    showAlertViewTitle:@"获取相册权限"
-                               message:nil
-                       isSeparateStyle:YES
-                           btnTitleArr:@[@"去获取"]
-                        alertBtnAction:@[@"pushToSysConfig"]
-                          alertVCBlock:^(id data) {
+            [NSObject showSYSAlertViewTitle:@"获取相册权限"
+                                    message:nil
+                            isSeparateStyle:YES
+                                btnTitleArr:@[@"去获取"]
+                             alertBtnAction:@[@"pushToSysConfig"]
+                                   targetVC:self
+                               alertVCBlock:^(id data) {
                 //DIY
             }];
             return nil;
@@ -111,15 +117,14 @@ static char *BaseVC_TZImagePickerController_asset = "BaseVC_TZImagePickerControl
             }
         }else{
             NSLog(@"摄像头不可用:%lu",(unsigned long)status);
-            [self alertControllerStyle:SYS_AlertController
-                    showAlertViewTitle:@"获取摄像头权限"
-                               message:nil
-                       isSeparateStyle:YES
-                           btnTitleArr:@[@"去获取"]
-                        alertBtnAction:@[@"pushToSysConfig"]
-                          alertVCBlock:^(id data) {
-                            //DIY
-                
+            [NSObject showSYSAlertViewTitle:@"获取摄像头权限"
+                                    message:nil
+                            isSeparateStyle:YES
+                                btnTitleArr:@[@"去获取"]
+                          alertBtnAction:@[@"pushToSysConfig"]
+                                   targetVC:self
+                               alertVCBlock:^(id data) {
+                //DIY
             }];
         }return nil;
     }];

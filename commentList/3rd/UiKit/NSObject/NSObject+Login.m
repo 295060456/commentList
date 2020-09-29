@@ -26,23 +26,23 @@
 }
 ///权限校验
 +(void)checkAuthority:(MKDataBlock)checkRes{
-    ///
-    NSDictionary *easyDict = @{
-        @"roleType":[NSNumber numberWithInteger:3]//权限类型: 0、评论回复；1、抖币转余额；2、提现；3、上传
-    };//流水类型(0-金币流水，1-余额流水)
-    ///
-    FMHttpRequest *req = [FMHttpRequest urlParametersWithMethod:HTTTP_METHOD_GET
-                                                           path:[URL_Manager sharedInstance].MKUserInfoCheckHadRoleGET
-                                                     parameters:easyDict];
-    RACSignal *reqSignal = [[FMARCNetwork sharedInstance] requestNetworkData:req];
-    [reqSignal subscribeNext:^(FMHttpResonse *response) {
-        if (response.isSuccess) {
-            NSLog(@"");
-            if (checkRes) {
-                checkRes(response.reqResult);
-            }
-        }
-    }];
+//    ///
+//    NSDictionary *easyDict = @{
+//        @"roleType":[NSNumber numberWithInteger:3]//权限类型: 0、评论回复；1、抖币转余额；2、提现；3、上传
+//    };//流水类型(0-金币流水，1-余额流水)
+//    ///
+//    FMHttpRequest *req = [FMHttpRequest urlParametersWithMethod:HTTTP_METHOD_GET
+//                                                           path:[URL_Manager sharedInstance].MKUserInfoCheckHadRoleGET
+//                                                     parameters:easyDict];
+//    RACSignal *reqSignal = [[FMARCNetwork sharedInstance] requestNetworkData:req];
+//    [reqSignal subscribeNext:^(FMHttpResonse *response) {
+//        if (response.isSuccess) {
+//            NSLog(@"");
+//            if (checkRes) {
+//                checkRes(response.reqResult);
+//            }
+//        }
+//    }];
 }
 
 @end

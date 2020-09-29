@@ -7,6 +7,7 @@
 //
 
 #import "CJTextField.h"
+#import "NSString+Extras.h"
 
 @implementation CJTextField
 

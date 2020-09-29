@@ -27,7 +27,9 @@
 #import "JXCategoryView.h"
 #import "ECAuthorizationTools.h"
 #import "YYKit.h"
+
 #import "UIImage+YBGIF.h"
+#import "LoadingImage.h"
 
 #import "NSObject+Extras.h"
 #import "NSObject+Time.h"
@@ -95,7 +97,7 @@
 #ifndef SCREEN_HEIGHT
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #endif
-#define kIMG(imgName) [UIImage imageNamed:imgName]
+#define KIMG(imgName) [UIImage imageNamed:imgName]
 
 #define RGBCOLOR(r,g,b)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
 #define COLOR_RGB(r,g,b,a)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
@@ -122,6 +124,16 @@
 #define KLightGrayColor [UIColor lightGrayColor]
 #define KGreenColor     [UIColor greenColor]
 #define KMagentaColor   [UIColor magentaColor]
+
+#pragma mark ======================================== UserDefault ========================================
+#define SetUserDefaultKeyWithValue(key,value) [[NSUserDefaults standardUserDefaults] setValue:value forKey:key]
+#define SetUserDefaultKeyWithObject(key,object) [[NSUserDefaults standardUserDefaults] setObject:object forKey:key]
+#define SetUserBoolKeyWithObject(key,object) [[NSUserDefaults standardUserDefaults] setBool:object forKey:key]
+#define GetUserDefaultValueForKey(key) [[NSUserDefaults standardUserDefaults] valueForKey:key]
+#define GetUserDefaultObjForKey(key) [[NSUserDefaults standardUserDefaults] objectForKey:key]
+#define GetUserDefaultBoolForKey(key) [[NSUserDefaults standardUserDefaults] boolForKey:key]
+#define DeleUserDefaultWithKey(key) [[NSUserDefaults standardUserDefaults] removeObjectForKey:key]
+#define UserDefaultSynchronize  [[NSUserDefaults standardUserDefaults] synchronize]
 
 static inline UIWindow * getMainWindow(){
     UIWindow *window = nil;

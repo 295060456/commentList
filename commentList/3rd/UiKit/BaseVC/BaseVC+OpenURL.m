@@ -8,6 +8,7 @@
 
 #import "BaseVC+OpenURL.h"
 #import "NSObject+Extras.h"
+#import "NSString+Extras.h"
 
 @implementation BaseVC (OpenURL)
 

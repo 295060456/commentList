@@ -15,6 +15,7 @@
 #import "NonHoveringHeaderView.h"
 #import "HoveringHeaderView.h"
 #import "UITableViewHeaderFooterView+Attribute.h"
+#import "NSString+Extras.h"
 
 @interface CommentPopUpVC ()
 <
@@ -452,7 +453,7 @@ forHeaderFooterViewReuseIdentifier:NSStringFromClass(HoveringHeaderView.class)];
                                      0,
                                      44,
                                      44);
-        [_closeBtn setImage:kIMG(@"Close")
+        [_closeBtn setImage:KIMG(@"Close")
                    forState:UIControlStateNormal];
         [_closeBtn addTarget:self
                       action:@selector(closeBtnClickEvent:)

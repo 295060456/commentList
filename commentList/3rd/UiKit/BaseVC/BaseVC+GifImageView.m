@@ -8,6 +8,7 @@
 
 #import "BaseVC+GifImageView.h"
 #import "UIView+Extras.h"
+#import "NSString+Extras.h"
 #import <objc/runtime.h>
 
 @implementation BaseVC (GifImageView)

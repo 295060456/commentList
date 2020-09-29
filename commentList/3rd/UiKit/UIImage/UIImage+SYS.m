@@ -7,7 +7,9 @@
 //
 
 #import "UIImage+SYS.h"
+#import "NSString+Extras.h"
 #import <objc/message.h>
+#import "AABlock.h"
 
 @implementation UIImage (SYS)
 
