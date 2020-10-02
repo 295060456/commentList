@@ -159,7 +159,9 @@
 		C59B9F24252702AC0039B485 /* BaseTableViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9F22252702AC0039B485 /* BaseTableViewer.m */; };
 		C59B9F2E252702B70039B485 /* TableViewAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9F28252702B70039B485 /* TableViewAnimationKit.m */; };
 		C59B9F2F252702B70039B485 /* UITableView+XSAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9F2A252702B70039B485 /* UITableView+XSAnimationKit.m */; };
-		C59BA07125270EE20039B485 /* CommentPopUpNonHoveringHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59BA06F25270EE20039B485 /* CommentPopUpNonHoveringHeaderView.m */; };
+		C59BA07125270EE20039B485 /* CommentPopUpNonHoveringHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59BA06F25270EE20039B485 /* CommentPopUpNonHoveringHeaderFooterView.m */; };
+		C59BA34F2527335C0039B485 /* back_white.png in Resources */ = {isa = PBXBuildFile; fileRef = C59BA34D2527335C0039B485 /* back_white.png */; };
+		C59BA3502527335C0039B485 /* back_black.png in Resources */ = {isa = PBXBuildFile; fileRef = C59BA34E2527335C0039B485 /* back_black.png */; };
 		C59C4A5724E3A943002C2104 /* BaseVC+TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C59C4A5624E3A942002C2104 /* BaseVC+TZLocationManager.m */; };
 		C59C4A5A24E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C59C4A5824E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.m */; };
 		C5AA48F6250BB8C2009F583F /* UIViewController+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AA48F5250BB8C2009F583F /* UIViewController+Shake.m */; };
@@ -423,8 +425,10 @@
 		C59B9F2C252702B70039B485 /* TableViewAnimationKitConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewAnimationKitConfig.h; sourceTree = "<group>"; };
 		C59B9F2D252702B70039B485 /* TableViewAnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewAnimationKit.h; sourceTree = "<group>"; };
 		C59B9F44252704F60039B485 /* 是否取消悬停 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "是否取消悬停"; sourceTree = "<group>"; };
-		C59BA06F25270EE20039B485 /* CommentPopUpNonHoveringHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentPopUpNonHoveringHeaderView.m; sourceTree = "<group>"; };
-		C59BA07025270EE20039B485 /* CommentPopUpNonHoveringHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentPopUpNonHoveringHeaderView.h; sourceTree = "<group>"; };
+		C59BA06F25270EE20039B485 /* CommentPopUpNonHoveringHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentPopUpNonHoveringHeaderFooterView.m; sourceTree = "<group>"; };
+		C59BA07025270EE20039B485 /* CommentPopUpNonHoveringHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentPopUpNonHoveringHeaderFooterView.h; sourceTree = "<group>"; };
+		C59BA34D2527335C0039B485 /* back_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_white.png; sourceTree = "<group>"; };
+		C59BA34E2527335C0039B485 /* back_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_black.png; sourceTree = "<group>"; };
 		C59C4A5524E3A942002C2104 /* BaseVC+TZLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+TZLocationManager.h"; sourceTree = "<group>"; };
 		C59C4A5624E3A942002C2104 /* BaseVC+TZLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+TZLocationManager.m"; sourceTree = "<group>"; };
 		C59C4A5824E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+TZImagePickerControllerDelegate.m"; sourceTree = "<group>"; };
@@ -634,7 +638,7 @@
 		C52F592824CD4CE9001F72B3 /* UiKit */ = {
 			isa = PBXGroup;
 			children = (
-				C59B9F40252704BD0039B485 /* UITableViewHeaderFooterView */,
+				C59B9F40252704BD0039B485 /* UITableViewHeaderFooterView 用作基类 */,
 				C59B9F1D252702910039B485 /* UITableView */,
 				C5AA4911250C9112009F583F /* NSObject */,
 				C5F78B2024BF41E6008A46EC /* BaseVC */,
@@ -649,6 +653,8 @@
 		C52F592B24CD4D20001F72B3 /* 图片资源 */ = {
 			isa = PBXGroup;
 			children = (
+				C59BA34E2527335C0039B485 /* back_black.png */,
+				C59BA34D2527335C0039B485 /* back_white.png */,
 				C590FE3624CFF131000F36C9 /* 刷新 */,
 				C590FE3224CFF110000F36C9 /* Indeterminate Spinner - Small@2x.png */,
 				C590FE3324CFF110000F36C9 /* Indeterminate Spinner - Small@3x.png */,
@@ -816,8 +822,8 @@
 		C590FE0E24CFE8D0000F36C9 /* 相关视图类 */ = {
 			isa = PBXGroup;
 			children = (
-				C59BA07025270EE20039B485 /* CommentPopUpNonHoveringHeaderView.h */,
-				C59BA06F25270EE20039B485 /* CommentPopUpNonHoveringHeaderView.m */,
+				C59BA3BF252739700039B485 /* 不悬停 */,
+				C59BA3BE252739690039B485 /* 悬停 */,
 				C5F78A8624BEE021008A46EC /* TBVCell */,
 				C52F591E24CD4A96001F72B3 /* 输入框部分 */,
 			);
@@ -1051,18 +1057,50 @@
 			path = "专治UITableView相应链断裂";
 			sourceTree = "<group>";
 		};
-		C59B9F40252704BD0039B485 /* UITableViewHeaderFooterView */ = {
+		C59B9F40252704BD0039B485 /* UITableViewHeaderFooterView 用作基类 */ = {
 			isa = PBXGroup;
 			children = (
 				C59B9F44252704F60039B485 /* 是否取消悬停 */,
-				C5C2082524BDEEFD001ED2F5 /* HoveringHeaderView.h */,
-				C5C2082024BDEEFD001ED2F5 /* HoveringHeaderView.m */,
-				C5C2082224BDEEFD001ED2F5 /* NonHoveringHeaderView.h */,
-				C5C2082124BDEEFD001ED2F5 /* NonHoveringHeaderView.m */,
+				C59BA3B7252738BA0039B485 /* 不悬停 */,
+				C59BA3B6252738B50039B485 /* 悬停 */,
 				C5C2082324BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.h */,
 				C5C2082424BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m */,
 			);
-			path = UITableViewHeaderFooterView;
+			path = "UITableViewHeaderFooterView 用作基类";
+			sourceTree = "<group>";
+		};
+		C59BA3B6252738B50039B485 /* 悬停 */ = {
+			isa = PBXGroup;
+			children = (
+				C5C2082524BDEEFD001ED2F5 /* HoveringHeaderView.h */,
+				C5C2082024BDEEFD001ED2F5 /* HoveringHeaderView.m */,
+			);
+			path = "悬停";
+			sourceTree = "<group>";
+		};
+		C59BA3B7252738BA0039B485 /* 不悬停 */ = {
+			isa = PBXGroup;
+			children = (
+				C5C2082224BDEEFD001ED2F5 /* NonHoveringHeaderView.h */,
+				C5C2082124BDEEFD001ED2F5 /* NonHoveringHeaderView.m */,
+			);
+			path = "不悬停";
+			sourceTree = "<group>";
+		};
+		C59BA3BE252739690039B485 /* 悬停 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "悬停";
+			sourceTree = "<group>";
+		};
+		C59BA3BF252739700039B485 /* 不悬停 */ = {
+			isa = PBXGroup;
+			children = (
+				C59BA07025270EE20039B485 /* CommentPopUpNonHoveringHeaderFooterView.h */,
+				C59BA06F25270EE20039B485 /* CommentPopUpNonHoveringHeaderFooterView.m */,
+			);
+			path = "不悬停";
 			sourceTree = "<group>";
 		};
 		C5AA4911250C9112009F583F /* NSObject */ = {
@@ -1448,6 +1486,7 @@
 				C590FEE924CFF163000F36C9 /* gif_header_11@2x.png in Resources */,
 				C590FEFB24CFF163000F36C9 /* gif_header_27@2x.png in Resources */,
 				C590FE7C24CFF154000F36C9 /* gif_header_32@3x.png in Resources */,
+				C59BA34F2527335C0039B485 /* back_white.png in Resources */,
 				C590FE9A24CFF154000F36C9 /* gif_header_2@3x.png in Resources */,
 				C590FE7324CFF154000F36C9 /* gif_header_5@3x.png in Resources */,
 				C590FEA524CFF154000F36C9 /* gif_header_42@3x.png in Resources */,
@@ -1492,6 +1531,7 @@
 				C590FE7924CFF154000F36C9 /* gif_header_16@3x.png in Resources */,
 				C590FEE324CFF163000F36C9 /* gif_header_47@2x.png in Resources */,
 				C590FEEA24CFF163000F36C9 /* gif_header_36@2x.png in Resources */,
+				C59BA3502527335C0039B485 /* back_black.png in Resources */,
 				C590FEE524CFF163000F36C9 /* gif_header_38@2x.png in Resources */,
 				C52F592A24CD4D18001F72B3 /* 钱袋.gif in Resources */,
 				C590FF0E24CFF163000F36C9 /* gif_header_53@2x.png in Resources */,
@@ -1713,7 +1753,7 @@
 				C5F78B1F24BF4195008A46EC /* PopUpVC.m in Sources */,
 				C590FE1524CFEA14000F36C9 /* CommentPopUpVC+VM.m in Sources */,
 				C5AA48F6250BB8C2009F583F /* UIViewController+Shake.m in Sources */,
-				C59BA07125270EE20039B485 /* CommentPopUpNonHoveringHeaderView.m in Sources */,
+				C59BA07125270EE20039B485 /* CommentPopUpNonHoveringHeaderFooterView.m in Sources */,
 				C52F592124CD4AA0001F72B3 /* InputView.m in Sources */,
 				C5AA492B250C914A009F583F /* NSObject+Time.m in Sources */,
 				C59B9F062526F3E10039B485 /* ZYTextField+HistoryDataList.m in Sources */,

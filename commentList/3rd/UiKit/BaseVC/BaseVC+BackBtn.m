@@ -7,21 +7,41 @@
 //
 
 #import "BaseVC+BackBtn.h"
+#import "UIButton+ImageTitleSpacing.h"
 #import <objc/runtime.h>
 
 @implementation BaseVC (BackBtn)
 
 static char *BaseVC_BackBtn_backBtnCategory = "BaseVC_BackBtn_backBtnCategory";
+static char *BaseVC_BackBtn_isBackBtnBlackorWhite = "BaseVC_BackBtn_isBackBtnBlackorWhite";
+
 @dynamic backBtnCategory;
+@dynamic isBackBtnBlackorWhite;
 
 #pragma mark —— 子类需要覆写
--(void)backBtnClickEvent:(UIButton *)sender{
+-(void)backBtnClickEvent:(UIButton *_Nullable)sender{
     if (self.navigationController) {
         [self.navigationController popViewControllerAnimated:YES];
     }else{
         [self dismissViewControllerAnimated:YES
                                  completion:nil];
     }
+}
+
+-(void)backComingStyle:(ComingStyle)ComingStyle
+             withEvent:(UIButton *_Nullable)sender{
+    switch (ComingStyle) {
+        case ComingStyle_PUSH:{
+            [self backBtnClickEvent:sender];
+        }break;
+        case ComingStyle_PRESENT:{
+            [self dismissViewControllerAnimated:YES
+                                     completion:nil];
+        }break;
+        default:
+            break;
+    }
+    
 }
 #pragma mark SET | GET
 #pragma mark —— @property(nonatomic,strong)BackBtn *backBtnCategory;
@@ -35,7 +55,7 @@ static char *BaseVC_BackBtn_backBtnCategory = "BaseVC_BackBtn_backBtnCategory";
                               forState:UIControlStateNormal];
         [BackBtnCategory setTitle:@"返回"
                          forState:UIControlStateNormal];
-        [BackBtnCategory setImage:KIMG(@"back_white")
+        [BackBtnCategory setImage:self.isBackBtnBlackorWhite ? KBuddleIMG(@"Others", nil, @"back_black") :KBuddleIMG(@"Others", nil, @"back_white")
                          forState:UIControlStateNormal];
         @weakify(self)
         [[BackBtnCategory rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -54,6 +74,17 @@ static char *BaseVC_BackBtn_backBtnCategory = "BaseVC_BackBtn_backBtnCategory";
                              BaseVC_BackBtn_backBtnCategory,
                              backBtnCategory,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+#pragma mark —— @property(nonatomic,assign)BOOL isBackBtnBlackorWhite;
+-(void)setIsBackBtnBlackorWhite:(BOOL)isBackBtnBlackorWhite{
+    objc_setAssociatedObject(self,
+                             BaseVC_BackBtn_isBackBtnBlackorWhite,
+                             [NSNumber numberWithBool:isBackBtnBlackorWhite],
+                             OBJC_ASSOCIATION_ASSIGN);
+}
+
+-(BOOL)isBackBtnBlackorWhite{
+    return [objc_getAssociatedObject(self, BaseVC_BackBtn_isBackBtnBlackorWhite) boolValue];
 }
 
 @end

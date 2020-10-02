@@ -12,8 +12,7 @@
 #import "LoadMoreTBVCell.h"
 #import "InfoTBVCell.h"
 
-#import "NonHoveringHeaderView.h"
-#import "HoveringHeaderView.h"
+#import "CommentPopUpNonHoveringHeaderFooterView.h"
 #import "UITableViewHeaderFooterView+Attribute.h"
 #import "NSString+Extras.h"
 
@@ -292,11 +291,11 @@ heightForHeaderInSection:(NSInteger)section{
 - (UIView *)tableView:(UITableView *)tableView
 viewForHeaderInSection:(NSInteger)section{
     //一级标题数据从这里进去
-    NonHoveringHeaderView *header = nil;
+    CommentPopUpNonHoveringHeaderFooterView *header = nil;
     MKFirstCommentModel *firstCommentModel = self.commentModel.listMytArr[section];
     {//第一种创建方式
-        header = [[NonHoveringHeaderView alloc]initWithReuseIdentifier:NSStringFromClass(NonHoveringHeaderView.class)
-                                                              withData:firstCommentModel];
+        header = [[CommentPopUpNonHoveringHeaderFooterView alloc]initWithReuseIdentifier:NSStringFromClass(NonHoveringHeaderView.class)
+                                                                          withData:firstCommentModel];
         @weakify(self)
         [header actionBlockNonHoveringHeaderView:^(id data) {
             self.commentId = firstCommentModel.commentId;
@@ -412,12 +411,12 @@ viewForHeaderInSection:(NSInteger)section{
         _tableView.backgroundColor = HEXCOLOR(0x242A37);
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        [_tableView registerClass:NonHoveringHeaderView.class
-forHeaderFooterViewReuseIdentifier:NSStringFromClass(NonHoveringHeaderView.class)];
-        [_tableView registerClass:HoveringHeaderView.class
-forHeaderFooterViewReuseIdentifier:NSStringFromClass(HoveringHeaderView.class)];
-        _tableView.mj_header = self.tableViewHeader;
-        _tableView.mj_footer = self.tableViewFooter;
+        [_tableView registerClass:CommentPopUpNonHoveringHeaderFooterView.class
+forHeaderFooterViewReuseIdentifier:NSStringFromClass(CommentPopUpNonHoveringHeaderFooterView.class)];
+        [_tableView registerClass:CommentPopUpNonHoveringHeaderFooterView.class
+forHeaderFooterViewReuseIdentifier:NSStringFromClass(CommentPopUpNonHoveringHeaderFooterView.class)];
+//        _tableView.mj_header = self.tableViewHeader;
+//        _tableView.mj_footer = self.tableViewFooter;
         _tableView.mj_footer.hidden = NO;
         _tableView.tableFooterView = UIView.new;
         

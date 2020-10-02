@@ -7,18 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIButton+ImageTitleSpacing.h"
 #import "AABlock.h"
 
 typedef enum : NSUInteger {
     ComingStyle_PUSH = 0,
     ComingStyle_PRESENT
 } ComingStyle;
-
-typedef enum : NSUInteger {
-    SYS_AlertController = 0,//UIAlertController
-    YX_AlertController//Pod
-} AlertControllerStyle;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -31,18 +25,15 @@ UIGestureRecognizerDelegate
 #pragma mark ——RACSignal
 @property(nonatomic,strong)RACSignal *reqSignal;
 
+@property(nonatomic,strong)id requestParams;
+@property(nonatomic,assign)ComingStyle pushOrPresent;
+
 @property(nonatomic,assign)BOOL isRequestFinish;//数据请求是否完毕 !!!
 @property(nonatomic,copy)void (^ReachableViaWWANNetWorking)(void);//3G网络
 @property(nonatomic,copy)void (^ReachableViaWiFiNetWorking)(void);//WiFi
 @property(nonatomic,copy)void (^UnknownNetWorking)(void);//未知网络
 @property(nonatomic,copy)void (^NotReachableNetWorking)(void);//无任何网络连接
 @property(nonatomic,copy)void (^ReachableNetWorking)(void);//有网络
-#pragma mark —— BaseVC+TZImagePickerController
-
-#pragma mark —— BaseVC+MJRefresh
-@property(nonatomic,strong)MJRefreshAutoGifFooter *tableViewFooter;
-@property(nonatomic,strong)MJRefreshGifHeader *tableViewHeader;
-@property(nonatomic,strong)MJRefreshBackNormalFooter *refreshBackNormalFooter;
 
 #pragma mark —— Sys_LifeCycle
 -(void)VCwillComingBlock:(MKDataBlock)block;//即将进来
@@ -53,19 +44,24 @@ UIGestureRecognizerDelegate
 -(void)locateTabBar:(NSInteger)index;
 ///设置状态栏背景颜色
 -(void)setStatusBarBackgroundColor:(UIColor *)color;
-///震动特效反馈
--(void)feedbackGenerator;
 #pragma mark —— Others
 @property(nonatomic,copy)MKDataBlock didBackBlock;
-//@property(nonatomic,strong)ViewForHeader *viewForHeader;
-//@property(nonatomic,strong)ViewForFooter *viewForFooter;
 
-+ (instancetype)ComingFromVC:(UIViewController *)rootVC
-                 comingStyle:(ComingStyle)comingStyle
-           presentationStyle:(UIModalPresentationStyle)presentationStyle
-               requestParams:(nullable id)requestParams
-                     success:(MKDataBlock)block
-                    animated:(BOOL)animated;
+/// 强制推控制器，自定义是PUSH还是PRESENT展现控制器，如果自定义PUSH但是navigationController不存在，则换用PRESENT展现控制器
+/// @param rootVC 从A控制器
+/// @param toVC 推到B控制器
+/// @param comingStyle 自定义展现的方式
+/// @param presentationStyle 如果是PRESENT情况下的一个系统参数设定
+/// @param requestParams A控制器—>B控制器，正向传值
+/// @param successBlock 在推控制器之前，反向block(B控制器），以便对B控制器的一些自定义修改
+/// @param animated 是否动画展现
++(instancetype)comingFromVC:(UIViewController *)rootVC
+                       toVC:(BaseVC *)toVC
+                comingStyle:(ComingStyle)comingStyle
+          presentationStyle:(UIModalPresentationStyle)presentationStyle
+              requestParams:(nullable id)requestParams
+                    success:(MKDataBlock)successBlock
+                   animated:(BOOL)animated;
 
 @end
 
