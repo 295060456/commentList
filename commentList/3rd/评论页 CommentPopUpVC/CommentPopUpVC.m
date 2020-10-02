@@ -13,6 +13,7 @@
 #import "InfoTBVCell.h"
 
 #import "CommentPopUpNonHoveringHeaderFooterView.h"
+#import "CommentPopUpHoveringHeaderFooterView.h"
 #import "UITableViewHeaderFooterView+Attribute.h"
 #import "NSString+Extras.h"
 
@@ -413,8 +414,8 @@ viewForHeaderInSection:(NSInteger)section{
         _tableView.dataSource = self;
         [_tableView registerClass:CommentPopUpNonHoveringHeaderFooterView.class
 forHeaderFooterViewReuseIdentifier:NSStringFromClass(CommentPopUpNonHoveringHeaderFooterView.class)];
-        [_tableView registerClass:CommentPopUpNonHoveringHeaderFooterView.class
-forHeaderFooterViewReuseIdentifier:NSStringFromClass(CommentPopUpNonHoveringHeaderFooterView.class)];
+        [_tableView registerClass:CommentPopUpHoveringHeaderFooterView.class
+forHeaderFooterViewReuseIdentifier:NSStringFromClass(CommentPopUpHoveringHeaderFooterView.class)];
 //        _tableView.mj_header = self.tableViewHeader;
 //        _tableView.mj_footer = self.tableViewFooter;
         _tableView.mj_footer.hidden = NO;

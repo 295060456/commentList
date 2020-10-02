@@ -162,6 +162,7 @@
 		C59BA07125270EE20039B485 /* CommentPopUpNonHoveringHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59BA06F25270EE20039B485 /* CommentPopUpNonHoveringHeaderFooterView.m */; };
 		C59BA34F2527335C0039B485 /* back_white.png in Resources */ = {isa = PBXBuildFile; fileRef = C59BA34D2527335C0039B485 /* back_white.png */; };
 		C59BA3502527335C0039B485 /* back_black.png in Resources */ = {isa = PBXBuildFile; fileRef = C59BA34E2527335C0039B485 /* back_black.png */; };
+		C59BA54E252740C80039B485 /* CommentPopUpHoveringHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59BA54D252740C80039B485 /* CommentPopUpHoveringHeaderFooterView.m */; };
 		C59C4A5724E3A943002C2104 /* BaseVC+TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C59C4A5624E3A942002C2104 /* BaseVC+TZLocationManager.m */; };
 		C59C4A5A24E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C59C4A5824E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.m */; };
 		C5AA48F6250BB8C2009F583F /* UIViewController+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AA48F5250BB8C2009F583F /* UIViewController+Shake.m */; };
@@ -429,6 +430,8 @@
 		C59BA07025270EE20039B485 /* CommentPopUpNonHoveringHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentPopUpNonHoveringHeaderFooterView.h; sourceTree = "<group>"; };
 		C59BA34D2527335C0039B485 /* back_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_white.png; sourceTree = "<group>"; };
 		C59BA34E2527335C0039B485 /* back_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_black.png; sourceTree = "<group>"; };
+		C59BA54C252740C80039B485 /* CommentPopUpHoveringHeaderFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentPopUpHoveringHeaderFooterView.h; sourceTree = "<group>"; };
+		C59BA54D252740C80039B485 /* CommentPopUpHoveringHeaderFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentPopUpHoveringHeaderFooterView.m; sourceTree = "<group>"; };
 		C59C4A5524E3A942002C2104 /* BaseVC+TZLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+TZLocationManager.h"; sourceTree = "<group>"; };
 		C59C4A5624E3A942002C2104 /* BaseVC+TZLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+TZLocationManager.m"; sourceTree = "<group>"; };
 		C59C4A5824E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+TZImagePickerControllerDelegate.m"; sourceTree = "<group>"; };
@@ -1090,6 +1093,8 @@
 		C59BA3BE252739690039B485 /* 悬停 */ = {
 			isa = PBXGroup;
 			children = (
+				C59BA54C252740C80039B485 /* CommentPopUpHoveringHeaderFooterView.h */,
+				C59BA54D252740C80039B485 /* CommentPopUpHoveringHeaderFooterView.m */,
 			);
 			path = "悬停";
 			sourceTree = "<group>";
@@ -1771,6 +1776,7 @@
 				C5C2082824BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m in Sources */,
 				C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */,
 				C5E4C0E024DFF11800D4862C /* BaseVC.m in Sources */,
+				C59BA54E252740C80039B485 /* CommentPopUpHoveringHeaderFooterView.m in Sources */,
 				C5AA49AF250C9901009F583F /* UIImage+YBGIF.m in Sources */,
 				C5AA493C250C92BD009F583F /* UIView+Extras.m in Sources */,
 				C5379EA324D13FDC0078880F /* ZYTextField.m in Sources */,
