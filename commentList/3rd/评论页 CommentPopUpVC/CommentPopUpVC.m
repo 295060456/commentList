@@ -298,7 +298,7 @@ viewForHeaderInSection:(NSInteger)section{
         header = [[NonHoveringHeaderView alloc]initWithReuseIdentifier:NSStringFromClass(NonHoveringHeaderView.class)
                                                               withData:firstCommentModel];
         @weakify(self)
-        [header actionBlock:^(id data) {
+        [header actionBlockNonHoveringHeaderView:^(id data) {
             self.commentId = firstCommentModel.commentId;
             self.ID = firstCommentModel.ID;
             @strongify(self)

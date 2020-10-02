@@ -159,6 +159,7 @@
 		C59B9F24252702AC0039B485 /* BaseTableViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9F22252702AC0039B485 /* BaseTableViewer.m */; };
 		C59B9F2E252702B70039B485 /* TableViewAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9F28252702B70039B485 /* TableViewAnimationKit.m */; };
 		C59B9F2F252702B70039B485 /* UITableView+XSAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9F2A252702B70039B485 /* UITableView+XSAnimationKit.m */; };
+		C59BA07125270EE20039B485 /* CommentPopUpNonHoveringHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59BA06F25270EE20039B485 /* CommentPopUpNonHoveringHeaderView.m */; };
 		C59C4A5724E3A943002C2104 /* BaseVC+TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C59C4A5624E3A942002C2104 /* BaseVC+TZLocationManager.m */; };
 		C59C4A5A24E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C59C4A5824E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.m */; };
 		C5AA48F6250BB8C2009F583F /* UIViewController+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AA48F5250BB8C2009F583F /* UIViewController+Shake.m */; };
@@ -421,6 +422,9 @@
 		C59B9F2B252702B70039B485 /* UITableView+XSAnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+XSAnimationKit.h"; sourceTree = "<group>"; };
 		C59B9F2C252702B70039B485 /* TableViewAnimationKitConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewAnimationKitConfig.h; sourceTree = "<group>"; };
 		C59B9F2D252702B70039B485 /* TableViewAnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewAnimationKit.h; sourceTree = "<group>"; };
+		C59B9F44252704F60039B485 /* 是否取消悬停 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "是否取消悬停"; sourceTree = "<group>"; };
+		C59BA06F25270EE20039B485 /* CommentPopUpNonHoveringHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentPopUpNonHoveringHeaderView.m; sourceTree = "<group>"; };
+		C59BA07025270EE20039B485 /* CommentPopUpNonHoveringHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentPopUpNonHoveringHeaderView.h; sourceTree = "<group>"; };
 		C59C4A5524E3A942002C2104 /* BaseVC+TZLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+TZLocationManager.h"; sourceTree = "<group>"; };
 		C59C4A5624E3A942002C2104 /* BaseVC+TZLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+TZLocationManager.m"; sourceTree = "<group>"; };
 		C59C4A5824E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+TZImagePickerControllerDelegate.m"; sourceTree = "<group>"; };
@@ -630,6 +634,7 @@
 		C52F592824CD4CE9001F72B3 /* UiKit */ = {
 			isa = PBXGroup;
 			children = (
+				C59B9F40252704BD0039B485 /* UITableViewHeaderFooterView */,
 				C59B9F1D252702910039B485 /* UITableView */,
 				C5AA4911250C9112009F583F /* NSObject */,
 				C5F78B2024BF41E6008A46EC /* BaseVC */,
@@ -797,6 +802,7 @@
 		C590FE0D24CFE88D000F36C9 /* 评论页 CommentPopUpVC */ = {
 			isa = PBXGroup;
 			children = (
+				C5F78A7F24BED4FD008A46EC /* 数据模型层 */,
 				C590FE0E24CFE8D0000F36C9 /* 相关视图类 */,
 				C590FE1124CFEA14000F36C9 /* CommentPopUpVC.h */,
 				C590FE1024CFEA14000F36C9 /* CommentPopUpVC.m */,
@@ -810,9 +816,9 @@
 		C590FE0E24CFE8D0000F36C9 /* 相关视图类 */ = {
 			isa = PBXGroup;
 			children = (
+				C59BA07025270EE20039B485 /* CommentPopUpNonHoveringHeaderView.h */,
+				C59BA06F25270EE20039B485 /* CommentPopUpNonHoveringHeaderView.m */,
 				C5F78A8624BEE021008A46EC /* TBVCell */,
-				C5F78A7F24BED4FD008A46EC /* 数据模型层 */,
-				C5C2081F24BDEEDE001ED2F5 /* 是否取消悬停 */,
 				C52F591E24CD4A96001F72B3 /* 输入框部分 */,
 			);
 			path = "相关视图类";
@@ -1045,6 +1051,20 @@
 			path = "专治UITableView相应链断裂";
 			sourceTree = "<group>";
 		};
+		C59B9F40252704BD0039B485 /* UITableViewHeaderFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				C59B9F44252704F60039B485 /* 是否取消悬停 */,
+				C5C2082524BDEEFD001ED2F5 /* HoveringHeaderView.h */,
+				C5C2082024BDEEFD001ED2F5 /* HoveringHeaderView.m */,
+				C5C2082224BDEEFD001ED2F5 /* NonHoveringHeaderView.h */,
+				C5C2082124BDEEFD001ED2F5 /* NonHoveringHeaderView.m */,
+				C5C2082324BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.h */,
+				C5C2082424BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m */,
+			);
+			path = UITableViewHeaderFooterView;
+			sourceTree = "<group>";
+		};
 		C5AA4911250C9112009F583F /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
@@ -1095,19 +1115,6 @@
 				C5B5205D24D6C2FC00579178 /* MKLoginModel.m */,
 			);
 			path = UserInfo;
-			sourceTree = "<group>";
-		};
-		C5C2081F24BDEEDE001ED2F5 /* 是否取消悬停 */ = {
-			isa = PBXGroup;
-			children = (
-				C5C2082524BDEEFD001ED2F5 /* HoveringHeaderView.h */,
-				C5C2082024BDEEFD001ED2F5 /* HoveringHeaderView.m */,
-				C5C2082224BDEEFD001ED2F5 /* NonHoveringHeaderView.h */,
-				C5C2082124BDEEFD001ED2F5 /* NonHoveringHeaderView.m */,
-				C5C2082324BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.h */,
-				C5C2082424BDEEFD001ED2F5 /* UITableViewHeaderFooterView+Attribute.m */,
-			);
-			path = "是否取消悬停";
 			sourceTree = "<group>";
 		};
 		C5CF70B824E510F5000DB72D /* Suspend */ = {
@@ -1706,6 +1713,7 @@
 				C5F78B1F24BF4195008A46EC /* PopUpVC.m in Sources */,
 				C590FE1524CFEA14000F36C9 /* CommentPopUpVC+VM.m in Sources */,
 				C5AA48F6250BB8C2009F583F /* UIViewController+Shake.m in Sources */,
+				C59BA07125270EE20039B485 /* CommentPopUpNonHoveringHeaderView.m in Sources */,
 				C52F592124CD4AA0001F72B3 /* InputView.m in Sources */,
 				C5AA492B250C914A009F583F /* NSObject+Time.m in Sources */,
 				C59B9F062526F3E10039B485 /* ZYTextField+HistoryDataList.m in Sources */,
