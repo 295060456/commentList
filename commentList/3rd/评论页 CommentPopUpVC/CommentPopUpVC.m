@@ -416,8 +416,8 @@ viewForHeaderInSection:(NSInteger)section{
 forHeaderFooterViewReuseIdentifier:NSStringFromClass(CommentPopUpNonHoveringHeaderFooterView.class)];
         [_tableView registerClass:CommentPopUpHoveringHeaderFooterView.class
 forHeaderFooterViewReuseIdentifier:NSStringFromClass(CommentPopUpHoveringHeaderFooterView.class)];
-//        _tableView.mj_header = self.tableViewHeader;
-//        _tableView.mj_footer = self.tableViewFooter;
+        _tableView.mj_header = self.mjRefreshGifHeader;
+        _tableView.mj_footer = self.mjRefreshBackNormalFooter;
         _tableView.mj_footer.hidden = NO;
         _tableView.tableFooterView = UIView.new;
         
