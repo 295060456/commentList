@@ -296,7 +296,7 @@ viewForHeaderInSection:(NSInteger)section{
     MKFirstCommentModel *firstCommentModel = self.commentModel.listMytArr[section];
     {//第一种创建方式
         header = [[CommentPopUpNonHoveringHeaderFooterView alloc]initWithReuseIdentifier:NSStringFromClass(NonHoveringHeaderView.class)
-                                                                          withData:firstCommentModel];
+                                                                                withData:firstCommentModel];
         @weakify(self)
         [header actionBlockNonHoveringHeaderView:^(id data) {
             self.commentId = firstCommentModel.commentId;
