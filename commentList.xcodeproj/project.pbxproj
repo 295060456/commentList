@@ -18,6 +18,7 @@
 		C5379EAD24D148570078880F /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379EAC24D148570078880F /* NSString+Extras.m */; };
 		C54F85AD252B616600EE3DD0 /* UITableView+WWFoldableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54F85AC252B616600EE3DD0 /* UITableView+WWFoldableTableView.m */; };
 		C54F85B1252B617E00EE3DD0 /* BaseVC+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C5336FA924DAB9D40082847C /* BaseVC+MJRefresh.m */; };
+		C56E31E8252F44CE004ACCC7 /* URL_Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = C56E31E6252F44CE004ACCC7 /* URL_Manager.m */; };
 		C57C22A02502569400FAAA3F /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C229F2502569400FAAA3F /* UIButton+ImageTitleSpacing.m */; };
 		C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0824BCAD3800894903 /* AppDelegate.m */; };
 		C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0B24BCAD3800894903 /* SceneDelegate.m */; };
@@ -188,7 +189,6 @@
 		C5AA49AD250C9901009F583F /* UIImage+SYS.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AA49A4250C9901009F583F /* UIImage+SYS.m */; };
 		C5AA49AE250C9901009F583F /* UIImage+Tailor.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AA49A7250C9901009F583F /* UIImage+Tailor.m */; };
 		C5AA49AF250C9901009F583F /* UIImage+YBGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AA49AA250C9901009F583F /* UIImage+YBGIF.m */; };
-		C5B5205924D6C27E00579178 /* URL_Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B5205724D6C27E00579178 /* URL_Manager.m */; };
 		C5B5206024D6C2FC00579178 /* MKLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B5205D24D6C2FC00579178 /* MKLoginModel.m */; };
 		C5C2081B24BDE254001ED2F5 /* InfoTBVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2081A24BDE254001ED2F5 /* InfoTBVCell.m */; };
 		C5C2081E24BDE268001ED2F5 /* LoadMoreTBVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2081D24BDE268001ED2F5 /* LoadMoreTBVCell.m */; };
@@ -265,6 +265,8 @@
 		C5379EAC24D148570078880F /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
 		C54F85AB252B616600EE3DD0 /* UITableView+WWFoldableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+WWFoldableTableView.h"; sourceTree = "<group>"; };
 		C54F85AC252B616600EE3DD0 /* UITableView+WWFoldableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+WWFoldableTableView.m"; sourceTree = "<group>"; };
+		C56E31E6252F44CE004ACCC7 /* URL_Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URL_Manager.m; sourceTree = "<group>"; };
+		C56E31E7252F44CE004ACCC7 /* URL_Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL_Manager.h; sourceTree = "<group>"; };
 		C57C229E2502569400FAAA3F /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		C57C229F2502569400FAAA3F /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
 		C5802D0424BCAD3800894903 /* commentList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = commentList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -482,8 +484,6 @@
 		C5AA49A8250C9901009F583F /* UIImage+Tailor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tailor.h"; sourceTree = "<group>"; };
 		C5AA49A9250C9901009F583F /* UIImage+SYS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SYS.h"; sourceTree = "<group>"; };
 		C5AA49AA250C9901009F583F /* UIImage+YBGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+YBGIF.m"; path = "../../../../../My_BaseProj/My_BaseProj/BaseCustomizeUIKit/UIImage/UIImage+YBGIF.m"; sourceTree = "<group>"; };
-		C5B5205724D6C27E00579178 /* URL_Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URL_Manager.m; sourceTree = "<group>"; };
-		C5B5205824D6C27E00579178 /* URL_Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL_Manager.h; sourceTree = "<group>"; };
 		C5B5205B24D6C2FC00579178 /* MKLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKLoginModel.h; sourceTree = "<group>"; };
 		C5B5205D24D6C2FC00579178 /* MKLoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKLoginModel.m; sourceTree = "<group>"; };
 		C5C2081224BDC6B5001ED2F5 /* AABlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AABlock.h; sourceTree = "<group>"; };
@@ -731,6 +731,15 @@
 			path = "UITableView 折叠功能";
 			sourceTree = "<group>";
 		};
+		C56E31E5252F449C004ACCC7 /* URL_Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C56E31E7252F44CE004ACCC7 /* URL_Manager.h */,
+				C56E31E6252F44CE004ACCC7 /* URL_Manager.m */,
+			);
+			path = URL_Manager;
+			sourceTree = "<group>";
+		};
 		C5802CFB24BCAD3800894903 = {
 			isa = PBXGroup;
 			children = (
@@ -754,11 +763,11 @@
 		C5802D0624BCAD3800894903 /* commentList */ = {
 			isa = PBXGroup;
 			children = (
+				C56E31E5252F449C004ACCC7 /* URL_Manager */,
 				C5C2081324BDC6C9001ED2F5 /* PrefixHeader.pch */,
 				C5C2081224BDC6B5001ED2F5 /* AABlock.h */,
 				C5802D1B24BCAD3900894903 /* Info.plist */,
 				C5B5205A24D6C2FC00579178 /* UserInfo */,
-				C5B5205624D6C27E00579178 /* URL_Manager */,
 				C590FF1524CFF8D1000F36C9 /* 可变参数Test */,
 				C5F78B3424BF4712008A46EC /* 3rd */,
 				C590FE0A24CFE816000F36C9 /* 入口——————效果 */,
@@ -1144,16 +1153,6 @@
 				C5AA4915250C9142009F583F /* NSObject+SYSAlertController.m */,
 			);
 			path = "NSObject+Alert";
-			sourceTree = "<group>";
-		};
-		C5B5205624D6C27E00579178 /* URL_Manager */ = {
-			isa = PBXGroup;
-			children = (
-				C5B5205824D6C27E00579178 /* URL_Manager.h */,
-				C5B5205724D6C27E00579178 /* URL_Manager.m */,
-			);
-			name = URL_Manager;
-			path = ../../../GitLab/monkeyKingVideo/Macro/URL_Manager;
 			sourceTree = "<group>";
 		};
 		C5B5205A24D6C2FC00579178 /* UserInfo */ = {
@@ -1799,7 +1798,6 @@
 				C5379EA924D13FE80078880F /* CJTextField.m in Sources */,
 				C5E4C0DD24DFF11800D4862C /* BaseVC+JXCategoryListContentViewDelegate.m in Sources */,
 				C5AA493A250C92BD009F583F /* UIView+Animation.m in Sources */,
-				C5B5205924D6C27E00579178 /* URL_Manager.m in Sources */,
 				C5AA49AE250C9901009F583F /* UIImage+Tailor.m in Sources */,
 				C5CF70C424E510F5000DB72D /* SuspendBtn.m in Sources */,
 				C590FE0F24CFE97E000F36C9 /* ViewController.m in Sources */,
@@ -1813,6 +1811,7 @@
 				C5379EA624D13FE20078880F /* HQTextField.m in Sources */,
 				C59B9F2E252702B70039B485 /* TableViewAnimationKit.m in Sources */,
 				C5802D1524BCAD3800894903 /* commentList.xcdatamodeld in Sources */,
+				C56E31E8252F44CE004ACCC7 /* URL_Manager.m in Sources */,
 				C5E4C0D924DFF11800D4862C /* BaseVC+OpenURL.m in Sources */,
 				C5AA492C250C914A009F583F /* NSObject+Sound.m in Sources */,
 			);
