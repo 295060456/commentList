@@ -47,6 +47,7 @@
 #import "UIView+Measure.h"
 #import "UIView+Animation.h"
 #import "UIView+Gradient.h"
+#import "UIView+Rotate.h"
 
 #import "MKCommentModel.h"
 #import "RBCLikeButton.h"
