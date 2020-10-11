@@ -20,6 +20,7 @@
 		C54F85B1252B617E00EE3DD0 /* BaseVC+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C5336FA924DAB9D40082847C /* BaseVC+MJRefresh.m */; };
 		C56E31E8252F44CE004ACCC7 /* URL_Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = C56E31E6252F44CE004ACCC7 /* URL_Manager.m */; };
 		C57C22A02502569400FAAA3F /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C229F2502569400FAAA3F /* UIButton+ImageTitleSpacing.m */; };
+		C57F0D3B253337680080EEF0 /* NSObject+OpenURL.m in Sources */ = {isa = PBXBuildFile; fileRef = C57F0D3A253337680080EEF0 /* NSObject+OpenURL.m */; };
 		C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0824BCAD3800894903 /* AppDelegate.m */; };
 		C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0B24BCAD3800894903 /* SceneDelegate.m */; };
 		C5802D1224BCAD3800894903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5802D1024BCAD3800894903 /* Main.storyboard */; };
@@ -197,7 +198,6 @@
 		C5DD001D24D46C6F00307DFA /* EmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD001B24D46C6F00307DFA /* EmptyView.m */; };
 		C5E4C0D724DFF11800D4862C /* BaseVC+BackBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E4C0C124DFF11700D4862C /* BaseVC+BackBtn.m */; };
 		C5E4C0D824DFF11800D4862C /* BaseVC+TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E4C0C224DFF11700D4862C /* BaseVC+TZImagePickerController.m */; };
-		C5E4C0D924DFF11800D4862C /* BaseVC+OpenURL.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E4C0C424DFF11700D4862C /* BaseVC+OpenURL.m */; };
 		C5E4C0DB24DFF11800D4862C /* BaseVC+AFNReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E4C0C824DFF11700D4862C /* BaseVC+AFNReachability.m */; };
 		C5E4C0DC24DFF11800D4862C /* BaseVC+JPImageresizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E4C0CD24DFF11700D4862C /* BaseVC+JPImageresizerView.m */; };
 		C5E4C0DD24DFF11800D4862C /* BaseVC+JXCategoryListContentViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E4C0CF24DFF11800D4862C /* BaseVC+JXCategoryListContentViewDelegate.m */; };
@@ -264,6 +264,8 @@
 		C56E31E7252F44CE004ACCC7 /* URL_Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL_Manager.h; sourceTree = "<group>"; };
 		C57C229E2502569400FAAA3F /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		C57C229F2502569400FAAA3F /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
+		C57F0D39253337680080EEF0 /* NSObject+OpenURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+OpenURL.h"; sourceTree = "<group>"; };
+		C57F0D3A253337680080EEF0 /* NSObject+OpenURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+OpenURL.m"; sourceTree = "<group>"; };
 		C5802D0424BCAD3800894903 /* commentList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = commentList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5802D0724BCAD3800894903 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5802D0824BCAD3800894903 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -504,9 +506,7 @@
 		C5E4C0C124DFF11700D4862C /* BaseVC+BackBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+BackBtn.m"; sourceTree = "<group>"; };
 		C5E4C0C224DFF11700D4862C /* BaseVC+TZImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+TZImagePickerController.m"; sourceTree = "<group>"; };
 		C5E4C0C324DFF11700D4862C /* BaseVC+TZImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+TZImagePickerController.h"; sourceTree = "<group>"; };
-		C5E4C0C424DFF11700D4862C /* BaseVC+OpenURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+OpenURL.m"; sourceTree = "<group>"; };
 		C5E4C0C524DFF11700D4862C /* BaseVC+BackBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+BackBtn.h"; sourceTree = "<group>"; };
-		C5E4C0C724DFF11700D4862C /* BaseVC+OpenURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+OpenURL.h"; sourceTree = "<group>"; };
 		C5E4C0C824DFF11700D4862C /* BaseVC+AFNReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseVC+AFNReachability.m"; sourceTree = "<group>"; };
 		C5E4C0CA24DFF11700D4862C /* BaseVC+BRPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+BRPickerView.h"; sourceTree = "<group>"; };
 		C5E4C0CB24DFF11700D4862C /* BaseVC+GifImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseVC+GifImageView.h"; sourceTree = "<group>"; };
@@ -1103,6 +1103,8 @@
 			isa = PBXGroup;
 			children = (
 				C5AA4912250C9139009F583F /* NSObject+Alert */,
+				C57F0D39253337680080EEF0 /* NSObject+OpenURL.h */,
+				C57F0D3A253337680080EEF0 /* NSObject+OpenURL.m */,
 				C5AA491D250C914A009F583F /* NSObject+Extras.h */,
 				C5AA491F250C914A009F583F /* NSObject+Extras.m */,
 				C5AA491E250C914A009F583F /* NSObject+Login.h */,
@@ -1299,8 +1301,6 @@
 				C5E4C0CF24DFF11800D4862C /* BaseVC+JXCategoryListContentViewDelegate.m */,
 				C5336FAA24DAB9D40082847C /* BaseVC+MJRefresh.h */,
 				C5336FA924DAB9D40082847C /* BaseVC+MJRefresh.m */,
-				C5E4C0C724DFF11700D4862C /* BaseVC+OpenURL.h */,
-				C5E4C0C424DFF11700D4862C /* BaseVC+OpenURL.m */,
 				C5E4C0C324DFF11700D4862C /* BaseVC+TZImagePickerController.h */,
 				C5E4C0C224DFF11700D4862C /* BaseVC+TZImagePickerController.m */,
 				C59C4A5924E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.h */,
@@ -1742,6 +1742,7 @@
 				C5AA492B250C914A009F583F /* NSObject+Time.m in Sources */,
 				C59B9F062526F3E10039B485 /* ZYTextField+HistoryDataList.m in Sources */,
 				C5B5206024D6C2FC00579178 /* MKLoginModel.m in Sources */,
+				C57F0D3B253337680080EEF0 /* NSObject+OpenURL.m in Sources */,
 				C5E4C0E124DFF11800D4862C /* BaseVC+BRPickerView.m in Sources */,
 				C58C61F32532FD140092BF89 /* UIView+Rotate.m in Sources */,
 				C59C4A5A24E3A95E002C2104 /* BaseVC+TZImagePickerControllerDelegate.m in Sources */,
@@ -1785,7 +1786,6 @@
 				C59B9F2E252702B70039B485 /* TableViewAnimationKit.m in Sources */,
 				C5802D1524BCAD3800894903 /* commentList.xcdatamodeld in Sources */,
 				C56E31E8252F44CE004ACCC7 /* URL_Manager.m in Sources */,
-				C5E4C0D924DFF11800D4862C /* BaseVC+OpenURL.m in Sources */,
 				C58C615F2532B3CA0092BF89 /* RBCLikeButton.m in Sources */,
 				C5AA492C250C914A009F583F /* NSObject+Sound.m in Sources */,
 			);
