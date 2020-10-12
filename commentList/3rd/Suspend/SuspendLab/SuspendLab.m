@@ -7,7 +7,6 @@
 //
 
 #import "SuspendLab.h"
-#import "NSString+Extras.h"
 
 @interface SuspendLab ()
 
@@ -22,6 +21,10 @@
         [UIView cornerCutToCircleWithView:self
                           AndCornerRadius:8];
     }return self;
+}
+
+-(void)drawRect:(CGRect)rect{
+    self.panRcognize.enabled = self.isAllowDrag;
 }
 
 -(void)actionSuspendViewBlock:(MKDataBlock)suspendLabBlock{
