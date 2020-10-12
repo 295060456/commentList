@@ -52,8 +52,7 @@
 
 #import "MKCommentModel.h"
 #import "RBCLikeButton.h"
-#import "MBProgressHUD.h"
-#import "MBProgressHUD+WJExtension.h"
+#import "WHToast.h"
 #import "EmptyView.h"
 #import "ZYTextField.h"
 #import "JPImageresizerView-umbrella.h"

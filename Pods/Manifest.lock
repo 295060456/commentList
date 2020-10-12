@@ -33,7 +33,6 @@ PODS:
   - JXCategoryView (1.5.6)
   - LYEmptyView (1.3.1)
   - Masonry (1.1.0)
-  - "MBProgressHUD+WJExtension (1.3.1)"
   - MJExtension (3.2.2)
   - MJRefresh (3.4.3)
   - ReactiveObjC (3.1.1)
@@ -42,6 +41,7 @@ PODS:
   - SDWebImage/Core (5.8.4)
   - SPAlertController (4.0.0)
   - TZImagePickerController (3.4.1)
+  - WHToast (0.0.7)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
@@ -56,13 +56,13 @@ DEPENDENCIES:
   - JXCategoryView
   - LYEmptyView
   - Masonry
-  - "MBProgressHUD+WJExtension"
   - MJExtension
   - MJRefresh
   - ReactiveObjC
   - SDWebImage
   - SPAlertController
   - TZImagePickerController
+  - WHToast
   - YYKit
 
 SPEC REPOS:
@@ -76,13 +76,13 @@ SPEC REPOS:
     - JXCategoryView
     - LYEmptyView
     - Masonry
-    - "MBProgressHUD+WJExtension"
     - MJExtension
     - MJRefresh
     - ReactiveObjC
     - SDWebImage
     - SPAlertController
     - TZImagePickerController
+    - WHToast
     - YYKit
 
 SPEC CHECKSUMS:
@@ -95,15 +95,15 @@ SPEC CHECKSUMS:
   JXCategoryView: 603ccd8277a89b1a73e9cedb9d8ed4b294576008
   LYEmptyView: b6d418cfa38b78df0cf243f9a9c25ccbdc399922
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  "MBProgressHUD+WJExtension": 1d9c93951b49e8c711fef6e6089aa6d7d3321192
   MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
   MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
   SPAlertController: b245d7a5e17d612da051f2612aca3703f21d108f
   TZImagePickerController: 4e7a7b3d314f8a75f11042931dfd9d34c270c7db
+  WHToast: 11a17a3f09f5f733e32bd6f3338919a448cbb719
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: e3c8729fc18ee2522301958c38b520f48ca6e4b5
+PODFILE CHECKSUM: f9f81838bf9199708101f9542929a9115e0b840c
 
 COCOAPODS: 1.9.3
