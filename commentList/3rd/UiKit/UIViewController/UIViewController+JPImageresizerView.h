@@ -1,12 +1,12 @@
 //
-//  BaseVC+JPImageresizerView.h
-//  MonkeyKingVideo
+//  UIViewController+JPImageresizerView.h
+//  UBallLive
 //
-//  Created by Jobs on 2020/8/7.
-//  Copyright © 2020 Jobs. All rights reserved.
+//  Created by Jobs on 2020/10/12.
 //
 
-#import "BaseVC.h"
+#import <UIKit/UIKit.h>
+#import "JPImageresizerView.h"
 
 typedef enum : NSInteger {
     JPImageresizerConfigureType_1 = 0,//默认配置裁剪图片/GIF（UIImage）
@@ -25,7 +25,7 @@ typedef enum : NSInteger {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BaseVC (JPImageresizerView)
+@interface UIViewController (JPImageresizerView)
 
 #pragma mark —— BaseVC+JPImageresizerView
 @property(nonatomic,strong)JPImageresizerConfigure *configure;
