@@ -37,7 +37,6 @@
 		C5802D3224BCAD3900894903 /* commentListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D3124BCAD3900894903 /* commentListUITests.m */; };
 		C58C615E2532B3CA0092BF89 /* RBCLikeButton.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C58C615B2532B3CA0092BF89 /* RBCLikeButton.bundle */; };
 		C58C615F2532B3CA0092BF89 /* RBCLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C615D2532B3CA0092BF89 /* RBCLikeButton.m */; };
-		C58C61F32532FD140092BF89 /* UIView+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C61F22532FD140092BF89 /* UIView+Rotate.m */; };
 		C590FE0F24CFE97E000F36C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78B1324BF3F73008A46EC /* ViewController.m */; };
 		C590FE1424CFEA14000F36C9 /* CommentPopUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C590FE1024CFEA14000F36C9 /* CommentPopUpVC.m */; };
 		C590FE1524CFEA14000F36C9 /* CommentPopUpVC+VM.m in Sources */ = {isa = PBXBuildFile; fileRef = C590FE1324CFEA14000F36C9 /* CommentPopUpVC+VM.m */; };
@@ -297,8 +296,6 @@
 		C58C615B2532B3CA0092BF89 /* RBCLikeButton.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RBCLikeButton.bundle; sourceTree = "<group>"; };
 		C58C615C2532B3CA0092BF89 /* RBCLikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCLikeButton.h; sourceTree = "<group>"; };
 		C58C615D2532B3CA0092BF89 /* RBCLikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCLikeButton.m; sourceTree = "<group>"; };
-		C58C61F12532FD140092BF89 /* UIView+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Rotate.h"; sourceTree = "<group>"; };
-		C58C61F22532FD140092BF89 /* UIView+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Rotate.m"; sourceTree = "<group>"; };
 		C58FDF6225233F6F00E020D3 /* LoadingImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingImage.h; sourceTree = "<group>"; };
 		C590FE1024CFEA14000F36C9 /* CommentPopUpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentPopUpVC.m; sourceTree = "<group>"; };
 		C590FE1124CFEA14000F36C9 /* CommentPopUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentPopUpVC.h; sourceTree = "<group>"; };
@@ -1257,8 +1254,6 @@
 				C5AA492F250C92BC009F583F /* UIView+Gradient.m */,
 				C5AA4932250C92BD009F583F /* UIView+Measure.h */,
 				C5AA4939250C92BD009F583F /* UIView+Measure.m */,
-				C58C61F12532FD140092BF89 /* UIView+Rotate.h */,
-				C58C61F22532FD140092BF89 /* UIView+Rotate.m */,
 				C5AA4931250C92BD009F583F /* UIView+SuspendView.h */,
 				C5AA4938250C92BD009F583F /* UIView+SuspendView.m */,
 			);
@@ -1762,7 +1757,6 @@
 				C522CFEB25346497006A822F /* UITableViewHeaderFooterView+Attribute.m in Sources */,
 				C5914CE82538515B007777A6 /* UIViewController+MJRefresh.m in Sources */,
 				C57F0D3B253337680080EEF0 /* NSObject+OpenURL.m in Sources */,
-				C58C61F32532FD140092BF89 /* UIView+Rotate.m in Sources */,
 				C590FF1824CFF8F1000F36C9 /* TestClass.m in Sources */,
 				C5914CE42538515A007777A6 /* UIViewController+NavigationBarHiddenMgr.m in Sources */,
 				C5E4C10F24DFF28000D4862C /* BWShareView.m in Sources */,
