@@ -151,6 +151,9 @@ alpha:1] \
 #define GetUserDefaultBoolForKey(key) [[NSUserDefaults standardUserDefaults] boolForKey:key]
 #define DeleUserDefaultWithKey(key) [[NSUserDefaults standardUserDefaults] removeObjectForKey:key]
 #define UserDefaultSynchronize  [[NSUserDefaults standardUserDefaults] synchronize]
+#pragma mark ======================================== 默认值 ========================================
+#define defaultValue 0
+#define defaultObj Nil
 
 #pragma mark ======================================== 其他 ========================================
 #define ReuseIdentifier NSStringFromClass ([self class])
