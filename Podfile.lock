@@ -14,33 +14,33 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - BRPickerView (2.6.5):
-    - BRPickerView/AddressPickerView (= 2.6.5)
-    - BRPickerView/Base (= 2.6.5)
-    - BRPickerView/DatePickerView (= 2.6.5)
-    - BRPickerView/StringPickerView (= 2.6.5)
-  - BRPickerView/AddressPickerView (2.6.5):
+  - BRPickerView (2.7.3):
+    - BRPickerView/AddressPickerView (= 2.7.3)
+    - BRPickerView/Base (= 2.7.3)
+    - BRPickerView/DatePickerView (= 2.7.3)
+    - BRPickerView/StringPickerView (= 2.7.3)
+  - BRPickerView/AddressPickerView (2.7.3):
     - BRPickerView/Base
-  - BRPickerView/Base (2.6.5)
-  - BRPickerView/DatePickerView (2.6.5):
+  - BRPickerView/Base (2.7.3)
+  - BRPickerView/DatePickerView (2.7.3):
     - BRPickerView/Base
-  - BRPickerView/StringPickerView (2.6.5):
+  - BRPickerView/StringPickerView (2.7.3):
     - BRPickerView/Base
-  - GKNavigationBar (1.1.3)
-  - IQKeyboardManager (6.5.5)
-  - JPImageresizerView (1.7.5)
+  - GKNavigationBar (1.1.8)
+  - IQKeyboardManager (6.5.6)
+  - JPImageresizerView (1.7.7)
   - JSONModel (1.8.0)
-  - JXCategoryView (1.5.6)
+  - JXCategoryView (1.5.7)
   - LYEmptyView (1.3.1)
   - Masonry (1.1.0)
-  - MJExtension (3.2.2)
-  - MJRefresh (3.4.3)
+  - MJExtension (3.2.3)
+  - MJRefresh (3.5.0)
   - ReactiveObjC (3.1.1)
-  - SDWebImage (5.8.4):
-    - SDWebImage/Core (= 5.8.4)
-  - SDWebImage/Core (5.8.4)
+  - SDWebImage (5.9.4):
+    - SDWebImage/Core (= 5.9.4)
+  - SDWebImage/Core (5.9.4)
   - SPAlertController (4.0.0)
-  - TZImagePickerController (3.4.1)
+  - TZImagePickerController (3.4.8)
   - WHToast (0.0.7)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -66,7 +66,7 @@ DEPENDENCIES:
   - YYKit
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - BRPickerView
     - GKNavigationBar
@@ -87,23 +87,23 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
-  BRPickerView: 70e2e38b6441d4b43e9d14727aea662756476367
-  GKNavigationBar: 9ea53a433ff9297bbc33aa663de6cd902b5aaf00
-  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
-  JPImageresizerView: c23ae0d67ea61da374c8a16d3f55982111375c10
+  BRPickerView: 9cc11880ac79c4872d081ccb88f306224c1501d7
+  GKNavigationBar: b68d31d24fc14a297b109e71280187dc311e0794
+  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
+  JPImageresizerView: ba2301b87ad03f7a7976deec4ccc75085d29f6c1
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
-  JXCategoryView: 603ccd8277a89b1a73e9cedb9d8ed4b294576008
+  JXCategoryView: fca2146e87eeaf014c71041337cb07bd4de5830b
   LYEmptyView: b6d418cfa38b78df0cf243f9a9c25ccbdc399922
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
-  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
+  MJExtension: a6fd35a527dafd7f3f1259017ee57551d58b3bb8
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
+  SDWebImage: b69257f4ab14e9b6a2ef53e910fdf914d8f757c1
   SPAlertController: b245d7a5e17d612da051f2612aca3703f21d108f
-  TZImagePickerController: 4e7a7b3d314f8a75f11042931dfd9d34c270c7db
+  TZImagePickerController: 6685e6d81b8fd5453e80ba369dd4ebd6e97276ee
   WHToast: 11a17a3f09f5f733e32bd6f3338919a448cbb719
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: f9f81838bf9199708101f9542929a9115e0b840c
+PODFILE CHECKSUM: 6b3ae3b3011d71c03622f76744ab028719312bac
 
 COCOAPODS: 1.9.3

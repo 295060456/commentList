@@ -1,6 +1,0 @@
-framework module Pods_commentList_commentListUITests {
-  umbrella header "Pods-commentList-commentListUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
