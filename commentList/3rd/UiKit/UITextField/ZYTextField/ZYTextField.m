@@ -12,7 +12,7 @@
 -(instancetype)init{
     if (self = [super init]) {
         self.clearButtonMode = UITextFieldViewModeWhileEditing;
-        [self modifyClearButtonWithImage:KBuddleIMG(nil, @"ZYTextField", nil, @"closeCircle")];
+        [self modifyClearButtonWithImage:KBuddleIMG(@"图片资源", @"ZYTextField", nil, @"closeCircle")];
     }return self;
 }
 
