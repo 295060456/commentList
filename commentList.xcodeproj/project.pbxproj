@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,6 +25,8 @@
 		C55B2AC6253427130038E50C /* SuspendLab.m in Sources */ = {isa = PBXBuildFile; fileRef = C55B2AC1253427130038E50C /* SuspendLab.m */; };
 		C55B2AC7253427130038E50C /* SuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55B2AC3253427130038E50C /* SuspendView.m */; };
 		C56E31E8252F44CE004ACCC7 /* URL_Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = C56E31E6252F44CE004ACCC7 /* URL_Manager.m */; };
+		C57672B72546BC3400C382C8 /* UIViewController+JXCategoryListContentViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C57672B32546BC3300C382C8 /* UIViewController+JXCategoryListContentViewDelegate.m */; };
+		C57672B82546BC3400C382C8 /* UIViewController+JXPagerViewListViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C57672B52546BC3300C382C8 /* UIViewController+JXPagerViewListViewDelegate.m */; };
 		C57C22A02502569400FAAA3F /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C229F2502569400FAAA3F /* UIButton+ImageTitleSpacing.m */; };
 		C57F0D3B253337680080EEF0 /* NSObject+OpenURL.m in Sources */ = {isa = PBXBuildFile; fileRef = C57F0D3A253337680080EEF0 /* NSObject+OpenURL.m */; };
 		C5802D0924BCAD3800894903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D0824BCAD3800894903 /* AppDelegate.m */; };
@@ -170,7 +172,6 @@
 		C5914CE72538515A007777A6 /* UIViewController+BackBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C5914CD12538515A007777A6 /* UIViewController+BackBtn.m */; };
 		C5914CE82538515B007777A6 /* UIViewController+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C5914CD72538515A007777A6 /* UIViewController+MJRefresh.m */; };
 		C5914CE92538515B007777A6 /* UIViewController+BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5914CD82538515A007777A6 /* UIViewController+BaseVC.m */; };
-		C5914CEA2538515B007777A6 /* UIViewController+JXCategoryListContentViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5914CDC2538515A007777A6 /* UIViewController+JXCategoryListContentViewDelegate.m */; };
 		C59B9F062526F3E10039B485 /* ZYTextField+HistoryDataList.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9F012526F3E10039B485 /* ZYTextField+HistoryDataList.m */; };
 		C59B9F072526F3E10039B485 /* ZYTextField.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C59B9F052526F3E10039B485 /* ZYTextField.bundle */; };
 		C59B9F23252702AC0039B485 /* 专治UITableView相应链断裂 in Resources */ = {isa = PBXBuildFile; fileRef = C59B9F20252702AC0039B485 /* 专治UITableView相应链断裂 */; };
@@ -273,6 +274,10 @@
 		C55B2AC4253427130038E50C /* SuspendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendView.h; sourceTree = "<group>"; };
 		C56E31E6252F44CE004ACCC7 /* URL_Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URL_Manager.m; sourceTree = "<group>"; };
 		C56E31E7252F44CE004ACCC7 /* URL_Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL_Manager.h; sourceTree = "<group>"; };
+		C57672B32546BC3300C382C8 /* UIViewController+JXCategoryListContentViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JXCategoryListContentViewDelegate.m"; sourceTree = "<group>"; };
+		C57672B42546BC3300C382C8 /* UIViewController+JXPagerViewListViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JXPagerViewListViewDelegate.h"; sourceTree = "<group>"; };
+		C57672B52546BC3300C382C8 /* UIViewController+JXPagerViewListViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JXPagerViewListViewDelegate.m"; sourceTree = "<group>"; };
+		C57672B62546BC3400C382C8 /* UIViewController+JXCategoryListContentViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JXCategoryListContentViewDelegate.h"; sourceTree = "<group>"; };
 		C57C229E2502569400FAAA3F /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		C57C229F2502569400FAAA3F /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
 		C57F0D39253337680080EEF0 /* NSObject+OpenURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+OpenURL.h"; sourceTree = "<group>"; };
@@ -435,7 +440,6 @@
 		C5914CCC2538515A007777A6 /* UIViewController+BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BaseVC.h"; sourceTree = "<group>"; };
 		C5914CCD2538515A007777A6 /* UIViewController+BRPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BRPickerView.m"; sourceTree = "<group>"; };
 		C5914CCE2538515A007777A6 /* UIViewController+GifImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GifImageView.m"; sourceTree = "<group>"; };
-		C5914CCF2538515A007777A6 /* UIViewController+JXCategoryListContentViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JXCategoryListContentViewDelegate.h"; sourceTree = "<group>"; };
 		C5914CD02538515A007777A6 /* UIViewController+TZLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TZLocationManager.h"; sourceTree = "<group>"; };
 		C5914CD12538515A007777A6 /* UIViewController+BackBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackBtn.m"; sourceTree = "<group>"; };
 		C5914CD22538515A007777A6 /* UIViewController+JPImageresizerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JPImageresizerView.h"; sourceTree = "<group>"; };
@@ -448,7 +452,6 @@
 		C5914CD92538515A007777A6 /* UIViewController+TZImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TZImagePickerController.h"; sourceTree = "<group>"; };
 		C5914CDA2538515A007777A6 /* UIViewController+BRPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BRPickerView.h"; sourceTree = "<group>"; };
 		C5914CDB2538515A007777A6 /* UIViewController+GifImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GifImageView.h"; sourceTree = "<group>"; };
-		C5914CDC2538515A007777A6 /* UIViewController+JXCategoryListContentViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JXCategoryListContentViewDelegate.m"; sourceTree = "<group>"; };
 		C59B9F002526F3E10039B485 /* ZYTextField+HistoryDataList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZYTextField+HistoryDataList.h"; sourceTree = "<group>"; };
 		C59B9F012526F3E10039B485 /* ZYTextField+HistoryDataList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZYTextField+HistoryDataList.m"; sourceTree = "<group>"; };
 		C59B9F052526F3E10039B485 /* ZYTextField.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZYTextField.bundle; sourceTree = "<group>"; };
@@ -781,6 +784,30 @@
 			path = URL_Manager;
 			sourceTree = "<group>";
 		};
+		C57671992546BA7B00C382C8 /* UIViewController+JXCategory */ = {
+			isa = PBXGroup;
+			children = (
+				C57672B62546BC3400C382C8 /* UIViewController+JXCategoryListContentViewDelegate.h */,
+				C57672B32546BC3300C382C8 /* UIViewController+JXCategoryListContentViewDelegate.m */,
+				C57672B42546BC3300C382C8 /* UIViewController+JXPagerViewListViewDelegate.h */,
+				C57672B52546BC3300C382C8 /* UIViewController+JXPagerViewListViewDelegate.m */,
+			);
+			path = "UIViewController+JXCategory";
+			sourceTree = "<group>";
+		};
+		C576719A2546BA8400C382C8 /* UIViewController+TZImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				C5914CD92538515A007777A6 /* UIViewController+TZImagePickerController.h */,
+				C5914CC92538515A007777A6 /* UIViewController+TZImagePickerController.m */,
+				C5914CD32538515A007777A6 /* UIViewController+TZImagePickerControllerDelegate.h */,
+				C5914CC82538515A007777A6 /* UIViewController+TZImagePickerControllerDelegate.m */,
+				C5914CD02538515A007777A6 /* UIViewController+TZLocationManager.h */,
+				C5914CC52538515A007777A6 /* UIViewController+TZLocationManager.m */,
+			);
+			path = "UIViewController+TZImagePickerController";
+			sourceTree = "<group>";
+		};
 		C5802CFB24BCAD3800894903 = {
 			isa = PBXGroup;
 			children = (
@@ -1080,32 +1107,26 @@
 		C5914CC22538515A007777A6 /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C5914CC32538515A007777A6 /* UIViewController+JPImageresizerView.m */,
+				C576719A2546BA8400C382C8 /* UIViewController+TZImagePickerController */,
+				C57671992546BA7B00C382C8 /* UIViewController+JXCategory */,
 				C5914CC42538515A007777A6 /* UIViewController+BackBtn.h */,
-				C5914CC52538515A007777A6 /* UIViewController+TZLocationManager.m */,
-				C5914CC62538515A007777A6 /* UIViewController+BWShareView.m */,
-				C5914CC72538515A007777A6 /* UIViewController+Shake.m */,
-				C5914CC82538515A007777A6 /* UIViewController+TZImagePickerControllerDelegate.m */,
-				C5914CC92538515A007777A6 /* UIViewController+TZImagePickerController.m */,
-				C5914CCA2538515A007777A6 /* UIViewController+NavigationBarHiddenMgr.m */,
-				C5914CCB2538515A007777A6 /* UIViewController+MJRefresh.h */,
 				C5914CCC2538515A007777A6 /* UIViewController+BaseVC.h */,
-				C5914CCD2538515A007777A6 /* UIViewController+BRPickerView.m */,
-				C5914CCE2538515A007777A6 /* UIViewController+GifImageView.m */,
-				C5914CCF2538515A007777A6 /* UIViewController+JXCategoryListContentViewDelegate.h */,
-				C5914CD02538515A007777A6 /* UIViewController+TZLocationManager.h */,
-				C5914CD12538515A007777A6 /* UIViewController+BackBtn.m */,
-				C5914CD22538515A007777A6 /* UIViewController+JPImageresizerView.h */,
-				C5914CD32538515A007777A6 /* UIViewController+TZImagePickerControllerDelegate.h */,
-				C5914CD42538515A007777A6 /* UIViewController+Shake.h */,
-				C5914CD52538515A007777A6 /* UIViewController+BWShareView.h */,
-				C5914CD62538515A007777A6 /* UIViewController+NavigationBarHiddenMgr.h */,
-				C5914CD72538515A007777A6 /* UIViewController+MJRefresh.m */,
-				C5914CD82538515A007777A6 /* UIViewController+BaseVC.m */,
-				C5914CD92538515A007777A6 /* UIViewController+TZImagePickerController.h */,
 				C5914CDA2538515A007777A6 /* UIViewController+BRPickerView.h */,
+				C5914CD52538515A007777A6 /* UIViewController+BWShareView.h */,
 				C5914CDB2538515A007777A6 /* UIViewController+GifImageView.h */,
-				C5914CDC2538515A007777A6 /* UIViewController+JXCategoryListContentViewDelegate.m */,
+				C5914CD22538515A007777A6 /* UIViewController+JPImageresizerView.h */,
+				C5914CCB2538515A007777A6 /* UIViewController+MJRefresh.h */,
+				C5914CD62538515A007777A6 /* UIViewController+NavigationBarHiddenMgr.h */,
+				C5914CD42538515A007777A6 /* UIViewController+Shake.h */,
+				C5914CD12538515A007777A6 /* UIViewController+BackBtn.m */,
+				C5914CD82538515A007777A6 /* UIViewController+BaseVC.m */,
+				C5914CCD2538515A007777A6 /* UIViewController+BRPickerView.m */,
+				C5914CC62538515A007777A6 /* UIViewController+BWShareView.m */,
+				C5914CCE2538515A007777A6 /* UIViewController+GifImageView.m */,
+				C5914CC32538515A007777A6 /* UIViewController+JPImageresizerView.m */,
+				C5914CD72538515A007777A6 /* UIViewController+MJRefresh.m */,
+				C5914CCA2538515A007777A6 /* UIViewController+NavigationBarHiddenMgr.m */,
+				C5914CC72538515A007777A6 /* UIViewController+Shake.m */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -1737,7 +1758,6 @@
 				C5914CE72538515A007777A6 /* UIViewController+BackBtn.m in Sources */,
 				C5AEEB1125384229000E1C5F /* UIView+Extras.m in Sources */,
 				C522CFEC25346497006A822F /* HoveringHeaderView.m in Sources */,
-				C5914CEA2538515B007777A6 /* UIViewController+JXCategoryListContentViewDelegate.m in Sources */,
 				C522CFEB25346497006A822F /* UITableViewHeaderFooterView+Attribute.m in Sources */,
 				C5914CE82538515B007777A6 /* UIViewController+MJRefresh.m in Sources */,
 				C57F0D3B253337680080EEF0 /* NSObject+OpenURL.m in Sources */,
@@ -1755,6 +1775,7 @@
 				C5914CDE2538515A007777A6 /* UIViewController+JPImageresizerView.m in Sources */,
 				C5AA49AF250C9901009F583F /* UIImage+YBGIF.m in Sources */,
 				C5379EA324D13FDC0078880F /* ZYTextField.m in Sources */,
+				C57672B72546BC3400C382C8 /* UIViewController+JXCategoryListContentViewDelegate.m in Sources */,
 				C522CFEA25346497006A822F /* NonHoveringHeaderView.m in Sources */,
 				C5AA493D250C92BD009F583F /* UIView+Chain.m in Sources */,
 				C5AA492D250C914A009F583F /* NSObject+Login.m in Sources */,
@@ -1764,6 +1785,7 @@
 				C5379EA924D13FE80078880F /* CJTextField.m in Sources */,
 				C5914CE32538515A007777A6 /* UIViewController+TZImagePickerController.m in Sources */,
 				C5AEEB1025384229000E1C5F /* UIView+Animation.m in Sources */,
+				C57672B82546BC3400C382C8 /* UIViewController+JXPagerViewListViewDelegate.m in Sources */,
 				C5AA49AE250C9901009F583F /* UIImage+Tailor.m in Sources */,
 				C590FE0F24CFE97E000F36C9 /* ViewController.m in Sources */,
 				C5AA4917250C9142009F583F /* NSObject+SPAlertController.m in Sources */,
@@ -1963,10 +1985,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WARNING_CFLAGS = (
-					"-Wno-ambiguous-macro",
-					" ",
-				);
+				WARNING_CFLAGS = "-Wno-ambiguous-macro  ";
 			};
 			name = Debug;
 		};
@@ -1987,10 +2006,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WARNING_CFLAGS = (
-					"-Wno-ambiguous-macro",
-					" ",
-				);
+				WARNING_CFLAGS = "-Wno-ambiguous-macro  ";
 			};
 			name = Release;
 		};

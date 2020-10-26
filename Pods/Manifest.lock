@@ -31,6 +31,7 @@ PODS:
   - JPImageresizerView (1.7.7)
   - JSONModel (1.8.0)
   - JXCategoryView (1.5.7)
+  - JXPagingView/Pager (2.0.13)
   - LYEmptyView (1.3.1)
   - Masonry (1.1.0)
   - MJExtension (3.2.3)
@@ -54,6 +55,7 @@ DEPENDENCIES:
   - JPImageresizerView
   - JSONModel
   - JXCategoryView
+  - JXPagingView/Pager
   - LYEmptyView
   - Masonry
   - MJExtension
@@ -74,6 +76,7 @@ SPEC REPOS:
     - JPImageresizerView
     - JSONModel
     - JXCategoryView
+    - JXPagingView
     - LYEmptyView
     - Masonry
     - MJExtension
@@ -93,6 +96,7 @@ SPEC CHECKSUMS:
   JPImageresizerView: ba2301b87ad03f7a7976deec4ccc75085d29f6c1
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   JXCategoryView: fca2146e87eeaf014c71041337cb07bd4de5830b
+  JXPagingView: 821ed274f09eaf2843a96c3a74e9d138e27d9730
   LYEmptyView: b6d418cfa38b78df0cf243f9a9c25ccbdc399922
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: a6fd35a527dafd7f3f1259017ee57551d58b3bb8
@@ -104,6 +108,6 @@ SPEC CHECKSUMS:
   WHToast: 11a17a3f09f5f733e32bd6f3338919a448cbb719
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 6b3ae3b3011d71c03622f76744ab028719312bac
+PODFILE CHECKSUM: ce66918b4b920b10e31fc9abdf5a61889d57cb73
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0
