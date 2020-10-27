@@ -6,10 +6,9 @@
 //  Copyright © 2020 Jobs. All rights reserved.
 //
 
-#import "CommentPopUpNonHoveringHeaderFooterView.h"
-#import "UITableViewHeaderFooterView+Attribute.h"
+#import "CommentPopUpViewForTableViewHeader.h"
 
-@interface CommentPopUpNonHoveringHeaderFooterView ()
+@interface CommentPopUpViewForTableViewHeader ()
 
 @property(nonatomic,strong)UIImageView *headerIMGV;
 @property(nonatomic,strong)UILabel *titleLab;
@@ -23,14 +22,11 @@
 
 @end
 
-@implementation CommentPopUpNonHoveringHeaderFooterView
-
-@synthesize result = _result;
+@implementation CommentPopUpViewForTableViewHeader
 
 -(instancetype)initWithReuseIdentifier:(nullable NSString *)reuseIdentifier
                               withData:(id)data{
     if (self = [super initWithReuseIdentifier:reuseIdentifier]) {
-        self.result.alpha = 1;
         self.contentView.backgroundColor = HEXCOLOR(0x242A37);
         if ([data isKindOfClass:MKFirstCommentModel.class]) {
             self.firstCommentModel = (MKFirstCommentModel *)data;
@@ -43,20 +39,6 @@
             self.LikeBtn.selected = self.firstCommentModel.isPraise.boolValue;
         }
     }return self;
-}
-
--(void)resultAction:(UIControl *)sender{
-    NSLog(@"%@",sender);
-    if (self.nonHoveringHeaderViewBlock) {
-        self.nonHoveringHeaderViewBlock(@{
-        @"sender":sender,
-        @"model":self.firstCommentModel
-                     });//UIControl
-    }
-}
-
--(void)setFrame:(CGRect)frame {
-    [super setFrame:[self.tableView rectForHeaderInSection:self.section]];
 }
 
 -(void)actionBlockCommentPopUpNonHoveringHeaderView:(MKDataBlock)commentPopUpNonHoveringHeaderViewBlock{
@@ -72,19 +54,6 @@
     }
 }
 #pragma mark —— lazyLoad
--(UIControl *)result{
-    if (!_result) {
-        _result = UIControl.new;
-        [_result addTarget:self
-                    action:@selector(resultAction:)
-          forControlEvents:UIControlEventTouchUpInside];
-        [self.contentView addSubview:_result];
-        [_result mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.contentView);
-        }];
-    }return _result;
-}
-
 -(UIImageView *)headerIMGV{
     if (!_headerIMGV) {
         _headerIMGV = UIImageView.new;

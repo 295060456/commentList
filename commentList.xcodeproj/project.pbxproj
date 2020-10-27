@@ -10,9 +10,6 @@
 		21B906A7D4963F3368EDB654 /* Pods_commentListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC02D2566A4642E3764C735B /* Pods_commentListUITests.framework */; };
 		47F1DE0F9D5C2BEEE0202B39 /* Pods_commentListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0CF0E67EA8BFA59C3D36147 /* Pods_commentListTests.framework */; };
 		B39069305FAC615D8C6F4D6B /* Pods_commentList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC5B97A55D8F418AC00D92E /* Pods_commentList.framework */; };
-		C522CFEA25346497006A822F /* NonHoveringHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C522CFE425346497006A822F /* NonHoveringHeaderView.m */; };
-		C522CFEB25346497006A822F /* UITableViewHeaderFooterView+Attribute.m in Sources */ = {isa = PBXBuildFile; fileRef = C522CFE625346497006A822F /* UITableViewHeaderFooterView+Attribute.m */; };
-		C522CFEC25346497006A822F /* HoveringHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C522CFE825346497006A822F /* HoveringHeaderView.m */; };
 		C52E89662510B3A40070356F /* UITextField+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C52E89652510B3A40070356F /* UITextField+Extend.m */; };
 		C52F592124CD4AA0001F72B3 /* InputView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52F592024CD4AA0001F72B3 /* InputView.m */; };
 		C5379EA324D13FDC0078880F /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379E9F24D13FDC0078880F /* ZYTextField.m */; };
@@ -38,6 +35,8 @@
 		C5802D1D24BCAD3900894903 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D1C24BCAD3900894903 /* main.m */; };
 		C5802D2724BCAD3900894903 /* commentListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D2624BCAD3900894903 /* commentListTests.m */; };
 		C5802D3224BCAD3900894903 /* commentListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5802D3124BCAD3900894903 /* commentListUITests.m */; };
+		C5850B1E25483DF8001E6676 /* ViewForTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C5850B1925483DF8001E6676 /* ViewForTableViewHeader.m */; };
+		C5850B1F25483DF8001E6676 /* ViewForTableViewFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C5850B1C25483DF8001E6676 /* ViewForTableViewFooter.m */; };
 		C58C615E2532B3CA0092BF89 /* RBCLikeButton.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C58C615B2532B3CA0092BF89 /* RBCLikeButton.bundle */; };
 		C58C615F2532B3CA0092BF89 /* RBCLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C615D2532B3CA0092BF89 /* RBCLikeButton.m */; };
 		C590FE0F24CFE97E000F36C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78B1324BF3F73008A46EC /* ViewController.m */; };
@@ -66,8 +65,7 @@
 		C59B9F24252702AC0039B485 /* BaseTableViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9F22252702AC0039B485 /* BaseTableViewer.m */; };
 		C59B9F2E252702B70039B485 /* TableViewAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9F28252702B70039B485 /* TableViewAnimationKit.m */; };
 		C59B9F2F252702B70039B485 /* UITableView+XSAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C59B9F2A252702B70039B485 /* UITableView+XSAnimationKit.m */; };
-		C59BA07125270EE20039B485 /* CommentPopUpNonHoveringHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59BA06F25270EE20039B485 /* CommentPopUpNonHoveringHeaderFooterView.m */; };
-		C59BA54E252740C80039B485 /* CommentPopUpHoveringHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59BA54D252740C80039B485 /* CommentPopUpHoveringHeaderFooterView.m */; };
+		C59BA07125270EE20039B485 /* CommentPopUpViewForTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C59BA06F25270EE20039B485 /* CommentPopUpViewForTableViewHeader.m */; };
 		C5AA4917250C9142009F583F /* NSObject+SPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AA4914250C9142009F583F /* NSObject+SPAlertController.m */; };
 		C5AA4918250C9142009F583F /* NSObject+SYSAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AA4915250C9142009F583F /* NSObject+SYSAlertController.m */; };
 		C5AA4927250C914A009F583F /* NSObject+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AA491C250C9149009F583F /* NSObject+Shake.m */; };
@@ -129,12 +127,6 @@
 		AB97C5DB8C2372F6EF680D78 /* Pods-commentListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commentListTests.debug.xcconfig"; path = "Target Support Files/Pods-commentListTests/Pods-commentListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC02D2566A4642E3764C735B /* Pods_commentListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_commentListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC11A027C76951D368AEBAA5 /* Pods-commentList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commentList.debug.xcconfig"; path = "Target Support Files/Pods-commentList/Pods-commentList.debug.xcconfig"; sourceTree = "<group>"; };
-		C522CFE325346497006A822F /* NonHoveringHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NonHoveringHeaderView.h; sourceTree = "<group>"; };
-		C522CFE425346497006A822F /* NonHoveringHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NonHoveringHeaderView.m; sourceTree = "<group>"; };
-		C522CFE525346497006A822F /* UITableViewHeaderFooterView+Attribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewHeaderFooterView+Attribute.h"; sourceTree = "<group>"; };
-		C522CFE625346497006A822F /* UITableViewHeaderFooterView+Attribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewHeaderFooterView+Attribute.m"; sourceTree = "<group>"; };
-		C522CFE825346497006A822F /* HoveringHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoveringHeaderView.m; sourceTree = "<group>"; };
-		C522CFE925346497006A822F /* HoveringHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoveringHeaderView.h; sourceTree = "<group>"; };
 		C52E89642510B3A40070356F /* UITextField+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Extend.h"; sourceTree = "<group>"; };
 		C52E89652510B3A40070356F /* UITextField+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Extend.m"; sourceTree = "<group>"; };
 		C52F591F24CD4AA0001F72B3 /* InputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputView.h; sourceTree = "<group>"; };
@@ -183,6 +175,10 @@
 		C5802D2D24BCAD3900894903 /* commentListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = commentListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5802D3124BCAD3900894903 /* commentListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = commentListUITests.m; sourceTree = "<group>"; };
 		C5802D3324BCAD3900894903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5850B1925483DF8001E6676 /* ViewForTableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewForTableViewHeader.m; sourceTree = "<group>"; };
+		C5850B1A25483DF8001E6676 /* ViewForTableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewForTableViewHeader.h; sourceTree = "<group>"; };
+		C5850B1C25483DF8001E6676 /* ViewForTableViewFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewForTableViewFooter.m; sourceTree = "<group>"; };
+		C5850B1D25483DF8001E6676 /* ViewForTableViewFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewForTableViewFooter.h; sourceTree = "<group>"; };
 		C58C615B2532B3CA0092BF89 /* RBCLikeButton.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RBCLikeButton.bundle; sourceTree = "<group>"; };
 		C58C615C2532B3CA0092BF89 /* RBCLikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCLikeButton.h; sourceTree = "<group>"; };
 		C58C615D2532B3CA0092BF89 /* RBCLikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCLikeButton.m; sourceTree = "<group>"; };
@@ -236,11 +232,8 @@
 		C59B9F2B252702B70039B485 /* UITableView+XSAnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+XSAnimationKit.h"; sourceTree = "<group>"; };
 		C59B9F2C252702B70039B485 /* TableViewAnimationKitConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewAnimationKitConfig.h; sourceTree = "<group>"; };
 		C59B9F2D252702B70039B485 /* TableViewAnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewAnimationKit.h; sourceTree = "<group>"; };
-		C59B9F44252704F60039B485 /* 是否取消悬停 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "是否取消悬停"; sourceTree = "<group>"; };
-		C59BA06F25270EE20039B485 /* CommentPopUpNonHoveringHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentPopUpNonHoveringHeaderFooterView.m; sourceTree = "<group>"; };
-		C59BA07025270EE20039B485 /* CommentPopUpNonHoveringHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentPopUpNonHoveringHeaderFooterView.h; sourceTree = "<group>"; };
-		C59BA54C252740C80039B485 /* CommentPopUpHoveringHeaderFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentPopUpHoveringHeaderFooterView.h; sourceTree = "<group>"; };
-		C59BA54D252740C80039B485 /* CommentPopUpHoveringHeaderFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentPopUpHoveringHeaderFooterView.m; sourceTree = "<group>"; };
+		C59BA06F25270EE20039B485 /* CommentPopUpViewForTableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentPopUpViewForTableViewHeader.m; sourceTree = "<group>"; };
+		C59BA07025270EE20039B485 /* CommentPopUpViewForTableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentPopUpViewForTableViewHeader.h; sourceTree = "<group>"; };
 		C5AA4913250C9142009F583F /* NSObject+SYSAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SYSAlertController.h"; sourceTree = "<group>"; };
 		C5AA4914250C9142009F583F /* NSObject+SPAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SPAlertController.m"; sourceTree = "<group>"; };
 		C5AA4915250C9142009F583F /* NSObject+SYSAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SYSAlertController.m"; sourceTree = "<group>"; };
@@ -389,24 +382,6 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
-		C522CFE225346497006A822F /* 不悬停 */ = {
-			isa = PBXGroup;
-			children = (
-				C522CFE325346497006A822F /* NonHoveringHeaderView.h */,
-				C522CFE425346497006A822F /* NonHoveringHeaderView.m */,
-			);
-			path = "不悬停";
-			sourceTree = "<group>";
-		};
-		C522CFE725346497006A822F /* 悬停 */ = {
-			isa = PBXGroup;
-			children = (
-				C522CFE825346497006A822F /* HoveringHeaderView.m */,
-				C522CFE925346497006A822F /* HoveringHeaderView.h */,
-			);
-			path = "悬停";
-			sourceTree = "<group>";
-		};
 		C52E89632510B3990070356F /* UITextField+Extend */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,9 +403,9 @@
 		C52F592824CD4CE9001F72B3 /* UiKit */ = {
 			isa = PBXGroup;
 			children = (
+				C5850B1725483DF8001E6676 /* UITableViewHeaderFooterView */,
 				C5914CBF2538515A007777A6 /* UINavigationController */,
 				C5914CC22538515A007777A6 /* UIViewController */,
-				C59B9F40252704BD0039B485 /* UITableViewHeaderFooterView 用作基类 */,
 				C59B9F1D252702910039B485 /* UITableView */,
 				C5AA4911250C9112009F583F /* NSObject */,
 				C5379E9A24D13FB40078880F /* UITextField */,
@@ -615,6 +590,33 @@
 			path = commentListUITests;
 			sourceTree = "<group>";
 		};
+		C5850B1725483DF8001E6676 /* UITableViewHeaderFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				C5850B1825483DF8001E6676 /* ViewForTableViewHeader */,
+				C5850B1B25483DF8001E6676 /* ViewForTableViewFooter */,
+			);
+			path = UITableViewHeaderFooterView;
+			sourceTree = "<group>";
+		};
+		C5850B1825483DF8001E6676 /* ViewForTableViewHeader */ = {
+			isa = PBXGroup;
+			children = (
+				C5850B1925483DF8001E6676 /* ViewForTableViewHeader.m */,
+				C5850B1A25483DF8001E6676 /* ViewForTableViewHeader.h */,
+			);
+			path = ViewForTableViewHeader;
+			sourceTree = "<group>";
+		};
+		C5850B1B25483DF8001E6676 /* ViewForTableViewFooter */ = {
+			isa = PBXGroup;
+			children = (
+				C5850B1C25483DF8001E6676 /* ViewForTableViewFooter.m */,
+				C5850B1D25483DF8001E6676 /* ViewForTableViewFooter.h */,
+			);
+			path = ViewForTableViewFooter;
+			sourceTree = "<group>";
+		};
 		C590FE0A24CFE816000F36C9 /* 入口——————效果 */ = {
 			isa = PBXGroup;
 			children = (
@@ -659,8 +661,8 @@
 		C590FE0E24CFE8D0000F36C9 /* 相关视图类 */ = {
 			isa = PBXGroup;
 			children = (
-				C59BA3BF252739700039B485 /* 不悬停 */,
-				C59BA3BE252739690039B485 /* 悬停 */,
+				C59BA07025270EE20039B485 /* CommentPopUpViewForTableViewHeader.h */,
+				C59BA06F25270EE20039B485 /* CommentPopUpViewForTableViewHeader.m */,
 				C5F78A8624BEE021008A46EC /* TBVCell */,
 				C52F591E24CD4A96001F72B3 /* 输入框部分 */,
 			);
@@ -782,36 +784,6 @@
 				C59B9F22252702AC0039B485 /* BaseTableViewer.m */,
 			);
 			path = "专治UITableView相应链断裂";
-			sourceTree = "<group>";
-		};
-		C59B9F40252704BD0039B485 /* UITableViewHeaderFooterView 用作基类 */ = {
-			isa = PBXGroup;
-			children = (
-				C59B9F44252704F60039B485 /* 是否取消悬停 */,
-				C522CFE225346497006A822F /* 不悬停 */,
-				C522CFE725346497006A822F /* 悬停 */,
-				C522CFE525346497006A822F /* UITableViewHeaderFooterView+Attribute.h */,
-				C522CFE625346497006A822F /* UITableViewHeaderFooterView+Attribute.m */,
-			);
-			path = "UITableViewHeaderFooterView 用作基类";
-			sourceTree = "<group>";
-		};
-		C59BA3BE252739690039B485 /* 悬停 */ = {
-			isa = PBXGroup;
-			children = (
-				C59BA54C252740C80039B485 /* CommentPopUpHoveringHeaderFooterView.h */,
-				C59BA54D252740C80039B485 /* CommentPopUpHoveringHeaderFooterView.m */,
-			);
-			path = "悬停";
-			sourceTree = "<group>";
-		};
-		C59BA3BF252739700039B485 /* 不悬停 */ = {
-			isa = PBXGroup;
-			children = (
-				C59BA07025270EE20039B485 /* CommentPopUpNonHoveringHeaderFooterView.h */,
-				C59BA06F25270EE20039B485 /* CommentPopUpNonHoveringHeaderFooterView.m */,
-			);
-			path = "不悬停";
 			sourceTree = "<group>";
 		};
 		C5AA4911250C9112009F583F /* NSObject */ = {
@@ -1253,7 +1225,7 @@
 				C590FE1A24CFEA6A000F36C9 /* MKCommentModel.m in Sources */,
 				C5F78B1F24BF4195008A46EC /* PopUpVC.m in Sources */,
 				C590FE1524CFEA14000F36C9 /* CommentPopUpVC+VM.m in Sources */,
-				C59BA07125270EE20039B485 /* CommentPopUpNonHoveringHeaderFooterView.m in Sources */,
+				C59BA07125270EE20039B485 /* CommentPopUpViewForTableViewHeader.m in Sources */,
 				C52F592124CD4AA0001F72B3 /* InputView.m in Sources */,
 				C5AA492B250C914A009F583F /* NSObject+Time.m in Sources */,
 				C59B9F062526F3E10039B485 /* ZYTextField+HistoryDataList.m in Sources */,
@@ -1261,12 +1233,11 @@
 				C55B2AC7253427130038E50C /* SuspendView.m in Sources */,
 				C5914CE72538515A007777A6 /* UIViewController+BackBtn.m in Sources */,
 				C5AEEB1125384229000E1C5F /* UIView+Extras.m in Sources */,
-				C522CFEC25346497006A822F /* HoveringHeaderView.m in Sources */,
-				C522CFEB25346497006A822F /* UITableViewHeaderFooterView+Attribute.m in Sources */,
 				C5914CE82538515B007777A6 /* UIViewController+MJRefresh.m in Sources */,
 				C57F0D3B253337680080EEF0 /* NSObject+OpenURL.m in Sources */,
 				C590FF1824CFF8F1000F36C9 /* TestClass.m in Sources */,
 				C5914CE42538515A007777A6 /* UIViewController+NavigationBarHiddenMgr.m in Sources */,
+				C5850B1E25483DF8001E6676 /* ViewForTableViewHeader.m in Sources */,
 				C5E4C10F24DFF28000D4862C /* BWShareView.m in Sources */,
 				C5AA493B250C92BD009F583F /* UIView+Gradient.m in Sources */,
 				C52E89662510B3A40070356F /* UITextField+Extend.m in Sources */,
@@ -1275,12 +1246,11 @@
 				C5DD001D24D46C6F00307DFA /* EmptyView.m in Sources */,
 				C54F85AD252B616600EE3DD0 /* UITableView+WWFoldableTableView.m in Sources */,
 				C5802D0C24BCAD3800894903 /* SceneDelegate.m in Sources */,
-				C59BA54E252740C80039B485 /* CommentPopUpHoveringHeaderFooterView.m in Sources */,
 				C5914CDE2538515A007777A6 /* UIViewController+JPImageresizerView.m in Sources */,
 				C5AA49AF250C9901009F583F /* UIImage+YBGIF.m in Sources */,
 				C5379EA324D13FDC0078880F /* ZYTextField.m in Sources */,
 				C57672B72546BC3400C382C8 /* UIViewController+JXCategoryListContentViewDelegate.m in Sources */,
-				C522CFEA25346497006A822F /* NonHoveringHeaderView.m in Sources */,
+				C5850B1F25483DF8001E6676 /* ViewForTableViewFooter.m in Sources */,
 				C5AA493D250C92BD009F583F /* UIView+Chain.m in Sources */,
 				C5AA492D250C914A009F583F /* NSObject+Login.m in Sources */,
 				C5AA4928250C914A009F583F /* NSObject+Extras.m in Sources */,

@@ -12,9 +12,7 @@
 #import "LoadMoreTBVCell.h"
 #import "InfoTBVCell.h"
 
-#import "CommentPopUpNonHoveringHeaderFooterView.h"
-#import "CommentPopUpHoveringHeaderFooterView.h"
-#import "UITableViewHeaderFooterView+Attribute.h"
+#import "CommentPopUpViewForTableViewHeader.h"
 #import "NSString+Extras.h"
 
 @interface CommentPopUpVC ()
@@ -298,13 +296,14 @@ heightForHeaderInSection:(NSInteger)section{
 - (UIView *)tableView:(UITableView *)tableView
 viewForHeaderInSection:(NSInteger)section{
     //一级标题数据从这里进去
-    CommentPopUpNonHoveringHeaderFooterView *header = nil;
+    CommentPopUpViewForTableViewHeader *header = nil;
     MKFirstCommentModel *firstCommentModel = self.commentModel.listMytArr[section];
     {//第一种创建方式
-        header = [[CommentPopUpNonHoveringHeaderFooterView alloc]initWithReuseIdentifier:NSStringFromClass(NonHoveringHeaderView.class)
+        header = [[CommentPopUpViewForTableViewHeader alloc]initWithReuseIdentifier:NSStringFromClass(CommentPopUpViewForTableViewHeader.class)
                                                                                 withData:firstCommentModel];
+        header.indexSection = section;
         @weakify(self)
-        [header actionBlockNonHoveringHeaderView:^(id data) {
+        [header actionBlockViewForTableViewHeader:^(id data) {
             self.commentId = firstCommentModel.commentId;
             self.ID = firstCommentModel.ID;
             @strongify(self)
@@ -343,21 +342,14 @@ viewForHeaderInSection:(NSInteger)section{
             }
         }];
     }
-    
-//
-//
-    
 //    {//第二种创建方式
-//        //viewForHeaderInSection 悬停与否
-//        Class headerClass = NonHoveringHeaderView.class;
-//    //    Class headerClass = HoveringHeaderView.class;
-//
-//        header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass(headerClass)];
+    //需要进行注册
+//    [_tableView registerClass:CommentPopUpViewForTableViewHeader.class
+//forHeaderFooterViewReuseIdentifier:NSStringFromClass(CommentPopUpViewForTableViewHeader.class)];
+//        header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass(CommentPopUpViewForTableViewHeader)];
 //    }
     
-    header.tableView = tableView;
-    header.section = section;
-
+    self.scrollViewClass = UITableView.class;//这一属性决定UITableViewHeaderFooterView是否悬停
     return header;
 }
 #pragma mark —— lazyLoad
@@ -418,10 +410,8 @@ viewForHeaderInSection:(NSInteger)section{
         _tableView.backgroundColor = HEXCOLOR(0x242A37);
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        [_tableView registerClass:CommentPopUpNonHoveringHeaderFooterView.class
-forHeaderFooterViewReuseIdentifier:NSStringFromClass(CommentPopUpNonHoveringHeaderFooterView.class)];
-        [_tableView registerClass:CommentPopUpHoveringHeaderFooterView.class
-forHeaderFooterViewReuseIdentifier:NSStringFromClass(CommentPopUpHoveringHeaderFooterView.class)];
+        [_tableView registerClass:CommentPopUpViewForTableViewHeader.class
+forHeaderFooterViewReuseIdentifier:NSStringFromClass(CommentPopUpViewForTableViewHeader.class)];
         _tableView.mj_header = self.mjRefreshGifHeader;
         _tableView.mj_footer = self.mjRefreshBackNormalFooter;
         _tableView.mj_footer.hidden = NO;
