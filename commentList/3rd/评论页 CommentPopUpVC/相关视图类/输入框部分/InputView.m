@@ -37,11 +37,11 @@ UITextFieldDelegate
     }return self;
 }
 ///发送
--(void)actionInputViewBlock:(MKDataBlock)inputViewActionBlock{
+-(void)actionInputViewBlock:(MKDataBlock _Nullable)inputViewActionBlock{
     self.inputViewActionBlock = inputViewActionBlock;
 }
 ///删除
--(void)actionisInputtingBlock:(MKDataBlock)isInputtingActionBlock{
+-(void)actionisInputtingBlock:(MKDataBlock _Nullable)isInputtingActionBlock{
     self.isInputtingActionBlock = isInputtingActionBlock;
 }
 

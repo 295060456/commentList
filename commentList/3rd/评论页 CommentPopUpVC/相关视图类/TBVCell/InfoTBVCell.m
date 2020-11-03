@@ -44,7 +44,7 @@
     }
 }
 
--(void)action:(MKDataBlock)actionBlock{
+-(void)action:(MKDataBlock _Nullable)actionBlock{
     self.actionBlock = actionBlock;
 }
 //点赞/取消点赞操作

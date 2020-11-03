@@ -41,7 +41,7 @@
     }return self;
 }
 
--(void)actionBlockCommentPopUpNonHoveringHeaderView:(MKDataBlock)commentPopUpNonHoveringHeaderViewBlock{
+-(void)actionBlockCommentPopUpNonHoveringHeaderView:(MKDataBlock _Nullable)commentPopUpNonHoveringHeaderViewBlock{
     self.commentPopUpNonHoveringHeaderViewBlock = commentPopUpNonHoveringHeaderViewBlock;
 }
 //点赞/取消点赞操作
