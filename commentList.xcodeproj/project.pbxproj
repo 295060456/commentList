@@ -16,6 +16,8 @@
 		C5379EA624D13FE20078880F /* HQTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379EA424D13FE20078880F /* HQTextField.m */; };
 		C5379EA924D13FE80078880F /* CJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379EA824D13FE80078880F /* CJTextField.m */; };
 		C5379EAD24D148570078880F /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379EAC24D148570078880F /* NSString+Extras.m */; };
+		C54B3FF4255297E1003BE195 /* UILabel+RichText.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3FF0255297E1003BE195 /* UILabel+RichText.m */; };
+		C54B3FF5255297E1003BE195 /* UILabel+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3FF3255297E1003BE195 /* UILabel+Extra.m */; };
 		C54F85AD252B616600EE3DD0 /* UITableView+WWFoldableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54F85AC252B616600EE3DD0 /* UITableView+WWFoldableTableView.m */; };
 		C55B2AC5253427130038E50C /* SuspendBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C55B2ABD253427130038E50C /* SuspendBtn.m */; };
 		C55B2AC6253427130038E50C /* SuspendLab.m in Sources */ = {isa = PBXBuildFile; fileRef = C55B2AC1253427130038E50C /* SuspendLab.m */; };
@@ -139,6 +141,10 @@
 		C5379EA824D13FE80078880F /* CJTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTextField.m; sourceTree = "<group>"; };
 		C5379EAB24D148570078880F /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
 		C5379EAC24D148570078880F /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
+		C54B3FF0255297E1003BE195 /* UILabel+RichText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+RichText.m"; sourceTree = "<group>"; };
+		C54B3FF1255297E1003BE195 /* UILabel+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extra.h"; sourceTree = "<group>"; };
+		C54B3FF2255297E1003BE195 /* UILabel+RichText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+RichText.h"; sourceTree = "<group>"; };
+		C54B3FF3255297E1003BE195 /* UILabel+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extra.m"; sourceTree = "<group>"; };
 		C54F85AB252B616600EE3DD0 /* UITableView+WWFoldableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+WWFoldableTableView.h"; sourceTree = "<group>"; };
 		C54F85AC252B616600EE3DD0 /* UITableView+WWFoldableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+WWFoldableTableView.m"; sourceTree = "<group>"; };
 		C55B2ABD253427130038E50C /* SuspendBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendBtn.m; sourceTree = "<group>"; };
@@ -403,6 +409,7 @@
 		C52F592824CD4CE9001F72B3 /* UiKit */ = {
 			isa = PBXGroup;
 			children = (
+				C54B3FEF255297E1003BE195 /* UILabel */,
 				C5850B1725483DF8001E6676 /* UITableViewHeaderFooterView */,
 				C5914CBF2538515A007777A6 /* UINavigationController */,
 				C5914CC22538515A007777A6 /* UIViewController */,
@@ -464,6 +471,17 @@
 				C5379EAC24D148570078880F /* NSString+Extras.m */,
 			);
 			path = NSString;
+			sourceTree = "<group>";
+		};
+		C54B3FEF255297E1003BE195 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				C54B3FF0255297E1003BE195 /* UILabel+RichText.m */,
+				C54B3FF1255297E1003BE195 /* UILabel+Extra.h */,
+				C54B3FF2255297E1003BE195 /* UILabel+RichText.h */,
+				C54B3FF3255297E1003BE195 /* UILabel+Extra.m */,
+			);
+			path = UILabel;
 			sourceTree = "<group>";
 		};
 		C54F85A7252B615F00EE3DD0 /* UITableView 折叠功能 */ = {
@@ -1237,8 +1255,10 @@
 				C57F0D3B253337680080EEF0 /* NSObject+OpenURL.m in Sources */,
 				C590FF1824CFF8F1000F36C9 /* TestClass.m in Sources */,
 				C5914CE42538515A007777A6 /* UIViewController+NavigationBarHiddenMgr.m in Sources */,
+				C54B3FF5255297E1003BE195 /* UILabel+Extra.m in Sources */,
 				C5850B1E25483DF8001E6676 /* ViewForTableViewHeader.m in Sources */,
 				C5E4C10F24DFF28000D4862C /* BWShareView.m in Sources */,
+				C54B3FF4255297E1003BE195 /* UILabel+RichText.m in Sources */,
 				C5AA493B250C92BD009F583F /* UIView+Gradient.m in Sources */,
 				C52E89662510B3A40070356F /* UITextField+Extend.m in Sources */,
 				C5F78A8424BED516008A46EC /* FirstClassModel.m in Sources */,
