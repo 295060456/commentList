@@ -153,6 +153,7 @@
 		C55B2AC1253427130038E50C /* SuspendLab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendLab.m; sourceTree = "<group>"; };
 		C55B2AC3253427130038E50C /* SuspendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendView.m; sourceTree = "<group>"; };
 		C55B2AC4253427130038E50C /* SuspendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendView.h; sourceTree = "<group>"; };
+		C562091E2554001100FE435F /* 高度自定义的按钮.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "高度自定义的按钮.md"; sourceTree = "<group>"; };
 		C56E31E6252F44CE004ACCC7 /* URL_Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URL_Manager.m; sourceTree = "<group>"; };
 		C56E31E7252F44CE004ACCC7 /* URL_Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL_Manager.h; sourceTree = "<group>"; };
 		C56E42322547183800B9F555 /* 图片资源 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "图片资源"; path = "commentList/Other/图片资源"; sourceTree = "<group>"; };
@@ -959,6 +960,7 @@
 		C5F78B2424BF4225008A46EC /* 高度自定义的按钮 */ = {
 			isa = PBXGroup;
 			children = (
+				C562091E2554001100FE435F /* 高度自定义的按钮.md */,
 				C57C229E2502569400FAAA3F /* UIButton+ImageTitleSpacing.h */,
 				C57C229F2502569400FAAA3F /* UIButton+ImageTitleSpacing.m */,
 			);
