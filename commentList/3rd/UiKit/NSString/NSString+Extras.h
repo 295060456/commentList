@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 *  为空返回 YES
 *  不为空返回 NO
 */
-+ (BOOL)isNullString:(NSString *)string;
++(BOOL)isNullString:(NSString *)string;
 #pragma mark —— 字符串替换
 /**
 *  有时候我们加载的URL中可能会出现中文,需要我们手动进行转码,但是同时又要保证URL中的特殊字符保持不变,那么我们就可以使用下面的方法
@@ -53,24 +53,34 @@ NS_ASSUME_NONNULL_BEGIN
                  standardChar:(char)standardChar;
 #pragma mark —— 时间相关
 /// 获取系统时间戳
-+ (NSString *)getSysTimeStamp;
++(NSString *)getSysTimeStamp;
 //服务器时间转化为某固定格式
 +(NSString *)getMMSSFromSS:(NSInteger)totalTime;
 //将秒数转换为字符串格式
-+ (NSString *)timeWithSecond:(NSInteger)second;
++(NSString *)timeWithSecond:(NSInteger)second;
 /// 以固定格式解析并返回服务器时间戳
 /// @param timeStampString 服务器返回的13位时间戳，毫秒
 /// iOS 生成的时间戳是10位
-+(NSString* )getTimeString:(NSString *)timeStampString;
++(NSString *)getTimeString:(NSString *)timeStampString;
 #pragma mark -限宽计算AttributeString与String的高度
-+ (CGFloat)getAttributeContentHeightWithAttributeString:(NSAttributedString*)atributedString
-                                           withFontSize:(float)fontSize
++(CGFloat)getAttributeContentHeightWithAttributeString:(NSAttributedString*)atributedString
+                                          withFontSize:(float)fontSize
+                                 boundingRectWithWidth:(CGFloat)width;
+
+/// 根据字符串以及其对应的行宽、行高和字体字号，计算该文本占用的高度
+/// @param lineSpacing 行与行之间的间距
+/// @param effectString 影响的字符串
+/// @param font 该字符串的字号和字体
+/// @param width 文本的宽度
++(CGFloat)getContentHeightWithParagraphStyleLineSpacing:(CGFloat)lineSpacing
+                                           effectString:(NSString *)effectString
+                                                   font:(UIFont *)font
                                   boundingRectWithWidth:(CGFloat)width;
 
-+ (CGFloat)getContentHeightWithParagraphStyleLineSpacing:(CGFloat)lineSpacing
-                                          fontWithString:(NSString *)fontWithString
-                                              fontOfSize:(CGFloat)fontOfSize
-                                   boundingRectWithWidth:(CGFloat)width;
++(float)textHitWithStirng:(NSString*)stingS
+                     font:(float)font
+                     widt:(float)wid;
+
 @end
 
 NS_ASSUME_NONNULL_END
