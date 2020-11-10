@@ -156,7 +156,7 @@
 		C562091E2554001100FE435F /* 高度自定义的按钮.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "高度自定义的按钮.md"; sourceTree = "<group>"; };
 		C56E31E6252F44CE004ACCC7 /* URL_Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URL_Manager.m; sourceTree = "<group>"; };
 		C56E31E7252F44CE004ACCC7 /* URL_Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL_Manager.h; sourceTree = "<group>"; };
-		C56E42322547183800B9F555 /* 图片资源 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "图片资源"; path = "commentList/Other/图片资源"; sourceTree = "<group>"; };
+		C56E42322547183800B9F555 /* 图片资源 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "图片资源"; sourceTree = "<group>"; };
 		C57672B32546BC3300C382C8 /* UIViewController+JXCategoryListContentViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JXCategoryListContentViewDelegate.m"; sourceTree = "<group>"; };
 		C57672B42546BC3300C382C8 /* UIViewController+JXPagerViewListViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JXPagerViewListViewDelegate.h"; sourceTree = "<group>"; };
 		C57672B52546BC3300C382C8 /* UIViewController+JXPagerViewListViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JXPagerViewListViewDelegate.m"; sourceTree = "<group>"; };
@@ -370,11 +370,9 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8BE28E3924BCB6A800CF5D7B /* Other */ = {
+		8BE28E3924BCB6A800CF5D7B /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				C5802D2524BCAD3900894903 /* commentListTests */,
-				C5802D3024BCAD3900894903 /* commentListUITests */,
 				C5802D0524BCAD3800894903 /* Products */,
 				C5802D0724BCAD3800894903 /* AppDelegate.h */,
 				C5802D0824BCAD3800894903 /* AppDelegate.m */,
@@ -386,7 +384,7 @@
 				C5802D1C24BCAD3900894903 /* main.m */,
 				C5802D1324BCAD3800894903 /* commentList.xcdatamodeld */,
 			);
-			path = Other;
+			path = Others;
 			sourceTree = "<group>";
 		};
 		C52E89632510B3990070356F /* UITextField+Extend */ = {
@@ -557,8 +555,9 @@
 		C5802CFB24BCAD3800894903 = {
 			isa = PBXGroup;
 			children = (
-				C56E42322547183800B9F555 /* 图片资源 */,
 				C5802D0624BCAD3800894903 /* commentList */,
+				C5802D2524BCAD3900894903 /* commentListTests */,
+				C5802D3024BCAD3900894903 /* commentListUITests */,
 				77B0E9260695179772350534 /* Pods */,
 				78848533E3389C3D9C3A78A7 /* Frameworks */,
 			);
@@ -578,15 +577,15 @@
 		C5802D0624BCAD3800894903 /* commentList */ = {
 			isa = PBXGroup;
 			children = (
+				C56E42322547183800B9F555 /* 图片资源 */,
+				C5C4FE1A255A5FF3002F407A /* 🌹Macro */,
 				C56E31E5252F449C004ACCC7 /* URL_Manager */,
-				C5C2081324BDC6C9001ED2F5 /* PrefixHeader.pch */,
-				C5C2081224BDC6B5001ED2F5 /* AABlock.h */,
-				C5802D1B24BCAD3900894903 /* Info.plist */,
 				C5B5205A24D6C2FC00579178 /* UserInfo */,
 				C590FF1524CFF8D1000F36C9 /* 可变参数Test */,
 				C5F78B3424BF4712008A46EC /* 3rd */,
 				C590FE0A24CFE816000F36C9 /* 入口——————效果 */,
-				8BE28E3924BCB6A800CF5D7B /* Other */,
+				8BE28E3924BCB6A800CF5D7B /* Others */,
+				C5802D1B24BCAD3900894903 /* Info.plist */,
 			);
 			path = commentList;
 			sourceTree = "<group>";
@@ -847,6 +846,15 @@
 				C5B5205D24D6C2FC00579178 /* MKLoginModel.m */,
 			);
 			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		C5C4FE1A255A5FF3002F407A /* 🌹Macro */ = {
+			isa = PBXGroup;
+			children = (
+				C5C2081324BDC6C9001ED2F5 /* PrefixHeader.pch */,
+				C5C2081224BDC6B5001ED2F5 /* AABlock.h */,
+			);
+			path = "🌹Macro";
 			sourceTree = "<group>";
 		};
 		C5CF70B824E510F5000DB72D /* Suspend */ = {
@@ -1471,7 +1479,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				GCC_PREFIX_HEADER = "$(SRCROOT)/commentList/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/🌹Macro/PrefixHeader.pch";
 				INFOPLIST_FILE = commentList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1492,7 +1500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				GCC_PREFIX_HEADER = "$(SRCROOT)/commentList/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/🌹Macro/PrefixHeader.pch";
 				INFOPLIST_FILE = commentList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
