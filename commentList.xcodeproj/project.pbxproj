@@ -15,10 +15,12 @@
 		C5379EA324D13FDC0078880F /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379E9F24D13FDC0078880F /* ZYTextField.m */; };
 		C5379EA624D13FE20078880F /* HQTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379EA424D13FE20078880F /* HQTextField.m */; };
 		C5379EA924D13FE80078880F /* CJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379EA824D13FE80078880F /* CJTextField.m */; };
-		C5379EAD24D148570078880F /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379EAC24D148570078880F /* NSString+Extras.m */; };
 		C54B3FF4255297E1003BE195 /* UILabel+RichText.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3FF0255297E1003BE195 /* UILabel+RichText.m */; };
 		C54B3FF5255297E1003BE195 /* UILabel+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3FF3255297E1003BE195 /* UILabel+Extra.m */; };
 		C54F85AD252B616600EE3DD0 /* UITableView+WWFoldableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54F85AC252B616600EE3DD0 /* UITableView+WWFoldableTableView.m */; };
+		C556975E255BFDA9005C1361 /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5569758255BFDA8005C1361 /* TimeModel.m */; };
+		C556975F255BFDA9005C1361 /* NSString+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = C5569759255BFDA8005C1361 /* NSString+Time.m */; };
+		C5569760255BFDA9005C1361 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = C556975D255BFDA9005C1361 /* NSString+Extras.m */; };
 		C55B2AC5253427130038E50C /* SuspendBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C55B2ABD253427130038E50C /* SuspendBtn.m */; };
 		C55B2AC6253427130038E50C /* SuspendLab.m in Sources */ = {isa = PBXBuildFile; fileRef = C55B2AC1253427130038E50C /* SuspendLab.m */; };
 		C55B2AC7253427130038E50C /* SuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55B2AC3253427130038E50C /* SuspendView.m */; };
@@ -139,14 +141,18 @@
 		C5379EA524D13FE20078880F /* HQTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQTextField.h; sourceTree = "<group>"; };
 		C5379EA724D13FE80078880F /* CJTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTextField.h; sourceTree = "<group>"; };
 		C5379EA824D13FE80078880F /* CJTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTextField.m; sourceTree = "<group>"; };
-		C5379EAB24D148570078880F /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
-		C5379EAC24D148570078880F /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
 		C54B3FF0255297E1003BE195 /* UILabel+RichText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+RichText.m"; sourceTree = "<group>"; };
 		C54B3FF1255297E1003BE195 /* UILabel+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extra.h"; sourceTree = "<group>"; };
 		C54B3FF2255297E1003BE195 /* UILabel+RichText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+RichText.h"; sourceTree = "<group>"; };
 		C54B3FF3255297E1003BE195 /* UILabel+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extra.m"; sourceTree = "<group>"; };
 		C54F85AB252B616600EE3DD0 /* UITableView+WWFoldableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+WWFoldableTableView.h"; sourceTree = "<group>"; };
 		C54F85AC252B616600EE3DD0 /* UITableView+WWFoldableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+WWFoldableTableView.m"; sourceTree = "<group>"; };
+		C5569758255BFDA8005C1361 /* TimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeModel.m; sourceTree = "<group>"; };
+		C5569759255BFDA8005C1361 /* NSString+Time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Time.m"; sourceTree = "<group>"; };
+		C556975A255BFDA8005C1361 /* NSString+Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Time.h"; sourceTree = "<group>"; };
+		C556975B255BFDA8005C1361 /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
+		C556975C255BFDA9005C1361 /* TimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeModel.h; sourceTree = "<group>"; };
+		C556975D255BFDA9005C1361 /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
 		C55B2ABD253427130038E50C /* SuspendBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendBtn.m; sourceTree = "<group>"; };
 		C55B2ABE253427130038E50C /* SuspendBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendBtn.h; sourceTree = "<group>"; };
 		C55B2AC0253427130038E50C /* SuspendLab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendLab.h; sourceTree = "<group>"; };
@@ -466,8 +472,12 @@
 		C5379EAA24D148470078880F /* NSString */ = {
 			isa = PBXGroup;
 			children = (
-				C5379EAB24D148570078880F /* NSString+Extras.h */,
-				C5379EAC24D148570078880F /* NSString+Extras.m */,
+				C556975B255BFDA8005C1361 /* NSString+Extras.h */,
+				C556975D255BFDA9005C1361 /* NSString+Extras.m */,
+				C556975A255BFDA8005C1361 /* NSString+Time.h */,
+				C5569759255BFDA8005C1361 /* NSString+Time.m */,
+				C556975C255BFDA9005C1361 /* TimeModel.h */,
+				C5569758255BFDA8005C1361 /* TimeModel.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -1231,6 +1241,7 @@
 				C57C22A02502569400FAAA3F /* UIButton+ImageTitleSpacing.m in Sources */,
 				C5C2081B24BDE254001ED2F5 /* InfoTBVCell.m in Sources */,
 				C5914CE22538515A007777A6 /* UIViewController+TZImagePickerControllerDelegate.m in Sources */,
+				C556975F255BFDA9005C1361 /* NSString+Time.m in Sources */,
 				C5CF70E424E51CFF000DB72D /* MonitorNetwoking.m in Sources */,
 				C5AA493F250C92BD009F583F /* UIView+Measure.m in Sources */,
 				C5AA492A250C914A009F583F /* NSObject+Measure.m in Sources */,
@@ -1256,6 +1267,7 @@
 				C590FE1524CFEA14000F36C9 /* CommentPopUpVC+VM.m in Sources */,
 				C59BA07125270EE20039B485 /* CommentPopUpViewForTableViewHeader.m in Sources */,
 				C52F592124CD4AA0001F72B3 /* InputView.m in Sources */,
+				C5569760255BFDA9005C1361 /* NSString+Extras.m in Sources */,
 				C5AA492B250C914A009F583F /* NSObject+Time.m in Sources */,
 				C59B9F062526F3E10039B485 /* ZYTextField+HistoryDataList.m in Sources */,
 				C5B5206024D6C2FC00579178 /* MKLoginModel.m in Sources */,
@@ -1265,6 +1277,7 @@
 				C5914CE82538515B007777A6 /* UIViewController+MJRefresh.m in Sources */,
 				C57F0D3B253337680080EEF0 /* NSObject+OpenURL.m in Sources */,
 				C590FF1824CFF8F1000F36C9 /* TestClass.m in Sources */,
+				C556975E255BFDA9005C1361 /* TimeModel.m in Sources */,
 				C5914CE42538515A007777A6 /* UIViewController+NavigationBarHiddenMgr.m in Sources */,
 				C54B3FF5255297E1003BE195 /* UILabel+Extra.m in Sources */,
 				C5850B1E25483DF8001E6676 /* ViewForTableViewHeader.m in Sources */,
@@ -1298,7 +1311,6 @@
 				C590FE1E24CFEA85000F36C9 /* BaseModel.m in Sources */,
 				C5914CE62538515A007777A6 /* UIViewController+GifImageView.m in Sources */,
 				C5914CE52538515A007777A6 /* UIViewController+BRPickerView.m in Sources */,
-				C5379EAD24D148570078880F /* NSString+Extras.m in Sources */,
 				C5914CE92538515B007777A6 /* UIViewController+BaseVC.m in Sources */,
 				C55B2AC5253427130038E50C /* SuspendBtn.m in Sources */,
 				C5379EA624D13FE20078880F /* HQTextField.m in Sources */,
