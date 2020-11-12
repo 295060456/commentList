@@ -90,17 +90,17 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.sources[indexPath.section].isFullShow) {//是全显示
-        InfoTBVCell *cell = [InfoTBVCell cellWith:tableView];
+        InfoTBVCell *cell = [InfoTBVCell cellWithTableView:tableView];
         [cell richElementsInCellWithModel:self.sources[indexPath.section].secClsModelMutArr[indexPath.row].secondClassText];
         return cell;
     }else{//不是全显示
         if (indexPath.row == self.sources[indexPath.section].PreMax &&
             self.sources[indexPath.section]._hasMore) {//
-            LoadMoreTBVCell *cell = [LoadMoreTBVCell cellWith:tableView];
+            LoadMoreTBVCell *cell = [LoadMoreTBVCell cellWithTableView:tableView];
             [cell richElementsInCellWithModel:nil];
             return cell;
         }else{
-            InfoTBVCell *cell = [InfoTBVCell cellWith:tableView];
+            InfoTBVCell *cell = [InfoTBVCell cellWithTableView:tableView];
 //            int r = indexPath.row;
 //            int d = indexPath.section;
             [cell richElementsInCellWithModel:self.sources[indexPath.section].secClsModelMutArr[indexPath.row].secondClassText];

@@ -247,7 +247,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     MKFirstCommentModel *firstCommentModel = self.commentModel.listMytArr[indexPath.section];
     MKChildCommentModel *childCommentModel = firstCommentModel.childMutArr[indexPath.row];
     if (firstCommentModel.isFullShow) {//是全显示
-        InfoTBVCell *cell = [InfoTBVCell cellWith:tableView];
+        InfoTBVCell *cell = [InfoTBVCell cellWithTableView:tableView];
         [cell richElementsInCellWithModel:childCommentModel];
         @weakify(self)
         [cell action:^(id data) {
@@ -261,11 +261,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     }else{//不是全显示
         if (indexPath.row == firstCommentModel.PreMax &&
             firstCommentModel._hasMore) {//
-            LoadMoreTBVCell *cell = [LoadMoreTBVCell cellWith:tableView];
+            LoadMoreTBVCell *cell = [LoadMoreTBVCell cellWithTableView:tableView];
             [cell richElementsInCellWithModel:childCommentModel];
             return cell;
         }else{
-            InfoTBVCell *cell = [InfoTBVCell cellWith:tableView];
+            InfoTBVCell *cell = [InfoTBVCell cellWithTableView:tableView];
 //            int r = indexPath.row;
 //            int d = indexPath.section;
             @weakify(self)

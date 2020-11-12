@@ -16,7 +16,7 @@
 
 @implementation LoadMoreTBVCell
 
-+(instancetype)cellWith:(UITableView *)tableView{
++(instancetype)cellWithTableView:(UITableView *)tableView{
     LoadMoreTBVCell *cell = (LoadMoreTBVCell *)[tableView dequeueReusableCellWithIdentifier:@"LoadMoreTBVCell"];
     if (!cell) {
         cell = [[LoadMoreTBVCell alloc]initWithStyle:UITableViewCellStyleDefault

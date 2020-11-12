@@ -16,7 +16,7 @@
 
 @implementation InfoTBVCell
 
-+(instancetype)cellWith:(UITableView *)tableView{
++(instancetype)cellWithTableView:(UITableView *)tableView{
     InfoTBVCell *cell = (InfoTBVCell *)[tableView dequeueReusableCellWithIdentifier:@"InfoTBVCell"];
     if (!cell) {
         cell = [[InfoTBVCell alloc]initWithStyle:UITableViewCellStyleSubtitle

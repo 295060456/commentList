@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)RBCLikeButton *LikeBtn;
 @property(nonatomic,strong)MKChildCommentModel *childCommentModel;
 
-+(instancetype)cellWith:(UITableView *)tableView;
++(instancetype)cellWithTableView:(UITableView *)tableView;
 +(CGFloat)cellHeightWithModel:(id _Nullable)model;
 - (void)richElementsInCellWithModel:(id _Nullable)model;
 -(void)action:(MKDataBlock _Nullable)actionBlock;
