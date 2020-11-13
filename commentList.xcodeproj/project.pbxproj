@@ -15,6 +15,10 @@
 		C5379EA324D13FDC0078880F /* ZYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379E9F24D13FDC0078880F /* ZYTextField.m */; };
 		C5379EA624D13FE20078880F /* HQTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379EA424D13FE20078880F /* HQTextField.m */; };
 		C5379EA924D13FE80078880F /* CJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379EA824D13FE80078880F /* CJTextField.m */; };
+		C54AB219255E60F6000A314D /* UITableViewCell+Margin.m in Sources */ = {isa = PBXBuildFile; fileRef = C54AB213255E60F5000A314D /* UITableViewCell+Margin.m */; };
+		C54AB21A255E60F6000A314D /* WhiteRightArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C54AB216255E60F5000A314D /* WhiteRightArrow@2x.png */; };
+		C54AB21B255E60F6000A314D /* WhiteRightArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C54AB217255E60F5000A314D /* WhiteRightArrow@3x.png */; };
+		C54AB21C255E60F6000A314D /* UITableViewCell+WhiteArrows.m in Sources */ = {isa = PBXBuildFile; fileRef = C54AB218255E60F5000A314D /* UITableViewCell+WhiteArrows.m */; };
 		C54B3FF4255297E1003BE195 /* UILabel+RichText.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3FF0255297E1003BE195 /* UILabel+RichText.m */; };
 		C54B3FF5255297E1003BE195 /* UILabel+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = C54B3FF3255297E1003BE195 /* UILabel+Extra.m */; };
 		C54F85AD252B616600EE3DD0 /* UITableView+WWFoldableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54F85AC252B616600EE3DD0 /* UITableView+WWFoldableTableView.m */; };
@@ -141,6 +145,12 @@
 		C5379EA524D13FE20078880F /* HQTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQTextField.h; sourceTree = "<group>"; };
 		C5379EA724D13FE80078880F /* CJTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTextField.h; sourceTree = "<group>"; };
 		C5379EA824D13FE80078880F /* CJTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTextField.m; sourceTree = "<group>"; };
+		C54AB212255E60F5000A314D /* UITableViewCell+Margin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Margin.h"; sourceTree = "<group>"; };
+		C54AB213255E60F5000A314D /* UITableViewCell+Margin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Margin.m"; sourceTree = "<group>"; };
+		C54AB215255E60F5000A314D /* UITableViewCell+WhiteArrows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+WhiteArrows.h"; sourceTree = "<group>"; };
+		C54AB216255E60F5000A314D /* WhiteRightArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WhiteRightArrow@2x.png"; sourceTree = "<group>"; };
+		C54AB217255E60F5000A314D /* WhiteRightArrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WhiteRightArrow@3x.png"; sourceTree = "<group>"; };
+		C54AB218255E60F5000A314D /* UITableViewCell+WhiteArrows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+WhiteArrows.m"; sourceTree = "<group>"; };
 		C54B3FF0255297E1003BE195 /* UILabel+RichText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+RichText.m"; sourceTree = "<group>"; };
 		C54B3FF1255297E1003BE195 /* UILabel+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extra.h"; sourceTree = "<group>"; };
 		C54B3FF2255297E1003BE195 /* UILabel+RichText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+RichText.h"; sourceTree = "<group>"; };
@@ -414,16 +424,17 @@
 		C52F592824CD4CE9001F72B3 /* UiKit */ = {
 			isa = PBXGroup;
 			children = (
-				C54B3FEF255297E1003BE195 /* UILabel */,
-				C5850B1725483DF8001E6676 /* UITableViewHeaderFooterView */,
-				C5914CBF2538515A007777A6 /* UINavigationController */,
-				C5914CC22538515A007777A6 /* UIViewController */,
-				C59B9F1D252702910039B485 /* UITableView */,
 				C5AA4911250C9112009F583F /* NSObject */,
-				C5379E9A24D13FB40078880F /* UITextField */,
-				C5DDFFAD24D3FA3F00307DFA /* UIImage */,
-				C5DDFFAC24D3FA3800307DFA /* UIView */,
 				C5379EAA24D148470078880F /* NSString */,
+				C5DDFFAD24D3FA3F00307DFA /* UIImage */,
+				C54B3FEF255297E1003BE195 /* UILabel */,
+				C5914CBF2538515A007777A6 /* UINavigationController */,
+				C59B9F1D252702910039B485 /* UITableView */,
+				C54AB210255E60F5000A314D /* UITableViewCell */,
+				C5850B1725483DF8001E6676 /* UITableViewHeaderFooterView */,
+				C5379E9A24D13FB40078880F /* UITextField */,
+				C5DDFFAC24D3FA3800307DFA /* UIView */,
+				C5914CC22538515A007777A6 /* UIViewController */,
 			);
 			path = UiKit;
 			sourceTree = "<group>";
@@ -480,6 +491,35 @@
 				C5569758255BFDA8005C1361 /* TimeModel.m */,
 			);
 			path = NSString;
+			sourceTree = "<group>";
+		};
+		C54AB210255E60F5000A314D /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C54AB211255E60F5000A314D /* 重设边距 */,
+				C54AB214255E60F5000A314D /* 自定义右侧小箭头图标 */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		C54AB211255E60F5000A314D /* 重设边距 */ = {
+			isa = PBXGroup;
+			children = (
+				C54AB212255E60F5000A314D /* UITableViewCell+Margin.h */,
+				C54AB213255E60F5000A314D /* UITableViewCell+Margin.m */,
+			);
+			path = "重设边距";
+			sourceTree = "<group>";
+		};
+		C54AB214255E60F5000A314D /* 自定义右侧小箭头图标 */ = {
+			isa = PBXGroup;
+			children = (
+				C54AB215255E60F5000A314D /* UITableViewCell+WhiteArrows.h */,
+				C54AB216255E60F5000A314D /* WhiteRightArrow@2x.png */,
+				C54AB217255E60F5000A314D /* WhiteRightArrow@3x.png */,
+				C54AB218255E60F5000A314D /* UITableViewCell+WhiteArrows.m */,
+			);
+			path = "自定义右侧小箭头图标";
 			sourceTree = "<group>";
 		};
 		C54B3FEF255297E1003BE195 /* UILabel */ = {
@@ -1121,8 +1161,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C590FF6A24D01D9A000F36C9 /* CommentListData.json in Resources */,
+				C54AB21A255E60F6000A314D /* WhiteRightArrow@2x.png in Resources */,
 				C5E4C11024DFF28000D4862C /* 分享控件的用法 in Resources */,
 				C5802D1A24BCAD3900894903 /* LaunchScreen.storyboard in Resources */,
+				C54AB21B255E60F6000A314D /* WhiteRightArrow@3x.png in Resources */,
 				C59B9F23252702AC0039B485 /* 专治UITableView相应链断裂 in Resources */,
 				C5802D1724BCAD3900894903 /* Assets.xcassets in Resources */,
 				C58C615E2532B3CA0092BF89 /* RBCLikeButton.bundle in Resources */,
@@ -1250,6 +1292,7 @@
 				C5914CE12538515A007777A6 /* UIViewController+Shake.m in Sources */,
 				C5914CDD2538515A007777A6 /* BaseNavigationVC.m in Sources */,
 				C5AA4918250C9142009F583F /* NSObject+SYSAlertController.m in Sources */,
+				C54AB219255E60F6000A314D /* UITableViewCell+Margin.m in Sources */,
 				C55B2AC6253427130038E50C /* SuspendLab.m in Sources */,
 				C5802D1D24BCAD3900894903 /* main.m in Sources */,
 				C5C2081E24BDE268001ED2F5 /* LoadMoreTBVCell.m in Sources */,
@@ -1299,6 +1342,7 @@
 				C5AA492D250C914A009F583F /* NSObject+Login.m in Sources */,
 				C5AA4928250C914A009F583F /* NSObject+Extras.m in Sources */,
 				C5F78B2F24BF44F1008A46EC /* ECAuthorizationTools.m in Sources */,
+				C54AB21C255E60F6000A314D /* UITableViewCell+WhiteArrows.m in Sources */,
 				C5E4C10E24DFF28000D4862C /* BWItemModel.m in Sources */,
 				C5379EA924D13FE80078880F /* CJTextField.m in Sources */,
 				C5914CE32538515A007777A6 /* UIViewController+TZImagePickerController.m in Sources */,
