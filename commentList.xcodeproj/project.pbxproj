@@ -29,7 +29,7 @@
 		C55B2AC6253427130038E50C /* SuspendLab.m in Sources */ = {isa = PBXBuildFile; fileRef = C55B2AC1253427130038E50C /* SuspendLab.m */; };
 		C55B2AC7253427130038E50C /* SuspendView.m in Sources */ = {isa = PBXBuildFile; fileRef = C55B2AC3253427130038E50C /* SuspendView.m */; };
 		C56E31E8252F44CE004ACCC7 /* URL_Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = C56E31E6252F44CE004ACCC7 /* URL_Manager.m */; };
-		C56E42332547183800B9F555 /* 图片资源 in Resources */ = {isa = PBXBuildFile; fileRef = C56E42322547183800B9F555 /* 图片资源 */; };
+		C56E42332547183800B9F555 /* ⚽️PicResource in Resources */ = {isa = PBXBuildFile; fileRef = C56E42322547183800B9F555 /* ⚽️PicResource */; };
 		C57672B72546BC3400C382C8 /* UIViewController+JXCategoryListContentViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C57672B32546BC3300C382C8 /* UIViewController+JXCategoryListContentViewDelegate.m */; };
 		C57672B82546BC3400C382C8 /* UIViewController+JXPagerViewListViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C57672B52546BC3300C382C8 /* UIViewController+JXPagerViewListViewDelegate.m */; };
 		C57C22A02502569400FAAA3F /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = C57C229F2502569400FAAA3F /* UIButton+ImageTitleSpacing.m */; };
@@ -47,7 +47,6 @@
 		C5850B1F25483DF8001E6676 /* ViewForTableViewFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C5850B1C25483DF8001E6676 /* ViewForTableViewFooter.m */; };
 		C58C615E2532B3CA0092BF89 /* RBCLikeButton.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C58C615B2532B3CA0092BF89 /* RBCLikeButton.bundle */; };
 		C58C615F2532B3CA0092BF89 /* RBCLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C615D2532B3CA0092BF89 /* RBCLikeButton.m */; };
-		C590FE0F24CFE97E000F36C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78B1324BF3F73008A46EC /* ViewController.m */; };
 		C590FE1424CFEA14000F36C9 /* CommentPopUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C590FE1024CFEA14000F36C9 /* CommentPopUpVC.m */; };
 		C590FE1524CFEA14000F36C9 /* CommentPopUpVC+VM.m in Sources */ = {isa = PBXBuildFile; fileRef = C590FE1324CFEA14000F36C9 /* CommentPopUpVC+VM.m */; };
 		C590FE1A24CFEA6A000F36C9 /* MKCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C590FE1924CFEA6A000F36C9 /* MKCommentModel.m */; };
@@ -107,6 +106,7 @@
 		C5F78A8524BED516008A46EC /* SecondClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78A8224BED515008A46EC /* SecondClassModel.m */; };
 		C5F78B1F24BF4195008A46EC /* PopUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78B1D24BF4195008A46EC /* PopUpVC.m */; };
 		C5F78B2F24BF44F1008A46EC /* ECAuthorizationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78B2E24BF44F1008A46EC /* ECAuthorizationTools.m */; };
+		C5F838272560DBBB005C6FDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F78B1324BF3F73008A46EC /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,7 +172,7 @@
 		C562091E2554001100FE435F /* 高度自定义的按钮.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "高度自定义的按钮.md"; sourceTree = "<group>"; };
 		C56E31E6252F44CE004ACCC7 /* URL_Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URL_Manager.m; sourceTree = "<group>"; };
 		C56E31E7252F44CE004ACCC7 /* URL_Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL_Manager.h; sourceTree = "<group>"; };
-		C56E42322547183800B9F555 /* 图片资源 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "图片资源"; sourceTree = "<group>"; };
+		C56E42322547183800B9F555 /* ⚽️PicResource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "⚽️PicResource"; sourceTree = "<group>"; };
 		C57672B32546BC3300C382C8 /* UIViewController+JXCategoryListContentViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JXCategoryListContentViewDelegate.m"; sourceTree = "<group>"; };
 		C57672B42546BC3300C382C8 /* UIViewController+JXPagerViewListViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JXPagerViewListViewDelegate.h"; sourceTree = "<group>"; };
 		C57672B52546BC3300C382C8 /* UIViewController+JXPagerViewListViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JXPagerViewListViewDelegate.m"; sourceTree = "<group>"; };
@@ -390,12 +390,7 @@
 			isa = PBXGroup;
 			children = (
 				C5802D0524BCAD3800894903 /* Products */,
-				C5802D0724BCAD3800894903 /* AppDelegate.h */,
-				C5802D0824BCAD3800894903 /* AppDelegate.m */,
-				C5802D0A24BCAD3800894903 /* SceneDelegate.h */,
-				C5802D0B24BCAD3800894903 /* SceneDelegate.m */,
 				C5802D1024BCAD3800894903 /* Main.storyboard */,
-				C5802D1624BCAD3900894903 /* Assets.xcassets */,
 				C5802D1824BCAD3900894903 /* LaunchScreen.storyboard */,
 				C5802D1C24BCAD3900894903 /* main.m */,
 				C5802D1324BCAD3800894903 /* commentList.xcdatamodeld */,
@@ -627,13 +622,14 @@
 		C5802D0624BCAD3800894903 /* commentList */ = {
 			isa = PBXGroup;
 			children = (
-				C56E42322547183800B9F555 /* 图片资源 */,
+				C5F836A72560D35C005C6FDA /* 资源文件管理 */,
+				C5F836A82560D377005C6FDA /* AppDelegate & SceneDelegate */,
+				C590FE0A24CFE816000F36C9 /* 入口——————效果 */,
 				C5C4FE1A255A5FF3002F407A /* 🌹Macro */,
 				C56E31E5252F449C004ACCC7 /* URL_Manager */,
 				C5B5205A24D6C2FC00579178 /* UserInfo */,
 				C590FF1524CFF8D1000F36C9 /* 可变参数Test */,
 				C5F78B3424BF4712008A46EC /* 3rd */,
-				C590FE0A24CFE816000F36C9 /* 入口——————效果 */,
 				8BE28E3924BCB6A800CF5D7B /* Others */,
 				C5802D1B24BCAD3900894903 /* Info.plist */,
 			);
@@ -1052,6 +1048,42 @@
 			path = 3rd;
 			sourceTree = "<group>";
 		};
+		C5F836A72560D35C005C6FDA /* 资源文件管理 */ = {
+			isa = PBXGroup;
+			children = (
+				C5802D1624BCAD3900894903 /* Assets.xcassets */,
+				C56E42322547183800B9F555 /* ⚽️PicResource */,
+			);
+			path = "资源文件管理";
+			sourceTree = "<group>";
+		};
+		C5F836A82560D377005C6FDA /* AppDelegate & SceneDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C5F836A92560D386005C6FDA /* AppDelegate */,
+				C5F836AA2560D38C005C6FDA /* SceneDelegate */,
+			);
+			path = "AppDelegate & SceneDelegate";
+			sourceTree = "<group>";
+		};
+		C5F836A92560D386005C6FDA /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C5802D0724BCAD3800894903 /* AppDelegate.h */,
+				C5802D0824BCAD3800894903 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		C5F836AA2560D38C005C6FDA /* SceneDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C5802D0A24BCAD3800894903 /* SceneDelegate.h */,
+				C5802D0B24BCAD3800894903 /* SceneDelegate.m */,
+			);
+			path = SceneDelegate;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1168,7 +1200,7 @@
 				C59B9F23252702AC0039B485 /* 专治UITableView相应链断裂 in Resources */,
 				C5802D1724BCAD3900894903 /* Assets.xcassets in Resources */,
 				C58C615E2532B3CA0092BF89 /* RBCLikeButton.bundle in Resources */,
-				C56E42332547183800B9F555 /* 图片资源 in Resources */,
+				C56E42332547183800B9F555 /* ⚽️PicResource in Resources */,
 				C5802D1224BCAD3800894903 /* Main.storyboard in Resources */,
 				C59B9F072526F3E10039B485 /* ZYTextField.bundle in Resources */,
 			);
@@ -1321,6 +1353,7 @@
 				C57F0D3B253337680080EEF0 /* NSObject+OpenURL.m in Sources */,
 				C590FF1824CFF8F1000F36C9 /* TestClass.m in Sources */,
 				C556975E255BFDA9005C1361 /* TimeModel.m in Sources */,
+				C5F838272560DBBB005C6FDA /* ViewController.m in Sources */,
 				C5914CE42538515A007777A6 /* UIViewController+NavigationBarHiddenMgr.m in Sources */,
 				C54B3FF5255297E1003BE195 /* UILabel+Extra.m in Sources */,
 				C5850B1E25483DF8001E6676 /* ViewForTableViewHeader.m in Sources */,
@@ -1349,7 +1382,6 @@
 				C5AEEB1025384229000E1C5F /* UIView+Animation.m in Sources */,
 				C57672B82546BC3400C382C8 /* UIViewController+JXPagerViewListViewDelegate.m in Sources */,
 				C5AA49AE250C9901009F583F /* UIImage+Tailor.m in Sources */,
-				C590FE0F24CFE97E000F36C9 /* ViewController.m in Sources */,
 				C5AA4917250C9142009F583F /* NSObject+SPAlertController.m in Sources */,
 				C5E4C11124DFF28000D4862C /* BWItemCollectionViewCell.m in Sources */,
 				C590FE1E24CFEA85000F36C9 /* BaseModel.m in Sources */,

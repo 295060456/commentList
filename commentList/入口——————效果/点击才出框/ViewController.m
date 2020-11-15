@@ -11,8 +11,6 @@
 #import "CommentPopUpVC.h"
 
 @interface ViewController ()
-{
-}
 
 @property(nonatomic,strong)id requestParams;
 @property(nonatomic,copy)MKDataBlock successBlock;
@@ -201,7 +199,6 @@
 
 }
 
-
 -(void)willOpen{
     self.commentPopUpVC.view.alpha = 1;
     [UIView animateWithDuration:0.3f
@@ -251,6 +248,7 @@
 //        [SceneDelegate sharedInstance].customSYSUITabBarController.lzb_tabBarHidden = NO;
     }];
 }
+
 -(void)touchesBegan:(NSSet<UITouch *> *)touches
           withEvent:(UIEvent *)event{
     for (UITouch *touch in touches) {

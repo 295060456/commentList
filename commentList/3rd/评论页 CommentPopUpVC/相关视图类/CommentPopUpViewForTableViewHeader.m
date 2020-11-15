@@ -101,9 +101,15 @@
 -(RBCLikeButton *)LikeBtn{
     if (!_LikeBtn) {
         _LikeBtn = RBCLikeButton.new;
-        [_LikeBtn setImage:KIMG(@"day_like")
+        [_LikeBtn setImage:KBuddleIMG(nil,
+                                      @"RBCLikeButton",
+                                      nil,
+                                      @"day_like")
                   forState:UIControlStateNormal];
-        [_LikeBtn setImage:KIMG(@"day_like_red")
+        [_LikeBtn setImage:KBuddleIMG(nil,
+                                      @"RBCLikeButton",
+                                      nil,
+                                      @"day_like_red")
                    forState:UIControlStateSelected];
 //        _LikeBtn.layer.cornerRadius = SCALING_RATIO(55 / 4);
 //        _LikeBtn.layer.borderColor = kGrayColor.CGColor;

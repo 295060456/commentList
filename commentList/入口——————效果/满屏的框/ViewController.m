@@ -11,9 +11,7 @@
 #import "LoadMoreTBVCell.h"
 #import "InfoTBVCell.h"
 
-#import "NonHoveringHeaderView.h"
-#import "HoveringHeaderView.h"
-#import "UITableViewHeaderFooterView+Attribute.h"
+#import "CommentPopUpViewForTableViewHeader.h"
 
 #import "FirstClassModel.h"
 #import "SecondClassModel.h"
@@ -38,7 +36,6 @@ UITableViewDelegate
     self.tableView.alpha = 1;
     NSLog(@"");
 }
-
 #pragma mark —————————— UITableViewDelegate,UITableViewDataSource ——————————
 - (CGFloat)tableView:(UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -92,6 +89,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.sources[indexPath.section].isFullShow) {//是全显示
         InfoTBVCell *cell = [InfoTBVCell cellWithTableView:tableView];
         [cell richElementsInCellWithModel:self.sources[indexPath.section].secClsModelMutArr[indexPath.row].secondClassText];
+//        cell.contentView.backgroundColor = RandomColor;
         return cell;
     }else{//不是全显示
         if (indexPath.row == self.sources[indexPath.section].PreMax &&
@@ -104,12 +102,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 //            int r = indexPath.row;
 //            int d = indexPath.section;
             [cell richElementsInCellWithModel:self.sources[indexPath.section].secClsModelMutArr[indexPath.row].secondClassText];
+            cell.contentView.backgroundColor = RandomColor;
             return cell;
         }
     }
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return self.sources.count;
 }
 
@@ -121,39 +120,27 @@ heightForHeaderInSection:(NSInteger)section{
 - (UIView *)tableView:(UITableView *)tableView
 viewForHeaderInSection:(NSInteger)section{
     
-    NonHoveringHeaderView *header = nil;
-    
-    {//第一种创建方式
-        header = [[NonHoveringHeaderView alloc]initWithReuseIdentifier:NSStringFromClass(NonHoveringHeaderView.class)
-                                                            withData:@(section)];
-
+    if (section == 0) {
+        CommentPopUpViewForTableViewHeader *header = [[CommentPopUpViewForTableViewHeader alloc] initWithReuseIdentifier:NSStringFromClass(CommentPopUpViewForTableViewHeader.class) withData:nil];
+    //    self.scrollViewClass = UITableView.class;//这一属性决定UITableViewHeaderFooterView是否悬停
+        
+        [header actionBlockCommentPopUpNonHoveringHeaderView:^(id data) {
+            
+        }];
+        header.backgroundColor = kRedColor;
+        return header;
+    }else{
+        return nil;
     }
-    
-//    {//第二种创建方式
-//        //viewForHeaderInSection 悬停与否
-//        Class headerClass = NonHoveringHeaderView.class;
-//    //    Class headerClass = HoveringHeaderView.class;
-//
-//        header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass(headerClass)];
-//    }
-    
-    header.tableView = tableView;
-    header.section = section;
-    header.textLabel.text = self.sources[section].firstClassText;
-
-    return header;
 }
-
 #pragma mark —— lazyLoad
 -(UITableView *)tableView{
     if (!_tableView) {
         _tableView = UITableView.new;
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        [_tableView registerClass:NonHoveringHeaderView.class
-forHeaderFooterViewReuseIdentifier:NSStringFromClass(NonHoveringHeaderView.class)];
-        [_tableView registerClass:HoveringHeaderView.class
-forHeaderFooterViewReuseIdentifier:NSStringFromClass(HoveringHeaderView.class)];
+        [_tableView registerClass:CommentPopUpViewForTableViewHeader.class
+forHeaderFooterViewReuseIdentifier:NSStringFromClass(CommentPopUpViewForTableViewHeader.class)];
         [self.view addSubview:_tableView];
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.view);
@@ -171,6 +158,5 @@ forHeaderFooterViewReuseIdentifier:NSStringFromClass(HoveringHeaderView.class)];
         }
     }return _sources;
 }
-
 
 @end

@@ -65,7 +65,7 @@
 - (void)setupBackWithFrame:(CGRect)frame {
     
     //1.初始化👍View
-    UIImageView *backImageView = [[UIImageView alloc] initWithImage:KBuddleIMG(@"图片资源",
+    UIImageView *backImageView = [[UIImageView alloc] initWithImage:KBuddleIMG(nil,
                                                                                @"RBCLikeButton",
                                                                                nil,
                                                                                @"day_like_red")];
