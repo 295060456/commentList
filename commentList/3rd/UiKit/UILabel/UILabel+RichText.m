@@ -5,7 +5,7 @@
 //  Created by Jobs on 2020/11/4.
 //
 
-#import "UILabel+RichText.h"
+#import "NSObject+RichText.h"
 
 @implementation RichLabelFontModel
 
@@ -63,9 +63,9 @@
 
 @end
 
-@implementation UILabel (RichText)
+@implementation NSObject (RichText)
 
--(NSAttributedString *)makeRichTextWithDataConfigMutArr:(NSArray <RichLabelDataStringsModel *>*_Nonnull)richTextDataConfigMutArr{
++(NSAttributedString *)makeRichTextWithDataConfigMutArr:(NSArray <RichLabelDataStringsModel *>*_Nonnull)richTextDataConfigMutArr{
     
     NSString *resultString = @"";
     
